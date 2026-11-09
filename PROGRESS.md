@@ -53,5 +53,4 @@
 
 | 时间 | tag | 内容 | commit |
 |---|---|---|---|
-| 2026-11-09 20:xx | `v0.0-skeleton` | 骨架：README / PROGRESS / src / experiments / lean / data / docs | 见 `git log` |
-| 2026-11-09 20:xx | `v0.1-constraints` | 约束对齐：constraints.py + 12 用例 + 基线重测 | 见 `git log` |
+| 2026-11-09 20:15 | `v0.0-skeleton` + `v0.1-constraints` | 首次上传：仓库骨架、独立校验器（10 条约束 + A3）、基线重测、Lean 4 条定理 | `9d3937b` |
