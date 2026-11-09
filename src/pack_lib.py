@@ -18,6 +18,15 @@ import numpy as np
 CLEARANCE = 3
 MAX_PRESSURE = 500.0
 
+# 约束层级：先做刚体（纯几何），再一条条加约束。
+# 每一层都是下一层的子集，便于测量「这一条约束带来多少代价」。
+LEVEL_RIGID = 0      # L0 刚体：仅不重叠、不越界
+LEVEL_SUPPORT = 1    # L1 + 不得悬空（至少 1 格底面接触）
+LEVEL_FRAGILE = 2    # L2 + 易碎件单层：100% 贴合、只能落在标准件顶面、自身不承重
+LEVEL_ORIENT = 3     # L3 + 定向件单一姿态、上层重心不超出其顶面投影
+LEVEL_PRESSURE = 4   # L4 + 承重 500 kg/m²
+LEVEL = LEVEL_PRESSURE
+
 # 假设 A1：非易碎件底面最小接触面积比。
 # 题面（附件1 P12）对标准件只说「可堆叠，无特殊约束」，**未规定接触比**。
 # 故默认 0（严格对齐题面，只要求不悬空）；可用环境变量覆盖做敏感性分析：
@@ -58,7 +67,14 @@ TRUCKS = [
 ]
 
 
-def orients(kind, dims):
+def orients(kind, dims, allowed=None):
+    """可用姿态。
+
+    allowed 不为 None 时以它为准（用于 OR-Library thpack 的 0/1 方向标记，
+    见 src/thpack.py）；否则按题面规则：定向件单一姿态，其余六种排列。
+    """
+    if allowed is not None:
+        return list(dict.fromkeys(tuple(a) for a in allowed))
     if kind == "oriented":
         return [tuple(dims)]
     return list(dict.fromkeys(itertools.permutations(dims)))
@@ -73,13 +89,34 @@ def expand_items():
     return out
 
 
+def apply_level(items, level):
+    """把货物明细调整到指定约束层级。
+
+    低于 L3 时放开定向件的姿态限制（题面「定向件单一姿态」属于 L3 才引入的约束）。
+    幂等：对已经是全姿态的明细重复调用不改变结果。
+    """
+    if level >= LEVEL_ORIENT:
+        return items
+    out = []
+    for it in items:
+        if it["kind"] == "oriented":
+            d = dict(it)
+            d["allowed"] = list(dict.fromkeys(itertools.permutations(d["dims"])))
+            out.append(d)
+        else:
+            out.append(it)
+    return out
+
+
 # ------------------------------------------------------------------ 容器
 class Truck:
-    def __init__(self, spec: TruckType):
+    def __init__(self, spec: TruckType, clearance: float = None, level: int = None):
         self.spec = spec
+        self.level = LEVEL if level is None else level
         L, W, H = spec.dims
         self.L, self.W, self.H = L, W, H
-        self.h_eff = H - CLEARANCE
+        # clearance=None 用题面的 3 cm 顶部余隙；OR-Library 标准算例无此要求，传 0
+        self.h_eff = H - (CLEARANCE if clearance is None else clearance)
         self.own = np.full((H, W, L), -1, dtype=np.int16)
         self.boxes = []          # list of dict
         self.kinds = []
@@ -89,38 +126,44 @@ class Truck:
         self.total_weight = 0
         self.extremes = {(0, 0, 0)}
 
-    # --- 可行性
+    # --- 可行性（按约束层级逐级放开）
     def feasible(self, x, y, z, l, w, h, kind, weight):
+        # ---- L0 刚体：边界 + 不重叠 + 载重
         if x < 0 or y < 0 or z < 0:
             return False
         if x + l > self.L or y + w > self.W or z + h > self.h_eff:
             return False
         if self.own[z:z + h, y:y + w, x:x + l].max() != -1:
             return False
-        if z > 0:
-            below = self.own[z - 1, y:y + w, x:x + l]
-            n_support = int((below != -1).sum())
-            if n_support == 0:
-                return False        # 假设 A3：任何货物不得悬空
-            ratio = n_support / (l * w)
-            need = 1.0 if kind == "fragile" else SUPPORT_RATIO
-            if ratio < need:
+        if self.total_weight + weight > self.spec.cap_weight:
+            return False
+
+        lv = self.level
+        if lv < LEVEL_SUPPORT or z == 0:
+            return True
+
+        # ---- L1 支撑：不得悬空
+        below = self.own[z - 1, y:y + w, x:x + l]
+        n_support = int((below != -1).sum())
+        if n_support == 0:
+            return False
+        if lv < LEVEL_FRAGILE:
+            return True
+
+        # ---- L2 易碎件单层
+        ratio = n_support / (l * w)
+        need = 1.0 if kind == "fragile" else SUPPORT_RATIO
+        if ratio < need:
+            return False
+        owners = set(below[below != -1].ravel().tolist())
+        for o in owners:
+            if self.kinds[o] == "fragile":          # 易碎件顶面不能承重
                 return False
-            owners = set(below[below != -1].ravel().tolist())
-            for o in owners:
-                if self.kinds[o] == "fragile":      # 易碎件不能承重
-                    return False
-                if kind == "fragile" and self.kinds[o] != "standard":
-                    return False
-            total = l * w
-            for o in owners:
-                cells = int((below == o).sum())
-                extra = weight * cells / total
-                cur = self.carried.get(o, 0) + extra
-                area_m2 = self.areas[o] * 1e-4
-                if (self.weights[o] + cur) / area_m2 > MAX_PRESSURE:
-                    return False
-            # C8（题面 P14）：若下方有定向件，本件重心投影须落在其顶面投影内
+            if kind == "fragile" and self.kinds[o] != "standard":
+                return False                        # 易碎件只能落在标准件顶面
+
+        # ---- L3 定向件：上层重心投影不得超出其顶面
+        if lv >= LEVEL_ORIENT:
             cx, cy = x + l / 2.0, y + w / 2.0
             for o in owners:
                 if self.kinds[o] != "oriented":
@@ -129,8 +172,16 @@ class Truck:
                 if not (ob["x"] <= cx <= ob["x"] + ob["l"] and
                         ob["y"] <= cy <= ob["y"] + ob["w"]):
                     return False
-        if self.total_weight + weight > self.spec.cap_weight:
-            return False
+
+        # ---- L4 承重：按接触面积分摊，每 m² 不超过上限
+        if lv >= LEVEL_PRESSURE:
+            total = l * w
+            for o in owners:
+                cells = int((below == o).sum())
+                extra = weight * cells / total
+                cur = self.carried.get(o, 0) + extra
+                if (self.weights[o] + cur) / (self.areas[o] * 1e-4) > MAX_PRESSURE:
+                    return False
         return True
 
     # --- 落子
@@ -162,7 +213,7 @@ class Truck:
 
 
 # ------------------------------------------------------------------ 求解器 1：极值点贪心
-def pack_ep(items, spec, max_trucks=30, ep_cap=1500):
+def pack_ep(items, spec, max_trucks=30, ep_cap=1500, level=None):
     trucks, rest = [], []
     for it in items:
         placed = False
@@ -171,7 +222,7 @@ def pack_ep(items, spec, max_trucks=30, ep_cap=1500):
                 placed = True
                 break
         if not placed and len(trucks) < max_trucks:
-            tr = Truck(spec)
+            tr = Truck(spec, level=level)
             if _ep_one(tr, it, ep_cap):
                 trucks.append(tr)
                 placed = True
@@ -183,7 +234,7 @@ def pack_ep(items, spec, max_trucks=30, ep_cap=1500):
 def _ep_one(tr, it, ep_cap):
     pts = sorted(tr.extremes, key=lambda p: (p[2], p[1], p[0]))[:ep_cap]
     for (x, y, z) in pts:
-        for (l, w, h) in orients(it["kind"], it["dims"]):
+        for (l, w, h) in orients(it["kind"], it["dims"], it.get("allowed")):
             if tr.feasible(x, y, z, l, w, h, it["kind"], it["weight"]):
                 tr.put(it, x, y, z, l, w, h)
                 return True

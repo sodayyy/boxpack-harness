@@ -1,0 +1,57 @@
+[
+ {
+  "level": 0,
+  "name": "L0 刚体",
+  "desc": "不重叠、不越界",
+  "trucks": 2,
+  "first_pct": 89.3,
+  "used_m3": 28.735,
+  "cost": 900,
+  "rest": 0,
+  "seconds": 5.2
+ },
+ {
+  "level": 1,
+  "name": "L1 +支撑",
+  "desc": "不得悬空",
+  "trucks": 2,
+  "first_pct": 89.3,
+  "used_m3": 28.735,
+  "cost": 900,
+  "rest": 0,
+  "seconds": 6.2
+ },
+ {
+  "level": 2,
+  "name": "L2 +易碎",
+  "desc": "单层 / 100% 贴合 / 只落标准件",
+  "trucks": 3,
+  "first_pct": 88.2,
+  "used_m3": 28.735,
+  "cost": 1350,
+  "rest": 0,
+  "seconds": 6.9
+ },
+ {
+  "level": 3,
+  "name": "L3 +定向",
+  "desc": "单一姿态 / 重心不超投影",
+  "trucks": 3,
+  "first_pct": 86.2,
+  "used_m3": 28.735,
+  "cost": 1350,
+  "rest": 0,
+  "seconds": 7.6
+ },
+ {
+  "level": 4,
+  "name": "L4 +承重",
+  "desc": "500 kg/m²",
+  "trucks": 3,
+  "first_pct": 86.2,
+  "used_m3": 28.735,
+  "cost": 1350,
+  "rest": 0,
+  "seconds": 7.2
+ }
+]
