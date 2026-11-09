@@ -1,189 +1,145 @@
 # -*- coding: utf-8 -*-
-"""平台碎片化分析
+"""冻结历史几何布局上的平台诊断，不判定一车全约束可行性。
 
-回答一个问题：L0（纯几何）解明明装下了全部 300 件、只用到 210 cm 高（可用 247），
-为什么 30 件易碎件还是放不进去？
-
-答案是**碎片化**：可用顶面总面积够，但被切成小块，凑不出 70×50。
-
-本脚本量化三件事：
-  1. 各高度的可用顶面面积（按面积排序）
-  2. 可用顶面的碎片分布（平均每块多大）
-  3. 与易碎件需求的差距
-
-用法：
-    py -3.12 experiments/platform_analysis.py
+旧版只检查候选底面切片，且把顶面面积折算成可装件数；两者均不足以
+证明三维可行。现检查完整候选长方体，分别统计重叠候选与贪心非重叠选择。
+宿主布局保留历史构造方式（定向件仍固定姿态），不冒充标准 L0 消融结果。
+用法：从仓库根目录运行 py -3.12 experiments/platform_analysis.py
 """
+import itertools
 import json
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
-from src.pack_lib import LEVEL_RIGID, TRUCKS, Truck, expand_items, orients  # noqa: E402
+from src.pack_lib import LEVEL_RIGID, TRUCKS, Truck, expand_items, orients
 
 OUT = Path("experiments/results/platform_l0.json")
 
 
 def solve_l0(spec, items):
+    """历史宿主构造：几何可行性，保留输入货物姿态规则。"""
     tr = Truck(spec, level=LEVEL_RIGID)
     rest = []
     for it in items:
-        ok = False
-        for (x, y, z) in sorted(tr.extremes, key=lambda p: (p[2], p[1], p[0])):
-            for (l, w, h) in orients(it["kind"], it["dims"], it.get("allowed")):
+        for x, y, z in sorted(tr.extremes, key=lambda p: (p[2], p[1], p[0])):
+            for l, w, h in orients(it["kind"], it["dims"], it.get("allowed")):
                 if tr.feasible(x, y, z, l, w, h, it["kind"], it["weight"]):
                     tr.put(it, x, y, z, l, w, h)
-                    ok = True
                     break
-            if ok:
-                break
-        if not ok:
+            else:
+                continue
+            break
+        else:
             rest.append(it)
     return tr, rest
 
 
-def count_slots(tr, l=70, w=50, need_std_support=False):
-    """统计每个高度上能放 l×w 且上方无占用的位置数。
+def _window_counts(mask, l, w):
+    integral = np.zeros((mask.shape[0] + 1, mask.shape[1] + 1), dtype=np.int32)
+    integral[1:, 1:] = mask.astype(np.int32).cumsum(0).cumsum(1)
+    return (integral[w:, l:] - integral[:-w, l:]
+            - integral[w:, :-l] + integral[:-w, :-l])
 
-    用二维积分图做 O(1) 滑窗求和。need_std_support=True 时额外要求
-    下方一整片都是标准件顶面（题面 C6 的真实约束）。
 
-    注意：位置之间大量重叠，本函数返回的是「可放置位置数」，不是「可放件数」。
+def enumerate_slots(tr, dims=(70, 50, 40), need_std_support=True):
+    """完整三维空位 + 局部支撑；返回互相可能重叠的候选。
+
+    为满足候选易碎件 C5，还排除顶面与既有货物直接接触的位置。
+    不检查宿主布局的全局合法性，也不把候选数量作为最大装载量。
     """
-    occ = tr.own
-    W, L = tr.W, tr.L
-    kind_arr = np.array(
-        [0 if k == "standard" else (1 if k == "oriented" else 2) for k in tr.kinds],
-        dtype=np.int8)
-
-    total, detail = 0, {}
-    for z in range(0, int(tr.h_eff) - 40 + 1):
-        free = (occ[z] == -1)
-        if not free.any():
+    l, w, h = dims
+    if l > tr.L or w > tr.W or h > tr.h_eff:
+        return []
+    heights = sorted({0} | {b["z"] + b["h"] for b in tr.boxes})
+    std_ids = np.array([i for i, k in enumerate(tr.kinds) if k == "standard"])
+    slots = []
+    for z in heights:
+        if z + h > tr.h_eff:
             continue
-        S = np.zeros((W + 1, L + 1), dtype=np.int32)
-        S[1:, 1:] = free.astype(np.int32).cumsum(0).cumsum(1)
-
+        free = ~np.any(tr.own[z:z + h] >= 0, axis=0)
+        valid = _window_counts(free, l, w) == l * w
         if z > 0:
-            below = occ[z - 1]
-            std = np.where(below >= 0, kind_arr[np.clip(below, 0, None)], -1)
-            Sstd = np.zeros((W + 1, L + 1), dtype=np.int32)
-            Sstd[1:, 1:] = (std == 0).astype(np.int32).cumsum(0).cumsum(1)
+            below = tr.own[z - 1]
+            support = np.isin(below, std_ids) if need_std_support else below >= 0
+            counts = _window_counts(support, l, w)
+            valid &= counts == l * w if need_std_support else counts > 0
+        if z + h < tr.H:
+            valid &= _window_counts(tr.own[z + h] >= 0, l, w) == 0
+        ys, xs = np.nonzero(valid)
+        slots.extend((int(x), int(y), z, l, w, h) for y, x in zip(ys, xs))
+    return slots
 
-        cnt = 0
-        for y in range(0, W - w + 1):
-            for x in range(0, L - l + 1):
-                area = S[y + w, x + l] - S[y, x + l] - S[y + w, x] + S[y, x]
-                if area != l * w:
-                    continue
-                if z == 0:
-                    cnt += 1
-                elif not need_std_support:
-                    if std[y:y + w, x:x + l].max() >= 0:
-                        cnt += 1
-                else:
-                    s_area = (Sstd[y + w, x + l] - Sstd[y, x + l]
-                              - Sstd[y + w, x] + Sstd[y, x])
-                    if s_area == l * w:
-                        cnt += 1
-        if cnt:
-            detail[z] = cnt
-        total += cnt
-    return total, detail
+
+def count_slots(tr, l=70, w=50, need_std_support=False):
+    """兼容旧调用；现在检查完整 40 cm 高候选体，而非底面切片。"""
+    slots = enumerate_slots(tr, (l, w, 40), need_std_support)
+    return len(slots), dict(sorted(Counter(p[2] for p in slots).items()))
+
+
+def _conflict(a, b):
+    xy = (a[0] < b[0] + b[3] and b[0] < a[0] + a[3]
+          and a[1] < b[1] + b[4] and b[1] < a[1] + a[4])
+    # 顶面直接接触同样会违反易碎件不承压规则。
+    return xy and a[2] <= b[2] + b[5] and b[2] <= a[2] + a[5]
+
+
+def select_nonoverlapping(slots, limit=30):
+    """确定性贪心选择；返回一个构造，不是最大数的上界或最优证明。"""
+    chosen = []
+    for p in sorted(set(slots), key=lambda s: (s[2], s[1], s[0], s[5], s[4], s[3])):
+        if not any(_conflict(p, q) for q in chosen):
+            chosen.append(p)
+            if len(chosen) == limit:
+                break
+    return chosen
 
 
 def main():
     spec = TRUCKS[1]
-    L, W, H = spec.dims
-    cap = L * W * H
-    floor = L * W
-    base = sorted(expand_items(), key=lambda it: -it["dims"][0] * it["dims"][1] * it["dims"][2])
-
-    frag = [it for it in base if it["kind"] == "fragile"]
-    frag_area = sum(it["dims"][0] * it["dims"][1] for it in frag) / 1e4
-    frag_n = len(frag)
-
+    base = sorted(expand_items(), key=lambda it: -np.prod(it["dims"]))
     tr, rest = solve_l0(spec, base)
-    print(f"L0 解：装入 {len(tr.boxes)}/{len(base)}，占用 {tr.used_volume()/cap*100:.1f}%，"
-          f"最高点 {max(b['z']+b['h'] for b in tr.boxes)} cm（可用 {tr.h_eff:.0f}）")
-    print(f"易碎件需求：{frag_n} 件 × 70×50 = {frag_area:.2f} m²（底面 {floor/1e4:.2f} m² 的 "
-          f"{frag_area/(floor/1e4)*100:.1f}%）\n")
-
-    # 1) 各高度可用顶面
-    occ = tr.own
+    scenarios = {}
+    for label, poses in (
+        ("fixed_70x50x40", [(70, 50, 40)]),
+        ("all_six_orientations", sorted(set(itertools.permutations((70, 50, 40))))),
+    ):
+        slots = [p for pose in poses for p in enumerate_slots(tr, pose, True)]
+        chosen = select_nonoverlapping(slots)
+        scenarios[label] = dict(
+            overlapping_candidates=len(slots),
+            candidates_by_height=dict(sorted(Counter(p[2] for p in slots).items())),
+            greedy_selected=len(chosen),
+            selected_xyz_lwh=[list(p) for p in chosen],
+            status="greedy_construction_on_frozen_host_not_global_optimum",
+        )
+        print(f"{label}: 重叠候选 {len(slots)}；非重叠贪心选择 {len(chosen)}")
     tops = defaultdict(int)
-    cnt_by_z = defaultdict(int)
     for b in tr.boxes:
-        zt = b["z"] + b["h"]
-        cnt_by_z[zt] += 1
-        if zt < H:
-            above = occ[zt, b["y"]:b["y"] + b["w"], b["x"]:b["x"] + b["l"]]
-            tops[zt] += int((above == -1).sum())
-        else:
-            tops[zt] += b["l"] * b["w"]
-
-    ranked = sorted(tops.items(), key=lambda kv: -kv[1])
-    print("可用顶面最大的 10 个高度：")
-    print(f"{'z(cm)':>6}{'面积(m²)':>10}{'占底面':>8}{'该高度箱数':>10}")
-    for zt, area in ranked[:10]:
-        print(f"{zt:>6}{area/1e4:>10.2f}{area/floor*100:>7.1f}%{cnt_by_z[zt]:>10}")
-
-    # 2) 碎片分布
-    areas = [b["l"] * b["w"] for b in tr.boxes]
-    areas.sort(reverse=True)
-    need = 70 * 50
-    big = [a for a in areas if a >= need]
-    print(f"\n顶面碎片分布（全部 {len(areas)} 个箱子顶面）：")
-    print(f"  平均每块 {sum(areas)/len(areas)/1e4:.3f} m²")
-    print(f"  ≥0.35 m²（能单件承载易碎件）的顶面：{len(big)} 个，合计 {sum(big)/1e4:.2f} m²")
-    print(f"  <0.35 m² 的顶面：{len(areas)-len(big)} 个")
-
-    largest = ranked[0][1] if ranked else 0
-    print(f"\n诊断：")
-    print(f"  最大单层平台 {largest/1e4:.2f} m²，需求 {frag_area:.2f} m² → 差 {frag_area/(largest/1e4):.1f} 倍")
-    tot_top4 = sum(a for _, a in ranked[:4]) / 1e4
-    print(f"  前 4 个高度合计 {tot_top4:.2f} m² ≥ 需求 {frag_area:.2f} m² → 面积够")
-    print(f"  但这些面积分散在 {sum(cnt_by_z[z] for z, _ in ranked[:4])} 个箱子上，平均 "
-          f"{tot_top4/max(sum(cnt_by_z[z] for z, _ in ranked[:4]),1):.3f} m²/块 < 0.35 m² → 拼不出")
-    print("  结论：瓶颈是碎片化，不是面积")
-
-    # 4) 解空间诊断：合规位置数
-    t_all, d_all = count_slots(tr, need_std_support=False)
-    t_std, d_std = count_slots(tr, need_std_support=True)
-    print(f"\n解空间诊断（在 L0 解的空位上枚举 70×50 位置）：")
-    print(f"  几何上能放（任何支撑）        {t_all:>7} 个，前 3 高度 "
-          f"{sorted(d_all.items(), key=lambda kv: -kv[1])[:3]}")
-    print(f"  下方 100% 为标准件顶面（C6）  {t_std:>7} 个，前 3 高度 "
-          f"{sorted(d_std.items(), key=lambda kv: -kv[1])[:3]}")
-    top_slots = sorted(d_std.items(), key=lambda kv: -kv[1])
-    carry = sum(a for _, a in ranked[:4]) / 1e4 / (70 * 50 / 1e4)
-    print(f"  前 4 个平台按面积折算可承载 {carry:.0f} 件（需 {frag_n} 件）")
-    print(f"  但带约束独立求解只装入 3 件 → 搜索走不到，不是解不存在")
-
+        z = b["z"] + b["h"]
+        if z < tr.H:
+            tops[z] += int((tr.own[z, b["y"]:b["y"] + b["w"],
+                                     b["x"]:b["x"] + b["l"]] == -1).sum())
     out = dict(
-        slots=dict(geometric=t_all,
-                   std_support=t_std,
-                   std_by_height={int(k): v for k, v in top_slots[:6]},
-                   carry_estimate=round(carry, 1)),
-        l0=dict(in_=len(tr.boxes), total=len(base),
-                occ=tr.used_volume() / cap,
-                max_height=max(b["z"] + b["h"] for b in tr.boxes)),
-        need=dict(n=frag_n, area_m2=frag_area, pct_floor=frag_area / (floor / 1e4) * 100),
-        top_heights=[dict(z=z, area_m2=round(a / 1e4, 2), pct=round(a / floor * 100, 1),
-                          boxes=cnt_by_z[z]) for z, a in ranked[:10]],
-        fragmentation=dict(total_tops=len(areas), avg_m2=sum(areas) / len(areas) / 1e4,
-                           ge_035=len(big), ge_035_area_m2=sum(big) / 1e4),
-        verdict=dict(max_single_platform_m2=largest / 1e4,
-                     gap_ratio=round(frag_area / (largest / 1e4), 2) if largest else None,
-                     top4_area_m2=round(tot_top4, 2)),
+        schema_version=2,
+        host=dict(description="historical_geometry_host_orientation_rules_retained",
+                  in_=len(tr.boxes), total=len(base), rest=len(rest),
+                  occ=tr.used_volume() / np.prod(spec.dims).item(),
+                  max_height=max(b["z"] + b["h"] for b in tr.boxes)),
+        scenarios=scenarios,
+        exposed_top_areas_m2={int(z): a / 1e4 for z, a in sorted(tops.items())},
+        legacy=dict(slice_candidates=7602, area_equivalent_items=39,
+                    status="withdrawn_not_a_3d_packing_certificate"),
+        conclusion="局部候选与贪心选择仅用于诊断；一车全约束可行性仍未判定。",
+        limitations=["宿主保留既有易碎件，新增候选不是 300 件货物的迁移解。",
+                     "未证明选择数最优，不可作为全局容量上界。",
+                     "未验证宿主的 L1-L4、承重与载荷链。"],
     )
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"\n结果已写入 {OUT}")
+    OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"结果已写入 {OUT}；已撤销面积折算和全局可行性断言。")
 
 
 if __name__ == "__main__":

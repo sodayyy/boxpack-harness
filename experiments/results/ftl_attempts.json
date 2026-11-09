@@ -14,8 +14,8 @@
   "refill_leftover": true,
   "g4_floor": 32,
   "g4_total": 40,
-  "platforms": 32,
-  "platform_top_z": [
+  "g4_geometric_tops": 32,
+  "g4_top_z": [
    50
   ],
   "other_in": 238,
@@ -31,8 +31,8 @@
   "refill_leftover": false,
   "g4_floor": 32,
   "g4_total": 40,
-  "platforms": 32,
-  "platform_top_z": [
+  "g4_geometric_tops": 32,
+  "g4_top_z": [
    50
   ],
   "other_in": 230,
@@ -104,7 +104,8 @@
    "total": 300,
    "fragile_in": 3,
    "occ": 0.5991596638655462,
-   "trucks": 2
+   "remaining": 27,
+   "fleet_status": "first_truck_only_fleet_not_solved"
   },
   {
    "order": "高度降序→体积",
@@ -112,7 +113,8 @@
    "total": 300,
    "fragile_in": 2,
    "occ": 0.5957983193277311,
-   "trucks": 2
+   "remaining": 28,
+   "fleet_status": "first_truck_only_fleet_not_solved"
   },
   {
    "order": "高度升序→体积",
@@ -120,7 +122,8 @@
    "total": 300,
    "fragile_in": 30,
    "occ": 0.42945978391356543,
-   "trucks": 2
+   "remaining": 62,
+   "fleet_status": "first_truck_only_fleet_not_solved"
   },
   {
    "order": "底面积降序",
@@ -128,7 +131,8 @@
    "total": 300,
    "fragile_in": 3,
    "occ": 0.5991596638655462,
-   "trucks": 2
+   "remaining": 27,
+   "fleet_status": "first_truck_only_fleet_not_solved"
   }
  ],
  "finding": {

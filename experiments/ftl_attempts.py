@@ -4,11 +4,13 @@
 逐步逼近「易碎件单层约束下，一辆车型 2 能否装完 300 件」这个问题：
 
   尝试 1  两阶段：先装完非易碎件，再装易碎件
-  尝试 2  平台优先：G4（80×60，顶面恰好 ≥ 70×50）只铺底层
-  尝试 3  排序扫描：四条排序在 L0（刚体）下的平台面积
+  尝试 2  历史平台优先尝试：G4只铺底，顶面不能直接满足易碎件C6
+  尝试 3  排序扫描：四条排序在保留定向姿态的历史几何模式下的裸露顶面
   尝试 4  排序 × 约束交叉：四条排序在 L4（全约束）下的易碎件装入数
 
-结论见 docs/05。核心发现：**「装完易碎件」与「装完货物」在贪心框架下互斥**。
+结论见 docs/05。已测四条排序存在装载权衡，不构成一般互斥定理。
+几何模式保留定向件姿态，不能替代 apply_level 放开姿态的标准 L0。
+G4 是定向件，其几何顶面不能直接作为 C6 标准件支撑面。
 
 用法：
     py -3.12 experiments/ftl_attempts.py
@@ -46,7 +48,7 @@ def place_all(tr, items, only_z=None):
 
 
 def top_coverage(tr):
-    """各精确高度上的可用顶面面积（cm²），只算上方为空的格子。"""
+    """各高度上紧邻上方切片为空的裸露面积（cm²），非完整净空或合法支撑容量。"""
     from collections import defaultdict
     tops = defaultdict(int)
     H = tr.H
@@ -127,7 +129,7 @@ def attempt2(base, spec, refill_leftover_g4=True):
         name="平台优先（G4 铺底）" + ("" if refill_leftover_g4 else "，放弃剩余 G4"),
         refill_leftover=refill_leftover_g4,
         g4_floor=n_platform, g4_total=len(g4),
-        platforms=n_platform, platform_top_z=sorted(top_z),
+        g4_geometric_tops=n_platform, g4_top_z=sorted(top_z),
         other_in=len(pending) - len(r_other), other_total=len(pending),
         abandoned=len(r_other) + (0 if refill_leftover_g4 else len(r_g4)),
         fragile_in=len(frag) - len(r_f), fragile_total=len(frag),
@@ -136,7 +138,7 @@ def attempt2(base, spec, refill_leftover_g4=True):
 
 
 def attempt3(base, spec):
-    """排序扫描：L0 刚体下的平台面积。"""
+    """排序扫描：历史几何模式裸露顶面，保留定向姿态，非正式L0。"""
     rows = []
     for tag, key in ORDERS:
         tr = Truck(spec, level=LEVEL_RIGID)
@@ -162,7 +164,8 @@ def attempt4(base, spec):
             order=tag, in_=len(tr.boxes), total=len(base),
             fragile_in=n_frag,
             occ=tr.used_volume() / (spec.dims[0] * spec.dims[1] * spec.dims[2]),
-            trucks=1 if not rest else 2,
+            remaining=len(rest),
+            fleet_status="one_truck_complete" if not rest else "first_truck_only_fleet_not_solved",
         ))
     return rows
 
@@ -186,29 +189,29 @@ def main():
     print(f"[1] {r1['name']}")
     print(f"    非易碎 {r1['nonfragile_in']}/{r1['nonfragile_total']}  易碎 {r1['fragile_in']}/{r1['fragile_total']}"
           f"  最高 {r1['max_height']} cm  占用 {r1['occ']*100:.1f}%")
-    print(f"    最大单层平台 {r1['best_top_m2']:.2f} m²（需 {frag_area:.2f}）\n")
+    print(f"    最大同高裸露顶面 {r1['best_top_m2']:.2f} m²（非合法平台容量；固定姿态底面合计 {frag_area:.2f}）\n")
 
     print("[2] 平台优先（G4 铺底）")
     r2a = attempt2(base, spec, refill_leftover_g4=True)
     r2b = attempt2(base, spec, refill_leftover_g4=False)
     out["attempt2_platform_first"] = r2a
     out["attempt2_abandon_leftover"] = r2b
-    print(f"    G4 铺底 {r2a['g4_floor']}/{r2a['g4_total']}，平台 {r2a['platforms']} 个，"
-          f"顶面 z={r2a['platform_top_z']}")
+    print(f"    G4 铺底 {r2a['g4_floor']}/{r2a['g4_total']}，几何顶面 {r2a['g4_geometric_tops']} 个，"
+          f"顶面 z={r2a['g4_top_z']}（G4非标准件，不能直接满足C6）")
     print(f"    变体 a（剩余 G4 参与后续装填，公平对比）："
           f"装入 {r2a['total_in']}/300，易碎 {r2a['fragile_in']}/30，占 {r2a['occ']*100:.1f}%")
     print(f"    变体 b（放弃剩余 {r2b['abandoned']} 件 G4，换平台）："
           f"装入 {r2b['total_in']}/300，易碎 {r2b['fragile_in']}/30，占 {r2b['occ']*100:.1f}%")
     print(f"    → 牺牲 {r2b['abandoned']} 件 G4（{r2b['abandoned']*0.24:.2f} m³），"
           f"易碎件从 {r2a['fragile_in']} 提到 {r2b['fragile_in']} 件（+{r2b['fragile_in']-r2a['fragile_in']}）")
-    print(f"    → 但两者都只装 280/300 件，仍需 2 辆；易碎件 18/30 仍未装完\n")
+    print("    → 两种变体均为首车部分装载；未求解剩余件的车队方案。\n")
 
     r3 = attempt3(base, spec)
     out["attempt3_order_l0"] = r3
-    print("[3] L0 刚体：排序对平台面积的影响")
+    print("[3] 历史几何模式（保留定向姿态）：排序对裸露顶面的影响")
     for r in r3:
         print(f"    {r['order']:<16} {r['in_']}/{r['total']}  占 {r['occ']*100:5.1f}%  "
-              f"最高 {r['max_height']:>3}  前4平台 {r['top4_m2']}")
+              f"最高 {r['max_height']:>3}  前4同高裸露面积 {r['top4_m2']}")
     print()
 
     r4 = attempt4(base, spec)
@@ -216,7 +219,7 @@ def main():
     print("[4] L4 全约束：排序对易碎件装入数的影响")
     for r in r4:
         print(f"    {r['order']:<16} {r['in_']:>3}/{r['total']}  易碎 {r['fragile_in']:>2}/30  "
-              f"占 {r['occ']*100:5.1f}%  需 {r['trucks']} 辆")
+              f"占 {r['occ']*100:5.1f}%  未装 {r['remaining']} 件（未求解完整车队）")
     print()
 
     # 核心发现
@@ -227,7 +230,7 @@ def main():
           f"但只装 {best_frag['in_']}/300 件（{best_frag['occ']*100:.1f}%）")
     print(f"  货物装得最多的排序 = {best_total['order']}（{best_total['in_']}/300），"
           f"但易碎件只进 {best_total['fragile_in']}/30")
-    print("  → 两个目标在贪心框架下互斥，无一排序同时达成")
+    print("  → 当前四种排序未同时达成；不是一般互斥定理，也未穷尽搜索。")
 
     out["finding"] = dict(
         best_fragile_order=best_frag["order"], best_fragile=best_frag["fragile_in"],

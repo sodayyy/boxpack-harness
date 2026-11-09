@@ -1,45 +1,33 @@
-# Lean 4 形式化
+# Lean 4：算术内核，而非三维装载证明
 
-本目录把报告里引用的两条关键不等式做成了机器可验证的定理。
+环境锁定 `leanprover/lean4:v4.36.0-rc2`，不依赖 Mathlib。
 
-## 文件
-
-| 文件 | 内容 |
-|---|---|
-| `Boxpack.lean` | 4 条定理（2,391 B） |
-| `lakefile.toml` | 构建配置 |
-| `lean-toolchain` | 版本锁定：`leanprover/lean4:v4.36.0-rc2` |
-
-## 4 条定理
-
-| 定理 | 陈述 | 作用 |
+| 声明 | 实际证明内容 | 不能推出 |
 |---|---|---|
-| `total_le` | 若每个箱子的体积和 ≤ C，则总体积 ≤ 箱数 × C | 「车辆数下界」的算术内核 |
-| `capacity_bounds_total` | 同上，报告直接引用的形式 | 指标合法性 |
-| `fragile_on_floor_infeasible` | `680×245×250 − 30×70×50×(247−40) < 28,735,000` | **易碎件铺底时一辆车型 2 装不下** |
-| `fragile_on_top_feasible` | `28,735,000 ≤ 680×245×250 − 30×70×50×3` | 对照组：置顶可行 |
+| `total_le` | 每箱体积和 ≤ C，则总体积 ≤ 箱数 × C | 几何容量假设自动成立 |
+| `capacity_bounds_total` | 上述结论的直接引用形式 | 一般三维最优性 |
+| `floor_shadow_capacity_insufficient` | `680×245×247 - 30×70×50×207 < 28,735,000` | 当前 C5 下所有铺底布局必然无解 |
+| `effective_capacity_not_ruled_out` | `28,735,000 ≤ 680×245×247` | 置顶可行或一车全约束可行 |
 
-第三条是核心：`41,650,000 − 105,000 × 207 = 19,915,000 < 28,735,000`。它把「易碎件垂直位置决定可行性」这一实验观察变成了机器验证的不可能性结论。
+## 修正说明
 
-## 怎么验证
+旧名称 `fragile_on_floor_infeasible` 和 `fragile_on_top_feasible` 容易让数值不等式冒充几何证明，本次已替换。比较使用 247 cm 有效高度，而非 250 cm 标称高度。
+
+铺底阴影柱计算为 `41,150,200 - 21,735,000 = 19,415,200 cm³`。该容量上界的几何解释要求：固定 70×50×40 姿态、全部铺底、每件正上方整柱不可用。**整柱留空是额外假设**；当前校验器只禁止直接压在易碎件上，允许由其他货物支撑的无接触跨接。因此 Lean 这里只验证数值，不证明当前 C5 蕴含该容量上界。
+
+旧名称不保留为别名，避免下游继续引用“置顶可行”；历史版本可从 `v0.3-ftl` 取得。
+
+## 复核
+
+从本目录执行：
 
 ```bash
-export ELAN_HOME="D:\Lean\elan"
+export ELAN_HOME="D:/Lean/elan"
 export PATH="/d/Lean/elan/bin:$PATH"
-cd lean
+lake env lean Boxpack.lean
 lake build
 ```
 
-预期输出：`Build completed successfully`。
+文件含四个 `#print axioms`，用于查看声明的真实依赖；无 `sorry`/`admit` 和新增公理。以本次实际构建输出为准。
 
-**不依赖 Mathlib**——纯 `List` / `Nat` / `omega` / `decide`。这意味着验证可在数秒内、无网络环境下完成，也不需要下载 5–15 GB 的 Mathlib。
-
-## 证明要点（给后来者）
-
-- `omega` 不认变量乘变量：证 `(n+1)*C` 前需先 `rw [Nat.add_mul, Nat.one_mul]` 展开成 `n*C + C`
-- `one_mul` 必须写 `Nat.one_mul`（无前缀版在 Mathlib 里，核心库没有）
-- 具体数值不等式用 `decide` 直接判定，无需手工推导
-
-## 未形式化的部分
-
-**三维几何约束不做形式化。** 理由：Mathlib 无三维装箱基础，从零构造代价远超本项目预算；该部分由 `src/constraints.py` 的几何校验承担。报告中需明确这一边界。
+三维几何、支撑、姿态和承重仍由独立 Python 校验器检查，尚未形式化。
