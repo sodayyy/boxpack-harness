@@ -1,0 +1,142 @@
+{
+ "attempt1_two_phase": {
+  "name": "两阶段（非易碎先装）",
+  "nonfragile_in": 270,
+  "nonfragile_total": 270,
+  "fragile_in": 1,
+  "fragile_total": 30,
+  "max_height": 180,
+  "occ": 0.592436974789916,
+  "best_top_m2": 3.4475
+ },
+ "attempt2_platform_first": {
+  "name": "平台优先（G4 铺底）",
+  "refill_leftover": true,
+  "g4_floor": 32,
+  "g4_total": 40,
+  "platforms": 32,
+  "platform_top_z": [
+   50
+  ],
+  "other_in": 238,
+  "other_total": 238,
+  "abandoned": 0,
+  "fragile_in": 10,
+  "fragile_total": 30,
+  "total_in": 280,
+  "occ": 0.6226890756302521
+ },
+ "attempt2_abandon_leftover": {
+  "name": "平台优先（G4 铺底），放弃剩余 G4",
+  "refill_leftover": false,
+  "g4_floor": 32,
+  "g4_total": 40,
+  "platforms": 32,
+  "platform_top_z": [
+   50
+  ],
+  "other_in": 230,
+  "other_total": 230,
+  "abandoned": 8,
+  "fragile_in": 18,
+  "fragile_total": 30,
+  "total_in": 280,
+  "occ": 0.6034813925570228
+ },
+ "attempt3_order_l0": [
+  {
+   "order": "体积降序",
+   "in_": 300,
+   "total": 300,
+   "occ": 0.6899159663865546,
+   "max_height": 210,
+   "top4_m2": [
+    4.22,
+    3.85,
+    3.0,
+    2.65
+   ]
+  },
+  {
+   "order": "高度降序→体积",
+   "in_": 300,
+   "total": 300,
+   "occ": 0.6899159663865546,
+   "max_height": 195,
+   "top4_m2": [
+    5.25,
+    4.9,
+    2.79,
+    1.68
+   ]
+  },
+  {
+   "order": "高度升序→体积",
+   "in_": 300,
+   "total": 300,
+   "occ": 0.6899159663865546,
+   "max_height": 205,
+   "top4_m2": [
+    7.2,
+    4.32,
+    1.33,
+    1.28
+   ]
+  },
+  {
+   "order": "底面积降序",
+   "in_": 300,
+   "total": 300,
+   "occ": 0.6899159663865546,
+   "max_height": 225,
+   "top4_m2": [
+    7.36,
+    2.77,
+    2.75,
+    1.44
+   ]
+  }
+ ],
+ "attempt4_order_l4": [
+  {
+   "order": "体积降序",
+   "in_": 273,
+   "total": 300,
+   "fragile_in": 3,
+   "occ": 0.5991596638655462,
+   "trucks": 2
+  },
+  {
+   "order": "高度降序→体积",
+   "in_": 272,
+   "total": 300,
+   "fragile_in": 2,
+   "occ": 0.5957983193277311,
+   "trucks": 2
+  },
+  {
+   "order": "高度升序→体积",
+   "in_": 238,
+   "total": 300,
+   "fragile_in": 30,
+   "occ": 0.42945978391356543,
+   "trucks": 2
+  },
+  {
+   "order": "底面积降序",
+   "in_": 273,
+   "total": 300,
+   "fragile_in": 3,
+   "occ": 0.5991596638655462,
+   "trucks": 2
+  }
+ ],
+ "finding": {
+  "best_fragile_order": "高度升序→体积",
+  "best_fragile": 30,
+  "best_fragile_total": 238,
+  "best_total_order": "体积降序",
+  "best_total": 273,
+  "best_total_fragile": 3
+ }
+}

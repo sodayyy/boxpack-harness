@@ -1,0 +1,95 @@
+{
+ "slots": {
+  "geometric": 117756,
+  "std_support": 7602,
+  "std_by_height": {
+   "175": 5901,
+   "195": 1701
+  },
+  "carry_estimate": 39.2
+ },
+ "l0": {
+  "in_": 300,
+  "total": 300,
+  "occ": 0.6899159663865546,
+  "max_height": 210
+ },
+ "need": {
+  "n": 30,
+  "area_m2": 10.5,
+  "pct_floor": 63.02521008403361
+ },
+ "top_heights": [
+  {
+   "z": 195,
+   "area_m2": 4.22,
+   "pct": 25.4,
+   "boxes": 31
+  },
+  {
+   "z": 175,
+   "area_m2": 3.85,
+   "pct": 23.1,
+   "boxes": 28
+  },
+  {
+   "z": 180,
+   "area_m2": 3.0,
+   "pct": 18.0,
+   "boxes": 13
+  },
+  {
+   "z": 185,
+   "area_m2": 2.65,
+   "pct": 15.9,
+   "boxes": 16
+  },
+  {
+   "z": 100,
+   "area_m2": 1.44,
+   "pct": 8.6,
+   "boxes": 11
+  },
+  {
+   "z": 200,
+   "area_m2": 1.14,
+   "pct": 6.8,
+   "boxes": 7
+  },
+  {
+   "z": 150,
+   "area_m2": 0.68,
+   "pct": 4.1,
+   "boxes": 49
+  },
+  {
+   "z": 90,
+   "area_m2": 0.6,
+   "pct": 3.6,
+   "boxes": 31
+  },
+  {
+   "z": 50,
+   "area_m2": 0.26,
+   "pct": 1.6,
+   "boxes": 35
+  },
+  {
+   "z": 160,
+   "area_m2": 0.25,
+   "pct": 1.5,
+   "boxes": 22
+  }
+ ],
+ "fragmentation": {
+  "total_tops": 300,
+  "avg_m2": 0.23515833333333336,
+  "ge_035": 64,
+  "ge_035_area_m2": 27.6
+ },
+ "verdict": {
+  "max_single_platform_m2": 4.225,
+  "gap_ratio": 2.49,
+  "top4_area_m2": 13.72
+ }
+}
