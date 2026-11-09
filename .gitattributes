@@ -1,0 +1,9 @@
+# 统一换行符，避免 Windows / Linux 之间的 CRLF 噪音
+* text=auto
+*.py    text eol=lf
+*.md    text eol=lf
+*.csv   text eol=lf
+*.lean  text eol=lf
+*.toml  text eol=lf
+*.json  text eol=lf
+*.txt   text eol=lf

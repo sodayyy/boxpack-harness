@@ -1,0 +1,10 @@
+name = "boxpack"
+version = "0.1.0"
+defaultTargets = ["Boxpack"]
+
+[[lean_lib]]
+name = "Boxpack"
+
+[[lean_exe]]
+name = "boxpack"
+root = "Main"
