@@ -10,7 +10,7 @@
 - 独立约束校验器；
 - OR-Library 外部校准；
 - Lean 对部分算术结论的形式化核验；
-- 已运行的互斥空间分区 + Beam 组件、小规模整数网格 L0 裁判，以及待接入的作者强基线和块构造。
+- 已运行的互斥空间分区 + Beam 组件、小规模整数网格 L0 裁判、Guesser作者几何基线，以及待完成的块构造与完整约束强搜索。
 
 > 当前最重要的结论必须限定范围：在固定 EP + First-Fit、固定排序和当前附件 1 算例下，L2 易碎规则组合（C5/C6）是车辆数的主要跳变层；这不等于已经证明所有算法都需要增加一辆车，也不等于已经证明车型 2 一辆车在全约束下无解。
 
@@ -198,7 +198,7 @@ OR-Library `thpack1` 共 100 个单容器算例：
 
 **以上为历史记录，不能继续称作已核实的纯几何 100 例校准。** 2026-11-10 发现旧脚本 `Truck(spec, clearance=0)` 隐含默认 L4，实际还启用支撑和旧承重。现已显式设为 `level=0`，新结果另存 `thpack1_ep_pure_geometry_v2.json`，不覆写历史。新前三例为 84.4% / 91.0% / 82.3%，平均 85.9%，身份、姿态、几何和体积核验均通过。**显式L0全100例已实际重跑：平均81.9615%（约82.0%），中位82.5090%，范围67.2759%–92.1445%，100例逐件布局身份/姿态/几何/指标独立核验均0违规。** 与旧记录相比仅第33、54、58、90例变化，总均值增加0.0666个百分点。这是约束口径修正，不是算法改进。此次约516秒包含几何复核，环境与历史耗时不同，不作速度优劣比较。
 
-Guesser文献数字涉及不同数据范围和时间预算，不能与历史81.9%直接相减。本机已完成固定源码的Linux Release构建，作者示例及thpack1前三例在单核5秒预算下运行并独立核验通过；前三例ISD为94.7397%、97.1988%、92.2626%。前10例5秒/30秒开发实验已完成：平均ISD为95.1806%/95.2641%，20次全部独立核验通过，107个文件哈希读回一致。尚非论文全文复现或完整强基线比较；同平台EP/B2和冻结90例仍待运行。详见[`docs/07-作者基线复现记录.md`](docs/07-作者基线复现记录.md)。
+Guesser文献数字涉及不同数据范围和时间预算，不能与历史81.9%直接相减。本机已完成固定源码的Linux Release构建，作者示例及thpack1前三例在单核5秒预算下运行并独立核验通过；前三例ISD为94.7397%、97.1988%、92.2626%。前10例5秒/30秒开发实验已完成：平均ISD为95.1806%/95.2641%，20次全部独立核验通过，107个文件哈希读回一致。尚非论文全文复现或完整强基线比较。2026-11-11完成同Linux/CPU0的前10例组件校准：EP平均81.2390%、B2平均78.8924%，平均求解CPU为0.9136秒/1.1704秒，20次独立核验通过；不同停止规则不构成等时间预算排名。冻结参数第11–20例的5秒/30秒共20次也全部通过，均值95.5497%/95.8249%，增加0.2751个百分点；其余第21–100例仍未运行。详见[`docs/07-作者基线复现记录.md`](docs/07-作者基线复现记录.md)。
 
 ### 5.3 易碎件平台诊断的修正
 
@@ -277,6 +277,9 @@ py -3.12 experiments/bench_thpack.py --verify
 py -3.12 experiments/verify_mes_result.py experiments/results/thpack1_ep_pure_geometry_v2.json
 py -3.12 experiments/bench_mes_beam.py --instances 3 --beam-width 8 --space-cap 80
 py -3.12 experiments/test_mes_beam.py
+python experiments/verify_linux_components.py experiments/results/linux_components_dev10_v1
+python experiments/verify_guesser_evidence.py experiments/results/guesser_frozen11_20_v1
+python experiments/summarize_author_comparison.py
 py -3.12 experiments/verify_mes_result.py experiments/results/thpack1_b2_final_w8_s80.json
 py -3.12 experiments/bench_small_l0.py
 py -3.12 experiments/ablation_mes_score.py

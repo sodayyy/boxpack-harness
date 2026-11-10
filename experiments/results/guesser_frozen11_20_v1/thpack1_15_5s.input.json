@@ -1,0 +1,70 @@
+{
+  "type": "input",
+  "version": "0.8.0",
+  "large_object": {
+    "measurement": {
+      "x": 587,
+      "y": 233,
+      "z": 220
+    }
+  },
+  "small_items": [
+    {
+      "profit": 162800,
+      "quantity": 32,
+      "measurement": {
+        "x": 100,
+        "y": 44,
+        "z": 37
+      },
+      "constraint": {
+        "orientation": {
+          "xyz": true,
+          "yxz": true,
+          "zyx": false,
+          "xzy": true,
+          "zxy": true,
+          "yzx": false
+        }
+      }
+    },
+    {
+      "profit": 386100,
+      "quantity": 49,
+      "measurement": {
+        "x": 90,
+        "y": 78,
+        "z": 55
+      },
+      "constraint": {
+        "orientation": {
+          "xyz": true,
+          "yxz": true,
+          "zyx": true,
+          "xzy": true,
+          "zxy": true,
+          "yzx": true
+        }
+      }
+    },
+    {
+      "profit": 155610,
+      "quantity": 38,
+      "measurement": {
+        "x": 65,
+        "y": 57,
+        "z": 42
+      },
+      "constraint": {
+        "orientation": {
+          "xyz": true,
+          "yxz": true,
+          "zyx": true,
+          "xzy": true,
+          "zxy": true,
+          "yzx": true
+        }
+      }
+    }
+  ]
+}

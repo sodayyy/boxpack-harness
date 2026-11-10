@@ -9,3 +9,5 @@
 *.txt   text eol=lf
 # Evidence hashes must survive checkout without newline conversion.
 experiments/results/guesser_dev10_5s30s_v1/** -text
+experiments/results/linux_components_dev10_v1/** -text whitespace=cr-at-eol
+experiments/results/guesser_frozen11_20_v1/** -text

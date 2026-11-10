@@ -1,0 +1,18 @@
+{
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "numpy": "1.26.4",
+  "cpu_affinity": 0,
+  "started_utc": "2026-11-10T18:32:11.194592+00:00",
+  "source_sha256": "d6f0b99b4cc6e51c5753565b175a778a40422dc92cffee3204bf16cc1d23f341",
+  "thread_env": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "command": [
+    "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/bench_linux_components.py",
+    "--output-dir",
+    "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/linux_components_dev10_v1"
+  ],
+  "scope": "first10 development; config calibration, not equal CPU budgets"
+}

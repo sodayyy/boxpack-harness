@@ -1,0 +1,121 @@
+{
+  "scope": "R4 same-Linux configuration calibration and first frozen batch; not equal-time ranking",
+  "source_sha256": "d6f0b99b4cc6e51c5753565b175a778a40422dc92cffee3204bf16cc1d23f341",
+  "logical_cpu": 0,
+  "evidence_checks": {
+    "guesser_dev10_5s30s_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "linux_components_dev10_v1": {
+      "runs": 20,
+      "hashed_files": 31,
+      "summary_by_method": {
+        "ep": {
+          "n": 10,
+          "mean_isd": 0.812390183059806,
+          "min_isd": 0.6932091531897047,
+          "max_isd": 0.910012788463264,
+          "mean_solve_cpu_seconds": 0.9135894674999998,
+          "mean_solve_wall_seconds": 0.8981091034000002
+        },
+        "b2": {
+          "n": 10,
+          "mean_isd": 0.7889243067875235,
+          "min_isd": 0.6023095007514219,
+          "max_isd": 0.8615223455796385,
+          "mean_solve_cpu_seconds": 1.1703830833,
+          "mean_solve_wall_seconds": 1.120934230500002
+        }
+      },
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen11_20_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    }
+  },
+  "guesser_summary_by_bundle": {
+    "guesser_dev10_5s30s_v1": {
+      "5": {
+        "n": 10,
+        "mean_isd": 0.9518057157252235,
+        "min_isd": 0.9226262079747102,
+        "max_isd": 0.9776145394990033,
+        "mean_process_cpu_seconds": 5.0084585,
+        "mean_wall_seconds": 4.9044678662
+      },
+      "30": {
+        "n": 10,
+        "mean_isd": 0.9526406614639866,
+        "min_isd": 0.9239210398801979,
+        "max_isd": 0.9776145394990033,
+        "mean_process_cpu_seconds": 30.0111426,
+        "mean_wall_seconds": 29.650310721199986
+      }
+    },
+    "guesser_frozen11_20_v1": {
+      "5": {
+        "n": 10,
+        "mean_isd": 0.9554972977392204,
+        "min_isd": 0.9115996812189718,
+        "max_isd": 0.9789036883815748,
+        "mean_process_cpu_seconds": 5.0110106,
+        "mean_wall_seconds": 4.869294246100004
+      },
+      "30": {
+        "n": 10,
+        "mean_isd": 0.9582487449160209,
+        "min_isd": 0.9138682376181554,
+        "max_isd": 0.9821980470341599,
+        "mean_process_cpu_seconds": 30.0122536,
+        "mean_wall_seconds": 29.264946418
+      }
+    }
+  },
+  "budget_changes": {
+    "guesser_dev10_5s30s_v1": {
+      "n": 10,
+      "mean_gain_percentage_points": 0.0834945738763071,
+      "improved": 5,
+      "unchanged": 5,
+      "decreased": 0
+    },
+    "guesser_frozen11_20_v1": {
+      "n": 10,
+      "mean_gain_percentage_points": 0.2751447176800492,
+      "improved": 5,
+      "unchanged": 5,
+      "decreased": 0
+    }
+  },
+  "historical_layout_overlap": {
+    "ep": {
+      "overlap_n": 10,
+      "identical_isd_n": 10,
+      "identical_box_lists_n": 10
+    },
+    "b2": {
+      "overlap_n": 3,
+      "identical_isd_n": 3,
+      "identical_box_lists_n": 3
+    }
+  },
+  "evidence_hash_manifests_sha256": {
+    "guesser_dev10_5s30s_v1": "d228173ab3ec5c28db13c0f4abfbe4b7b1b5d6dfe3e6c7bf765916119204a65e",
+    "linux_components_dev10_v1": "9e7c072be5ff6d61be18fce534f162a10615bc699a691dd4ce8690b50ecd4cba",
+    "guesser_frozen11_20_v1": "87e31324c4736e7dc42f1bc1c58797177b66b3068b32927a5e154606ff8118b8"
+  },
+  "limitations": [
+    "EP stops after one deterministic construction; B2 uses w8/s80 state budget.",
+    "Guesser uses author CPU-time limits, not strict wall-time limits.",
+    "Rows 1-10 are development; rows 11-20 are frozen-parameter comparison, not unseen blind testing.",
+    "No confidence interval, general monotonicity or optimality proof from single runs.",
+    "Pure geometry only; no fragile/support/pressure or multi-vehicle conclusion."
+  ]
+}

@@ -48,11 +48,34 @@ def output_errors(inst, payload, adapted):
     return errors
 
 
+def select_instances(instances, start_index, count, split):
+    """Use 1-based source-row indices; never infer a frozen split from pid text."""
+    if (isinstance(start_index, bool) or isinstance(count, bool)
+            or not isinstance(start_index, int) or not isinstance(count, int)
+            or start_index < 1 or count < 1):
+        raise ValueError("start index and count must be positive integers")
+    if split not in ("development", "frozen"):
+        raise ValueError("unknown evaluation split")
+    last_index = start_index + count - 1
+    if last_index > len(instances):
+        raise ValueError("requested range exceeds the source instances")
+    if split == "development" and last_index > 10:
+        raise ValueError("development split is restricted to source rows 1-10")
+    if split == "frozen" and (start_index < 11 or last_index > 100):
+        raise ValueError("frozen comparison split is restricted to source rows 11-100")
+    selected = instances[start_index - 1:last_index]
+    if len({str(inst["pid"]) for inst in selected}) != len(selected):
+        raise ValueError("duplicate source pid in selected range")
+    return selected
+
+
 def main():
     import resource  # Linux-only runtime; evidence rechecking also works on Windows.
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--file", type=Path, default=ROOT / "data/thpack/thpack1.txt")
     ap.add_argument("--instances", type=int, default=10)
+    ap.add_argument("--start-index", type=int, default=1, help="1-based source-row index, not pid")
+    ap.add_argument("--split", choices=["development", "frozen"], default="development")
     ap.add_argument("--budgets", type=int, nargs="+", default=[5, 30])
     ap.add_argument("--binary", type=Path, default=Path("/home/yzj/boxpack-author/build-release/app/allocate"))
     ap.add_argument("--author-source", type=Path, default=Path("/home/yzj/boxpack-author/sclp-75eec37"))
@@ -64,9 +87,21 @@ def main():
         ap.error("output directory already exists; keep earlier evidence intact")
     if not args.binary.is_file() or not args.author_source.is_dir():
         ap.error("fixed author binary or source directory is missing")
-    insts = parse_thpack(args.file)[:args.instances]
-    if len(insts) != args.instances:
-        ap.error("requested more instances than the source contains")
+    try:
+        insts = select_instances(parse_thpack(args.file), args.start_index,
+                                 args.instances, args.split)
+    except ValueError as exc:
+        ap.error(str(exc))
+    planned_runs = [{"pid": str(inst["pid"]), "cpu_budget_seconds": budget}
+                    for budget in args.budgets for inst in insts]
+    selection = {"source_name": args.file.name, "split": args.split,
+                 "first_source_row": args.start_index,
+                 "last_source_row": args.start_index + args.instances - 1,
+                 "pids": [str(inst["pid"]) for inst in insts],
+                 "cpu_budgets_seconds": args.budgets}
+    scope = ("development instances" if args.split == "development" else
+             "frozen parameter comparison; historical EP results already seen")
+    scope += "; author defaults; not blind testing or full paper replication"
     cpu = min(os.sched_getaffinity(0))
     env = dict(os.environ, OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1")
     args.output_dir.mkdir(parents=True)
@@ -85,6 +120,7 @@ def main():
                    "thread_env": {k: env[k] for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS")},
                    "started_utc": datetime.now(timezone.utc).isoformat(),
                    "source_data_sha256": sha256(args.file),
+                   "selection": selection,
                    "harness_head": subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True).strip(),
                    "harness_git_diff": subprocess.check_output(["git", "-C", str(ROOT), "diff", "--stat"], text=True),
                    "note": "working harness files are identified by per-file SHA256; HEAD alone is not the tested code",
@@ -114,7 +150,7 @@ def main():
     records = []
     for budget in args.budgets:
         for inst in insts:
-            label = f"thpack1_{inst['pid']}_{budget}s"
+            label = f"{args.file.stem}_{inst['pid']}_{budget}s"
             inp = args.output_dir / (label + ".input.json")
             raw = args.output_dir / (label + ".raw.json")
             adapted_path = args.output_dir / (label + ".adapted.json")
@@ -161,7 +197,9 @@ def main():
                 except (ValueError, KeyError, TypeError) as exc:
                     record["errors"].append(str(exc))
             records.append(record)
-            save_json(args.output_dir / "manifest.json", {"status": "in_progress", "runs": records})
+            save_json(args.output_dir / "manifest.json", {
+                "schema_version": 2, "status": "in_progress", "scope": scope,
+                "selection": selection, "planned_runs": planned_runs, "runs": records})
             print(json.dumps({k: record.get(k) for k in
                               ("label", "returncode", "placed", "isd", "errors")}), flush=True)
             if record["errors"]:
@@ -179,8 +217,9 @@ def main():
                                       "mean_process_cpu_seconds": statistics.mean(
                                           r["process_cpu_user_seconds"] + r["process_cpu_system_seconds"] for r in rows),
                                       "mean_wall_seconds": statistics.mean(r["wall_seconds_solver_process"] for r in rows)}
-    save_json(args.output_dir / "manifest.json", {"status": "verified" if passed else "failed",
-              "scope": "first 10 development instances, author defaults, no claim of blind test or paper replication",
+    save_json(args.output_dir / "manifest.json", {
+              "schema_version": 2, "status": "verified" if passed else "failed",
+              "scope": scope, "selection": selection, "planned_runs": planned_runs,
               "runs": records, "summary_by_budget": summaries})
     register(args.output_dir / "manifest.json")
     save_json(args.output_dir / "sha256.json", {"algorithm": "SHA256", "files": hashes,

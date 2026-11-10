@@ -1,0 +1,268 @@
+{
+  "status": "verified",
+  "planned_runs": [
+    {
+      "method": "ep",
+      "pid": "1"
+    },
+    {
+      "method": "ep",
+      "pid": "2"
+    },
+    {
+      "method": "ep",
+      "pid": "3"
+    },
+    {
+      "method": "ep",
+      "pid": "4"
+    },
+    {
+      "method": "ep",
+      "pid": "5"
+    },
+    {
+      "method": "ep",
+      "pid": "6"
+    },
+    {
+      "method": "ep",
+      "pid": "7"
+    },
+    {
+      "method": "ep",
+      "pid": "8"
+    },
+    {
+      "method": "ep",
+      "pid": "9"
+    },
+    {
+      "method": "ep",
+      "pid": "10"
+    },
+    {
+      "method": "b2",
+      "pid": "1"
+    },
+    {
+      "method": "b2",
+      "pid": "2"
+    },
+    {
+      "method": "b2",
+      "pid": "3"
+    },
+    {
+      "method": "b2",
+      "pid": "4"
+    },
+    {
+      "method": "b2",
+      "pid": "5"
+    },
+    {
+      "method": "b2",
+      "pid": "6"
+    },
+    {
+      "method": "b2",
+      "pid": "7"
+    },
+    {
+      "method": "b2",
+      "pid": "8"
+    },
+    {
+      "method": "b2",
+      "pid": "9"
+    },
+    {
+      "method": "b2",
+      "pid": "10"
+    }
+  ],
+  "runs": [
+    {
+      "method": "ep",
+      "pid": "1",
+      "file": "ep_1.json",
+      "isd": 0.843870078784644,
+      "errors": [],
+      "solve_cpu_seconds": 0.65094002,
+      "solve_wall_seconds": 0.6521372830000018
+    },
+    {
+      "method": "ep",
+      "pid": "2",
+      "file": "ep_2.json",
+      "isd": 0.910012788463264,
+      "errors": [],
+      "solve_cpu_seconds": 0.854217756,
+      "solve_wall_seconds": 0.8551339990000031
+    },
+    {
+      "method": "ep",
+      "pid": "3",
+      "file": "ep_3.json",
+      "isd": 0.8228694147682822,
+      "errors": [],
+      "solve_cpu_seconds": 0.4724658530000001,
+      "solve_wall_seconds": 0.4737044980000036
+    },
+    {
+      "method": "ep",
+      "pid": "4",
+      "file": "ep_4.json",
+      "isd": 0.794678330932727,
+      "errors": [],
+      "solve_cpu_seconds": 1.1094096649999998,
+      "solve_wall_seconds": 1.1107228169999956
+    },
+    {
+      "method": "ep",
+      "pid": "5",
+      "file": "ep_5.json",
+      "isd": 0.7271091825021386,
+      "errors": [],
+      "solve_cpu_seconds": 1.2681349339999999,
+      "solve_wall_seconds": 1.2711453189999986
+    },
+    {
+      "method": "ep",
+      "pid": "6",
+      "file": "ep_6.json",
+      "isd": 0.8830161364616769,
+      "errors": [],
+      "solve_cpu_seconds": 1.4060310950000003,
+      "solve_wall_seconds": 1.4077374829999911
+    },
+    {
+      "method": "ep",
+      "pid": "7",
+      "file": "ep_7.json",
+      "isd": 0.8247965245157632,
+      "errors": [],
+      "solve_cpu_seconds": 0.9224709859999995,
+      "solve_wall_seconds": 0.8850995890000064
+    },
+    {
+      "method": "ep",
+      "pid": "8",
+      "file": "ep_8.json",
+      "isd": 0.8751223843970113,
+      "errors": [],
+      "solve_cpu_seconds": 1.4012268709999995,
+      "solve_wall_seconds": 1.3277884299999982
+    },
+    {
+      "method": "ep",
+      "pid": "9",
+      "file": "ep_9.json",
+      "isd": 0.6932091531897047,
+      "errors": [],
+      "solve_cpu_seconds": 0.5139827169999993,
+      "solve_wall_seconds": 0.4887788019999988
+    },
+    {
+      "method": "ep",
+      "pid": "10",
+      "file": "ep_10.json",
+      "isd": 0.7492178365828481,
+      "errors": [],
+      "solve_cpu_seconds": 0.5370147779999996,
+      "solve_wall_seconds": 0.5088428140000048
+    },
+    {
+      "method": "b2",
+      "pid": "1",
+      "file": "b2_1.json",
+      "isd": 0.8585731557925956,
+      "errors": [],
+      "solve_cpu_seconds": 0.10004478299999953,
+      "solve_wall_seconds": 0.09479378200001065
+    },
+    {
+      "method": "b2",
+      "pid": "2",
+      "file": "b2_2.json",
+      "isd": 0.8593825046643992,
+      "errors": [],
+      "solve_cpu_seconds": 4.119112756,
+      "solve_wall_seconds": 3.980637416999997
+    },
+    {
+      "method": "b2",
+      "pid": "3",
+      "file": "b2_3.json",
+      "isd": 0.6023095007514219,
+      "errors": [],
+      "solve_cpu_seconds": 0.05647416899999946,
+      "solve_wall_seconds": 0.05649459600000739
+    },
+    {
+      "method": "b2",
+      "pid": "4",
+      "file": "b2_4.json",
+      "isd": 0.774736603519752,
+      "errors": [],
+      "solve_cpu_seconds": 0.47543529200000023,
+      "solve_wall_seconds": 0.4671665770000004
+    },
+    {
+      "method": "b2",
+      "pid": "5",
+      "file": "b2_5.json",
+      "isd": 0.8005027315067456,
+      "errors": [],
+      "solve_cpu_seconds": 0.29203808399999964,
+      "solve_wall_seconds": 0.2723083910000099
+    },
+    {
+      "method": "b2",
+      "pid": "6",
+      "file": "b2_6.json",
+      "isd": 0.8129983030692977,
+      "errors": [],
+      "solve_cpu_seconds": 1.1879968269999992,
+      "solve_wall_seconds": 1.108259584999999
+    },
+    {
+      "method": "b2",
+      "pid": "7",
+      "file": "b2_7.json",
+      "isd": 0.8016868940186017,
+      "errors": [],
+      "solve_cpu_seconds": 0.34231283900000165,
+      "solve_wall_seconds": 0.31917175099999895
+    },
+    {
+      "method": "b2",
+      "pid": "8",
+      "file": "b2_8.json",
+      "isd": 0.8615223455796385,
+      "errors": [],
+      "solve_cpu_seconds": 4.228781053999999,
+      "solve_wall_seconds": 4.0082633250000015
+    },
+    {
+      "method": "b2",
+      "pid": "9",
+      "file": "b2_9.json",
+      "isd": 0.675006331086933,
+      "errors": [],
+      "solve_cpu_seconds": 0.0886199170000026,
+      "solve_wall_seconds": 0.08863303199998995
+    },
+    {
+      "method": "b2",
+      "pid": "10",
+      "file": "b2_10.json",
+      "isd": 0.842524697885849,
+      "errors": [],
+      "solve_cpu_seconds": 0.8130151119999987,
+      "solve_wall_seconds": 0.8136138490000064
+    }
+  ],
+  "note": "state-budget B2 and early-stopping EP are not an equal-time ranking"
+}
