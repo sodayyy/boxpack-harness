@@ -69,6 +69,31 @@ class ProtocolTests(unittest.TestCase):
                     validate_conversion(inst, converted)
                     self.assertEqual(converted["small_items"][0]["quantity"], 2)
 
+    def test_guesser_output_identity_adapter(self):
+        from experiments.adapt_guesser_output import adapt
+        from experiments.verify_mes_result import verify
+        inst = dict(pid="synthetic", box=(20, 20, 20), types=[
+            dict(t=1, dims=(4, 3, 2), flags=(0, 0, 1), qty=1),
+            dict(t=2, dims=(5, 3, 2), flags=(0, 0, 1), qty=1),
+        ])
+        payload = {"small_items": [
+            {"measurement": {"x": 3, "y": 4, "z": 2},
+             "position": {"x": 0, "y": 0, "z": 0}},
+            {"measurement": {"x": 5, "y": 3, "z": 2},
+             "position": {"x": 3, "y": 0, "z": 0}},
+        ]}
+        adapted = adapt(inst, payload)
+        self.assertEqual([b["name"] for b in adapted["boxes"]], ["T1", "T2"])
+        items = [{"serial": "T1-000", "name": "T1", "allowed": [(3, 4, 2), (4, 3, 2)]},
+                 {"serial": "T2-000", "name": "T2", "allowed": [(5, 3, 2)]}]
+        self.assertFalse(verify(adapted, inst["box"], items))
+        ambiguous = dict(inst, types=[
+            dict(t=1, dims=(4, 3, 2), flags=(1, 1, 0), qty=1),
+            dict(t=2, dims=(4, 3, 2), flags=(1, 1, 0), qty=1),
+        ])
+        with self.assertRaises(ValueError):
+            adapt(ambiguous, {"small_items": [payload["small_items"][0]]})
+
     def test_saved_l0_layout_verifier(self):
         from experiments.verify_mes_result import verify
         items = [dict(serial="G1-000", name="G1", allowed=[(60, 40, 30)])]
