@@ -27,7 +27,7 @@ from src.pack_lib import TruckType, orients  # noqa: E402
 from src.thpack import parse_thpack, to_items  # noqa: E402
 
 
-def pack_one(inst, order="volume"):
+def pack_one(inst, order="volume", verify=False):
     """单容器装载（不用 pack_ep，因为它是多容器首次适应）。"""
     from src.pack_lib import Truck
 
@@ -42,7 +42,7 @@ def pack_one(inst, order="volume"):
         items.sort(key=lambda it: -it["dims"][0] * it["dims"][1])
 
     # clearance=0：标准算例不含题面的 3 cm 顶部余隙
-    tr = Truck(spec, clearance=0)
+    tr = Truck(spec, clearance=0, level=0)
     rest = []
     for it in items:
         ok = False
@@ -59,7 +59,9 @@ def pack_one(inst, order="volume"):
 
     cap = L * W * H
     return dict(pid=inst["pid"], n=len(items), placed=len(items) - len(rest),
-                isd=tr.used_volume() / cap, rest=len(rest))
+                isd=tr.used_volume() / cap, rest=len(rest),
+                boxes=tr.boxes, level=0,
+                geometry_errors=check_solution(tr, L, W, H) if verify else None)
 
 
 def check_solution(tr, L, W, H):
@@ -67,7 +69,9 @@ def check_solution(tr, L, W, H):
     errs = 0
     bs = tr.boxes
     for i, a in enumerate(bs):
-        if a["x"] + a["l"] > L or a["y"] + a["w"] > W or a["z"] + a["h"] > H:
+        if (min(a["x"], a["y"], a["z"]) < 0 or
+                min(a["l"], a["w"], a["h"]) <= 0 or
+                a["x"] + a["l"] > L or a["y"] + a["w"] > W or a["z"] + a["h"] > H):
             errs += 1
         for b in bs[i + 1:]:
             if (a["x"] < b["x"] + b["l"] and b["x"] < a["x"] + a["l"] and
@@ -82,7 +86,7 @@ def main():
     ap.add_argument("--file", default="data/thpack/thpack1.txt")
     ap.add_argument("--instances", type=int, default=0, help="0 表示全部")
     ap.add_argument("--order", default="volume", choices=["volume", "height", "area"])
-    ap.add_argument("--json", default="experiments/results/thpack1_m0.json")
+    ap.add_argument("--json", default="experiments/results/thpack1_ep_pure_geometry_v2.json")
     ap.add_argument("--verify", action="store_true", help="额外做越界/重叠独立检查")
     args = ap.parse_args()
 
@@ -102,7 +106,7 @@ def main():
     t_all = time.time()
     for inst in insts:
         t0 = time.time()
-        r = pack_one(inst, args.order)
+        r = pack_one(inst, args.order, args.verify)
         r["seconds"] = round(time.time() - t0, 2)
         rows.append(r)
         print(f"  算例 {r['pid']:>3}  {r['n']:>3} 件  装入 {r['placed']:>3}  "

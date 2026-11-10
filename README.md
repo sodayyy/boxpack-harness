@@ -10,7 +10,7 @@
 - 独立约束校验器；
 - OR-Library 外部校准；
 - Lean 对部分算术结论的形式化核验；
-- 后续可接入 MES + Beam、块构造和小规模精确验证的算法接口。
+- 已运行的互斥空间分区 + Beam 组件、小规模整数网格 L0 裁判，以及待接入的作者强基线和块构造。
 
 > 当前最重要的结论必须限定范围：在固定 EP + First-Fit、固定排序和当前附件 1 算例下，L2 易碎规则组合（C5/C6）是车辆数的主要跳变层；这不等于已经证明所有算法都需要增加一辆车，也不等于已经证明车型 2 一辆车在全约束下无解。
 
@@ -86,8 +86,9 @@ Three-dimensional Rectangular Multiple-Bin-Size Bin Packing Problem
 当前目标分开报告：
 
 - P1：最少车辆数；
-- P2：最低运输成本；
-- P3：先最小成本、再最少车辆，或先最少车辆、再最低成本，必须明确目标顺序。
+- P2：最低运输成本，在原始完整可行域独立求解，不限制在 P1 最少车辆解集中。
+
+不擅自增加词典序优先级。主情景、替代解释与比较协议见 [`docs/06-固定协议与验证口径.md`](docs/06-固定协议与验证口径.md)。
 
 不能把“车辆数最少”和“成本最低”混成一个没有说明的结论，因为：
 
@@ -113,8 +114,8 @@ Three-dimensional Rectangular Multiple-Bin-Size Bin Packing Problem
 注意：
 
 - L0–L4 是实验层级，不是全局最优性证明；
-- 当前 L1 的“至少一格接触”和 L4 的接触面积均摊属于工程操作化定义；
-- L4 尚未实现完整堆叠链载荷传递；
+- L1 要求正面积接触（1cm 网格上体现为至少一格），不是完整静态稳定性；
+- 求解器 L4 仍使用 `legacy_b1`；新增 `chain_area_v1` 已实现逐层竖向传力和地面反力守恒的独立后验审核，尚未替换搜索筛选，不包含力矩平衡或局部峰值压力；
 - A1 非易碎件接触比例是参数，不应被写成题面硬约束。
 
 ---
@@ -133,11 +134,11 @@ Extreme Point + First-Fit + 体积降序
 
 用于检验简单改变货物顺序是否有效。已测小样本中，固定候选点骨架下的排序变化和 RGS 重启未显示稳定增益；这不能推广为所有随机搜索都无效，仍需考察更强的搜索框架。
 
-### B2：MES + Beam Search（组件已实现，校准未优于EP）
+### B2：互斥空间分区 + Beam（历史名 MES+Beam，未优于 EP）
 
 参考 Guesser et al. 2026 EJOR：
 
-- 用 maximal empty spaces 表示剩余空间；
+- 当前用互斥空闲长方体分区表示剩余空间，不是文献中可重叠的极大空闲空间覆盖；
 - 每一步保留多个部分布局；
 - 用 beam width 控制搜索规模；
 - 尝试多个姿态、候选空间和放置动作；
@@ -145,17 +146,17 @@ Extreme Point + First-Fit + 体积降序
 
 它首先在 L0 单容器标准算例上校准，再迁移到多容器和 L2 易碎件层，避免把算法问题和约束问题混在一起。当前B2首版已完成同口径校准：thpack1前3例、体积排序、space_cap=80下，width=1/4/8/16平均ISD分别为74.6%/76.1%/77.3%/77.3%；代表性width=8低于EP-FF同口径85.9%。因此B2目前只能称已实现的组件级实验，不能称SOTA或性能提升；独立几何校验为0违规。
 
-### B3：Block-building + MES + Beam
+### B3：Block-building + MES + Beam（计划，未实现）
 
 针对本题“货物类型少、重复件多”的特点，构造同类货物块或组合块，再用 MES + Beam 搜索。重点检验它能否保留连续平整平台，缓解易碎件 C6 的平台碎片化。
 
-### B4：有限车型组合枚举 + 统一装载器
+### B4：有限车型组合枚举 + 统一装载器（计划，未实现）
 
 外层枚举有限的车型组合 `(n_1,n_2)`，内层统一调用 B0/B2/B3，分别评价车辆数、成本、未装件数和校验结果。这样才能真正回答混合车队成本问题。
 
 ### 精确验证器
 
-对 8–20 件小规模实例运行 CP-SAT/MILP/分支搜索，验证：
+当前已实现单容器有限整数网格 L0 完整枚举裁判；8–20 件扩展及 CP-SAT/MILP 是后续计划，拟验证：
 
 - 最少车辆数；
 - L2 易碎可行性；
@@ -195,7 +196,9 @@ OR-Library `thpack1` 共 100 个单容器算例：
 - 最低：67.3%；
 - 平均耗时：约 2.35 秒。
 
-该结果是本仓库弱基线的实测校准。Guesser 2026 EJOR 报告的30秒95.91%覆盖不同异质性类别，数据集范围、搜索框架和时间预算均不同；不能直接相减为严格性能gap，也不能据此宣称本仓库达到SOTA。本轮未重跑这100例。
+**以上为历史记录，不能继续称作已核实的纯几何 100 例校准。** 2026-11-10 发现旧脚本 `Truck(spec, clearance=0)` 隐含默认 L4，实际还启用支撑和旧承重。现已显式设为 `level=0`，新结果另存 `thpack1_ep_pure_geometry_v2.json`，不覆写历史。新前三例为 84.4% / 91.0% / 82.3%，平均 85.9%，身份、姿态、几何和体积核验均通过。**显式L0全100例已实际重跑：平均81.9615%（约82.0%），中位82.5090%，范围67.2759%–92.1445%，100例逐件布局身份/姿态/几何/指标独立核验均0违规。** 与旧记录相比仅第33、54、58、90例变化，总均值增加0.0666个百分点。这是约束口径修正，不是算法改进。此次约516秒包含几何复核，环境与历史耗时不同，不作速度优劣比较。
+
+Guesser 文献数字涉及不同数据范围和时间预算，不能与历史 81.9% 直接相减；作者固定源码已下载、10 例输入已准备，尚未成功编译运行，详见 [`docs/07-作者基线复现记录.md`](docs/07-作者基线复现记录.md)。
 
 ### 5.3 易碎件平台诊断的修正
 
@@ -210,7 +213,11 @@ OR-Library `thpack1` 共 100 个单容器算例：
 
 > 现有结果提示易碎件平台碎片化和搜索顺序可能是重要瓶颈，但车型 2 一辆车的完整合法可行性仍未解决。
 
-### 5.4 机器验证
+### 5.4 协议修正后的全量导出
+
+两车型 EP 体积降序各装完 300 件：车型1为 3 辆 / 1350元，车型2为 2 辆 / 1400元。每套布局均导出 JSON/CSV，双轴坐标变换读回后逐件一致；严格全局身份、目录规格与原规则检查均 0 违规，新增竖向载荷链审核也 0 违规，5 辆车的地面反力残差均为 0。标称车队空间利用率分别约49.4%和34.5%，运输完成率均100%，两者不能混称“满载率”。这不是混合车型最优结果，也不是完整物理安全认证。
+
+### 5.5 机器验证
 
 Lean 工程包含4个无 `sorry` 的算术声明，本次 `lake env lean` 与 `lake build` 均通过。已移除暗示“置顶可行”的旧命名，统一有效高度247 cm；几何到阴影柱容量的推导没有形式化。C5仅禁直接承压，不蕴含整柱留空；在额外同高、固定姿态、禁止跨接的阴影柱情景下，必要平台高度为88.76 cm，而非旧稿44 cm。任何正容量余量都不替代完整三维可行解。
 
@@ -235,9 +242,10 @@ Lean 工程包含4个无 `sorry` 的算术声明，本次 `lake env lean` 与 `l
 
 ```text
 src/pack_lib.py                  数据、车辆、占用栅格、L0–L4、EP 求解器
-src/constraints.py               独立约束校验器
+src/constraints.py               独立车队/目录校验与竖向载荷链审核
+src/solution_io.py               双轴坐标转换、JSON/CSV导出与读回
 src/thpack.py                    OR-Library thpack 解析
-src/mes_beam.py                  B2 MES + Beam 单容器L0组件
+src/mes_beam.py                  B2互斥空间分区 + Beam 单容器L0组件
 experiments/ablation_levels.py   L0–L4 约束消融
 experiments/bench_thpack.py      EP标准算例校准
 experiments/bench_mes_beam.py    B2单容器L0校准
@@ -260,15 +268,16 @@ PROGRESS.md                       节点和实验台账
 
 ```bash
 py -3.12 experiments/test_constraints.py
+py -3.12 experiments/test_protocol.py
 py -3.12 experiments/test_platform_analysis.py
 py -3.12 experiments/review_regression.py
 py -3.12 experiments/ablation_levels.py --truck 1
 py -3.12 experiments/ablation_levels.py --truck 0
-py -3.12 experiments/bench_thpack.py
+py -3.12 experiments/bench_thpack.py --verify
+py -3.12 experiments/verify_mes_result.py experiments/results/thpack1_ep_pure_geometry_v2.json
 py -3.12 experiments/bench_mes_beam.py --instances 3 --beam-width 8 --space-cap 80
 py -3.12 experiments/test_mes_beam.py
 py -3.12 experiments/verify_mes_result.py experiments/results/thpack1_b2_final_w8_s80.json
-py -3.12 experiments/test_mes_beam.py
 py -3.12 experiments/bench_small_l0.py
 py -3.12 experiments/ablation_mes_score.py
 py -3.12 experiments/ftl_attempts.py
@@ -287,12 +296,12 @@ py -3.12 experiments/run_baselines.py
 | 当前EP-FF为弱基线，B2首版尚未优于EP | 已补空间不变量、整数网格L0裁判和评分优先级消融；再评估论文级组件 |
 | 车型 2 一辆车全约束可行性未解决 | 做实际迁移/重排和 B2/B3 搜索，不作先验断言 |
 | L1 不是完整物理稳定性 | 参数化支撑比例，并区分几何接触与静态稳定 |
-| B1 承重是整底面积分摊/平均近似 | 后续小规模加入载荷守恒与必要力矩平衡，不与算法B2编号混用 |
+| 求解器仍用旧 B1；新载荷链仅后验审核 | 版本分开；后续接入求解器并研究力矩平衡，不冒称完整物理安全 |
 | 目前主要是单车型实验 | 实现 B4 混合车型枚举和成本优化 |
 | 只有一组题面货物 | N3 扫描易碎比例、规模、定向比例、承重上限和车型组合 |
 | 小规模裁判目前只覆盖整数网格L0 | 扩展实例规模和约束层；只有完整搜索或有效上界吻合时声明最优 |
 
-当前正式节点和 Git 标签见 [`PROGRESS.md`](PROGRESS.md)。B2首版三算例平均低于EP；同口径 `count` 评分优先级消融未改善前三例平均ISD。新增的L0整数网格裁判与空间不变量测试只用于小规模诊断，不外推为L1–L4或多容器最优结论。N2保留为失败诊断，原“一车解或不可行证明”判据未满足；B3/B4尚未实现。
+当前正式节点和 Git 标签见 [`PROGRESS.md`](PROGRESS.md)。固定协议和输出校验修正已完成，作者强基线编译受环境阻塞。B2首版三算例平均低于EP；同口径 `count` 评分优先级消融未改善前三例平均ISD。新增的L0整数网格裁判与空间不变量测试只用于小规模诊断，不外推为L1–L4或多容器最优结论。N2保留为失败诊断，原“一车解或不可行证明”判据未满足；B3/B4尚未实现。
 
 ---
 

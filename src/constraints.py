@@ -22,9 +22,9 @@
     P18  货物高度不得超过车厢高度，顶层货物距车厢顶部预留不小于 3 cm
 """
 import csv
+import math
+from numbers import Real
 from collections import Counter
-
-import numpy as np
 
 CLEARANCE = 3          # C10：顶部余隙 cm
 MAX_PRESSURE = 500.0   # C9：kg/m²
@@ -43,6 +43,7 @@ def load_catalog(path):
                 dims=(int(r["长_cm"]), int(r["宽_cm"]), int(r["高_cm"])),
                 weight=int(r["单重_kg"]),
                 kind=KIND_MAP[r["类型"]],
+                qty=int(r["数量"]),
             )
     return cat
 
@@ -114,7 +115,7 @@ def check_overlap(boxes, errors):
 def check_fragile_single_layer(boxes, errors):
     """C5 易碎件仅单层：不得有货物**直接压在**易碎件顶面上。
 
-    口径说明：题面「仅允许单层放置，不可堆叠」约束的是「堆叠」即承重关系，
+    项目主情景将题面「仅允许单层放置，不可堆叠」解释为直接接触承压，
     因此判定为「某件货的底面与易碎件顶面接触」。若货物由其他件支撑、
     只是悬在易碎件上方（不接触），不计为堆叠——这种情况由 A1 支撑比控制，
     并在敏感性分析中单独讨论。
@@ -141,14 +142,9 @@ def check_fragile_support(boxes, errors):
         if not below:
             errors.append(f"C6 {f['serial']}: 悬空（z={f['z']} 下方无支撑）")
             continue
-        covered = np.zeros((f["w"], f["l"]), dtype=bool)
-        for b in below:
-            x0 = max(b["x"], f["x"]) - f["x"]
-            x1 = min(b["x"] + b["l"], f["x"] + f["l"]) - f["x"]
-            y0 = max(b["y"], f["y"]) - f["y"]
-            y1 = min(b["y"] + b["w"], f["y"] + f["w"]) - f["y"]
-            covered[y0:y1, x0:x1] = True
-        ratio = covered.sum() / covered.size
+        # 合法不重叠箱体在同一支撑高度的接触面内部互斥，可直接求面积和；
+        # 对非法重叠布局check_overlap另行拒绝。支持有限实数坐标，不依赖栅格切片。
+        ratio = sum(_overlap_area(f, b) for b in below) / (f["l"] * f["w"])
         if ratio < 1.0 - 1e-9:
             errors.append(f"C6 {f['serial']}: 底面仅贴合 {ratio:.1%}，要求 100%")
         for b in below:
@@ -188,8 +184,7 @@ def check_oriented_cog(boxes, errors):
 def check_floating(boxes, errors):
     """A3（假设）：任何货物不得悬空——z>0 时下方至少有一件直接支撑。
 
-    题面未明写，但物理必需（且 OR-Library 等公开基准亦以此为前提）。
-    「可堆叠」隐含「必须堆在东西上面」，故列为假设并在 README 中标注。
+    这是项目操作化假设，不代表静力稳定；纯几何公开基准不启用本条。
     """
     for b in boxes:
         if b["z"] == 0:
@@ -248,21 +243,158 @@ def check_counts(boxes, expect, errors):
             errors.append(f"C3 出现未知型号 {name}")
 
 
-# ------------------------------------------------------------------ 入口
-def check_all(boxes, spec, catalog, expect_counts=None, max_errors=200):
-    """跑全部 10 条约束，返回违规描述列表（空列表 = 合法）。"""
+# ------------------------------------------------------------------ 身份与入口
+def check_metadata(boxes, catalog, errors, strict_ids=False):
+    """核对输入目录，不信任解文件中的类型、重量或几何字段。"""
+    seen = set()
+    required = {"serial", "name", "kind", "weight", "x", "y", "z", "l", "w", "h"}
+    for i, b in enumerate(boxes):
+        if not isinstance(b, dict) or not required.issubset(b):
+            errors.append(f"C3 record {i}: 缺失字段或非对象")
+            continue
+        serial = b["serial"]
+        if not isinstance(serial, str) or not serial:
+            errors.append(f"C3 record {i}: 非法身份编号")
+        elif serial in seen:
+            errors.append(f"C3 {serial}: 重复身份")
+        else:
+            seen.add(serial)
+        name = b["name"]
+        source = catalog.get(name) if isinstance(name, str) else None
+        if source is None:
+            errors.append(f"C3 record {i}: 未知型号 {name}")
+            continue
+        if b["kind"] != source["kind"] or b["weight"] != source["weight"]:
+            errors.append(f"C3 {serial}: 类型或重量与输入目录不符")
+        if strict_ids:
+            valid = {f"{name}-{j:03d}" for j in range(source["qty"])}
+            if not isinstance(serial, str) or serial not in valid:
+                errors.append(f"C3 {serial}: 不在该型号的输入身份集合")
+        for key in ("x", "y", "z", "l", "w", "h", "weight"):
+            value = b[key]
+            if (isinstance(value, bool) or not isinstance(value, Real)
+                    or not math.isfinite(value)):
+                errors.append(f"C1 {serial}: {key} 必须是有限实数")
+            elif key in ("l", "w", "h") and value <= 0:
+                errors.append(f"C1 {serial}: {key} 必须为正")
+            elif key == "weight" and value < 0:
+                errors.append(f"C3 {serial}: 重量不可为负")
+
+
+def check_all(boxes, spec, catalog, expect_counts=None, max_errors=200,
+              level=4, strict_ids=False, support_ratio=0.0,
+              pressure_model="legacy_b1"):
+    """按层检查；默认兼容旧B1。生产整批入口使用check_fleet。"""
+    if level not in range(5) or not 0 <= support_ratio <= 1:
+        raise ValueError("invalid level or support ratio")
+    if pressure_model not in ("legacy_b1", "chain_area_v1"):
+        raise ValueError("unknown pressure model")
     errors = []
-    check_orientation(boxes, catalog, errors)
+    check_metadata(boxes, catalog, errors, strict_ids=strict_ids)
+    if errors:
+        return errors[:max_errors]  # 损坏记录不继续几何计算，避免异常或伪造属性绕过。
+    if level >= 3:
+        check_orientation(boxes, catalog, errors)
+    else:
+        for b in boxes:
+            if sorted((b["l"], b["w"], b["h"])) != sorted(catalog[b["name"]]["dims"]):
+                errors.append(f"C1 {b['serial']}: 尺寸非原始尺寸排列")
     check_overlap(boxes, errors)
-    check_fragile_single_layer(boxes, errors)
-    check_fragile_support(boxes, errors)
-    check_oriented_cog(boxes, errors)
-    check_pressure(boxes, errors)
-    check_floating(boxes, errors)
     check_bounds(boxes, spec, errors)
-    if expect_counts:
+    if level >= 1:
+        check_floating(boxes, errors)
+    if level >= 2:
+        check_fragile_single_layer(boxes, errors)
+        check_fragile_support(boxes, errors)
+        if support_ratio > 0:
+            for b in boxes:
+                if b["z"] > 0 and b["kind"] != "fragile":
+                    area = sum(_overlap_area(b, o) for o in boxes
+                               if o is not b and _resting_on(b, o))
+                    if area + EPS < support_ratio * b["l"] * b["w"]:
+                        errors.append(f"A1 {b['serial']}: 接触比例不足 {support_ratio}")
+    if level >= 3:
+        check_oriented_cog(boxes, errors)
+    if level >= 4:
+        if pressure_model == "legacy_b1":
+            check_pressure(boxes, errors)
+        else:
+            errors.extend(audit_load_chain(boxes)["errors"])
+    if expect_counts is not None:
         check_counts(boxes, expect_counts, errors)
     return errors[:max_errors]
+
+
+def check_fleet(fleet, truck_catalog, catalog, level=4, support_ratio=0.0,
+                pressure_model="legacy_b1", require_complete=True):
+    """fleet=[{truck_type, boxes}]；跨车唯一身份和整批守恒，逐车按目录检查。"""
+    errors = []
+    if not isinstance(fleet, list):
+        return ["C3 车队必须为列表"]
+    for i, tr in enumerate(fleet, 1):
+        if (not isinstance(tr, dict) or not isinstance(tr.get("boxes"), list) or
+                not isinstance(tr.get("truck_type"), str)):
+            errors.append(f"C3 车{i}: 缺失或非法车型/货物列表")
+    if errors:
+        return errors
+    all_boxes = [b for tr in fleet for b in tr["boxes"]]
+    check_metadata(all_boxes, catalog, errors, strict_ids=True)
+    if errors:
+        return errors
+    for i, tr in enumerate(fleet, 1):
+        spec = truck_catalog.get(tr["truck_type"])
+        if spec is None:
+            errors.append(f"C10 车{i}: 未知车型")
+            continue
+        errors.extend(f"车{i} {e}" for e in check_all(
+            tr["boxes"], spec, catalog, level=level, strict_ids=True,
+            support_ratio=support_ratio, pressure_model=pressure_model))
+    if require_complete:
+        check_counts(all_boxes, {name: s["qty"] for name, s in catalog.items()}, errors)
+    return errors
+
+
+def audit_load_chain(boxes, max_pressure=MAX_PRESSURE):
+    """chain_area_v1后验检查：竖向力守恒，不是力矩平衡/局部压力证明。"""
+    errors = []
+    totals = {b["serial"]: float(b["weight"]) for b in boxes}
+    transfers, reactions, pressures = [], {}, {}
+    if len(totals) != len(boxes):
+        return {"model": "chain_area_v1", "errors": ["C3 重复身份"],
+                "transfers": [], "floor_reactions": {}, "top_pressure": {}}
+    for b in sorted(boxes, key=lambda b: b["z"], reverse=True):
+        serial = b["serial"]
+        total = totals[serial]
+        external = total - b["weight"]
+        pressure = external / (b["l"] * b["w"] * 1e-4)
+        pressures[serial] = pressure
+        if pressure > max_pressure + 1e-6:
+            errors.append(f"C9 {serial}: 链传递顶面平均压力 {pressure:.6g} > {max_pressure}")
+        if b["kind"] == "fragile" and external > EPS:
+            errors.append(f"C5 {serial}: 易碎件外加载荷 {external:.6g}")
+        if abs(b["z"]) < EPS:
+            reactions[serial] = total
+            continue
+        supports = [(o, _overlap_area(b, o)) for o in boxes
+                    if o is not b and _resting_on(b, o)]
+        area = sum(a for _, a in supports)
+        if area <= EPS:
+            errors.append(f"A3 {serial}: 载荷无支撑传向地面")
+            continue
+        for o, a in supports:
+            force = total * a / area
+            totals[o["serial"]] += force
+            transfers.append({"upper": serial, "lower": o["serial"],
+                              "contact_area_cm2": a, "load_kg": force})
+    weight = sum(b["weight"] for b in boxes)
+    residual = sum(reactions.values()) - weight
+    if abs(residual) > 1e-7 * max(1, weight):
+        errors.append(f"C9 地面反力不守恒: residual={residual:.6g} kg")
+    return dict(model="chain_area_v1", errors=errors, transfers=transfers,
+                floor_reactions=reactions, top_pressure=pressures,
+                total_load=totals, total_weight_kg=weight,
+                conservation_residual_kg=residual,
+                limitation="fixed_area_shares_vertical_only_no_moment_or_peak_pressure")
 
 
 def summarize(errors):

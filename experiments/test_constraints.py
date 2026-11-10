@@ -75,11 +75,11 @@ def case_C8():
 def case_C9():
     """合成用例：一件 200 kg / 0.175 m² 的重物会把下层压到 500 kg/m² 以上。
 
-    注意：本题货物整体密度仅 143 kg/m³，堆满 247 cm 的理论最大承压约
-    353 kg/m² < 500，故 C9 在真实算例中不会被触发。此用例仅验证校验逻辑存在。
+    使用单独的合成重物目录，不篡改原始G2重量。总体平均密度不能证明
+    局部压力上界，本例只验证旧B1压力逻辑。
     """
     heavy = mk("G2", "standard", 0, 0, 0, 50, 35, 25, 8, "C9-base")
-    top = mk("G2", "standard", 0, 0, 25, 50, 35, 25, 200, "C9-heavy")
+    top = mk("H1", "standard", 0, 0, 25, 50, 35, 25, 200, "C9-heavy")
     return [heavy, top]
 
 
@@ -124,7 +124,11 @@ def main():
             boxes, counts = out
         else:
             boxes, counts = out, None
-        errs = check_all(boxes, SPEC, CATALOG, counts)
+        catalog = dict(CATALOG)
+        if fn is case_C9:
+            catalog["H1"] = dict(dims=(50, 35, 25), weight=200,
+                                 kind="standard", qty=1)
+        errs = check_all(boxes, SPEC, catalog, counts)
         hit = [e for e in errs if e.startswith(expect + " ")]
         ok = bool(hit)
         passed += ok

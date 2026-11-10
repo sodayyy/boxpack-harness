@@ -1,0 +1,109 @@
+{
+  "recorded_at": "2026-11-10T19:19:05.451764+08:00",
+  "python": "3.13.14 (main, Jun 11 2026, 04:04:46) [MSC v.1944 64 bit (AMD64)]",
+  "support_ratio": 0.0,
+  "scope": "fixed_EP_FF_layer_specific_independent_checks_not_global_optimality",
+  "rows": [
+    {
+      "truck": "车型1",
+      "level": 0,
+      "trucks": 2,
+      "rest": 0,
+      "cost": 900,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 5.353
+    },
+    {
+      "truck": "车型1",
+      "level": 1,
+      "trucks": 2,
+      "rest": 0,
+      "cost": 900,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 6.675
+    },
+    {
+      "truck": "车型1",
+      "level": 2,
+      "trucks": 3,
+      "rest": 0,
+      "cost": 1350,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 6.984
+    },
+    {
+      "truck": "车型1",
+      "level": 3,
+      "trucks": 3,
+      "rest": 0,
+      "cost": 1350,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 6.975
+    },
+    {
+      "truck": "车型1",
+      "level": 4,
+      "trucks": 3,
+      "rest": 0,
+      "cost": 1350,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 5.866
+    },
+    {
+      "truck": "车型2",
+      "level": 0,
+      "trucks": 1,
+      "rest": 0,
+      "cost": 700,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 7.6
+    },
+    {
+      "truck": "车型2",
+      "level": 1,
+      "trucks": 1,
+      "rest": 0,
+      "cost": 700,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 8.132
+    },
+    {
+      "truck": "车型2",
+      "level": 2,
+      "trucks": 2,
+      "rest": 0,
+      "cost": 1400,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 6.278
+    },
+    {
+      "truck": "车型2",
+      "level": 3,
+      "trucks": 2,
+      "rest": 0,
+      "cost": 1400,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 6.889
+    },
+    {
+      "truck": "车型2",
+      "level": 4,
+      "trucks": 2,
+      "rest": 0,
+      "cost": 1400,
+      "independently_checked_errors": [],
+      "regression_matches": true,
+      "seconds": 7.327
+    }
+  ],
+  "all_passed": true
+}

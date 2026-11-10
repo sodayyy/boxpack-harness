@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "scope": "EP_single_container_explicit_L0_100_instances_not_SOTA_comparison",
+  "input_file": "data/thpack/thpack1.txt",
+  "result_file": "experiments/results/thpack1_ep_pure_geometry_v2.json",
+  "old_result_file": "experiments/results/thpack1_m0.json",
+  "python": "3.13.14 (main, Jun 11 2026, 04:04:46) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "instances": 100,
+  "mean_isd": 0.8196149323254996,
+  "median_isd": 0.8250901141323819,
+  "min_isd": 0.6727594432897458,
+  "max_isd": 0.9214445380167646,
+  "population_sd_isd": 0.04847788328746636,
+  "sum_instance_wall_seconds": 516.21,
+  "mean_instance_wall_seconds": 5.1621,
+  "geometry_errors": 0,
+  "old_mean_isd": 0.8189492489436556,
+  "changes": [
+    {
+      "pid": "33",
+      "old_isd": 0.899541768889072,
+      "new_isd": 0.9116017417302046,
+      "delta_pp": 1.2059972841132582
+    },
+    {
+      "pid": "54",
+      "old_isd": 0.7938581477599251,
+      "new_isd": 0.8079600207646358,
+      "delta_pp": 1.4101873004710663
+    },
+    {
+      "pid": "58",
+      "old_isd": 0.8236764040223838,
+      "new_isd": 0.8433241097760623,
+      "delta_pp": 1.9647705753678468
+    },
+    {
+      "pid": "90",
+      "old_isd": 0.815989866272821,
+      "new_isd": 0.8367486528576964,
+      "delta_pp": 2.07587865848754
+    }
+  ],
+  "interpretation": "constraint_protocol_correction_not_algorithm_improvement_or_strict_timing_comparison"
+}

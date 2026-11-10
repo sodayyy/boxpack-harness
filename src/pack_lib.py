@@ -19,7 +19,7 @@ CLEARANCE = 3
 MAX_PRESSURE = 500.0
 
 # 约束层级：先做刚体（纯几何），再一条条加约束。
-# 每一层都是下一层的子集，便于测量「这一条约束带来多少代价」。
+# 每层增加约束，理论可行域逐层缩小；启发式输出不等于最优约束代价。
 LEVEL_RIGID = 0      # L0 刚体：仅不重叠、不越界
 LEVEL_SUPPORT = 1    # L1 + 不得悬空（至少 1 格底面接触）
 LEVEL_FRAGILE = 2    # L2 + 易碎件单层：100% 贴合、只能落在标准件顶面、自身不承重
@@ -29,7 +29,7 @@ LEVEL = LEVEL_PRESSURE
 
 # 假设 A1：非易碎件底面最小接触面积比。
 # 题面（附件1 P12）对标准件只说「可堆叠，无特殊约束」，**未规定接触比**。
-# 故默认 0（严格对齐题面，只要求不悬空）；可用环境变量覆盖做敏感性分析：
+# 默认 0 是项目主情景，L1以上另要求正面积接触；可覆盖做敏感性分析：
 #     SUPPORT_RATIO=0.75 py -3.12 experiments/run_baselines.py
 SUPPORT_RATIO = float(os.environ.get("SUPPORT_RATIO", "0"))
 
@@ -374,4 +374,5 @@ def lower_bound(spec):
     tw = sum(t.weight * t.qty for t in TYPES)
     L, W, H = spec.dims
     cv = L * W * H
-    return max(-(-tv // cv), -(-tw // spec.cap_weight)), tv, tw, cv
+    effective_cv = L * W * (H - CLEARANCE)
+    return max(-(-tv // effective_cv), -(-tw // spec.cap_weight)), tv, tw, cv
