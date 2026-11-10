@@ -7,3 +7,5 @@
 *.toml  text eol=lf
 *.json  text eol=lf
 *.txt   text eol=lf
+# Evidence hashes must survive checkout without newline conversion.
+experiments/results/guesser_dev10_5s30s_v1/** -text
