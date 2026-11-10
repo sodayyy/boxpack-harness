@@ -3,9 +3,8 @@
 
 Positive integer dimensions, one container, prescribed axis-aligned rotations,
 no support, weight, fragility or load constraints. Every feasible integer
-origin is considered independently of insertion order. See the project model
-notes for the self-checked difference-constraint justification for integer
-coordinates when all lengths are integral.
+origin is considered independently of insertion order. Completeness claims
+in this implementation refer only to this explicit integer-grid model.
 """
 from __future__ import annotations
 
@@ -67,6 +66,8 @@ def _orientations(item):
 def _candidate_origins(dims, container):
     L, W, H = container
     l, w, h = dims
+    if l > L or w > W or h > H:
+        return
     for z in range(H - h + 1):
         for y in range(W - w + 1):
             for x in range(L - l + 1):
@@ -75,11 +76,11 @@ def _candidate_origins(dims, container):
 
 def solve_exact(items, container, time_limit=10.0, node_limit=500_000,
                 objective="volume_then_count"):
-    """Exhaust finite grid; certify only exhaustion or all-item upper bounds.
+    """Exhaust the finite grid and report a certified incumbent when possible.
 
-    The default matches B2's calibrated final objective. The alternative is
-    ``count_then_volume``. On a budget limit, bounds are conservative global
-    bounds, not estimates based on only the currently visited branch.
+    The default objective matches B2's calibrated state key: used volume first,
+    then placed count. ``count_then_volume`` is available for an explicitly
+    different experiment. A budget-limited result is not optimal.
     """
     start = time.perf_counter()
     container = _positive_int_dims(container)
@@ -124,8 +125,7 @@ def solve_exact(items, container, time_limit=10.0, node_limit=500_000,
         if key(len(boxes), volume) > key(best["placed"], best["used_volume"]):
             best.update(placed=len(boxes), used_volume=volume,
                         boxes=[dict(b) for b in boxes])
-        if len(boxes) == len(ordered):
-            # A feasible full-item layout attains BOTH trivial global bounds.
+        if (len(boxes) == len(ordered) and volume == total_volume):
             raise StopSearch("all_items_upper_bound_attained")
         if i == len(ordered):
             return
@@ -148,7 +148,7 @@ def solve_exact(items, container, time_limit=10.0, node_limit=500_000,
                 boxes.append(box)
                 visit(i + 1, boxes, volume + volumes[i])
                 boxes.pop()
-        visit(i + 1, boxes, volume)  # Required subset-selection branch.
+        visit(i + 1, boxes, volume)
 
     termination = "exhausted_integer_grid"
     try:
@@ -156,12 +156,10 @@ def solve_exact(items, container, time_limit=10.0, node_limit=500_000,
     except StopSearch as stop:
         termination = str(stop)
     optimal = termination in {"exhausted_integer_grid", "all_items_upper_bound_attained"}
-    count_bound = (best["placed"] if optimal and objective == "count_then_volume"
-                   else len(ordered))
-    volume_bound = (best["used_volume"] if optimal and objective == "volume_then_count"
-                    else min(capacity, total_volume))
+    count_bound = best["placed"] if optimal else len(ordered)
+    volume_bound = best["used_volume"] if optimal else min(capacity, total_volume)
     return SearchResult(
-        "optimal" if optimal else "time_limit", container, best["placed"],
+        "optimal" if optimal else termination, container, best["placed"],
         best["used_volume"], best["boxes"], nodes, count_bound,
         time.perf_counter() - start, volume_bound, objective, termination,
     )

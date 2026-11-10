@@ -15,6 +15,30 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.mes_beam import beam_pack  # noqa: E402
 from experiments.exact_l0 import solve_exact  # noqa: E402
+from experiments.verify_mes_result import verify  # noqa: E402
+
+
+def validate_layout(result, items, container):
+    """Check saved coordinates independently of either search implementation."""
+    errors = verify(result, container)
+    catalog = {it["serial"]: it for it in items}
+    for box in result["boxes"]:
+        item = catalog.get(box["serial"])
+        if item is None:
+            errors.append(f"unknown serial: {box['serial']}")
+            continue
+        allowed = item.get("allowed") or [item["dims"]]
+        if (box["l"], box["w"], box["h"]) not in [tuple(d) for d in allowed]:
+            errors.append(f"orientation mismatch: {box['serial']}")
+        if any(not isinstance(box[k], int) for k in ("x", "y", "z")):
+            errors.append(f"noninteger origin: {box['serial']}")
+    if result["placed"] != len(result["boxes"]):
+        errors.append("placed count mismatch")
+    if result["used_volume"] != sum(b["l"] * b["w"] * b["h"] for b in result["boxes"]):
+        errors.append("used volume mismatch")
+    if errors:
+        raise ValueError("; ".join(errors))
+    return errors
 
 
 INSTANCES = [
@@ -78,7 +102,8 @@ def _run_one(instance, time_limit, node_limit):
     items.sort(key=lambda it: (-it["dims"][0] * it["dims"][1] * it["dims"][2],
                               str(it.get("serial", ""))))
     container = tuple(instance["container"])
-    exact = solve_exact(items, container, time_limit=time_limit, node_limit=node_limit)
+    exact = solve_exact(items, container, time_limit=time_limit, node_limit=node_limit,
+                        objective="volume_then_count")
     b2_start = time.perf_counter()
     b2 = beam_pack(items, container, beam_width=8, space_cap=80)
     b2_seconds = time.perf_counter() - b2_start
@@ -86,6 +111,8 @@ def _run_one(instance, time_limit, node_limit):
     # tests exercise the internal update invariant separately.
     b2_boxes = b2["boxes"]
     b2_volume = sum(b["l"] * b["w"] * b["h"] for b in b2_boxes)
+    exact_errors = validate_layout(vars(exact), items, container)
+    b2_errors = validate_layout(b2, items, container)
     return {
         "instance_id": instance["instance_id"],
         "container": list(container),
@@ -96,12 +123,19 @@ def _run_one(instance, time_limit, node_limit):
             "used_volume": exact.used_volume,
             "nodes": exact.nodes,
             "upper_bound": exact.upper_bound,
+            "volume_upper_bound": exact.volume_upper_bound,
+            "objective": exact.objective,
+            "termination": exact.termination,
+            "boxes": exact.boxes,
+            "independent_validation_errors": exact_errors,
             "seconds": round(exact.seconds, 6),
         },
         "b2": {
             "beam_width": b2["beam_width"],
             "space_cap": b2["space_cap"],
             "state_priority": b2["state_priority"],
+            "boxes": b2_boxes,
+            "independent_validation_errors": b2_errors,
             "placed": b2["placed"],
             "used_volume": b2["used_volume"],
             "recomputed_volume": b2_volume,
@@ -123,12 +157,14 @@ def main():
     node_limit = 2_000_000
     rows = [_run_one(instance, time_limit, node_limit) for instance in INSTANCES]
     payload = {
+        "schema_version": 2,
+        "objective": "volume_then_count",
         "method": "B2_vs_exact_L0_referee",
         "scope": "small_single_container_integer_grid_axis_aligned_geometry",
         "time_limit_seconds": time_limit,
         "node_limit": node_limit,
         "instances": rows,
-        "interpretation": "The referee and B2 share one deterministic volume-descending item order. Only rows with exact.status=optimal support an exact gap comparison; time_limit rows provide a feasible lower bound and a conservative count upper bound, not an optimality claim.",
+        "interpretation": "Same volume-then-count objective and deterministic volume-descending item order. Optimality follows from integer-grid exhaustion or a validated full-item layout attaining both trivial global bounds. Count differences are descriptive, not separate count-optimality claims. Budget-limited rows retain valid loose count and volume upper bounds; no optimality claim.",
     }
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for row in rows:

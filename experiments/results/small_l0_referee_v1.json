@@ -1,4 +1,6 @@
 {
+  "schema_version": 2,
+  "objective": "volume_then_count",
   "method": "B2_vs_exact_L0_referee",
   "scope": "small_single_container_integer_grid_axis_aligned_geometry",
   "time_limit_seconds": 5.0,
@@ -18,17 +20,250 @@
         "used_volume": 64,
         "nodes": 9,
         "upper_bound": 8,
-        "seconds": 0.000964
+        "volume_upper_bound": 64,
+        "objective": "volume_then_count",
+        "termination": "all_items_upper_bound_attained",
+        "boxes": [
+          {
+            "serial": "I0",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I1",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I2",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 2,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I3",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 2,
+            "y": 2,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I4",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I5",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 2,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I6",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 2,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I7",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 2,
+            "y": 2,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "independent_validation_errors": [],
+        "seconds": 0.000245
       },
       "b2": {
         "beam_width": 8,
         "space_cap": 80,
         "state_priority": "volume",
+        "boxes": [
+          {
+            "serial": "I0",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I1",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I2",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 2,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I3",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 2,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I4",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I5",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 2,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I6",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 2,
+            "y": 2,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "I7",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 2,
+            "y": 2,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "independent_validation_errors": [],
         "placed": 8,
         "used_volume": 64,
         "recomputed_volume": 64,
         "skipped": 0,
-        "seconds": 0.001152,
+        "seconds": 0.001233,
         "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
       },
       "count_gap_if_exact": 0,
@@ -49,17 +284,250 @@
         "used_volume": 452,
         "nodes": 9,
         "upper_bound": 8,
-        "seconds": 0.001253
+        "volume_upper_bound": 452,
+        "objective": "volume_then_count",
+        "termination": "all_items_upper_bound_attained",
+        "boxes": [
+          {
+            "serial": "A",
+            "dims": [
+              5,
+              5,
+              5
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 5,
+            "w": 5,
+            "h": 5
+          },
+          {
+            "serial": "B",
+            "dims": [
+              5,
+              5,
+              4
+            ],
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "l": 5,
+            "w": 5,
+            "h": 4
+          },
+          {
+            "serial": "C",
+            "dims": [
+              5,
+              4,
+              4
+            ],
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "l": 5,
+            "w": 4,
+            "h": 4
+          },
+          {
+            "serial": "D",
+            "dims": [
+              4,
+              4,
+              4
+            ],
+            "x": 5,
+            "y": 5,
+            "z": 0,
+            "l": 4,
+            "w": 4,
+            "h": 4
+          },
+          {
+            "serial": "E",
+            "dims": [
+              4,
+              3,
+              3
+            ],
+            "x": 5,
+            "y": 0,
+            "z": 4,
+            "l": 4,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "F",
+            "dims": [
+              3,
+              3,
+              3
+            ],
+            "x": 5,
+            "y": 3,
+            "z": 4,
+            "l": 3,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "G",
+            "dims": [
+              3,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 5,
+            "z": 4,
+            "l": 3,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "H",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 8,
+            "y": 3,
+            "z": 4,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "independent_validation_errors": [],
+        "seconds": 0.001386
       },
       "b2": {
         "beam_width": 8,
         "space_cap": 80,
         "state_priority": "volume",
+        "boxes": [
+          {
+            "serial": "A",
+            "dims": [
+              5,
+              5,
+              5
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 5,
+            "w": 5,
+            "h": 5
+          },
+          {
+            "serial": "B",
+            "dims": [
+              5,
+              5,
+              4
+            ],
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "l": 5,
+            "w": 5,
+            "h": 4
+          },
+          {
+            "serial": "C",
+            "dims": [
+              5,
+              4,
+              4
+            ],
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "l": 5,
+            "w": 4,
+            "h": 4
+          },
+          {
+            "serial": "D",
+            "dims": [
+              4,
+              4,
+              4
+            ],
+            "x": 5,
+            "y": 0,
+            "z": 4,
+            "l": 4,
+            "w": 4,
+            "h": 4
+          },
+          {
+            "serial": "E",
+            "dims": [
+              4,
+              3,
+              3
+            ],
+            "x": 0,
+            "y": 5,
+            "z": 4,
+            "l": 4,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "F",
+            "dims": [
+              3,
+              3,
+              3
+            ],
+            "x": 0,
+            "y": 5,
+            "z": 7,
+            "l": 3,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "G",
+            "dims": [
+              3,
+              2,
+              2
+            ],
+            "x": 5,
+            "y": 0,
+            "z": 8,
+            "l": 3,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "H",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 5,
+            "y": 2,
+            "z": 8,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "independent_validation_errors": [],
         "placed": 8,
         "used_volume": 452,
         "recomputed_volume": 452,
         "skipped": 0,
-        "seconds": 0.003432,
+        "seconds": 0.00347,
         "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
       },
       "count_gap_if_exact": 0,
@@ -80,17 +548,362 @@
         "used_volume": 441,
         "nodes": 13,
         "upper_bound": 12,
-        "seconds": 0.001725
+        "volume_upper_bound": 441,
+        "objective": "volume_then_count",
+        "termination": "all_items_upper_bound_attained",
+        "boxes": [
+          {
+            "serial": "T0",
+            "dims": [
+              5,
+              5,
+              4
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 5,
+            "w": 5,
+            "h": 4
+          },
+          {
+            "serial": "T1",
+            "dims": [
+              5,
+              4,
+              4
+            ],
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "l": 5,
+            "w": 4,
+            "h": 4
+          },
+          {
+            "serial": "T2",
+            "dims": [
+              4,
+              4,
+              4
+            ],
+            "x": 5,
+            "y": 4,
+            "z": 0,
+            "l": 4,
+            "w": 4,
+            "h": 4
+          },
+          {
+            "serial": "T3",
+            "dims": [
+              4,
+              4,
+              3
+            ],
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "l": 4,
+            "w": 4,
+            "h": 3
+          },
+          {
+            "serial": "T4",
+            "dims": [
+              4,
+              3,
+              3
+            ],
+            "x": 0,
+            "y": 5,
+            "z": 3,
+            "l": 4,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "T5",
+            "dims": [
+              4,
+              3,
+              3
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "l": 4,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "T6",
+            "dims": [
+              3,
+              3,
+              3
+            ],
+            "x": 4,
+            "y": 0,
+            "z": 4,
+            "l": 3,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "T7",
+            "dims": [
+              3,
+              3,
+              2
+            ],
+            "x": 7,
+            "y": 0,
+            "z": 4,
+            "l": 3,
+            "w": 3,
+            "h": 2
+          },
+          {
+            "serial": "T8",
+            "dims": [
+              3,
+              2,
+              2
+            ],
+            "x": 4,
+            "y": 8,
+            "z": 0,
+            "l": 3,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "T10",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 7,
+            "y": 8,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "T9",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 4,
+            "y": 8,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "T11",
+            "dims": [
+              2,
+              2,
+              1
+            ],
+            "x": 6,
+            "y": 8,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 1
+          }
+        ],
+        "independent_validation_errors": [],
+        "seconds": 0.001669
       },
       "b2": {
         "beam_width": 8,
         "space_cap": 80,
         "state_priority": "volume",
+        "boxes": [
+          {
+            "serial": "T0",
+            "dims": [
+              5,
+              5,
+              4
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 5,
+            "w": 5,
+            "h": 4
+          },
+          {
+            "serial": "T1",
+            "dims": [
+              5,
+              4,
+              4
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "l": 5,
+            "w": 4,
+            "h": 4
+          },
+          {
+            "serial": "T2",
+            "dims": [
+              4,
+              4,
+              4
+            ],
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "l": 4,
+            "w": 4,
+            "h": 4
+          },
+          {
+            "serial": "T3",
+            "dims": [
+              4,
+              4,
+              3
+            ],
+            "x": 5,
+            "y": 0,
+            "z": 4,
+            "l": 4,
+            "w": 4,
+            "h": 3
+          },
+          {
+            "serial": "T4",
+            "dims": [
+              4,
+              3,
+              3
+            ],
+            "x": 5,
+            "y": 0,
+            "z": 7,
+            "l": 4,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "T5",
+            "dims": [
+              4,
+              3,
+              3
+            ],
+            "x": 5,
+            "y": 4,
+            "z": 0,
+            "l": 4,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "T6",
+            "dims": [
+              3,
+              3,
+              3
+            ],
+            "x": 5,
+            "y": 7,
+            "z": 0,
+            "l": 3,
+            "w": 3,
+            "h": 3
+          },
+          {
+            "serial": "T7",
+            "dims": [
+              3,
+              3,
+              2
+            ],
+            "x": 5,
+            "y": 7,
+            "z": 3,
+            "l": 3,
+            "w": 3,
+            "h": 2
+          },
+          {
+            "serial": "T8",
+            "dims": [
+              3,
+              2,
+              2
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 8,
+            "l": 3,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "T10",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 3,
+            "y": 0,
+            "z": 8,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "T9",
+            "dims": [
+              2,
+              2,
+              2
+            ],
+            "x": 3,
+            "y": 2,
+            "z": 8,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "serial": "T11",
+            "dims": [
+              2,
+              2,
+              1
+            ],
+            "x": 0,
+            "y": 2,
+            "z": 8,
+            "l": 2,
+            "w": 2,
+            "h": 1
+          }
+        ],
+        "independent_validation_errors": [],
         "placed": 12,
         "used_volume": 441,
         "recomputed_volume": 441,
         "skipped": 0,
-        "seconds": 0.006983,
+        "seconds": 0.007223,
         "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
       },
       "count_gap_if_exact": 0,
@@ -111,17 +924,166 @@
         "used_volume": 308,
         "nodes": 6,
         "upper_bound": 5,
-        "seconds": 0.000255
+        "volume_upper_bound": 308,
+        "objective": "volume_then_count",
+        "termination": "all_items_upper_bound_attained",
+        "boxes": [
+          {
+            "serial": "G2",
+            "dims": [
+              6,
+              5,
+              4
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 6,
+            "w": 5,
+            "h": 4
+          },
+          {
+            "serial": "G3",
+            "dims": [
+              6,
+              5,
+              4
+            ],
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "l": 6,
+            "w": 5,
+            "h": 4
+          },
+          {
+            "serial": "G1",
+            "dims": [
+              5,
+              4,
+              3
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "l": 5,
+            "w": 4,
+            "h": 3
+          },
+          {
+            "serial": "G0",
+            "dims": [
+              2,
+              2,
+              1
+            ],
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 1
+          },
+          {
+            "serial": "G4",
+            "dims": [
+              2,
+              2,
+              1
+            ],
+            "x": 8,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 1
+          }
+        ],
+        "independent_validation_errors": [],
+        "seconds": 0.00028
       },
       "b2": {
         "beam_width": 8,
         "space_cap": 80,
         "state_priority": "volume",
+        "boxes": [
+          {
+            "serial": "G2",
+            "dims": [
+              6,
+              5,
+              4
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 6,
+            "w": 5,
+            "h": 4
+          },
+          {
+            "serial": "G3",
+            "dims": [
+              6,
+              5,
+              4
+            ],
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "l": 6,
+            "w": 5,
+            "h": 4
+          },
+          {
+            "serial": "G1",
+            "dims": [
+              5,
+              4,
+              3
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "l": 5,
+            "w": 4,
+            "h": 3
+          },
+          {
+            "serial": "G0",
+            "dims": [
+              2,
+              2,
+              1
+            ],
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 1
+          },
+          {
+            "serial": "G4",
+            "dims": [
+              2,
+              2,
+              1
+            ],
+            "x": 6,
+            "y": 0,
+            "z": 1,
+            "l": 2,
+            "w": 2,
+            "h": 1
+          }
+        ],
+        "independent_validation_errors": [],
         "placed": 5,
         "used_volume": 308,
         "recomputed_volume": 308,
         "skipped": 0,
-        "seconds": 0.00144,
+        "seconds": 0.001698,
         "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
       },
       "count_gap_if_exact": 0,
@@ -142,12 +1104,91 @@
         "used_volume": 27,
         "nodes": 4,
         "upper_bound": 3,
-        "seconds": 8.3e-05
+        "volume_upper_bound": 27,
+        "objective": "volume_then_count",
+        "termination": "all_items_upper_bound_attained",
+        "boxes": [
+          {
+            "serial": "R1",
+            "dims": [
+              4,
+              3,
+              1
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 4,
+            "w": 3,
+            "h": 1
+          },
+          {
+            "serial": "R2",
+            "dims": [
+              1,
+              4,
+              3
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "l": 1,
+            "w": 4,
+            "h": 3
+          },
+          {
+            "serial": "R0",
+            "dims": [
+              1,
+              3,
+              1
+            ],
+            "x": 1,
+            "y": 0,
+            "z": 1,
+            "l": 1,
+            "w": 3,
+            "h": 1
+          }
+        ],
+        "independent_validation_errors": [],
+        "seconds": 9.9e-05
       },
       "b2": {
         "beam_width": 8,
         "space_cap": 80,
         "state_priority": "volume",
+        "boxes": [
+          {
+            "serial": "R2",
+            "dims": [
+              1,
+              4,
+              3
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 1,
+            "w": 4,
+            "h": 3
+          },
+          {
+            "serial": "R0",
+            "dims": [
+              1,
+              3,
+              1
+            ],
+            "x": 0,
+            "y": 0,
+            "z": 3,
+            "l": 1,
+            "w": 3,
+            "h": 1
+          }
+        ],
+        "independent_validation_errors": [],
         "placed": 2,
         "used_volume": 15,
         "recomputed_volume": 15,
@@ -160,5 +1201,5 @@
       "common_item_order": "volume_desc_then_serial"
     }
   ],
-  "interpretation": "The referee and B2 share one deterministic volume-descending item order. Only rows with exact.status=optimal support an exact gap comparison; time_limit rows provide a feasible lower bound and a conservative count upper bound, not an optimality claim."
+  "interpretation": "Same volume-then-count objective and deterministic volume-descending item order. Optimality follows from integer-grid exhaustion or a validated full-item layout attaining both trivial global bounds. Count differences are descriptive, not separate count-optimality claims. Budget-limited rows retain valid loose count and volume upper bounds; no optimality claim."
 }

@@ -246,6 +246,7 @@ experiments/verify_mes_result.py B2保存布局独立几何校验
 experiments/exact_l0.py               小规模L0完整枚举裁判
 experiments/bench_small_l0.py         B2与小规模裁判对照
 experiments/ablation_mes_score.py     B2评分优先级消融
+experiments/results/small_l0_referee_v1.json 精确裁判与B2布局、独立校验及最优差距
 experiments/ftl_attempts.py      早期贪心分层尝试，结论已降级
 experiments/platform_analysis.py 平台候选诊断，仅作诊断指标
 experiments/run_baselines.py     当前 EP/LAYER 对照
@@ -283,7 +284,7 @@ py -3.12 experiments/run_baselines.py
 
 | 局限 | 处理方式 |
 |---|---|
-| 当前EP-FF为弱基线，B2首版尚未优于EP | 已补空间不变量测试和小规模L0精确裁判；再做评分函数消融与论文级组件 |
+| 当前EP-FF为弱基线，B2首版尚未优于EP | 已补空间不变量、整数网格L0裁判和评分优先级消融；再评估论文级组件 |
 | 车型 2 一辆车全约束可行性未解决 | 做实际迁移/重排和 B2/B3 搜索，不作先验断言 |
 | L1 不是完整物理稳定性 | 参数化支撑比例，并区分几何接触与静态稳定 |
 | B1 承重是整底面积分摊/平均近似 | 后续小规模加入载荷守恒与必要力矩平衡，不与算法B2编号混用 |
