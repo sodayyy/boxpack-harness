@@ -15,6 +15,7 @@ lake-packages/
 *.tmp
 # 正式作者运行日志属于哈希证据，必须随清单归档。
 !experiments/results/guesser_frozen*_v1/*.log
+!experiments/results/metasolver_dev10_5s30s_v1/*.log
 
 # 原始数据（题面附件有版权/保密风险，不入库）
 data/raw/

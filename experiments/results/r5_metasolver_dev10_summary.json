@@ -1,0 +1,22 @@
+{
+  "directory": "C:\\Users\\yzj\\WorkBuddy\\2026-10-29-17-53-27\\boxpack-harness\\experiments\\results\\metasolver_dev10_5s30s_v1",
+  "runs": 20,
+  "hashed_files": 69,
+  "summary_by_budget": {
+    "5": {
+      "n": 10,
+      "mean_isd": 0.9461773196205203,
+      "mean_process_cpu_seconds": 5.0310652000000005,
+      "mean_wall_seconds": 4.860316425100001
+    },
+    "30": {
+      "n": 10,
+      "mean_isd": 0.9500541017134813,
+      "mean_process_cpu_seconds": 30.0709545,
+      "mean_wall_seconds": 29.354437312500004
+    }
+  },
+  "binary_sha256": "32575c758959531a33f42c255b11091b8c72d477048b8e61687fe4262b75a2a5",
+  "errors": [],
+  "passed": true
+}

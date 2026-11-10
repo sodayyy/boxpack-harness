@@ -1,0 +1,21 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.14 (main, Jun 11 2026, 04:04:46) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "single",
+  "level": 3,
+  "pressure_model": "chain_area_v1",
+  "support_ratio": 0,
+  "source_total_volume_cm3": 28735000,
+  "source_total_weight_kg": 4110,
+  "command": [
+    "C:\\Users\\yzj\\WorkBuddy\\2026-10-29-17-53-27\\boxpack-harness\\experiments\\bench_constrained_fleet.py",
+    "--scope",
+    "single",
+    "--level",
+    "3",
+    "--output-dir",
+    "C:\\Users\\yzj\\WorkBuddy\\2026-10-29-17-53-27\\boxpack-harness\\experiments\\results\\chain_single_L3_v1"
+  ],
+  "planned_count": 10,
+  "limitation": "bounded_EP_orders_not_global_search_or_moment_equilibrium"
+}

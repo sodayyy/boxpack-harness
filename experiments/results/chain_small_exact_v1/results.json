@@ -1,0 +1,3159 @@
+{
+  "runs": [
+    {
+      "case": "standard_stack_8",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T2",
+          "serial": "T2-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T3",
+          "serial": "T3-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T4",
+          "serial": "T4-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T5",
+          "serial": "T5-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T6",
+          "serial": "T6-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T7",
+          "serial": "T7-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          19
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 0,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 0,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 64,
+        "placed": 8,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T2",
+            "serial": "T2-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T3",
+            "serial": "T3-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T4",
+            "serial": "T4-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 8,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T5",
+            "serial": "T5-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 10,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T6",
+            "serial": "T6-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 12,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T7",
+            "serial": "T7-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 14,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 9,
+        "volume_upper_bound": 64,
+        "seconds": 0.0004124999977648258,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T2-000",
+              "name": "T2",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 4,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T3-000",
+              "name": "T3",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 6,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T4-000",
+              "name": "T4",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 8,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T5-000",
+              "name": "T5",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 10,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T6-000",
+              "name": "T6",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 12,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T7-000",
+              "name": "T7",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 14,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 64,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "standard_stack_8",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T2",
+          "serial": "T2-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T3",
+          "serial": "T3-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T4",
+          "serial": "T4-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T5",
+          "serial": "T5-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T6",
+          "serial": "T6-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T7",
+          "serial": "T7-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          19
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 1,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 1,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 64,
+        "placed": 8,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T2",
+            "serial": "T2-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T3",
+            "serial": "T3-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T4",
+            "serial": "T4-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 8,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T5",
+            "serial": "T5-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 10,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T6",
+            "serial": "T6-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 12,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T7",
+            "serial": "T7-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 14,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 9,
+        "volume_upper_bound": 64,
+        "seconds": 0.00038100000529084355,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T2-000",
+              "name": "T2",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 4,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T3-000",
+              "name": "T3",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 6,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T4-000",
+              "name": "T4",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 8,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T5-000",
+              "name": "T5",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 10,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T6-000",
+              "name": "T6",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 12,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T7-000",
+              "name": "T7",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 14,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 64,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "standard_stack_8",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T2",
+          "serial": "T2-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T3",
+          "serial": "T3-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T4",
+          "serial": "T4-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T5",
+          "serial": "T5-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T6",
+          "serial": "T6-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T7",
+          "serial": "T7-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          19
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 2,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 2,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 64,
+        "placed": 8,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T2",
+            "serial": "T2-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T3",
+            "serial": "T3-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T4",
+            "serial": "T4-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 8,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T5",
+            "serial": "T5-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 10,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T6",
+            "serial": "T6-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 12,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T7",
+            "serial": "T7-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 14,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 9,
+        "volume_upper_bound": 64,
+        "seconds": 0.00040440000884700567,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T2-000",
+              "name": "T2",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 4,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T3-000",
+              "name": "T3",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 6,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T4-000",
+              "name": "T4",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 8,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T5-000",
+              "name": "T5",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 10,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T6-000",
+              "name": "T6",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 12,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T7-000",
+              "name": "T7",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 14,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 64,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "standard_stack_8",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T2",
+          "serial": "T2-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T3",
+          "serial": "T3-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T4",
+          "serial": "T4-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T5",
+          "serial": "T5-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T6",
+          "serial": "T6-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T7",
+          "serial": "T7-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          19
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 3,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 3,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 64,
+        "placed": 8,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T2",
+            "serial": "T2-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T3",
+            "serial": "T3-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T4",
+            "serial": "T4-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 8,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T5",
+            "serial": "T5-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 10,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T6",
+            "serial": "T6-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 12,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T7",
+            "serial": "T7-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 14,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 9,
+        "volume_upper_bound": 64,
+        "seconds": 0.000385499995900318,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T2-000",
+              "name": "T2",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 4,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T3-000",
+              "name": "T3",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 6,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T4-000",
+              "name": "T4",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 8,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T5-000",
+              "name": "T5",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 10,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T6-000",
+              "name": "T6",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 12,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T7-000",
+              "name": "T7",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 14,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 64,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "standard_stack_8",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T2",
+          "serial": "T2-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T3",
+          "serial": "T3-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T4",
+          "serial": "T4-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T5",
+          "serial": "T5-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T6",
+          "serial": "T6-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        },
+        {
+          "name": "T7",
+          "serial": "T7-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.01
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          19
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 4,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 4,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 64,
+        "placed": 8,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T2",
+            "serial": "T2-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T3",
+            "serial": "T3-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T4",
+            "serial": "T4-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 8,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T5",
+            "serial": "T5-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 10,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T6",
+            "serial": "T6-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 12,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T7",
+            "serial": "T7-000",
+            "kind": "standard",
+            "weight": 0.01,
+            "x": 0,
+            "y": 0,
+            "z": 14,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 9,
+        "volume_upper_bound": 64,
+        "seconds": 0.0005272000125842169,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T2-000",
+              "name": "T2",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 4,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T3-000",
+              "name": "T3",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 6,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T4-000",
+              "name": "T4",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 8,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T5-000",
+              "name": "T5",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 10,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T6-000",
+              "name": "T6",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 12,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            },
+            {
+              "serial": "T7-000",
+              "name": "T7",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 14,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.01
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 64,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "fragile_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 0,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 0,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 3,
+        "volume_upper_bound": 16,
+        "seconds": 4.769999941345304e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 16,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "fragile_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 1,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 1,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 3,
+        "volume_upper_bound": 16,
+        "seconds": 4.119999357499182e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 16,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "fragile_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 2,
+      "exact": {
+        "status": "optimal",
+        "termination": "exhausted_integer_grid",
+        "objective": "volume_then_count",
+        "level": 2,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 8,
+        "placed": 1,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 10,
+        "volume_upper_bound": 8,
+        "seconds": 6.890000076964498e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [
+        "T1-000"
+      ],
+      "ep_volume": 8,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "fragile_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 3,
+      "exact": {
+        "status": "optimal",
+        "termination": "exhausted_integer_grid",
+        "objective": "volume_then_count",
+        "level": 3,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 8,
+        "placed": 1,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 10,
+        "volume_upper_bound": 8,
+        "seconds": 6.670001312159002e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [
+        "T1-000"
+      ],
+      "ep_volume": 8,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "fragile_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 4,
+      "exact": {
+        "status": "optimal",
+        "termination": "exhausted_integer_grid",
+        "objective": "volume_then_count",
+        "level": 4,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 8,
+        "placed": 1,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 10,
+        "volume_upper_bound": 8,
+        "seconds": 9.109999518841505e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [
+        "T1-000"
+      ],
+      "ep_volume": 8,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "late_standard_support_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 0,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 0,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 3,
+        "volume_upper_bound": 16,
+        "seconds": 3.6299999919719994e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 16,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "late_standard_support_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 1,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 1,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 3,
+        "volume_upper_bound": 16,
+        "seconds": 3.3200005418621004e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 16,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "late_standard_support_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 2,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 2,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 8,
+        "volume_upper_bound": 16,
+        "seconds": 5.6599994422867894e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [
+        "T1-000"
+      ],
+      "ep_volume": 8,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "late_standard_support_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 3,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 3,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 8,
+        "volume_upper_bound": 16,
+        "seconds": 5.94000011915341e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [
+        "T1-000"
+      ],
+      "ep_volume": 8,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "late_standard_support_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "fragile",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 0.05
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 4,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 4,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "fragile",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 0.05,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 8,
+        "volume_upper_bound": 16,
+        "seconds": 7.169999298639596e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "fragile",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 0.05
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [
+        "T1-000"
+      ],
+      "ep_volume": 8,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "pressure_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 0,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 0,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 1,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 1,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 3,
+        "volume_upper_bound": 16,
+        "seconds": 3.5200006095692515e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 1
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 16,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "pressure_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 1,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 1,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 1,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 1,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 3,
+        "volume_upper_bound": 16,
+        "seconds": 4.440000338945538e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 1
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 16,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "pressure_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 2,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 2,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 1,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 1,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 3,
+        "volume_upper_bound": 16,
+        "seconds": 4.6600005589425564e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 1
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 16,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "pressure_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 3,
+      "exact": {
+        "status": "optimal",
+        "termination": "all_items_upper_bound_attained",
+        "objective": "volume_then_count",
+        "level": 3,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 16,
+        "placed": 2,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 1,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "name": "T1",
+            "serial": "T1-000",
+            "kind": "standard",
+            "weight": 1,
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 3,
+        "volume_upper_bound": 16,
+        "seconds": 4.050000279676169e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 1
+            },
+            {
+              "serial": "T1-000",
+              "name": "T1",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 2,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [],
+      "ep_volume": 16,
+      "errors": [],
+      "ep_errors": []
+    },
+    {
+      "case": "pressure_stack_2",
+      "items": [
+        {
+          "name": "T0",
+          "serial": "T0-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        },
+        {
+          "name": "T1",
+          "serial": "T1-000",
+          "kind": "standard",
+          "dims": [
+            2,
+            2,
+            2
+          ],
+          "weight": 1
+        }
+      ],
+      "spec": {
+        "dims": [
+          2,
+          2,
+          7
+        ],
+        "cap_weight": 100,
+        "cost": 1
+      },
+      "level": 4,
+      "exact": {
+        "status": "optimal",
+        "termination": "exhausted_integer_grid",
+        "objective": "volume_then_count",
+        "level": 4,
+        "pressure_model": "chain_area_v1",
+        "used_volume": 8,
+        "placed": 1,
+        "boxes": [
+          {
+            "name": "T0",
+            "serial": "T0-000",
+            "kind": "standard",
+            "weight": 1,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "l": 2,
+            "w": 2,
+            "h": 2
+          }
+        ],
+        "nodes": 10,
+        "volume_upper_bound": 8,
+        "seconds": 8.030000026337802e-05,
+        "limitation": "single_container_finite_integer_grid_only; acceptance_reuses_constraints_checker"
+      },
+      "ep_fleet": [
+        {
+          "truck_type": "test",
+          "boxes": [
+            {
+              "serial": "T0-000",
+              "name": "T0",
+              "kind": "standard",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "l": 2,
+              "w": 2,
+              "h": 2,
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "ep_unplaced": [
+        "T1-000"
+      ],
+      "ep_volume": 8,
+      "errors": [],
+      "ep_errors": []
+    }
+  ],
+  "scope": "finite_integer_grid_single_container_only",
+  "optimal_runs": 20,
+  "limitation": "Includes one easy eight-item case, not broad 8--20 item scaling evidence; shares independent acceptance checker"
+}

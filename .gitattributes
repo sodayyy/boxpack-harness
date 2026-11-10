@@ -11,3 +11,6 @@
 experiments/results/guesser_dev10_5s30s_v1/** -text
 experiments/results/linux_components_dev10_v1/** -text whitespace=cr-at-eol
 experiments/results/guesser_frozen11_20_v1/** -text
+experiments/results/guesser_frozen*_v1/** -text whitespace=cr-at-eol
+experiments/results/chain_*_v1/** -text whitespace=cr-at-eol
+experiments/results/metasolver_dev10_5s30s_v1/** -text whitespace=cr-at-eol

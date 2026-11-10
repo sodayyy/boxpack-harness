@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "runs": 200,
+  "evidence_checks": {
+    "guesser_dev10_5s30s_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen11_20_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen21_30_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen31_40_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen41_50_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen51_60_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen61_70_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen71_80_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen81_90_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    },
+    "guesser_frozen91_100_v1": {
+      "runs": 20,
+      "hashed_files": 107,
+      "errors": [],
+      "passed": true
+    }
+  },
+  "summaries": {
+    "development_1_10": {
+      "by_budget": {
+        "5": {
+          "n": 10,
+          "mean_isd": 0.9518057157252235,
+          "min_isd": 0.9226262079747102,
+          "max_isd": 0.9776145394990033,
+          "mean_process_cpu_seconds": 5.0084585,
+          "mean_wall_seconds": 4.9044678662
+        },
+        "30": {
+          "n": 10,
+          "mean_isd": 0.9526406614639866,
+          "min_isd": 0.9239210398801979,
+          "max_isd": 0.9776145394990033,
+          "mean_process_cpu_seconds": 30.0111426,
+          "mean_wall_seconds": 29.650310721199986
+        }
+      },
+      "mean_gain_percentage_points": 0.0834945738763071,
+      "improved": 5,
+      "unchanged": 5,
+      "decreased": 0
+    },
+    "frozen_11_100": {
+      "by_budget": {
+        "5": {
+          "n": 90,
+          "mean_isd": 0.9559754556185451,
+          "min_isd": 0.9002253933416241,
+          "max_isd": 0.9877854223483048,
+          "mean_process_cpu_seconds": 5.009937533333333,
+          "mean_wall_seconds": 4.863072923555564
+        },
+        "30": {
+          "n": 90,
+          "mean_isd": 0.9583317565621928,
+          "min_isd": 0.9002253933416241,
+          "max_isd": 0.988838808864984,
+          "mean_process_cpu_seconds": 30.01169488888889,
+          "mean_wall_seconds": 29.010748433511125
+        }
+      },
+      "mean_gain_percentage_points": 0.23563009436476748,
+      "improved": 54,
+      "unchanged": 36,
+      "decreased": 0
+    },
+    "all_1_100_descriptive": {
+      "by_budget": {
+        "5": {
+          "n": 100,
+          "mean_isd": 0.955558481629213,
+          "min_isd": 0.9002253933416241,
+          "max_isd": 0.9877854223483048,
+          "mean_process_cpu_seconds": 5.00978963,
+          "mean_wall_seconds": 4.867212417820008
+        },
+        "30": {
+          "n": 100,
+          "mean_isd": 0.9577626470523722,
+          "min_isd": 0.9002253933416241,
+          "max_isd": 0.988838808864984,
+          "mean_process_cpu_seconds": 30.01163966,
+          "mean_wall_seconds": 29.074704662280013
+        }
+      },
+      "mean_gain_percentage_points": 0.22041654231592145,
+      "improved": 59,
+      "unchanged": 41,
+      "decreased": 0
+    }
+  },
+  "source_sha256": "d6f0b99b4cc6e51c5753565b175a778a40422dc92cffee3204bf16cc1d23f341",
+  "evidence_hash_manifests_sha256": {
+    "guesser_dev10_5s30s_v1": "d228173ab3ec5c28db13c0f4abfbe4b7b1b5d6dfe3e6c7bf765916119204a65e",
+    "guesser_frozen11_20_v1": "87e31324c4736e7dc42f1bc1c58797177b66b3068b32927a5e154606ff8118b8",
+    "guesser_frozen21_30_v1": "2f9aea5d5fdb8d29e0dd683386513c513b458426e7ab424f7600ed656412924c",
+    "guesser_frozen31_40_v1": "4dcd6518ab912688fb262cb6f0de1d45975842746d3ba55de37879b453ac51bf",
+    "guesser_frozen41_50_v1": "ef230edf040cd73c22b13b26968d902f2d733335013a9524465fa72fb11f9ada",
+    "guesser_frozen51_60_v1": "1e1b2e6856001f08f58b371575a9261ced84a9ddb0342b78644cda55b9bda2c3",
+    "guesser_frozen61_70_v1": "39135130ee6eace7187ff78863bcc92b7226be1444de4c08f73586f08859d66e",
+    "guesser_frozen71_80_v1": "dfb5073b13b58748705f45401ab3a45ac20e5b28059e9ff89490c59a6ab573a6",
+    "guesser_frozen81_90_v1": "0fb1a70d7bbc47d85cab3eba1bf1d4c675a8aaf68cc0864f497cdb3e2e0641a8",
+    "guesser_frozen91_100_v1": "28f77d33a69e499508d5ba6d6ed9f300c96ecc7675ef79af99a957e58f4f7339"
+  },
+  "limitations": [
+    "Frozen parameters, not unseen blind testing; historical EP data had been viewed.",
+    "Single default run per budget; no statistical significance or monotonicity proof.",
+    "Author CPU limits; not equal-time ranking against deterministic EP/B2.",
+    "Pure geometry; no full-constraint fleet or physical safety conclusion."
+  ]
+}

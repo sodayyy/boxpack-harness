@@ -1,0 +1,4440 @@
+{
+  "appendix": {
+    "cli_parameters": {
+      "fitness_function": {
+        "alpha": 4.0,
+        "alpha_2": 4.0,
+        "beta": 1.0,
+        "beta_2": 1.0,
+        "configuration_switch_threshold": 1.01,
+        "delta": 0.04,
+        "delta_2": 0.04,
+        "gamma": 0.2,
+        "gamma_2": 0.2
+      },
+      "general": {
+        "maximum_running_time_seconds": 5.0
+      },
+      "greedy": {
+        "skip_type": "none"
+      },
+      "io": {
+        "help": false,
+        "instance_file": "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_85_5s.input.json",
+        "irace": false,
+        "output_file": "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_85_5s.raw.json"
+      },
+      "tree_search": {
+        "block_minimum_volume_ratio": -1.0,
+        "initial_branching_factor": 4,
+        "maximum_branching_factor": 10000,
+        "maximum_number_of_blocks": 10000
+      }
+    },
+    "constraints_compliance": {
+      "all_constraints": true,
+      "large_object_space_constraint": true,
+      "non_empty_packing_constraint": true,
+      "orientation_allocation_constraint": true,
+      "overlap_constraint": true,
+      "quantity_constraint": true
+    },
+    "elapsed_times": {
+      "allocation_whole": 4.91,
+      "double_effort": 4.91,
+      "fitness_computer_partial": 0.29000000000000004,
+      "greedy": 3.97,
+      "initialization": 0.09000000000000001,
+      "volume_loss_update": 0.19,
+      "wall": 4.8500000000000005
+    },
+    "initial_blocks": {
+      "allocated_volume": {
+        "maximum": 19582640,
+        "mean": 3147994.481955101,
+        "median": 2455200.0,
+        "minimum": 44770
+      },
+      "large_object_volume": 30089620,
+      "number": 3519,
+      "number_of_items": {
+        "maximum": 195,
+        "mean": 40.42256322818983,
+        "median": 33.0,
+        "minimum": 1
+      },
+      "relative_allocated_volume": {
+        "maximum": 0.6508104788295764,
+        "mean": 0.10462061275466705,
+        "median": 0.08159624481798042,
+        "minimum": 0.001487888514378048
+      },
+      "relative_volume": {
+        "maximum": 0.6508104788295764,
+        "mean": 0.10462061275466705,
+        "median": 0.08159624481798042,
+        "minimum": 0.001487888514378048
+      },
+      "volume": {
+        "maximum": 19582640,
+        "mean": 3147994.481955101,
+        "median": 2455200.0,
+        "minimum": 44770
+      }
+    },
+    "input_statistics": {
+      "large_object_volume": 30089620,
+      "number_of_different_item_types": 3,
+      "total_quantity_of_small_items": 319,
+      "total_volume_of_small_items": 30056994,
+      "volume_fraction_relative_to_large_object_volume": 99.89157058148292
+    },
+    "number_of_calls": {
+      "bsg": 9,
+      "double_effort": 1,
+      "fitness_computer": 29362810,
+      "greedy": 52196,
+      "greedy_initial_skips": 0,
+      "greedy_of_partial_skips": 0,
+      "volume_loss_update": 2933
+    },
+    "packing_statistics": {
+      "all_items_have_been_allocated_in_their_primary_orientation": false,
+      "number_of_allocated_small_items": 314,
+      "total_volume_of_allocated_small_items": 29598958,
+      "volume_fraction_relative_to_items_total_volume": 98.47610842255217,
+      "volume_fraction_relative_to_large_object_volume": 98.36933135081134
+    },
+    "solution_history": [
+      {
+        "branching_factor": 4,
+        "time": 0.0,
+        "volume_usage": 28091754
+      },
+      {
+        "branching_factor": 4,
+        "time": 0.0,
+        "volume_usage": 28659004
+      },
+      {
+        "branching_factor": 4,
+        "time": 0.0,
+        "volume_usage": 29185044
+      },
+      {
+        "branching_factor": 4,
+        "time": 0.0,
+        "volume_usage": 29442114
+      },
+      {
+        "branching_factor": 6,
+        "time": 0.01,
+        "volume_usage": 28091754
+      },
+      {
+        "branching_factor": 6,
+        "time": 0.01,
+        "volume_usage": 28659004
+      },
+      {
+        "branching_factor": 6,
+        "time": 0.01,
+        "volume_usage": 28706418
+      },
+      {
+        "branching_factor": 6,
+        "time": 0.02,
+        "volume_usage": 29185044
+      },
+      {
+        "branching_factor": 6,
+        "time": 0.02,
+        "volume_usage": 29442114
+      },
+      {
+        "branching_factor": 6,
+        "time": 0.03,
+        "volume_usage": 29442546
+      },
+      {
+        "branching_factor": 6,
+        "time": 0.03,
+        "volume_usage": 29508986
+      },
+      {
+        "branching_factor": 6,
+        "time": 0.03,
+        "volume_usage": 29520536
+      },
+      {
+        "branching_factor": 8,
+        "time": 0.04,
+        "volume_usage": 28091754
+      },
+      {
+        "branching_factor": 8,
+        "time": 0.04,
+        "volume_usage": 28659004
+      },
+      {
+        "branching_factor": 8,
+        "time": 0.04,
+        "volume_usage": 28706418
+      },
+      {
+        "branching_factor": 8,
+        "time": 0.04,
+        "volume_usage": 29185044
+      },
+      {
+        "branching_factor": 8,
+        "time": 0.04,
+        "volume_usage": 29442114
+      },
+      {
+        "branching_factor": 8,
+        "time": 0.06,
+        "volume_usage": 29442546
+      },
+      {
+        "branching_factor": 8,
+        "time": 0.07,
+        "volume_usage": 29443194
+      },
+      {
+        "branching_factor": 8,
+        "time": 0.07,
+        "volume_usage": 29508986
+      },
+      {
+        "branching_factor": 8,
+        "time": 0.07,
+        "volume_usage": 29520536
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.07,
+        "volume_usage": 28091754
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.07,
+        "volume_usage": 28659004
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.07,
+        "volume_usage": 28706418
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.07,
+        "volume_usage": 28782546
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.08,
+        "volume_usage": 29185044
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.08,
+        "volume_usage": 29442114
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.11000000000000001,
+        "volume_usage": 29442546
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.12000000000000001,
+        "volume_usage": 29497652
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.14,
+        "volume_usage": 29508986
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.14,
+        "volume_usage": 29520536
+      },
+      {
+        "branching_factor": 11,
+        "time": 0.14,
+        "volume_usage": 29520752
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.14,
+        "volume_usage": 28091754
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.14,
+        "volume_usage": 28659004
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.14,
+        "volume_usage": 28706418
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.15000000000000002,
+        "volume_usage": 28760876
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.15000000000000002,
+        "volume_usage": 28872086
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.15000000000000002,
+        "volume_usage": 28938526
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.15000000000000002,
+        "volume_usage": 29185044
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.15000000000000002,
+        "volume_usage": 29442114
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.22000000000000003,
+        "volume_usage": 29442546
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.22000000000000003,
+        "volume_usage": 29497652
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.28,
+        "volume_usage": 29508986
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.28,
+        "volume_usage": 29520536
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.28,
+        "volume_usage": 29520752
+      },
+      {
+        "branching_factor": 16,
+        "time": 0.28,
+        "volume_usage": 29565522
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.29000000000000004,
+        "volume_usage": 28091754
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.29000000000000004,
+        "volume_usage": 28659004
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.29000000000000004,
+        "volume_usage": 28706418
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.30000000000000004,
+        "volume_usage": 28760876
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.30000000000000004,
+        "volume_usage": 28782546
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.30000000000000004,
+        "volume_usage": 28872086
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.31000000000000005,
+        "volume_usage": 28938526
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.31000000000000005,
+        "volume_usage": 28983296
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.32000000000000006,
+        "volume_usage": 29185044
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.32000000000000006,
+        "volume_usage": 29442114
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.43000000000000005,
+        "volume_usage": 29442546
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.43000000000000005,
+        "volume_usage": 29497652
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.4700000000000001,
+        "volume_usage": 29509634
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.51,
+        "volume_usage": 29520752
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.56,
+        "volume_usage": 29521184
+      },
+      {
+        "branching_factor": 23,
+        "time": 0.6000000000000001,
+        "volume_usage": 29587192
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.63,
+        "volume_usage": 28091754
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.63,
+        "volume_usage": 28659004
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.63,
+        "volume_usage": 28706418
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.63,
+        "volume_usage": 28760876
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.63,
+        "volume_usage": 28782546
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.64,
+        "volume_usage": 28892974
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.64,
+        "volume_usage": 28906088
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.64,
+        "volume_usage": 29095154
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.65,
+        "volume_usage": 29196594
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.68,
+        "volume_usage": 29442114
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.95,
+        "volume_usage": 29442546
+      },
+      {
+        "branching_factor": 33,
+        "time": 0.95,
+        "volume_usage": 29497652
+      },
+      {
+        "branching_factor": 33,
+        "time": 1.06,
+        "volume_usage": 29509634
+      },
+      {
+        "branching_factor": 33,
+        "time": 1.07,
+        "volume_usage": 29542422
+      },
+      {
+        "branching_factor": 33,
+        "time": 1.19,
+        "volume_usage": 29542638
+      },
+      {
+        "branching_factor": 33,
+        "time": 1.2200000000000002,
+        "volume_usage": 29576074
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.37,
+        "volume_usage": 28091754
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.37,
+        "volume_usage": 28659004
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.37,
+        "volume_usage": 28706418
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.37,
+        "volume_usage": 28760876
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.37,
+        "volume_usage": 28782546
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.37,
+        "volume_usage": 28892974
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.3800000000000001,
+        "volume_usage": 28906088
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.3800000000000001,
+        "volume_usage": 29061934
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.3800000000000001,
+        "volume_usage": 29197674
+      },
+      {
+        "branching_factor": 47,
+        "time": 1.52,
+        "volume_usage": 29442114
+      },
+      {
+        "branching_factor": 47,
+        "time": 2.0700000000000003,
+        "volume_usage": 29442546
+      },
+      {
+        "branching_factor": 47,
+        "time": 2.08,
+        "volume_usage": 29497652
+      },
+      {
+        "branching_factor": 47,
+        "time": 2.24,
+        "volume_usage": 29520752
+      },
+      {
+        "branching_factor": 47,
+        "time": 2.3400000000000003,
+        "volume_usage": 29542422
+      },
+      {
+        "branching_factor": 47,
+        "time": 2.63,
+        "volume_usage": 29542638
+      },
+      {
+        "branching_factor": 47,
+        "time": 2.74,
+        "volume_usage": 29565738
+      },
+      {
+        "branching_factor": 47,
+        "time": 2.9800000000000004,
+        "volume_usage": 29598958
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.02,
+        "volume_usage": 28091754
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.02,
+        "volume_usage": 28659004
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.02,
+        "volume_usage": 28706418
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.02,
+        "volume_usage": 28760876
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.03,
+        "volume_usage": 28782546
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.03,
+        "volume_usage": 28892974
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.03,
+        "volume_usage": 28906088
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.03,
+        "volume_usage": 29061934
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.04,
+        "volume_usage": 29197674
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.17,
+        "volume_usage": 29207146
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.17,
+        "volume_usage": 29264114
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.29,
+        "volume_usage": 29442114
+      },
+      {
+        "branching_factor": 66,
+        "time": 3.7800000000000002,
+        "volume_usage": 29519754
+      },
+      {
+        "branching_factor": 66,
+        "time": 4.63,
+        "volume_usage": 29542422
+      }
+    ],
+    "solution_search": {
+      "average_depth": 12.97662656142233,
+      "maximum_depth": 29,
+      "minimum_depth": 3
+    }
+  },
+  "large_object": {
+    "measurement": {
+      "x": 587,
+      "y": 233,
+      "z": 220
+    }
+  },
+  "small_items": [
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 36,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 36,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 72,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 72,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 108,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 108,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 144,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 144,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 180,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 180,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 216,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 216,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 252,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 252,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 288,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 288,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 324,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 324,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 360,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 360,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 396,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 396,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 432,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 432,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 468,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 36,
+        "y": 61,
+        "z": 56
+      },
+      "position": {
+        "x": 468,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 56,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 112,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 168,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 224,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 280,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 336,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 392,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 56,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 112,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 168,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 224,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 280,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 336,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 392,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 448,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 448,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 56,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 112,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 168,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 224,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 280,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 336,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 392,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 61,
+        "z": 36
+      },
+      "position": {
+        "x": 448,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 0,
+        "y": 61,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 0,
+        "y": 61,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 0,
+        "y": 92,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 0,
+        "y": 92,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 0,
+        "y": 61,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 0,
+        "y": 61,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 0,
+        "y": 92,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 0,
+        "y": 92,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 72,
+        "y": 61,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 72,
+        "y": 61,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 72,
+        "y": 92,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 72,
+        "y": 92,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 72,
+        "y": 61,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 72,
+        "y": 61,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 72,
+        "y": 92,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 72,
+        "y": 92,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 144,
+        "y": 61,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 144,
+        "y": 61,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 144,
+        "y": 92,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 144,
+        "y": 92,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 144,
+        "y": 61,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 144,
+        "y": 61,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 144,
+        "y": 92,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 144,
+        "y": 92,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 216,
+        "y": 61,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 216,
+        "y": 61,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 216,
+        "y": 92,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 216,
+        "y": 92,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 216,
+        "y": 61,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 216,
+        "y": 61,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 216,
+        "y": 92,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 216,
+        "y": 92,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 288,
+        "y": 61,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 288,
+        "y": 61,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 288,
+        "y": 92,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 288,
+        "y": 92,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 288,
+        "y": 61,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 288,
+        "y": 61,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 288,
+        "y": 92,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 288,
+        "y": 92,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 360,
+        "y": 61,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 360,
+        "y": 61,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 360,
+        "y": 92,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 360,
+        "y": 92,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 360,
+        "y": 61,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 360,
+        "y": 61,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 360,
+        "y": 92,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 360,
+        "y": 92,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 432,
+        "y": 61,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 432,
+        "y": 61,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 432,
+        "y": 92,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 432,
+        "y": 92,
+        "z": 55
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 432,
+        "y": 61,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 432,
+        "y": 61,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 432,
+        "y": 92,
+        "z": 110
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 31,
+        "z": 55
+      },
+      "position": {
+        "x": 432,
+        "y": 92,
+        "z": 165
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 0,
+        "y": 123,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 72,
+        "y": 123,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 144,
+        "y": 123,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 216,
+        "y": 123,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 0,
+        "y": 178,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 72,
+        "y": 178,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 144,
+        "y": 178,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 216,
+        "y": 178,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 0,
+        "y": 123,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 72,
+        "y": 123,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 144,
+        "y": 123,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 216,
+        "y": 123,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 0,
+        "y": 178,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 72,
+        "y": 178,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 144,
+        "y": 178,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 216,
+        "y": 178,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 288,
+        "y": 123,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 288,
+        "y": 123,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 360,
+        "y": 123,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 360,
+        "y": 123,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 288,
+        "y": 178,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 288,
+        "y": 178,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 360,
+        "y": 178,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 360,
+        "y": 178,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 432,
+        "y": 123,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 432,
+        "y": 123,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 432,
+        "y": 178,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 432,
+        "y": 178,
+        "z": 31
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 0,
+        "y": 123,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 72,
+        "y": 123,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 144,
+        "y": 123,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 216,
+        "y": 123,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 0,
+        "y": 178,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 72,
+        "y": 178,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 144,
+        "y": 178,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 216,
+        "y": 178,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 288,
+        "y": 123,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 288,
+        "y": 178,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 360,
+        "y": 123,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 360,
+        "y": 178,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 432,
+        "y": 123,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 432,
+        "y": 178,
+        "z": 62
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 0,
+        "y": 125,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 56,
+        "y": 125,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 112,
+        "y": 125,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 168,
+        "y": 125,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 224,
+        "y": 125,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 280,
+        "y": 125,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 336,
+        "y": 125,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 392,
+        "y": 125,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 0,
+        "y": 161,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 56,
+        "y": 161,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 112,
+        "y": 161,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 168,
+        "y": 161,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 224,
+        "y": 161,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 280,
+        "y": 161,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 336,
+        "y": 161,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 392,
+        "y": 161,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 0,
+        "y": 197,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 56,
+        "y": 197,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 112,
+        "y": 197,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 168,
+        "y": 197,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 224,
+        "y": 197,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 280,
+        "y": 197,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 336,
+        "y": 197,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 392,
+        "y": 197,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 448,
+        "y": 125,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 448,
+        "y": 161,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 56,
+        "y": 36,
+        "z": 61
+      },
+      "position": {
+        "x": 448,
+        "y": 197,
+        "z": 159
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 0,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 36,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 36,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 72,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 72,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 108,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 108,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 144,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 36,
+        "z": 56
+      },
+      "position": {
+        "x": 526,
+        "y": 144,
+        "z": 56
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 56,
+        "z": 36
+      },
+      "position": {
+        "x": 526,
+        "y": 0,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 56,
+        "z": 36
+      },
+      "position": {
+        "x": 526,
+        "y": 56,
+        "z": 112
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 56,
+        "z": 36
+      },
+      "position": {
+        "x": 526,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 56,
+        "z": 36
+      },
+      "position": {
+        "x": 526,
+        "y": 56,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 56,
+        "z": 36
+      },
+      "position": {
+        "x": 526,
+        "y": 0,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 61,
+        "y": 56,
+        "z": 36
+      },
+      "position": {
+        "x": 526,
+        "y": 56,
+        "z": 184
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 543,
+        "y": 178,
+        "z": 146
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 565,
+        "y": 178,
+        "z": 146
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 543,
+        "y": 178,
+        "z": 183
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 565,
+        "y": 178,
+        "z": 183
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 189,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 211,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 189,
+        "z": 37
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 211,
+        "z": 37
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 189,
+        "z": 74
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 211,
+        "z": 74
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 506,
+        "y": 178,
+        "z": 154
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 506,
+        "y": 178,
+        "z": 176
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 506,
+        "y": 178,
+        "z": 198
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 112,
+        "z": 146
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 134,
+        "z": 146
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 112,
+        "z": 183
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 134,
+        "z": 183
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 156,
+        "z": 146
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 22,
+        "z": 37
+      },
+      "position": {
+        "x": 532,
+        "y": 156,
+        "z": 183
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 0,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 37,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 74,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 111,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 0,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 37,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 74,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 111,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 148,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 185,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 222,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 259,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 148,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 185,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 222,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 259,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 0,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 37,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 74,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 111,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 0,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 37,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 74,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 111,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 148,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 185,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 222,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 259,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 148,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 185,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 222,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 259,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 296,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 333,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 370,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 407,
+        "y": 123,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 296,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 333,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 370,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 407,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 296,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 333,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 370,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 407,
+        "y": 178,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 296,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 333,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 370,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 407,
+        "y": 178,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 0,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 37,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 74,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 111,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 0,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 37,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 74,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 111,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 148,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 185,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 222,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 259,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 148,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 185,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 222,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 259,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 296,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 333,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 370,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 407,
+        "y": 123,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 296,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 333,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 370,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 407,
+        "y": 178,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 0,
+        "z": 37
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 0,
+        "z": 74
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 0,
+        "z": 111
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 55,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 55,
+        "z": 37
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 55,
+        "z": 74
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 55,
+        "z": 111
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 0,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 55,
+        "z": 148
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 123,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 178,
+        "z": 0
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 123,
+        "z": 37
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 178,
+        "z": 37
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 123,
+        "z": 74
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 504,
+        "y": 178,
+        "z": 74
+      }
+    },
+    {
+      "measurement": {
+        "x": 37,
+        "y": 55,
+        "z": 22
+      },
+      "position": {
+        "x": 550,
+        "y": 178,
+        "z": 124
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 499,
+        "y": 178,
+        "z": 117
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 521,
+        "y": 178,
+        "z": 117
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 510,
+        "y": 123,
+        "z": 146
+      }
+    },
+    {
+      "measurement": {
+        "x": 22,
+        "y": 55,
+        "z": 37
+      },
+      "position": {
+        "x": 510,
+        "y": 123,
+        "z": 183
+      }
+    },
+    {
+      "measurement": {
+        "x": 72,
+        "y": 55,
+        "z": 31
+      },
+      "position": {
+        "x": 515,
+        "y": 123,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 37,
+        "z": 22
+      },
+      "position": {
+        "x": 444,
+        "y": 196,
+        "z": 93
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 37,
+        "z": 22
+      },
+      "position": {
+        "x": 444,
+        "y": 196,
+        "z": 115
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 37,
+        "z": 22
+      },
+      "position": {
+        "x": 444,
+        "y": 196,
+        "z": 137
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 72,
+        "z": 31
+      },
+      "position": {
+        "x": 444,
+        "y": 124,
+        "z": 97
+      }
+    },
+    {
+      "measurement": {
+        "x": 55,
+        "y": 72,
+        "z": 31
+      },
+      "position": {
+        "x": 444,
+        "y": 124,
+        "z": 128
+      }
+    }
+  ],
+  "type": "output",
+  "version": "0.5.0"
+}

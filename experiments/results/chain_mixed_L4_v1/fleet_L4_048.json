@@ -1,0 +1,6060 @@
+{
+  "label": "fleet_L4_048",
+  "combination": [
+    2,
+    1
+  ],
+  "vehicle_order": [
+    "车型2",
+    "车型1",
+    "车型1"
+  ],
+  "item_order": "fragile_first",
+  "level": 4,
+  "pressure_model": "chain_area_v1",
+  "fleet": [
+    {
+      "truck_type": "车型2",
+      "boxes": [
+        {
+          "serial": "G3-000",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-001",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 70,
+          "y": 0,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-002",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 140,
+          "y": 0,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-003",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 210,
+          "y": 0,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-004",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 280,
+          "y": 0,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-005",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 350,
+          "y": 0,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-006",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 420,
+          "y": 0,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-007",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 490,
+          "y": 0,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-008",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 560,
+          "y": 0,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-009",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 630,
+          "y": 0,
+          "z": 0,
+          "l": 50,
+          "w": 70,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-010",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 0,
+          "y": 50,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-011",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 70,
+          "y": 50,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-012",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 140,
+          "y": 50,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-013",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 210,
+          "y": 50,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-014",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 280,
+          "y": 50,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-015",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 350,
+          "y": 50,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-016",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 420,
+          "y": 50,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-017",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 490,
+          "y": 50,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-018",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 560,
+          "y": 50,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-019",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 630,
+          "y": 70,
+          "z": 0,
+          "l": 50,
+          "w": 70,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-020",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 0,
+          "y": 100,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-021",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 70,
+          "y": 100,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-022",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 140,
+          "y": 100,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-023",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 210,
+          "y": 100,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-024",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 280,
+          "y": 100,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-025",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 350,
+          "y": 100,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-026",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 420,
+          "y": 100,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-027",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 490,
+          "y": 100,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-028",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 560,
+          "y": 100,
+          "z": 0,
+          "l": 70,
+          "w": 50,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G3-029",
+          "name": "G3",
+          "kind": "fragile",
+          "x": 630,
+          "y": 140,
+          "z": 0,
+          "l": 50,
+          "w": 70,
+          "h": 40,
+          "weight": 15
+        },
+        {
+          "serial": "G4-000",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 0,
+          "y": 150,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-001",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 80,
+          "y": 150,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-002",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 160,
+          "y": 150,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-003",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 240,
+          "y": 150,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-004",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 320,
+          "y": 150,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-005",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 400,
+          "y": 150,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-006",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 480,
+          "y": 150,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-007",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 0,
+          "y": 150,
+          "z": 50,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-008",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 80,
+          "y": 150,
+          "z": 50,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-009",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 160,
+          "y": 150,
+          "z": 50,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-010",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 240,
+          "y": 150,
+          "z": 50,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-011",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 320,
+          "y": 150,
+          "z": 50,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-012",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 400,
+          "y": 150,
+          "z": 50,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-013",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 480,
+          "y": 150,
+          "z": 50,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-014",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 0,
+          "y": 150,
+          "z": 100,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-015",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 80,
+          "y": 150,
+          "z": 100,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-016",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 160,
+          "y": 150,
+          "z": 100,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-017",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 240,
+          "y": 150,
+          "z": 100,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-018",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 320,
+          "y": 150,
+          "z": 100,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-019",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 400,
+          "y": 150,
+          "z": 100,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-020",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 480,
+          "y": 150,
+          "z": 100,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-021",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 0,
+          "y": 150,
+          "z": 150,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-022",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 80,
+          "y": 150,
+          "z": 150,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-023",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 160,
+          "y": 150,
+          "z": 150,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-024",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 240,
+          "y": 150,
+          "z": 150,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-025",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 320,
+          "y": 150,
+          "z": 150,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-026",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 400,
+          "y": 150,
+          "z": 150,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-027",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 480,
+          "y": 150,
+          "z": 150,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G5-000",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 560,
+          "y": 150,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-001",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 560,
+          "y": 190,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-002",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 560,
+          "y": 150,
+          "z": 60,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-003",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 560,
+          "y": 190,
+          "z": 60,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-004",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 560,
+          "y": 150,
+          "z": 120,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-005",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 560,
+          "y": 190,
+          "z": 120,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-006",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 560,
+          "y": 150,
+          "z": 180,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-007",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 560,
+          "y": 190,
+          "z": 180,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G1-000",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 150,
+          "z": 0,
+          "l": 30,
+          "w": 60,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-001",
+          "name": "G1",
+          "kind": "standard",
+          "x": 0,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-002",
+          "name": "G1",
+          "kind": "standard",
+          "x": 60,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-003",
+          "name": "G1",
+          "kind": "standard",
+          "x": 120,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-004",
+          "name": "G1",
+          "kind": "standard",
+          "x": 180,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-005",
+          "name": "G1",
+          "kind": "standard",
+          "x": 240,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-006",
+          "name": "G1",
+          "kind": "standard",
+          "x": 300,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-007",
+          "name": "G1",
+          "kind": "standard",
+          "x": 360,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-008",
+          "name": "G1",
+          "kind": "standard",
+          "x": 420,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-009",
+          "name": "G1",
+          "kind": "standard",
+          "x": 480,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-010",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 210,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-011",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 150,
+          "z": 40,
+          "l": 30,
+          "w": 60,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-012",
+          "name": "G1",
+          "kind": "standard",
+          "x": 0,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-013",
+          "name": "G1",
+          "kind": "standard",
+          "x": 60,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-014",
+          "name": "G1",
+          "kind": "standard",
+          "x": 120,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-015",
+          "name": "G1",
+          "kind": "standard",
+          "x": 180,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-016",
+          "name": "G1",
+          "kind": "standard",
+          "x": 240,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-017",
+          "name": "G1",
+          "kind": "standard",
+          "x": 300,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-018",
+          "name": "G1",
+          "kind": "standard",
+          "x": 360,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-019",
+          "name": "G1",
+          "kind": "standard",
+          "x": 420,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-020",
+          "name": "G1",
+          "kind": "standard",
+          "x": 480,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-021",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 210,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-022",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 150,
+          "z": 80,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-023",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 190,
+          "z": 80,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-024",
+          "name": "G1",
+          "kind": "standard",
+          "x": 0,
+          "y": 210,
+          "z": 80,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-025",
+          "name": "G1",
+          "kind": "standard",
+          "x": 60,
+          "y": 210,
+          "z": 80,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-026",
+          "name": "G1",
+          "kind": "standard",
+          "x": 120,
+          "y": 210,
+          "z": 80,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-027",
+          "name": "G1",
+          "kind": "standard",
+          "x": 180,
+          "y": 210,
+          "z": 80,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-028",
+          "name": "G1",
+          "kind": "standard",
+          "x": 240,
+          "y": 210,
+          "z": 80,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-029",
+          "name": "G1",
+          "kind": "standard",
+          "x": 300,
+          "y": 210,
+          "z": 80,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-030",
+          "name": "G1",
+          "kind": "standard",
+          "x": 360,
+          "y": 210,
+          "z": 80,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-031",
+          "name": "G1",
+          "kind": "standard",
+          "x": 420,
+          "y": 210,
+          "z": 80,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-032",
+          "name": "G1",
+          "kind": "standard",
+          "x": 480,
+          "y": 210,
+          "z": 80,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-033",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 150,
+          "z": 110,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-034",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 190,
+          "z": 110,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-035",
+          "name": "G1",
+          "kind": "standard",
+          "x": 0,
+          "y": 210,
+          "z": 120,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-036",
+          "name": "G1",
+          "kind": "standard",
+          "x": 60,
+          "y": 210,
+          "z": 120,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-037",
+          "name": "G1",
+          "kind": "standard",
+          "x": 120,
+          "y": 210,
+          "z": 120,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-038",
+          "name": "G1",
+          "kind": "standard",
+          "x": 180,
+          "y": 210,
+          "z": 120,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-039",
+          "name": "G1",
+          "kind": "standard",
+          "x": 240,
+          "y": 210,
+          "z": 120,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-040",
+          "name": "G1",
+          "kind": "standard",
+          "x": 300,
+          "y": 210,
+          "z": 120,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-041",
+          "name": "G1",
+          "kind": "standard",
+          "x": 360,
+          "y": 210,
+          "z": 120,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-042",
+          "name": "G1",
+          "kind": "standard",
+          "x": 420,
+          "y": 210,
+          "z": 120,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-043",
+          "name": "G1",
+          "kind": "standard",
+          "x": 480,
+          "y": 210,
+          "z": 120,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-044",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 150,
+          "z": 140,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-045",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 190,
+          "z": 140,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-046",
+          "name": "G1",
+          "kind": "standard",
+          "x": 0,
+          "y": 210,
+          "z": 160,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-047",
+          "name": "G1",
+          "kind": "standard",
+          "x": 60,
+          "y": 210,
+          "z": 160,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-048",
+          "name": "G1",
+          "kind": "standard",
+          "x": 120,
+          "y": 210,
+          "z": 160,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-049",
+          "name": "G1",
+          "kind": "standard",
+          "x": 180,
+          "y": 210,
+          "z": 160,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-050",
+          "name": "G1",
+          "kind": "standard",
+          "x": 240,
+          "y": 210,
+          "z": 160,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-051",
+          "name": "G1",
+          "kind": "standard",
+          "x": 300,
+          "y": 210,
+          "z": 160,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-052",
+          "name": "G1",
+          "kind": "standard",
+          "x": 360,
+          "y": 210,
+          "z": 160,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-053",
+          "name": "G1",
+          "kind": "standard",
+          "x": 420,
+          "y": 210,
+          "z": 160,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-054",
+          "name": "G1",
+          "kind": "standard",
+          "x": 480,
+          "y": 210,
+          "z": 160,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-055",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 150,
+          "z": 170,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-056",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 190,
+          "z": 170,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-057",
+          "name": "G1",
+          "kind": "standard",
+          "x": 0,
+          "y": 150,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-058",
+          "name": "G1",
+          "kind": "standard",
+          "x": 60,
+          "y": 150,
+          "z": 200,
+          "l": 40,
+          "w": 60,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-059",
+          "name": "G1",
+          "kind": "standard",
+          "x": 100,
+          "y": 150,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-060",
+          "name": "G1",
+          "kind": "standard",
+          "x": 160,
+          "y": 150,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-061",
+          "name": "G1",
+          "kind": "standard",
+          "x": 220,
+          "y": 150,
+          "z": 200,
+          "l": 40,
+          "w": 60,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-062",
+          "name": "G1",
+          "kind": "standard",
+          "x": 260,
+          "y": 150,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-063",
+          "name": "G1",
+          "kind": "standard",
+          "x": 320,
+          "y": 150,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-064",
+          "name": "G1",
+          "kind": "standard",
+          "x": 380,
+          "y": 150,
+          "z": 200,
+          "l": 40,
+          "w": 60,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-065",
+          "name": "G1",
+          "kind": "standard",
+          "x": 420,
+          "y": 150,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-066",
+          "name": "G1",
+          "kind": "standard",
+          "x": 480,
+          "y": 150,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-067",
+          "name": "G1",
+          "kind": "standard",
+          "x": 600,
+          "y": 150,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-068",
+          "name": "G1",
+          "kind": "standard",
+          "x": 0,
+          "y": 190,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-069",
+          "name": "G1",
+          "kind": "standard",
+          "x": 100,
+          "y": 190,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-070",
+          "name": "G1",
+          "kind": "standard",
+          "x": 160,
+          "y": 190,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-071",
+          "name": "G1",
+          "kind": "standard",
+          "x": 260,
+          "y": 190,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-072",
+          "name": "G1",
+          "kind": "standard",
+          "x": 320,
+          "y": 190,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-073",
+          "name": "G1",
+          "kind": "standard",
+          "x": 420,
+          "y": 190,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        },
+        {
+          "serial": "G1-074",
+          "name": "G1",
+          "kind": "standard",
+          "x": 480,
+          "y": 190,
+          "z": 200,
+          "l": 60,
+          "w": 40,
+          "h": 30,
+          "weight": 12
+        }
+      ]
+    },
+    {
+      "truck_type": "车型1",
+      "boxes": [
+        {
+          "serial": "G4-028",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-029",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 80,
+          "y": 0,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-030",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 160,
+          "y": 0,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-031",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 240,
+          "y": 0,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-032",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 320,
+          "y": 0,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-033",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 0,
+          "y": 60,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-034",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 80,
+          "y": 60,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-035",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 160,
+          "y": 60,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-036",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 240,
+          "y": 60,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-037",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 320,
+          "y": 60,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-038",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 0,
+          "y": 120,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G4-039",
+          "name": "G4",
+          "kind": "oriented",
+          "x": 80,
+          "y": 120,
+          "z": 0,
+          "l": 80,
+          "w": 60,
+          "h": 50,
+          "weight": 25
+        },
+        {
+          "serial": "G5-008",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 160,
+          "y": 120,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-009",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 200,
+          "y": 120,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-010",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 240,
+          "y": 120,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-011",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 280,
+          "y": 120,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-012",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 320,
+          "y": 120,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-013",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 360,
+          "y": 120,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-014",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 160,
+          "y": 160,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-015",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 200,
+          "y": 160,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-016",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 240,
+          "y": 160,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-017",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 280,
+          "y": 160,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-018",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 320,
+          "y": 160,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-019",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 360,
+          "y": 160,
+          "z": 0,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-020",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 0,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-021",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 40,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-022",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 80,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-023",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 120,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-024",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 160,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-025",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 200,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-026",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 240,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-027",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 280,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-028",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 320,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-029",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 360,
+          "y": 0,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-030",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 0,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-031",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 40,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-032",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 80,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-033",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 120,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-034",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 160,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-035",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 200,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-036",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 240,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-037",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 280,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-038",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 320,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-039",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 360,
+          "y": 40,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-040",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 0,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-041",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 40,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-042",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 80,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-043",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 120,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-044",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 160,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-045",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 200,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-046",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 240,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-047",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 280,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-048",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 320,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G5-049",
+          "name": "G5",
+          "kind": "oriented",
+          "x": 360,
+          "y": 80,
+          "z": 50,
+          "l": 40,
+          "w": 40,
+          "h": 60,
+          "weight": 18
+        },
+        {
+          "serial": "G1-075",
+          "name": "G1",
+          "kind": "standard",
+          "x": 0,
+          "y": 180,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-076",
+          "name": "G1",
+          "kind": "standard",
+          "x": 60,
+          "y": 180,
+          "z": 0,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-077",
+          "name": "G1",
+          "kind": "standard",
+          "x": 120,
+          "y": 180,
+          "z": 0,
+          "l": 40,
+          "w": 30,
+          "h": 60,
+          "weight": 12
+        },
+        {
+          "serial": "G1-078",
+          "name": "G1",
+          "kind": "standard",
+          "x": 0,
+          "y": 180,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G1-079",
+          "name": "G1",
+          "kind": "standard",
+          "x": 60,
+          "y": 180,
+          "z": 40,
+          "l": 60,
+          "w": 30,
+          "h": 40,
+          "weight": 12
+        },
+        {
+          "serial": "G2-000",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 120,
+          "z": 50,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-001",
+          "name": "G2",
+          "kind": "standard",
+          "x": 50,
+          "y": 120,
+          "z": 50,
+          "l": 25,
+          "w": 50,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-002",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 120,
+          "z": 50,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-003",
+          "name": "G2",
+          "kind": "standard",
+          "x": 130,
+          "y": 120,
+          "z": 50,
+          "l": 25,
+          "w": 50,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-004",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 155,
+          "z": 50,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-005",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 155,
+          "z": 50,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-006",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 120,
+          "z": 60,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-007",
+          "name": "G2",
+          "kind": "standard",
+          "x": 200,
+          "y": 120,
+          "z": 60,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-008",
+          "name": "G2",
+          "kind": "standard",
+          "x": 240,
+          "y": 120,
+          "z": 60,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-009",
+          "name": "G2",
+          "kind": "standard",
+          "x": 280,
+          "y": 120,
+          "z": 60,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-010",
+          "name": "G2",
+          "kind": "standard",
+          "x": 320,
+          "y": 120,
+          "z": 60,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-011",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 120,
+          "z": 60,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-012",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 160,
+          "z": 60,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-013",
+          "name": "G2",
+          "kind": "standard",
+          "x": 200,
+          "y": 160,
+          "z": 60,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-014",
+          "name": "G2",
+          "kind": "standard",
+          "x": 240,
+          "y": 160,
+          "z": 60,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-015",
+          "name": "G2",
+          "kind": "standard",
+          "x": 280,
+          "y": 160,
+          "z": 60,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-016",
+          "name": "G2",
+          "kind": "standard",
+          "x": 320,
+          "y": 160,
+          "z": 60,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-017",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 160,
+          "z": 60,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-018",
+          "name": "G2",
+          "kind": "standard",
+          "x": 120,
+          "y": 180,
+          "z": 60,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-019",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 120,
+          "z": 75,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-020",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 120,
+          "z": 75,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-021",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 180,
+          "z": 80,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-022",
+          "name": "G2",
+          "kind": "standard",
+          "x": 50,
+          "y": 180,
+          "z": 80,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-023",
+          "name": "G2",
+          "kind": "standard",
+          "x": 50,
+          "y": 120,
+          "z": 85,
+          "l": 25,
+          "w": 50,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-024",
+          "name": "G2",
+          "kind": "standard",
+          "x": 130,
+          "y": 120,
+          "z": 85,
+          "l": 25,
+          "w": 50,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-025",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 120,
+          "z": 85,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-026",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 155,
+          "z": 85,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-027",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 155,
+          "z": 85,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-028",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 155,
+          "z": 85,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-029",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 160,
+          "z": 85,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-030",
+          "name": "G2",
+          "kind": "standard",
+          "x": 210,
+          "y": 160,
+          "z": 85,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-031",
+          "name": "G2",
+          "kind": "standard",
+          "x": 260,
+          "y": 160,
+          "z": 85,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-032",
+          "name": "G2",
+          "kind": "standard",
+          "x": 310,
+          "y": 160,
+          "z": 85,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-033",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 120,
+          "z": 100,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-034",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 120,
+          "z": 100,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-035",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 0,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-036",
+          "name": "G2",
+          "kind": "standard",
+          "x": 40,
+          "y": 0,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-037",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 0,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-038",
+          "name": "G2",
+          "kind": "standard",
+          "x": 120,
+          "y": 0,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-039",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 0,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-040",
+          "name": "G2",
+          "kind": "standard",
+          "x": 200,
+          "y": 0,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-041",
+          "name": "G2",
+          "kind": "standard",
+          "x": 240,
+          "y": 0,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-042",
+          "name": "G2",
+          "kind": "standard",
+          "x": 280,
+          "y": 0,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-043",
+          "name": "G2",
+          "kind": "standard",
+          "x": 320,
+          "y": 0,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-044",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 0,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-045",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 40,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-046",
+          "name": "G2",
+          "kind": "standard",
+          "x": 40,
+          "y": 40,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-047",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 40,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-048",
+          "name": "G2",
+          "kind": "standard",
+          "x": 120,
+          "y": 40,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-049",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 40,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-050",
+          "name": "G2",
+          "kind": "standard",
+          "x": 200,
+          "y": 40,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-051",
+          "name": "G2",
+          "kind": "standard",
+          "x": 240,
+          "y": 40,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-052",
+          "name": "G2",
+          "kind": "standard",
+          "x": 280,
+          "y": 40,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-053",
+          "name": "G2",
+          "kind": "standard",
+          "x": 320,
+          "y": 40,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-054",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 40,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-055",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 80,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-056",
+          "name": "G2",
+          "kind": "standard",
+          "x": 40,
+          "y": 80,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-057",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 80,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-058",
+          "name": "G2",
+          "kind": "standard",
+          "x": 120,
+          "y": 80,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-059",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 80,
+          "z": 110,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-060",
+          "name": "G2",
+          "kind": "standard",
+          "x": 200,
+          "y": 80,
+          "z": 110,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-061",
+          "name": "G2",
+          "kind": "standard",
+          "x": 240,
+          "y": 80,
+          "z": 110,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-062",
+          "name": "G2",
+          "kind": "standard",
+          "x": 280,
+          "y": 80,
+          "z": 110,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-063",
+          "name": "G2",
+          "kind": "standard",
+          "x": 320,
+          "y": 80,
+          "z": 110,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-064",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 80,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-065",
+          "name": "G2",
+          "kind": "standard",
+          "x": 355,
+          "y": 120,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-066",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 130,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-067",
+          "name": "G2",
+          "kind": "standard",
+          "x": 210,
+          "y": 130,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-068",
+          "name": "G2",
+          "kind": "standard",
+          "x": 260,
+          "y": 130,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-069",
+          "name": "G2",
+          "kind": "standard",
+          "x": 310,
+          "y": 130,
+          "z": 110,
+          "l": 35,
+          "w": 50,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-070",
+          "name": "G2",
+          "kind": "standard",
+          "x": 355,
+          "y": 155,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-071",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 165,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-072",
+          "name": "G2",
+          "kind": "standard",
+          "x": 210,
+          "y": 165,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-073",
+          "name": "G2",
+          "kind": "standard",
+          "x": 260,
+          "y": 165,
+          "z": 110,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-074",
+          "name": "G2",
+          "kind": "standard",
+          "x": 120,
+          "y": 180,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-075",
+          "name": "G2",
+          "kind": "standard",
+          "x": 310,
+          "y": 180,
+          "z": 110,
+          "l": 35,
+          "w": 25,
+          "h": 50,
+          "weight": 8
+        },
+        {
+          "serial": "G2-076",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 180,
+          "z": 115,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-077",
+          "name": "G2",
+          "kind": "standard",
+          "x": 50,
+          "y": 180,
+          "z": 115,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-078",
+          "name": "G2",
+          "kind": "standard",
+          "x": 50,
+          "y": 120,
+          "z": 120,
+          "l": 25,
+          "w": 50,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-079",
+          "name": "G2",
+          "kind": "standard",
+          "x": 130,
+          "y": 120,
+          "z": 120,
+          "l": 25,
+          "w": 50,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-080",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 155,
+          "z": 120,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-081",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 155,
+          "z": 120,
+          "l": 50,
+          "w": 25,
+          "h": 35,
+          "weight": 8
+        },
+        {
+          "serial": "G2-082",
+          "name": "G2",
+          "kind": "standard",
+          "x": 0,
+          "y": 120,
+          "z": 125,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-083",
+          "name": "G2",
+          "kind": "standard",
+          "x": 80,
+          "y": 120,
+          "z": 125,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-084",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 0,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-085",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 35,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-086",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 70,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-087",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 80,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-088",
+          "name": "G2",
+          "kind": "standard",
+          "x": 210,
+          "y": 80,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-089",
+          "name": "G2",
+          "kind": "standard",
+          "x": 260,
+          "y": 80,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-090",
+          "name": "G2",
+          "kind": "standard",
+          "x": 310,
+          "y": 80,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-091",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 105,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-092",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 115,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-093",
+          "name": "G2",
+          "kind": "standard",
+          "x": 210,
+          "y": 115,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-094",
+          "name": "G2",
+          "kind": "standard",
+          "x": 260,
+          "y": 115,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-095",
+          "name": "G2",
+          "kind": "standard",
+          "x": 310,
+          "y": 115,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-096",
+          "name": "G2",
+          "kind": "standard",
+          "x": 360,
+          "y": 140,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-097",
+          "name": "G2",
+          "kind": "standard",
+          "x": 160,
+          "y": 150,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-098",
+          "name": "G2",
+          "kind": "standard",
+          "x": 210,
+          "y": 150,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        },
+        {
+          "serial": "G2-099",
+          "name": "G2",
+          "kind": "standard",
+          "x": 260,
+          "y": 150,
+          "z": 135,
+          "l": 50,
+          "w": 35,
+          "h": 25,
+          "weight": 8
+        }
+      ]
+    }
+  ],
+  "rest_serials": [],
+  "complete": true,
+  "vehicles": 2,
+  "cost": 1150,
+  "placed": 300,
+  "used_volume_cm3": 28735000,
+  "errors": [],
+  "solve_wall_seconds": 6.155765000003157,
+  "chain_audits": [
+    {
+      "model": "chain_area_v1",
+      "errors": [],
+      "transfers": [
+        {
+          "upper": "G1-057",
+          "lower": "G4-021",
+          "contact_area_cm2": 2400,
+          "load_kg": 12.0
+        },
+        {
+          "upper": "G1-058",
+          "lower": "G4-021",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-058",
+          "lower": "G4-022",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-059",
+          "lower": "G4-022",
+          "contact_area_cm2": 2400,
+          "load_kg": 12.0
+        },
+        {
+          "upper": "G1-060",
+          "lower": "G4-023",
+          "contact_area_cm2": 2400,
+          "load_kg": 12.0
+        },
+        {
+          "upper": "G1-061",
+          "lower": "G4-023",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-061",
+          "lower": "G4-024",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-062",
+          "lower": "G4-024",
+          "contact_area_cm2": 2400,
+          "load_kg": 12.0
+        },
+        {
+          "upper": "G1-063",
+          "lower": "G4-025",
+          "contact_area_cm2": 2400,
+          "load_kg": 12.0
+        },
+        {
+          "upper": "G1-064",
+          "lower": "G4-025",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-064",
+          "lower": "G4-026",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-065",
+          "lower": "G4-026",
+          "contact_area_cm2": 2400,
+          "load_kg": 12.0
+        },
+        {
+          "upper": "G1-066",
+          "lower": "G4-027",
+          "contact_area_cm2": 2400,
+          "load_kg": 12.0
+        },
+        {
+          "upper": "G1-067",
+          "lower": "G1-055",
+          "contact_area_cm2": 2400,
+          "load_kg": 12.0
+        },
+        {
+          "upper": "G1-068",
+          "lower": "G4-021",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-068",
+          "lower": "G1-046",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-069",
+          "lower": "G4-022",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-069",
+          "lower": "G1-047",
+          "contact_area_cm2": 400,
+          "load_kg": 2.0
+        },
+        {
+          "upper": "G1-069",
+          "lower": "G1-048",
+          "contact_area_cm2": 800,
+          "load_kg": 4.0
+        },
+        {
+          "upper": "G1-070",
+          "lower": "G4-023",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-070",
+          "lower": "G1-048",
+          "contact_area_cm2": 400,
+          "load_kg": 2.0
+        },
+        {
+          "upper": "G1-070",
+          "lower": "G1-049",
+          "contact_area_cm2": 800,
+          "load_kg": 4.0
+        },
+        {
+          "upper": "G1-071",
+          "lower": "G4-024",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-071",
+          "lower": "G1-050",
+          "contact_area_cm2": 800,
+          "load_kg": 4.0
+        },
+        {
+          "upper": "G1-071",
+          "lower": "G1-051",
+          "contact_area_cm2": 400,
+          "load_kg": 2.0
+        },
+        {
+          "upper": "G1-072",
+          "lower": "G4-025",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-072",
+          "lower": "G1-051",
+          "contact_area_cm2": 800,
+          "load_kg": 4.0
+        },
+        {
+          "upper": "G1-072",
+          "lower": "G1-052",
+          "contact_area_cm2": 400,
+          "load_kg": 2.0
+        },
+        {
+          "upper": "G1-073",
+          "lower": "G4-026",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-073",
+          "lower": "G1-053",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-074",
+          "lower": "G4-027",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G1-074",
+          "lower": "G1-054",
+          "contact_area_cm2": 1200,
+          "load_kg": 6.0
+        },
+        {
+          "upper": "G5-006",
+          "lower": "G5-004",
+          "contact_area_cm2": 1600,
+          "load_kg": 18.0
+        },
+        {
+          "upper": "G5-007",
+          "lower": "G5-005",
+          "contact_area_cm2": 1600,
+          "load_kg": 18.0
+        },
+        {
+          "upper": "G1-055",
+          "lower": "G1-044",
+          "contact_area_cm2": 2400,
+          "load_kg": 24.0
+        },
+        {
+          "upper": "G1-056",
+          "lower": "G1-045",
+          "contact_area_cm2": 2400,
+          "load_kg": 12.0
+        },
+        {
+          "upper": "G1-046",
+          "lower": "G1-035",
+          "contact_area_cm2": 1800,
+          "load_kg": 18.0
+        },
+        {
+          "upper": "G1-047",
+          "lower": "G1-036",
+          "contact_area_cm2": 1800,
+          "load_kg": 14.0
+        },
+        {
+          "upper": "G1-048",
+          "lower": "G1-037",
+          "contact_area_cm2": 1800,
+          "load_kg": 18.0
+        },
+        {
+          "upper": "G1-049",
+          "lower": "G1-038",
+          "contact_area_cm2": 1800,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G1-050",
+          "lower": "G1-039",
+          "contact_area_cm2": 1800,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G1-051",
+          "lower": "G1-040",
+          "contact_area_cm2": 1800,
+          "load_kg": 18.0
+        },
+        {
+          "upper": "G1-052",
+          "lower": "G1-041",
+          "contact_area_cm2": 1800,
+          "load_kg": 14.0
+        },
+        {
+          "upper": "G1-053",
+          "lower": "G1-042",
+          "contact_area_cm2": 1800,
+          "load_kg": 18.0
+        },
+        {
+          "upper": "G1-054",
+          "lower": "G1-043",
+          "contact_area_cm2": 1800,
+          "load_kg": 18.0
+        },
+        {
+          "upper": "G4-021",
+          "lower": "G4-014",
+          "contact_area_cm2": 4800,
+          "load_kg": 49.0
+        },
+        {
+          "upper": "G4-022",
+          "lower": "G4-015",
+          "contact_area_cm2": 4800,
+          "load_kg": 49.0
+        },
+        {
+          "upper": "G4-023",
+          "lower": "G4-016",
+          "contact_area_cm2": 4800,
+          "load_kg": 49.0
+        },
+        {
+          "upper": "G4-024",
+          "lower": "G4-017",
+          "contact_area_cm2": 4800,
+          "load_kg": 49.0
+        },
+        {
+          "upper": "G4-025",
+          "lower": "G4-018",
+          "contact_area_cm2": 4800,
+          "load_kg": 49.0
+        },
+        {
+          "upper": "G4-026",
+          "lower": "G4-019",
+          "contact_area_cm2": 4800,
+          "load_kg": 49.0
+        },
+        {
+          "upper": "G4-027",
+          "lower": "G4-020",
+          "contact_area_cm2": 4800,
+          "load_kg": 43.0
+        },
+        {
+          "upper": "G1-044",
+          "lower": "G1-033",
+          "contact_area_cm2": 2400,
+          "load_kg": 36.0
+        },
+        {
+          "upper": "G1-045",
+          "lower": "G1-034",
+          "contact_area_cm2": 2400,
+          "load_kg": 24.0
+        },
+        {
+          "upper": "G5-004",
+          "lower": "G5-002",
+          "contact_area_cm2": 1600,
+          "load_kg": 36.0
+        },
+        {
+          "upper": "G5-005",
+          "lower": "G5-003",
+          "contact_area_cm2": 1600,
+          "load_kg": 36.0
+        },
+        {
+          "upper": "G1-035",
+          "lower": "G1-024",
+          "contact_area_cm2": 1800,
+          "load_kg": 30.0
+        },
+        {
+          "upper": "G1-036",
+          "lower": "G1-025",
+          "contact_area_cm2": 1800,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G1-037",
+          "lower": "G1-026",
+          "contact_area_cm2": 1800,
+          "load_kg": 30.0
+        },
+        {
+          "upper": "G1-038",
+          "lower": "G1-027",
+          "contact_area_cm2": 1800,
+          "load_kg": 28.0
+        },
+        {
+          "upper": "G1-039",
+          "lower": "G1-028",
+          "contact_area_cm2": 1800,
+          "load_kg": 28.0
+        },
+        {
+          "upper": "G1-040",
+          "lower": "G1-029",
+          "contact_area_cm2": 1800,
+          "load_kg": 30.0
+        },
+        {
+          "upper": "G1-041",
+          "lower": "G1-030",
+          "contact_area_cm2": 1800,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G1-042",
+          "lower": "G1-031",
+          "contact_area_cm2": 1800,
+          "load_kg": 30.0
+        },
+        {
+          "upper": "G1-043",
+          "lower": "G1-032",
+          "contact_area_cm2": 1800,
+          "load_kg": 30.0
+        },
+        {
+          "upper": "G1-033",
+          "lower": "G1-022",
+          "contact_area_cm2": 2400,
+          "load_kg": 48.0
+        },
+        {
+          "upper": "G1-034",
+          "lower": "G1-023",
+          "contact_area_cm2": 2400,
+          "load_kg": 36.0
+        },
+        {
+          "upper": "G4-014",
+          "lower": "G4-007",
+          "contact_area_cm2": 4800,
+          "load_kg": 74.0
+        },
+        {
+          "upper": "G4-015",
+          "lower": "G4-008",
+          "contact_area_cm2": 4800,
+          "load_kg": 74.0
+        },
+        {
+          "upper": "G4-016",
+          "lower": "G4-009",
+          "contact_area_cm2": 4800,
+          "load_kg": 74.0
+        },
+        {
+          "upper": "G4-017",
+          "lower": "G4-010",
+          "contact_area_cm2": 4800,
+          "load_kg": 74.0
+        },
+        {
+          "upper": "G4-018",
+          "lower": "G4-011",
+          "contact_area_cm2": 4800,
+          "load_kg": 74.0
+        },
+        {
+          "upper": "G4-019",
+          "lower": "G4-012",
+          "contact_area_cm2": 4800,
+          "load_kg": 74.0
+        },
+        {
+          "upper": "G4-020",
+          "lower": "G4-013",
+          "contact_area_cm2": 4800,
+          "load_kg": 68.0
+        },
+        {
+          "upper": "G1-022",
+          "lower": "G1-011",
+          "contact_area_cm2": 1200,
+          "load_kg": 60.0
+        },
+        {
+          "upper": "G1-023",
+          "lower": "G1-011",
+          "contact_area_cm2": 600,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G1-023",
+          "lower": "G1-021",
+          "contact_area_cm2": 1200,
+          "load_kg": 32.0
+        },
+        {
+          "upper": "G1-024",
+          "lower": "G1-012",
+          "contact_area_cm2": 1800,
+          "load_kg": 42.0
+        },
+        {
+          "upper": "G1-025",
+          "lower": "G1-013",
+          "contact_area_cm2": 1800,
+          "load_kg": 38.0
+        },
+        {
+          "upper": "G1-026",
+          "lower": "G1-014",
+          "contact_area_cm2": 1800,
+          "load_kg": 42.0
+        },
+        {
+          "upper": "G1-027",
+          "lower": "G1-015",
+          "contact_area_cm2": 1800,
+          "load_kg": 40.0
+        },
+        {
+          "upper": "G1-028",
+          "lower": "G1-016",
+          "contact_area_cm2": 1800,
+          "load_kg": 40.0
+        },
+        {
+          "upper": "G1-029",
+          "lower": "G1-017",
+          "contact_area_cm2": 1800,
+          "load_kg": 42.0
+        },
+        {
+          "upper": "G1-030",
+          "lower": "G1-018",
+          "contact_area_cm2": 1800,
+          "load_kg": 38.0
+        },
+        {
+          "upper": "G1-031",
+          "lower": "G1-019",
+          "contact_area_cm2": 1800,
+          "load_kg": 42.0
+        },
+        {
+          "upper": "G1-032",
+          "lower": "G1-020",
+          "contact_area_cm2": 1800,
+          "load_kg": 42.0
+        },
+        {
+          "upper": "G5-002",
+          "lower": "G5-000",
+          "contact_area_cm2": 1600,
+          "load_kg": 54.0
+        },
+        {
+          "upper": "G5-003",
+          "lower": "G5-001",
+          "contact_area_cm2": 1600,
+          "load_kg": 54.0
+        },
+        {
+          "upper": "G4-007",
+          "lower": "G4-000",
+          "contact_area_cm2": 4800,
+          "load_kg": 99.0
+        },
+        {
+          "upper": "G4-008",
+          "lower": "G4-001",
+          "contact_area_cm2": 4800,
+          "load_kg": 99.0
+        },
+        {
+          "upper": "G4-009",
+          "lower": "G4-002",
+          "contact_area_cm2": 4800,
+          "load_kg": 99.0
+        },
+        {
+          "upper": "G4-010",
+          "lower": "G4-003",
+          "contact_area_cm2": 4800,
+          "load_kg": 99.0
+        },
+        {
+          "upper": "G4-011",
+          "lower": "G4-004",
+          "contact_area_cm2": 4800,
+          "load_kg": 99.0
+        },
+        {
+          "upper": "G4-012",
+          "lower": "G4-005",
+          "contact_area_cm2": 4800,
+          "load_kg": 99.0
+        },
+        {
+          "upper": "G4-013",
+          "lower": "G4-006",
+          "contact_area_cm2": 4800,
+          "load_kg": 93.0
+        },
+        {
+          "upper": "G1-011",
+          "lower": "G1-000",
+          "contact_area_cm2": 1800,
+          "load_kg": 88.0
+        },
+        {
+          "upper": "G1-012",
+          "lower": "G1-001",
+          "contact_area_cm2": 1800,
+          "load_kg": 54.0
+        },
+        {
+          "upper": "G1-013",
+          "lower": "G1-002",
+          "contact_area_cm2": 1800,
+          "load_kg": 50.0
+        },
+        {
+          "upper": "G1-014",
+          "lower": "G1-003",
+          "contact_area_cm2": 1800,
+          "load_kg": 54.0
+        },
+        {
+          "upper": "G1-015",
+          "lower": "G1-004",
+          "contact_area_cm2": 1800,
+          "load_kg": 52.0
+        },
+        {
+          "upper": "G1-016",
+          "lower": "G1-005",
+          "contact_area_cm2": 1800,
+          "load_kg": 52.0
+        },
+        {
+          "upper": "G1-017",
+          "lower": "G1-006",
+          "contact_area_cm2": 1800,
+          "load_kg": 54.0
+        },
+        {
+          "upper": "G1-018",
+          "lower": "G1-007",
+          "contact_area_cm2": 1800,
+          "load_kg": 50.0
+        },
+        {
+          "upper": "G1-019",
+          "lower": "G1-008",
+          "contact_area_cm2": 1800,
+          "load_kg": 54.0
+        },
+        {
+          "upper": "G1-020",
+          "lower": "G1-009",
+          "contact_area_cm2": 1800,
+          "load_kg": 54.0
+        },
+        {
+          "upper": "G1-021",
+          "lower": "G1-010",
+          "contact_area_cm2": 1800,
+          "load_kg": 44.0
+        }
+      ],
+      "floor_reactions": {
+        "G3-000": 15.0,
+        "G3-001": 15.0,
+        "G3-002": 15.0,
+        "G3-003": 15.0,
+        "G3-004": 15.0,
+        "G3-005": 15.0,
+        "G3-006": 15.0,
+        "G3-007": 15.0,
+        "G3-008": 15.0,
+        "G3-009": 15.0,
+        "G3-010": 15.0,
+        "G3-011": 15.0,
+        "G3-012": 15.0,
+        "G3-013": 15.0,
+        "G3-014": 15.0,
+        "G3-015": 15.0,
+        "G3-016": 15.0,
+        "G3-017": 15.0,
+        "G3-018": 15.0,
+        "G3-019": 15.0,
+        "G3-020": 15.0,
+        "G3-021": 15.0,
+        "G3-022": 15.0,
+        "G3-023": 15.0,
+        "G3-024": 15.0,
+        "G3-025": 15.0,
+        "G3-026": 15.0,
+        "G3-027": 15.0,
+        "G3-028": 15.0,
+        "G3-029": 15.0,
+        "G4-000": 124.0,
+        "G4-001": 124.0,
+        "G4-002": 124.0,
+        "G4-003": 124.0,
+        "G4-004": 124.0,
+        "G4-005": 124.0,
+        "G4-006": 118.0,
+        "G5-000": 72.0,
+        "G5-001": 72.0,
+        "G1-000": 100.0,
+        "G1-001": 66.0,
+        "G1-002": 62.0,
+        "G1-003": 66.0,
+        "G1-004": 64.0,
+        "G1-005": 64.0,
+        "G1-006": 66.0,
+        "G1-007": 62.0,
+        "G1-008": 66.0,
+        "G1-009": 66.0,
+        "G1-010": 56.0
+      },
+      "top_pressure": {
+        "G1-057": 0.0,
+        "G1-058": 0.0,
+        "G1-059": 0.0,
+        "G1-060": 0.0,
+        "G1-061": 0.0,
+        "G1-062": 0.0,
+        "G1-063": 0.0,
+        "G1-064": 0.0,
+        "G1-065": 0.0,
+        "G1-066": 0.0,
+        "G1-067": 0.0,
+        "G1-068": 0.0,
+        "G1-069": 0.0,
+        "G1-070": 0.0,
+        "G1-071": 0.0,
+        "G1-072": 0.0,
+        "G1-073": 0.0,
+        "G1-074": 0.0,
+        "G5-006": 0.0,
+        "G5-007": 0.0,
+        "G1-055": 49.99999999999999,
+        "G1-056": 0.0,
+        "G1-046": 33.33333333333333,
+        "G1-047": 11.111111111111109,
+        "G1-048": 33.33333333333333,
+        "G1-049": 22.222222222222218,
+        "G1-050": 22.222222222222218,
+        "G1-051": 33.33333333333333,
+        "G1-052": 11.111111111111109,
+        "G1-053": 33.33333333333333,
+        "G1-054": 33.33333333333333,
+        "G4-021": 49.99999999999999,
+        "G4-022": 49.99999999999999,
+        "G4-023": 49.99999999999999,
+        "G4-024": 49.99999999999999,
+        "G4-025": 49.99999999999999,
+        "G4-026": 49.99999999999999,
+        "G4-027": 37.5,
+        "G1-044": 99.99999999999999,
+        "G1-045": 49.99999999999999,
+        "G5-004": 112.5,
+        "G5-005": 112.5,
+        "G1-035": 99.99999999999999,
+        "G1-036": 77.77777777777777,
+        "G1-037": 99.99999999999999,
+        "G1-038": 88.88888888888887,
+        "G1-039": 88.88888888888887,
+        "G1-040": 99.99999999999999,
+        "G1-041": 77.77777777777777,
+        "G1-042": 99.99999999999999,
+        "G1-043": 99.99999999999999,
+        "G1-033": 150.0,
+        "G1-034": 99.99999999999999,
+        "G4-014": 102.08333333333333,
+        "G4-015": 102.08333333333333,
+        "G4-016": 102.08333333333333,
+        "G4-017": 102.08333333333333,
+        "G4-018": 102.08333333333333,
+        "G4-019": 102.08333333333333,
+        "G4-020": 89.58333333333333,
+        "G1-022": 199.99999999999997,
+        "G1-023": 150.0,
+        "G1-024": 166.66666666666666,
+        "G1-025": 144.44444444444443,
+        "G1-026": 166.66666666666666,
+        "G1-027": 155.55555555555554,
+        "G1-028": 155.55555555555554,
+        "G1-029": 166.66666666666666,
+        "G1-030": 144.44444444444443,
+        "G1-031": 166.66666666666666,
+        "G1-032": 166.66666666666666,
+        "G5-002": 225.0,
+        "G5-003": 225.0,
+        "G4-007": 154.16666666666666,
+        "G4-008": 154.16666666666666,
+        "G4-009": 154.16666666666666,
+        "G4-010": 154.16666666666666,
+        "G4-011": 154.16666666666666,
+        "G4-012": 154.16666666666666,
+        "G4-013": 141.66666666666666,
+        "G1-011": 422.2222222222222,
+        "G1-012": 233.33333333333331,
+        "G1-013": 211.1111111111111,
+        "G1-014": 233.33333333333331,
+        "G1-015": 222.2222222222222,
+        "G1-016": 222.2222222222222,
+        "G1-017": 233.33333333333331,
+        "G1-018": 211.1111111111111,
+        "G1-019": 233.33333333333331,
+        "G1-020": 233.33333333333331,
+        "G1-021": 177.77777777777774,
+        "G3-000": 0.0,
+        "G3-001": 0.0,
+        "G3-002": 0.0,
+        "G3-003": 0.0,
+        "G3-004": 0.0,
+        "G3-005": 0.0,
+        "G3-006": 0.0,
+        "G3-007": 0.0,
+        "G3-008": 0.0,
+        "G3-009": 0.0,
+        "G3-010": 0.0,
+        "G3-011": 0.0,
+        "G3-012": 0.0,
+        "G3-013": 0.0,
+        "G3-014": 0.0,
+        "G3-015": 0.0,
+        "G3-016": 0.0,
+        "G3-017": 0.0,
+        "G3-018": 0.0,
+        "G3-019": 0.0,
+        "G3-020": 0.0,
+        "G3-021": 0.0,
+        "G3-022": 0.0,
+        "G3-023": 0.0,
+        "G3-024": 0.0,
+        "G3-025": 0.0,
+        "G3-026": 0.0,
+        "G3-027": 0.0,
+        "G3-028": 0.0,
+        "G3-029": 0.0,
+        "G4-000": 206.24999999999997,
+        "G4-001": 206.24999999999997,
+        "G4-002": 206.24999999999997,
+        "G4-003": 206.24999999999997,
+        "G4-004": 206.24999999999997,
+        "G4-005": 206.24999999999997,
+        "G4-006": 193.74999999999997,
+        "G5-000": 337.5,
+        "G5-001": 337.5,
+        "G1-000": 488.88888888888886,
+        "G1-001": 299.99999999999994,
+        "G1-002": 277.77777777777777,
+        "G1-003": 299.99999999999994,
+        "G1-004": 288.88888888888886,
+        "G1-005": 288.88888888888886,
+        "G1-006": 299.99999999999994,
+        "G1-007": 277.77777777777777,
+        "G1-008": 299.99999999999994,
+        "G1-009": 299.99999999999994,
+        "G1-010": 244.44444444444443
+      },
+      "total_load": {
+        "G3-000": 15.0,
+        "G3-001": 15.0,
+        "G3-002": 15.0,
+        "G3-003": 15.0,
+        "G3-004": 15.0,
+        "G3-005": 15.0,
+        "G3-006": 15.0,
+        "G3-007": 15.0,
+        "G3-008": 15.0,
+        "G3-009": 15.0,
+        "G3-010": 15.0,
+        "G3-011": 15.0,
+        "G3-012": 15.0,
+        "G3-013": 15.0,
+        "G3-014": 15.0,
+        "G3-015": 15.0,
+        "G3-016": 15.0,
+        "G3-017": 15.0,
+        "G3-018": 15.0,
+        "G3-019": 15.0,
+        "G3-020": 15.0,
+        "G3-021": 15.0,
+        "G3-022": 15.0,
+        "G3-023": 15.0,
+        "G3-024": 15.0,
+        "G3-025": 15.0,
+        "G3-026": 15.0,
+        "G3-027": 15.0,
+        "G3-028": 15.0,
+        "G3-029": 15.0,
+        "G4-000": 124.0,
+        "G4-001": 124.0,
+        "G4-002": 124.0,
+        "G4-003": 124.0,
+        "G4-004": 124.0,
+        "G4-005": 124.0,
+        "G4-006": 118.0,
+        "G4-007": 99.0,
+        "G4-008": 99.0,
+        "G4-009": 99.0,
+        "G4-010": 99.0,
+        "G4-011": 99.0,
+        "G4-012": 99.0,
+        "G4-013": 93.0,
+        "G4-014": 74.0,
+        "G4-015": 74.0,
+        "G4-016": 74.0,
+        "G4-017": 74.0,
+        "G4-018": 74.0,
+        "G4-019": 74.0,
+        "G4-020": 68.0,
+        "G4-021": 49.0,
+        "G4-022": 49.0,
+        "G4-023": 49.0,
+        "G4-024": 49.0,
+        "G4-025": 49.0,
+        "G4-026": 49.0,
+        "G4-027": 43.0,
+        "G5-000": 72.0,
+        "G5-001": 72.0,
+        "G5-002": 54.0,
+        "G5-003": 54.0,
+        "G5-004": 36.0,
+        "G5-005": 36.0,
+        "G5-006": 18.0,
+        "G5-007": 18.0,
+        "G1-000": 100.0,
+        "G1-001": 66.0,
+        "G1-002": 62.0,
+        "G1-003": 66.0,
+        "G1-004": 64.0,
+        "G1-005": 64.0,
+        "G1-006": 66.0,
+        "G1-007": 62.0,
+        "G1-008": 66.0,
+        "G1-009": 66.0,
+        "G1-010": 56.0,
+        "G1-011": 88.0,
+        "G1-012": 54.0,
+        "G1-013": 50.0,
+        "G1-014": 54.0,
+        "G1-015": 52.0,
+        "G1-016": 52.0,
+        "G1-017": 54.0,
+        "G1-018": 50.0,
+        "G1-019": 54.0,
+        "G1-020": 54.0,
+        "G1-021": 44.0,
+        "G1-022": 60.0,
+        "G1-023": 48.0,
+        "G1-024": 42.0,
+        "G1-025": 38.0,
+        "G1-026": 42.0,
+        "G1-027": 40.0,
+        "G1-028": 40.0,
+        "G1-029": 42.0,
+        "G1-030": 38.0,
+        "G1-031": 42.0,
+        "G1-032": 42.0,
+        "G1-033": 48.0,
+        "G1-034": 36.0,
+        "G1-035": 30.0,
+        "G1-036": 26.0,
+        "G1-037": 30.0,
+        "G1-038": 28.0,
+        "G1-039": 28.0,
+        "G1-040": 30.0,
+        "G1-041": 26.0,
+        "G1-042": 30.0,
+        "G1-043": 30.0,
+        "G1-044": 36.0,
+        "G1-045": 24.0,
+        "G1-046": 18.0,
+        "G1-047": 14.0,
+        "G1-048": 18.0,
+        "G1-049": 16.0,
+        "G1-050": 16.0,
+        "G1-051": 18.0,
+        "G1-052": 14.0,
+        "G1-053": 18.0,
+        "G1-054": 18.0,
+        "G1-055": 24.0,
+        "G1-056": 12.0,
+        "G1-057": 12.0,
+        "G1-058": 12.0,
+        "G1-059": 12.0,
+        "G1-060": 12.0,
+        "G1-061": 12.0,
+        "G1-062": 12.0,
+        "G1-063": 12.0,
+        "G1-064": 12.0,
+        "G1-065": 12.0,
+        "G1-066": 12.0,
+        "G1-067": 12.0,
+        "G1-068": 12.0,
+        "G1-069": 12.0,
+        "G1-070": 12.0,
+        "G1-071": 12.0,
+        "G1-072": 12.0,
+        "G1-073": 12.0,
+        "G1-074": 12.0
+      },
+      "total_weight_kg": 2194,
+      "conservation_residual_kg": 0.0,
+      "limitation": "fixed_area_shares_vertical_only_no_moment_or_peak_pressure"
+    },
+    {
+      "model": "chain_area_v1",
+      "errors": [],
+      "transfers": [
+        {
+          "upper": "G2-084",
+          "lower": "G2-044",
+          "contact_area_cm2": 1750,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-085",
+          "lower": "G2-054",
+          "contact_area_cm2": 1500,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-086",
+          "lower": "G2-054",
+          "contact_area_cm2": 250,
+          "load_kg": 1.3333333333333333
+        },
+        {
+          "upper": "G2-086",
+          "lower": "G2-064",
+          "contact_area_cm2": 1250,
+          "load_kg": 6.666666666666667
+        },
+        {
+          "upper": "G2-087",
+          "lower": "G2-059",
+          "contact_area_cm2": 1225,
+          "load_kg": 6.222222222222222
+        },
+        {
+          "upper": "G2-087",
+          "lower": "G2-060",
+          "contact_area_cm2": 350,
+          "load_kg": 1.7777777777777777
+        },
+        {
+          "upper": "G2-088",
+          "lower": "G2-060",
+          "contact_area_cm2": 875,
+          "load_kg": 4.444444444444445
+        },
+        {
+          "upper": "G2-088",
+          "lower": "G2-061",
+          "contact_area_cm2": 700,
+          "load_kg": 3.5555555555555554
+        },
+        {
+          "upper": "G2-089",
+          "lower": "G2-061",
+          "contact_area_cm2": 525,
+          "load_kg": 2.6666666666666665
+        },
+        {
+          "upper": "G2-089",
+          "lower": "G2-062",
+          "contact_area_cm2": 1050,
+          "load_kg": 5.333333333333333
+        },
+        {
+          "upper": "G2-090",
+          "lower": "G2-062",
+          "contact_area_cm2": 175,
+          "load_kg": 1.0
+        },
+        {
+          "upper": "G2-090",
+          "lower": "G2-063",
+          "contact_area_cm2": 1225,
+          "load_kg": 7.0
+        },
+        {
+          "upper": "G2-091",
+          "lower": "G2-064",
+          "contact_area_cm2": 500,
+          "load_kg": 2.857142857142857
+        },
+        {
+          "upper": "G2-091",
+          "lower": "G2-065",
+          "contact_area_cm2": 900,
+          "load_kg": 5.142857142857143
+        },
+        {
+          "upper": "G2-092",
+          "lower": "G2-059",
+          "contact_area_cm2": 525,
+          "load_kg": 2.5074626865671643
+        },
+        {
+          "upper": "G2-092",
+          "lower": "G2-060",
+          "contact_area_cm2": 150,
+          "load_kg": 0.7164179104477612
+        },
+        {
+          "upper": "G2-092",
+          "lower": "G2-066",
+          "contact_area_cm2": 1000,
+          "load_kg": 4.776119402985074
+        },
+        {
+          "upper": "G2-093",
+          "lower": "G2-060",
+          "contact_area_cm2": 375,
+          "load_kg": 1.791044776119403
+        },
+        {
+          "upper": "G2-093",
+          "lower": "G2-061",
+          "contact_area_cm2": 300,
+          "load_kg": 1.4328358208955223
+        },
+        {
+          "upper": "G2-093",
+          "lower": "G2-067",
+          "contact_area_cm2": 1000,
+          "load_kg": 4.776119402985074
+        },
+        {
+          "upper": "G2-094",
+          "lower": "G2-061",
+          "contact_area_cm2": 225,
+          "load_kg": 1.0746268656716418
+        },
+        {
+          "upper": "G2-094",
+          "lower": "G2-062",
+          "contact_area_cm2": 450,
+          "load_kg": 2.1492537313432836
+        },
+        {
+          "upper": "G2-094",
+          "lower": "G2-068",
+          "contact_area_cm2": 1000,
+          "load_kg": 4.776119402985074
+        },
+        {
+          "upper": "G2-095",
+          "lower": "G2-062",
+          "contact_area_cm2": 75,
+          "load_kg": 0.41379310344827586
+        },
+        {
+          "upper": "G2-095",
+          "lower": "G2-063",
+          "contact_area_cm2": 525,
+          "load_kg": 2.896551724137931
+        },
+        {
+          "upper": "G2-095",
+          "lower": "G2-065",
+          "contact_area_cm2": 150,
+          "load_kg": 0.8275862068965517
+        },
+        {
+          "upper": "G2-095",
+          "lower": "G2-069",
+          "contact_area_cm2": 700,
+          "load_kg": 3.8620689655172415
+        },
+        {
+          "upper": "G2-096",
+          "lower": "G2-065",
+          "contact_area_cm2": 675,
+          "load_kg": 3.4285714285714284
+        },
+        {
+          "upper": "G2-096",
+          "lower": "G2-070",
+          "contact_area_cm2": 900,
+          "load_kg": 4.571428571428571
+        },
+        {
+          "upper": "G2-097",
+          "lower": "G2-066",
+          "contact_area_cm2": 750,
+          "load_kg": 3.4285714285714284
+        },
+        {
+          "upper": "G2-097",
+          "lower": "G2-071",
+          "contact_area_cm2": 1000,
+          "load_kg": 4.571428571428571
+        },
+        {
+          "upper": "G2-098",
+          "lower": "G2-067",
+          "contact_area_cm2": 750,
+          "load_kg": 3.4285714285714284
+        },
+        {
+          "upper": "G2-098",
+          "lower": "G2-072",
+          "contact_area_cm2": 1000,
+          "load_kg": 4.571428571428571
+        },
+        {
+          "upper": "G2-099",
+          "lower": "G2-068",
+          "contact_area_cm2": 750,
+          "load_kg": 3.4285714285714284
+        },
+        {
+          "upper": "G2-099",
+          "lower": "G2-073",
+          "contact_area_cm2": 1000,
+          "load_kg": 4.571428571428571
+        },
+        {
+          "upper": "G2-082",
+          "lower": "G2-033",
+          "contact_area_cm2": 1750,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-083",
+          "lower": "G2-034",
+          "contact_area_cm2": 1750,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-078",
+          "lower": "G2-023",
+          "contact_area_cm2": 1250,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-079",
+          "lower": "G2-024",
+          "contact_area_cm2": 1250,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-080",
+          "lower": "G2-026",
+          "contact_area_cm2": 1250,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-081",
+          "lower": "G2-027",
+          "contact_area_cm2": 1250,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-076",
+          "lower": "G2-021",
+          "contact_area_cm2": 1250,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-077",
+          "lower": "G2-022",
+          "contact_area_cm2": 1250,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-035",
+          "lower": "G5-020",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-036",
+          "lower": "G5-021",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-037",
+          "lower": "G5-022",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-038",
+          "lower": "G5-023",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-039",
+          "lower": "G5-024",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-040",
+          "lower": "G5-025",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-041",
+          "lower": "G5-026",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-042",
+          "lower": "G5-027",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-043",
+          "lower": "G5-028",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-044",
+          "lower": "G5-029",
+          "contact_area_cm2": 1400,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G2-045",
+          "lower": "G5-030",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-046",
+          "lower": "G5-031",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-047",
+          "lower": "G5-032",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-048",
+          "lower": "G5-033",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-049",
+          "lower": "G5-034",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-050",
+          "lower": "G5-035",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-051",
+          "lower": "G5-036",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-052",
+          "lower": "G5-037",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-053",
+          "lower": "G5-038",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-054",
+          "lower": "G5-039",
+          "contact_area_cm2": 1400,
+          "load_kg": 17.333333333333332
+        },
+        {
+          "upper": "G2-055",
+          "lower": "G5-040",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-056",
+          "lower": "G5-041",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-057",
+          "lower": "G5-042",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-058",
+          "lower": "G5-043",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-059",
+          "lower": "G5-044",
+          "contact_area_cm2": 1400,
+          "load_kg": 13.38374792703151
+        },
+        {
+          "upper": "G2-059",
+          "lower": "G2-006",
+          "contact_area_cm2": 350,
+          "load_kg": 3.3459369817578777
+        },
+        {
+          "upper": "G2-060",
+          "lower": "G5-045",
+          "contact_area_cm2": 1400,
+          "load_kg": 13.38374792703151
+        },
+        {
+          "upper": "G2-060",
+          "lower": "G2-007",
+          "contact_area_cm2": 350,
+          "load_kg": 3.3459369817578777
+        },
+        {
+          "upper": "G2-061",
+          "lower": "G5-046",
+          "contact_area_cm2": 1400,
+          "load_kg": 13.38374792703151
+        },
+        {
+          "upper": "G2-061",
+          "lower": "G2-008",
+          "contact_area_cm2": 350,
+          "load_kg": 3.3459369817578777
+        },
+        {
+          "upper": "G2-062",
+          "lower": "G5-047",
+          "contact_area_cm2": 1400,
+          "load_kg": 13.517104134499915
+        },
+        {
+          "upper": "G2-062",
+          "lower": "G2-009",
+          "contact_area_cm2": 350,
+          "load_kg": 3.3792760336249787
+        },
+        {
+          "upper": "G2-063",
+          "lower": "G5-048",
+          "contact_area_cm2": 1400,
+          "load_kg": 14.317241379310346
+        },
+        {
+          "upper": "G2-063",
+          "lower": "G2-010",
+          "contact_area_cm2": 350,
+          "load_kg": 3.5793103448275865
+        },
+        {
+          "upper": "G2-064",
+          "lower": "G5-049",
+          "contact_area_cm2": 1400,
+          "load_kg": 17.523809523809526
+        },
+        {
+          "upper": "G2-065",
+          "lower": "G2-025",
+          "contact_area_cm2": 1575,
+          "load_kg": 17.39901477832512
+        },
+        {
+          "upper": "G2-066",
+          "lower": "G2-006",
+          "contact_area_cm2": 525,
+          "load_kg": 9.197256958450987
+        },
+        {
+          "upper": "G2-066",
+          "lower": "G2-007",
+          "contact_area_cm2": 150,
+          "load_kg": 2.627787702414568
+        },
+        {
+          "upper": "G2-066",
+          "lower": "G2-029",
+          "contact_area_cm2": 250,
+          "load_kg": 4.379646170690946
+        },
+        {
+          "upper": "G2-067",
+          "lower": "G2-007",
+          "contact_area_cm2": 375,
+          "load_kg": 6.569469256036419
+        },
+        {
+          "upper": "G2-067",
+          "lower": "G2-008",
+          "contact_area_cm2": 300,
+          "load_kg": 5.255575404829136
+        },
+        {
+          "upper": "G2-067",
+          "lower": "G2-030",
+          "contact_area_cm2": 250,
+          "load_kg": 4.379646170690946
+        },
+        {
+          "upper": "G2-068",
+          "lower": "G2-008",
+          "contact_area_cm2": 225,
+          "load_kg": 3.9416815536218515
+        },
+        {
+          "upper": "G2-068",
+          "lower": "G2-009",
+          "contact_area_cm2": 450,
+          "load_kg": 7.883363107243703
+        },
+        {
+          "upper": "G2-068",
+          "lower": "G2-031",
+          "contact_area_cm2": 250,
+          "load_kg": 4.379646170690946
+        },
+        {
+          "upper": "G2-069",
+          "lower": "G2-009",
+          "contact_area_cm2": 75,
+          "load_kg": 0.7736131934032984
+        },
+        {
+          "upper": "G2-069",
+          "lower": "G2-010",
+          "contact_area_cm2": 375,
+          "load_kg": 3.868065967016492
+        },
+        {
+          "upper": "G2-069",
+          "lower": "G2-032",
+          "contact_area_cm2": 700,
+          "load_kg": 7.220389805097451
+        },
+        {
+          "upper": "G2-070",
+          "lower": "G2-028",
+          "contact_area_cm2": 1575,
+          "load_kg": 11.478260869565217
+        },
+        {
+          "upper": "G2-070",
+          "lower": "G2-032",
+          "contact_area_cm2": 150,
+          "load_kg": 1.093167701863354
+        },
+        {
+          "upper": "G2-071",
+          "lower": "G2-029",
+          "contact_area_cm2": 1500,
+          "load_kg": 12.57142857142857
+        },
+        {
+          "upper": "G2-072",
+          "lower": "G2-030",
+          "contact_area_cm2": 1500,
+          "load_kg": 12.57142857142857
+        },
+        {
+          "upper": "G2-073",
+          "lower": "G2-031",
+          "contact_area_cm2": 1500,
+          "load_kg": 12.57142857142857
+        },
+        {
+          "upper": "G2-074",
+          "lower": "G2-018",
+          "contact_area_cm2": 875,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-075",
+          "lower": "G2-032",
+          "contact_area_cm2": 525,
+          "load_kg": 8.0
+        },
+        {
+          "upper": "G2-033",
+          "lower": "G2-019",
+          "contact_area_cm2": 1750,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G2-034",
+          "lower": "G2-020",
+          "contact_area_cm2": 1750,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G2-023",
+          "lower": "G2-001",
+          "contact_area_cm2": 1250,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G2-024",
+          "lower": "G2-003",
+          "contact_area_cm2": 1250,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G2-025",
+          "lower": "G2-011",
+          "contact_area_cm2": 1750,
+          "load_kg": 25.39901477832512
+        },
+        {
+          "upper": "G2-026",
+          "lower": "G2-004",
+          "contact_area_cm2": 1250,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G2-027",
+          "lower": "G2-005",
+          "contact_area_cm2": 1250,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G2-028",
+          "lower": "G2-017",
+          "contact_area_cm2": 1500,
+          "load_kg": 19.47826086956522
+        },
+        {
+          "upper": "G2-029",
+          "lower": "G2-012",
+          "contact_area_cm2": 1225,
+          "load_kg": 19.40639146609296
+        },
+        {
+          "upper": "G2-029",
+          "lower": "G2-013",
+          "contact_area_cm2": 350,
+          "load_kg": 5.544683276026559
+        },
+        {
+          "upper": "G2-030",
+          "lower": "G2-013",
+          "contact_area_cm2": 875,
+          "load_kg": 13.861708190066398
+        },
+        {
+          "upper": "G2-030",
+          "lower": "G2-014",
+          "contact_area_cm2": 700,
+          "load_kg": 11.089366552053118
+        },
+        {
+          "upper": "G2-031",
+          "lower": "G2-014",
+          "contact_area_cm2": 525,
+          "load_kg": 8.31702491403984
+        },
+        {
+          "upper": "G2-031",
+          "lower": "G2-015",
+          "contact_area_cm2": 1050,
+          "load_kg": 16.63404982807968
+        },
+        {
+          "upper": "G2-032",
+          "lower": "G2-015",
+          "contact_area_cm2": 175,
+          "load_kg": 3.0391946883701
+        },
+        {
+          "upper": "G2-032",
+          "lower": "G2-016",
+          "contact_area_cm2": 1225,
+          "load_kg": 21.274362818590706
+        },
+        {
+          "upper": "G2-021",
+          "lower": "G1-078",
+          "contact_area_cm2": 1250,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G2-022",
+          "lower": "G1-078",
+          "contact_area_cm2": 250,
+          "load_kg": 3.2
+        },
+        {
+          "upper": "G2-022",
+          "lower": "G1-079",
+          "contact_area_cm2": 1000,
+          "load_kg": 12.8
+        },
+        {
+          "upper": "G2-019",
+          "lower": "G2-000",
+          "contact_area_cm2": 1750,
+          "load_kg": 24.0
+        },
+        {
+          "upper": "G2-020",
+          "lower": "G2-002",
+          "contact_area_cm2": 1750,
+          "load_kg": 24.0
+        },
+        {
+          "upper": "G2-006",
+          "lower": "G5-008",
+          "contact_area_cm2": 875,
+          "load_kg": 20.543193940208866
+        },
+        {
+          "upper": "G2-007",
+          "lower": "G5-009",
+          "contact_area_cm2": 875,
+          "load_kg": 20.543193940208866
+        },
+        {
+          "upper": "G2-008",
+          "lower": "G5-010",
+          "contact_area_cm2": 875,
+          "load_kg": 20.543193940208862
+        },
+        {
+          "upper": "G2-009",
+          "lower": "G5-011",
+          "contact_area_cm2": 875,
+          "load_kg": 20.036252334271982
+        },
+        {
+          "upper": "G2-010",
+          "lower": "G5-012",
+          "contact_area_cm2": 875,
+          "load_kg": 15.447376311844078
+        },
+        {
+          "upper": "G2-011",
+          "lower": "G5-013",
+          "contact_area_cm2": 1400,
+          "load_kg": 33.399014778325125
+        },
+        {
+          "upper": "G2-012",
+          "lower": "G5-014",
+          "contact_area_cm2": 1400,
+          "load_kg": 27.40639146609296
+        },
+        {
+          "upper": "G2-013",
+          "lower": "G5-015",
+          "contact_area_cm2": 1400,
+          "load_kg": 27.40639146609296
+        },
+        {
+          "upper": "G2-014",
+          "lower": "G5-016",
+          "contact_area_cm2": 1400,
+          "load_kg": 27.40639146609296
+        },
+        {
+          "upper": "G2-015",
+          "lower": "G5-017",
+          "contact_area_cm2": 1400,
+          "load_kg": 27.673244516449778
+        },
+        {
+          "upper": "G2-016",
+          "lower": "G5-018",
+          "contact_area_cm2": 1400,
+          "load_kg": 29.274362818590706
+        },
+        {
+          "upper": "G2-017",
+          "lower": "G5-019",
+          "contact_area_cm2": 1400,
+          "load_kg": 27.47826086956522
+        },
+        {
+          "upper": "G2-018",
+          "lower": "G1-077",
+          "contact_area_cm2": 875,
+          "load_kg": 16.0
+        },
+        {
+          "upper": "G5-020",
+          "lower": "G4-028",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-021",
+          "lower": "G4-028",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-022",
+          "lower": "G4-029",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-023",
+          "lower": "G4-029",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-024",
+          "lower": "G4-030",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-025",
+          "lower": "G4-030",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-026",
+          "lower": "G4-031",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-027",
+          "lower": "G4-031",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-028",
+          "lower": "G4-032",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-029",
+          "lower": "G4-032",
+          "contact_area_cm2": 1600,
+          "load_kg": 34.0
+        },
+        {
+          "upper": "G5-030",
+          "lower": "G4-028",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-030",
+          "lower": "G4-033",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-031",
+          "lower": "G4-028",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-031",
+          "lower": "G4-033",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-032",
+          "lower": "G4-029",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-032",
+          "lower": "G4-034",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-033",
+          "lower": "G4-029",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-033",
+          "lower": "G4-034",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-034",
+          "lower": "G4-030",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-034",
+          "lower": "G4-035",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-035",
+          "lower": "G4-030",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-035",
+          "lower": "G4-035",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-036",
+          "lower": "G4-031",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-036",
+          "lower": "G4-036",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-037",
+          "lower": "G4-031",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-037",
+          "lower": "G4-036",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-038",
+          "lower": "G4-032",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-038",
+          "lower": "G4-037",
+          "contact_area_cm2": 800,
+          "load_kg": 13.0
+        },
+        {
+          "upper": "G5-039",
+          "lower": "G4-032",
+          "contact_area_cm2": 800,
+          "load_kg": 17.666666666666664
+        },
+        {
+          "upper": "G5-039",
+          "lower": "G4-037",
+          "contact_area_cm2": 800,
+          "load_kg": 17.666666666666664
+        },
+        {
+          "upper": "G5-040",
+          "lower": "G4-033",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-041",
+          "lower": "G4-033",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-042",
+          "lower": "G4-034",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-043",
+          "lower": "G4-034",
+          "contact_area_cm2": 1600,
+          "load_kg": 26.0
+        },
+        {
+          "upper": "G5-044",
+          "lower": "G4-035",
+          "contact_area_cm2": 1600,
+          "load_kg": 31.383747927031507
+        },
+        {
+          "upper": "G5-045",
+          "lower": "G4-035",
+          "contact_area_cm2": 1600,
+          "load_kg": 31.383747927031507
+        },
+        {
+          "upper": "G5-046",
+          "lower": "G4-036",
+          "contact_area_cm2": 1600,
+          "load_kg": 31.383747927031507
+        },
+        {
+          "upper": "G5-047",
+          "lower": "G4-036",
+          "contact_area_cm2": 1600,
+          "load_kg": 31.517104134499917
+        },
+        {
+          "upper": "G5-048",
+          "lower": "G4-037",
+          "contact_area_cm2": 1600,
+          "load_kg": 32.317241379310346
+        },
+        {
+          "upper": "G5-049",
+          "lower": "G4-037",
+          "contact_area_cm2": 1600,
+          "load_kg": 35.523809523809526
+        },
+        {
+          "upper": "G2-000",
+          "lower": "G4-038",
+          "contact_area_cm2": 1750,
+          "load_kg": 32.0
+        },
+        {
+          "upper": "G2-001",
+          "lower": "G4-038",
+          "contact_area_cm2": 1250,
+          "load_kg": 24.0
+        },
+        {
+          "upper": "G2-002",
+          "lower": "G4-039",
+          "contact_area_cm2": 1750,
+          "load_kg": 32.0
+        },
+        {
+          "upper": "G2-003",
+          "lower": "G4-039",
+          "contact_area_cm2": 1250,
+          "load_kg": 24.0
+        },
+        {
+          "upper": "G2-004",
+          "lower": "G4-038",
+          "contact_area_cm2": 1250,
+          "load_kg": 24.0
+        },
+        {
+          "upper": "G2-005",
+          "lower": "G4-039",
+          "contact_area_cm2": 1250,
+          "load_kg": 24.0
+        },
+        {
+          "upper": "G1-078",
+          "lower": "G1-075",
+          "contact_area_cm2": 1800,
+          "load_kg": 31.2
+        },
+        {
+          "upper": "G1-079",
+          "lower": "G1-076",
+          "contact_area_cm2": 1800,
+          "load_kg": 24.8
+        }
+      ],
+      "floor_reactions": {
+        "G4-028": 103.0,
+        "G4-029": 103.0,
+        "G4-030": 103.0,
+        "G4-031": 103.0,
+        "G4-032": 115.66666666666666,
+        "G4-033": 103.0,
+        "G4-034": 103.0,
+        "G4-035": 113.76749585406301,
+        "G4-036": 113.90085206153142,
+        "G4-037": 123.50771756978654,
+        "G4-038": 105.0,
+        "G4-039": 105.0,
+        "G5-008": 38.543193940208866,
+        "G5-009": 38.543193940208866,
+        "G5-010": 38.543193940208866,
+        "G5-011": 38.03625233427198,
+        "G5-012": 33.44737631184408,
+        "G5-013": 51.399014778325125,
+        "G5-014": 45.406391466092956,
+        "G5-015": 45.406391466092956,
+        "G5-016": 45.406391466092956,
+        "G5-017": 45.67324451644978,
+        "G5-018": 47.2743628185907,
+        "G5-019": 45.47826086956522,
+        "G1-075": 43.2,
+        "G1-076": 36.8,
+        "G1-077": 28.0
+      },
+      "top_pressure": {
+        "G2-084": 0.0,
+        "G2-085": 0.0,
+        "G2-086": 0.0,
+        "G2-087": 0.0,
+        "G2-088": 0.0,
+        "G2-089": 0.0,
+        "G2-090": 0.0,
+        "G2-091": 0.0,
+        "G2-092": 0.0,
+        "G2-093": 0.0,
+        "G2-094": 0.0,
+        "G2-095": 0.0,
+        "G2-096": 0.0,
+        "G2-097": 0.0,
+        "G2-098": 0.0,
+        "G2-099": 0.0,
+        "G2-082": 0.0,
+        "G2-083": 0.0,
+        "G2-078": 0.0,
+        "G2-079": 0.0,
+        "G2-080": 0.0,
+        "G2-081": 0.0,
+        "G2-076": 0.0,
+        "G2-077": 0.0,
+        "G2-035": 0.0,
+        "G2-036": 0.0,
+        "G2-037": 0.0,
+        "G2-038": 0.0,
+        "G2-039": 0.0,
+        "G2-040": 0.0,
+        "G2-041": 0.0,
+        "G2-042": 0.0,
+        "G2-043": 0.0,
+        "G2-044": 45.71428571428571,
+        "G2-045": 0.0,
+        "G2-046": 0.0,
+        "G2-047": 0.0,
+        "G2-048": 0.0,
+        "G2-049": 0.0,
+        "G2-050": 0.0,
+        "G2-051": 0.0,
+        "G2-052": 0.0,
+        "G2-053": 0.0,
+        "G2-054": 53.33333333333332,
+        "G2-055": 0.0,
+        "G2-056": 0.0,
+        "G2-057": 0.0,
+        "G2-058": 0.0,
+        "G2-059": 49.88391376451078,
+        "G2-060": 49.88391376451078,
+        "G2-061": 49.88391376451078,
+        "G2-062": 50.836458103570806,
+        "G2-063": 56.55172413793104,
+        "G2-064": 54.421768707483,
+        "G2-065": 53.708655876143546,
+        "G2-066": 46.88394760889429,
+        "G2-067": 46.88394760889429,
+        "G2-068": 46.88394760889429,
+        "G2-069": 22.06896551724138,
+        "G2-070": 26.122448979591834,
+        "G2-071": 26.122448979591834,
+        "G2-072": 26.122448979591834,
+        "G2-073": 26.122448979591834,
+        "G2-074": 0.0,
+        "G2-075": 0.0,
+        "G2-033": 45.71428571428571,
+        "G2-034": 45.71428571428571,
+        "G2-023": 64.0,
+        "G2-024": 64.0,
+        "G2-025": 99.42294159042925,
+        "G2-026": 64.0,
+        "G2-027": 64.0,
+        "G2-028": 65.59006211180125,
+        "G2-029": 96.86328424068294,
+        "G2-030": 96.86328424068294,
+        "G2-031": 96.86328424068294,
+        "G2-032": 93.2203286112046,
+        "G2-021": 64.0,
+        "G2-022": 64.0,
+        "G2-019": 91.42857142857142,
+        "G2-020": 91.42857142857142,
+        "G2-006": 143.3507878881013,
+        "G2-007": 143.3507878881013,
+        "G2-008": 143.35078788810128,
+        "G2-009": 137.5571695345369,
+        "G2-010": 85.11287213536089,
+        "G2-011": 145.137227304715,
+        "G2-012": 110.89366552053119,
+        "G2-013": 110.89366552053116,
+        "G2-014": 110.89366552053116,
+        "G2-015": 112.41854009399871,
+        "G2-016": 121.56778753480403,
+        "G2-017": 111.30434782608695,
+        "G2-018": 91.42857142857142,
+        "G5-020": 50.0,
+        "G5-021": 50.0,
+        "G5-022": 50.0,
+        "G5-023": 50.0,
+        "G5-024": 50.0,
+        "G5-025": 50.0,
+        "G5-026": 50.0,
+        "G5-027": 50.0,
+        "G5-028": 50.0,
+        "G5-029": 100.0,
+        "G5-030": 50.0,
+        "G5-031": 50.0,
+        "G5-032": 50.0,
+        "G5-033": 50.0,
+        "G5-034": 50.0,
+        "G5-035": 50.0,
+        "G5-036": 50.0,
+        "G5-037": 50.0,
+        "G5-038": 50.0,
+        "G5-039": 108.3333333333333,
+        "G5-040": 50.0,
+        "G5-041": 50.0,
+        "G5-042": 50.0,
+        "G5-043": 50.0,
+        "G5-044": 83.64842454394694,
+        "G5-045": 83.64842454394694,
+        "G5-046": 83.64842454394694,
+        "G5-047": 84.48190084062448,
+        "G5-048": 89.48275862068967,
+        "G5-049": 109.52380952380953,
+        "G2-000": 137.14285714285714,
+        "G2-001": 128.0,
+        "G2-002": 137.14285714285714,
+        "G2-003": 128.0,
+        "G2-004": 128.0,
+        "G2-005": 128.0,
+        "G1-078": 106.66666666666666,
+        "G1-079": 71.1111111111111,
+        "G4-028": 162.5,
+        "G4-029": 162.5,
+        "G4-030": 162.5,
+        "G4-031": 162.5,
+        "G4-032": 188.88888888888886,
+        "G4-033": 162.5,
+        "G4-034": 162.5,
+        "G4-035": 184.93228302929793,
+        "G4-036": 185.2101084615238,
+        "G4-037": 205.22441160372193,
+        "G4-038": 166.66666666666666,
+        "G4-039": 166.66666666666666,
+        "G5-008": 128.39496212630542,
+        "G5-009": 128.39496212630542,
+        "G5-010": 128.39496212630542,
+        "G5-011": 125.22657708919986,
+        "G5-012": 96.54610194902551,
+        "G5-013": 208.74384236453201,
+        "G5-014": 171.28994666308097,
+        "G5-015": 171.28994666308097,
+        "G5-016": 171.28994666308097,
+        "G5-017": 172.9577782278111,
+        "G5-018": 182.9647676161919,
+        "G5-019": 171.73913043478262,
+        "G1-075": 173.33333333333334,
+        "G1-076": 137.77777777777774,
+        "G1-077": 133.33333333333331
+      },
+      "total_load": {
+        "G4-028": 103.0,
+        "G4-029": 103.0,
+        "G4-030": 103.0,
+        "G4-031": 103.0,
+        "G4-032": 115.66666666666666,
+        "G4-033": 103.0,
+        "G4-034": 103.0,
+        "G4-035": 113.76749585406301,
+        "G4-036": 113.90085206153142,
+        "G4-037": 123.50771756978654,
+        "G4-038": 105.0,
+        "G4-039": 105.0,
+        "G5-008": 38.543193940208866,
+        "G5-009": 38.543193940208866,
+        "G5-010": 38.543193940208866,
+        "G5-011": 38.03625233427198,
+        "G5-012": 33.44737631184408,
+        "G5-013": 51.399014778325125,
+        "G5-014": 45.406391466092956,
+        "G5-015": 45.406391466092956,
+        "G5-016": 45.406391466092956,
+        "G5-017": 45.67324451644978,
+        "G5-018": 47.2743628185907,
+        "G5-019": 45.47826086956522,
+        "G5-020": 26.0,
+        "G5-021": 26.0,
+        "G5-022": 26.0,
+        "G5-023": 26.0,
+        "G5-024": 26.0,
+        "G5-025": 26.0,
+        "G5-026": 26.0,
+        "G5-027": 26.0,
+        "G5-028": 26.0,
+        "G5-029": 34.0,
+        "G5-030": 26.0,
+        "G5-031": 26.0,
+        "G5-032": 26.0,
+        "G5-033": 26.0,
+        "G5-034": 26.0,
+        "G5-035": 26.0,
+        "G5-036": 26.0,
+        "G5-037": 26.0,
+        "G5-038": 26.0,
+        "G5-039": 35.33333333333333,
+        "G5-040": 26.0,
+        "G5-041": 26.0,
+        "G5-042": 26.0,
+        "G5-043": 26.0,
+        "G5-044": 31.38374792703151,
+        "G5-045": 31.38374792703151,
+        "G5-046": 31.38374792703151,
+        "G5-047": 31.517104134499917,
+        "G5-048": 32.317241379310346,
+        "G5-049": 35.523809523809526,
+        "G1-075": 43.2,
+        "G1-076": 36.8,
+        "G1-077": 28.0,
+        "G1-078": 31.2,
+        "G1-079": 24.8,
+        "G2-000": 32.0,
+        "G2-001": 24.0,
+        "G2-002": 32.0,
+        "G2-003": 24.0,
+        "G2-004": 24.0,
+        "G2-005": 24.0,
+        "G2-006": 20.543193940208866,
+        "G2-007": 20.543193940208866,
+        "G2-008": 20.543193940208862,
+        "G2-009": 20.036252334271982,
+        "G2-010": 15.447376311844078,
+        "G2-011": 33.399014778325125,
+        "G2-012": 27.40639146609296,
+        "G2-013": 27.406391466092956,
+        "G2-014": 27.406391466092956,
+        "G2-015": 27.673244516449778,
+        "G2-016": 29.274362818590706,
+        "G2-017": 27.47826086956522,
+        "G2-018": 16.0,
+        "G2-019": 24.0,
+        "G2-020": 24.0,
+        "G2-021": 16.0,
+        "G2-022": 16.0,
+        "G2-023": 16.0,
+        "G2-024": 16.0,
+        "G2-025": 25.39901477832512,
+        "G2-026": 16.0,
+        "G2-027": 16.0,
+        "G2-028": 19.47826086956522,
+        "G2-029": 24.951074742119516,
+        "G2-030": 24.951074742119516,
+        "G2-031": 24.951074742119516,
+        "G2-032": 24.313557506960805,
+        "G2-033": 16.0,
+        "G2-034": 16.0,
+        "G2-035": 8.0,
+        "G2-036": 8.0,
+        "G2-037": 8.0,
+        "G2-038": 8.0,
+        "G2-039": 8.0,
+        "G2-040": 8.0,
+        "G2-041": 8.0,
+        "G2-042": 8.0,
+        "G2-043": 8.0,
+        "G2-044": 16.0,
+        "G2-045": 8.0,
+        "G2-046": 8.0,
+        "G2-047": 8.0,
+        "G2-048": 8.0,
+        "G2-049": 8.0,
+        "G2-050": 8.0,
+        "G2-051": 8.0,
+        "G2-052": 8.0,
+        "G2-053": 8.0,
+        "G2-054": 17.333333333333332,
+        "G2-055": 8.0,
+        "G2-056": 8.0,
+        "G2-057": 8.0,
+        "G2-058": 8.0,
+        "G2-059": 16.729684908789388,
+        "G2-060": 16.729684908789388,
+        "G2-061": 16.729684908789388,
+        "G2-062": 16.896380168124892,
+        "G2-063": 17.896551724137932,
+        "G2-064": 17.523809523809526,
+        "G2-065": 17.39901477832512,
+        "G2-066": 16.2046908315565,
+        "G2-067": 16.2046908315565,
+        "G2-068": 16.2046908315565,
+        "G2-069": 11.862068965517242,
+        "G2-070": 12.571428571428571,
+        "G2-071": 12.571428571428571,
+        "G2-072": 12.571428571428571,
+        "G2-073": 12.571428571428571,
+        "G2-074": 8.0,
+        "G2-075": 8.0,
+        "G2-076": 8.0,
+        "G2-077": 8.0,
+        "G2-078": 8.0,
+        "G2-079": 8.0,
+        "G2-080": 8.0,
+        "G2-081": 8.0,
+        "G2-082": 8.0,
+        "G2-083": 8.0,
+        "G2-084": 8.0,
+        "G2-085": 8.0,
+        "G2-086": 8.0,
+        "G2-087": 8.0,
+        "G2-088": 8.0,
+        "G2-089": 8.0,
+        "G2-090": 8.0,
+        "G2-091": 8.0,
+        "G2-092": 8.0,
+        "G2-093": 8.0,
+        "G2-094": 8.0,
+        "G2-095": 8.0,
+        "G2-096": 8.0,
+        "G2-097": 8.0,
+        "G2-098": 8.0,
+        "G2-099": 8.0
+      },
+      "total_weight_kg": 1916,
+      "conservation_residual_kg": 0.0,
+      "limitation": "fixed_area_shares_vertical_only_no_moment_or_peak_pressure"
+    }
+  ]
+}

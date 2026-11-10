@@ -1,0 +1,151 @@
+***** Creando el contenedor ****
+File(BR): /mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/data/thpack/thpack1.txt
+Instance:1
+min_fr:0.98
+Maxtime:5
+587 233 220
+n_blocks:10000
+greedy
+bsg
+double effort
+copying state
+running
+beams/max_level_size:4/16
+[BSG_path] new best_solution_found (0.25): 0.91956362 3 nodes
+[DoubleEffort] new best_solution_found (0.26): 0.91956362
+beams/max_level_size:6/36
+[BSG_path] new best_solution_found (0.29): 0.92316985 4 nodes
+[DoubleEffort] new best_solution_found (0.29): 0.92316985
+beams/max_level_size:8/64
+beams/max_level_size:11/121
+beams/max_level_size:16/256
+[BSG_path] new best_solution_found (0.63): 0.92742348 4 nodes
+[DoubleEffort] new best_solution_found (0.67): 0.92742348
+beams/max_level_size:23/529
+[BSG_path] new best_solution_found (1): 0.93980682 9 nodes
+[BSG_path] new best_solution_found (1.12): 0.94341304 10 nodes
+[BSG_path] new best_solution_found (1.21): 0.94465101 7 nodes
+[BSG_path] new best_solution_found (1.21): 0.94497471 6 nodes
+[BSG_path] new best_solution_found (1.23): 0.94615884 9 nodes
+[DoubleEffort] new best_solution_found (1.3): 0.94615884
+beams/max_level_size:33/1089
+beams/max_level_size:47/2209
+allocation time: 5.02
+wall time: 5.04
+greedy search calls: 16609
+% volume utilization
+94.615884
+
+{"type": "output",
+"version": "0.5.0",
+"large_object": { "measurement": {"x":587, "y": 233, "z": 220} },
+"small_items": [
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 0, "y": 0, "z": 0}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 92, "y": 0, "z": 0}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 184, "y": 0, "z": 0}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 0, "y": 0, "z": 55}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 92, "y": 0, "z": 55}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 184, "y": 0, "z": 55}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 0, "y": 0, "z": 110}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 92, "y": 0, "z": 110}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 184, "y": 0, "z": 110}},
+{"measurement": {"x": 92, "y": 55, "z": 81}, "position": {"x": 0, "y": 81, "z": 0}},
+{"measurement": {"x": 92, "y": 55, "z": 81}, "position": {"x": 92, "y": 81, "z": 0}},
+{"measurement": {"x": 92, "y": 55, "z": 81}, "position": {"x": 184, "y": 81, "z": 0}},
+{"measurement": {"x": 92, "y": 55, "z": 81}, "position": {"x": 0, "y": 81, "z": 81}},
+{"measurement": {"x": 92, "y": 55, "z": 81}, "position": {"x": 92, "y": 81, "z": 81}},
+{"measurement": {"x": 92, "y": 55, "z": 81}, "position": {"x": 184, "y": 81, "z": 81}},
+{"measurement": {"x": 81, "y": 92, "z": 55}, "position": {"x": 0, "y": 136, "z": 0}},
+{"measurement": {"x": 81, "y": 92, "z": 55}, "position": {"x": 81, "y": 136, "z": 0}},
+{"measurement": {"x": 81, "y": 92, "z": 55}, "position": {"x": 0, "y": 136, "z": 55}},
+{"measurement": {"x": 81, "y": 92, "z": 55}, "position": {"x": 81, "y": 136, "z": 55}},
+{"measurement": {"x": 81, "y": 92, "z": 55}, "position": {"x": 0, "y": 136, "z": 110}},
+{"measurement": {"x": 81, "y": 92, "z": 55}, "position": {"x": 81, "y": 136, "z": 110}},
+{"measurement": {"x": 55, "y": 92, "z": 81}, "position": {"x": 162, "y": 136, "z": 0}},
+{"measurement": {"x": 55, "y": 92, "z": 81}, "position": {"x": 217, "y": 136, "z": 0}},
+{"measurement": {"x": 55, "y": 92, "z": 81}, "position": {"x": 162, "y": 136, "z": 81}},
+{"measurement": {"x": 55, "y": 92, "z": 81}, "position": {"x": 217, "y": 136, "z": 81}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 0, "z": 0}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 25, "z": 0}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 0, "z": 43}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 25, "z": 43}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 0, "z": 86}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 25, "z": 86}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 0, "z": 129}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 25, "z": 129}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 0, "z": 172}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 25, "z": 172}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 50, "z": 0}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 50, "z": 43}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 50, "z": 86}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 50, "z": 129}},
+{"measurement": {"x": 110, "y": 25, "z": 43}, "position": {"x": 477, "y": 50, "z": 172}},
+{"measurement": {"x": 55, "y": 81, "z": 92}, "position": {"x": 477, "y": 75, "z": 0}},
+{"measurement": {"x": 55, "y": 81, "z": 92}, "position": {"x": 532, "y": 75, "z": 0}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 477, "y": 75, "z": 92}},
+{"measurement": {"x": 55, "y": 81, "z": 92}, "position": {"x": 477, "y": 75, "z": 122}},
+{"measurement": {"x": 55, "y": 81, "z": 92}, "position": {"x": 532, "y": 75, "z": 122}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 477, "y": 156, "z": 0}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 477, "y": 156, "z": 30}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 477, "y": 156, "z": 60}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 477, "y": 156, "z": 90}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 477, "y": 156, "z": 120}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 477, "y": 156, "z": 150}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 477, "y": 156, "z": 180}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 0, "z": 0}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 76, "z": 0}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 152, "z": 0}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 0, "z": 30}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 76, "z": 30}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 152, "z": 30}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 0, "z": 60}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 76, "z": 60}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 152, "z": 60}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 0, "z": 90}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 76, "z": 90}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 152, "z": 90}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 0, "z": 120}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 76, "z": 120}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 152, "z": 120}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 0, "z": 150}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 76, "z": 150}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 152, "z": 150}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 0, "z": 180}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 76, "z": 180}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 369, "y": 152, "z": 180}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 277, "y": 0, "z": 0}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 277, "y": 81, "z": 0}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 277, "y": 0, "z": 55}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 277, "y": 81, "z": 55}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 277, "y": 0, "z": 110}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 277, "y": 81, "z": 110}},
+{"measurement": {"x": 92, "y": 55, "z": 81}, "position": {"x": 277, "y": 162, "z": 0}},
+{"measurement": {"x": 92, "y": 55, "z": 81}, "position": {"x": 277, "y": 162, "z": 81}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 0, "y": 0, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 43, "y": 0, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 86, "y": 0, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 129, "y": 0, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 172, "y": 0, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 0, "y": 110, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 43, "y": 110, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 86, "y": 110, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 129, "y": 110, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 172, "y": 110, "z": 165}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 0, "y": 0, "z": 190}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 108, "y": 0, "z": 190}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 0, "y": 76, "z": 190}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 108, "y": 76, "z": 190}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 0, "y": 152, "z": 190}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 108, "y": 152, "z": 190}},
+{"measurement": {"x": 92, "y": 81, "z": 55}, "position": {"x": 216, "y": 152, "z": 165}},
+{"measurement": {"x": 110, "y": 43, "z": 25}, "position": {"x": 216, "y": 0, "z": 165}},
+{"measurement": {"x": 110, "y": 43, "z": 25}, "position": {"x": 216, "y": 43, "z": 165}},
+{"measurement": {"x": 110, "y": 43, "z": 25}, "position": {"x": 216, "y": 86, "z": 165}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 326, "y": 0, "z": 170}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 326, "y": 110, "z": 170}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 326, "y": 0, "z": 195}},
+{"measurement": {"x": 43, "y": 110, "z": 25}, "position": {"x": 326, "y": 110, "z": 195}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 216, "y": 0, "z": 190}},
+{"measurement": {"x": 108, "y": 76, "z": 30}, "position": {"x": 216, "y": 76, "z": 190}},
+] }
+{"remaining" :[[1,3],[2,1],[3,1]], "loaded" :[[1,37],[2,32],[3,38]], "utilization" : 0.94615884}

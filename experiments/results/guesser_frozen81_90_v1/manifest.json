@@ -1,0 +1,749 @@
+{
+  "schema_version": 2,
+  "status": "verified",
+  "scope": "frozen parameter comparison; historical EP results already seen; author defaults; not blind testing or full paper replication",
+  "selection": {
+    "source_name": "thpack1.txt",
+    "split": "frozen",
+    "first_source_row": 81,
+    "last_source_row": 90,
+    "pids": [
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90"
+    ],
+    "cpu_budgets_seconds": [
+      5,
+      30
+    ]
+  },
+  "planned_runs": [
+    {
+      "pid": "81",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "82",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "83",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "84",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "85",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "86",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "87",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "88",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "89",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "90",
+      "cpu_budget_seconds": 5
+    },
+    {
+      "pid": "81",
+      "cpu_budget_seconds": 30
+    },
+    {
+      "pid": "82",
+      "cpu_budget_seconds": 30
+    },
+    {
+      "pid": "83",
+      "cpu_budget_seconds": 30
+    },
+    {
+      "pid": "84",
+      "cpu_budget_seconds": 30
+    },
+    {
+      "pid": "85",
+      "cpu_budget_seconds": 30
+    },
+    {
+      "pid": "86",
+      "cpu_budget_seconds": 30
+    },
+    {
+      "pid": "87",
+      "cpu_budget_seconds": 30
+    },
+    {
+      "pid": "88",
+      "cpu_budget_seconds": 30
+    },
+    {
+      "pid": "89",
+      "cpu_budget_seconds": 30
+    },
+    {
+      "pid": "90",
+      "cpu_budget_seconds": 30
+    }
+  ],
+  "runs": [
+    {
+      "label": "thpack1_81_5s",
+      "pid": "81",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_81_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_81_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.832965381000122,
+      "process_cpu_user_seconds": 4.661943,
+      "process_cpu_system_seconds": 0.349646,
+      "placed": 69,
+      "isd": 0.9397965145455476,
+      "elapsed_times": {
+        "allocation_whole": 5.0,
+        "double_effort": 5.0,
+        "fitness_computer_partial": 0.65,
+        "greedy": 4.1000000000000005,
+        "initialization": 0.0,
+        "volume_loss_update": 0.16,
+        "wall": 4.82
+      }
+    },
+    {
+      "label": "thpack1_82_5s",
+      "pid": "82",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_82_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_82_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.841502168000261,
+      "process_cpu_user_seconds": 4.653059,
+      "process_cpu_system_seconds": 0.358248,
+      "placed": 159,
+      "isd": 0.9656472896633457,
+      "elapsed_times": {
+        "allocation_whole": 4.99,
+        "double_effort": 4.99,
+        "fitness_computer_partial": 0.66,
+        "greedy": 4.16,
+        "initialization": 0.01,
+        "volume_loss_update": 0.15000000000000002,
+        "wall": 4.8100000000000005
+      }
+    },
+    {
+      "label": "thpack1_83_5s",
+      "pid": "83",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_83_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_83_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.820835594000073,
+      "process_cpu_user_seconds": 4.701924,
+      "process_cpu_system_seconds": 0.30410000000000004,
+      "placed": 117,
+      "isd": 0.9687009008422174,
+      "elapsed_times": {
+        "allocation_whole": 5.0,
+        "double_effort": 5.0,
+        "fitness_computer_partial": 0.46,
+        "greedy": 3.9800000000000004,
+        "initialization": 0.0,
+        "volume_loss_update": 0.13,
+        "wall": 4.800000000000001
+      }
+    },
+    {
+      "label": "thpack1_84_5s",
+      "pid": "84",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_84_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_84_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.881265312999858,
+      "process_cpu_user_seconds": 4.602727,
+      "process_cpu_system_seconds": 0.40180499999999997,
+      "placed": 65,
+      "isd": 0.9415229570861978,
+      "elapsed_times": {
+        "allocation_whole": 5.0,
+        "double_effort": 5.0,
+        "fitness_computer_partial": 0.56,
+        "greedy": 4.12,
+        "initialization": 0.0,
+        "volume_loss_update": 0.11,
+        "wall": 4.87
+      }
+    },
+    {
+      "label": "thpack1_85_5s",
+      "pid": "85",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_85_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_85_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.862723731000187,
+      "process_cpu_user_seconds": 4.805655000000002,
+      "process_cpu_system_seconds": 0.2024729999999999,
+      "placed": 314,
+      "isd": 0.9836933135081134,
+      "elapsed_times": {
+        "allocation_whole": 4.91,
+        "double_effort": 4.91,
+        "fitness_computer_partial": 0.29000000000000004,
+        "greedy": 3.97,
+        "initialization": 0.09000000000000001,
+        "volume_loss_update": 0.19,
+        "wall": 4.8500000000000005
+      }
+    },
+    {
+      "label": "thpack1_86_5s",
+      "pid": "86",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_86_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_86_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.829261147000125,
+      "process_cpu_user_seconds": 4.752412,
+      "process_cpu_system_seconds": 0.2578690000000001,
+      "placed": 146,
+      "isd": 0.9604240930925682,
+      "elapsed_times": {
+        "allocation_whole": 4.970000000000001,
+        "double_effort": 4.970000000000001,
+        "fitness_computer_partial": 0.37,
+        "greedy": 4.12,
+        "initialization": 0.030000000000000002,
+        "volume_loss_update": 0.11,
+        "wall": 4.82
+      }
+    },
+    {
+      "label": "thpack1_87_5s",
+      "pid": "87",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_87_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_87_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.811456670000098,
+      "process_cpu_user_seconds": 4.602893999999996,
+      "process_cpu_system_seconds": 0.40903199999999984,
+      "placed": 95,
+      "isd": 0.9375584005381258,
+      "elapsed_times": {
+        "allocation_whole": 5.0,
+        "double_effort": 5.0,
+        "fitness_computer_partial": 0.79,
+        "greedy": 4.07,
+        "initialization": 0.0,
+        "volume_loss_update": 0.21000000000000002,
+        "wall": 4.800000000000001
+      }
+    },
+    {
+      "label": "thpack1_88_5s",
+      "pid": "88",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_88_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_88_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.873508458000288,
+      "process_cpu_user_seconds": 4.621313000000001,
+      "process_cpu_system_seconds": 0.3864360000000002,
+      "placed": 119,
+      "isd": 0.9521427655118276,
+      "elapsed_times": {
+        "allocation_whole": 5.0,
+        "double_effort": 5.0,
+        "fitness_computer_partial": 0.68,
+        "greedy": 4.25,
+        "initialization": 0.0,
+        "volume_loss_update": 0.16,
+        "wall": 4.78
+      }
+    },
+    {
+      "label": "thpack1_89_5s",
+      "pid": "89",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_89_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_89_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.849291857000026,
+      "process_cpu_user_seconds": 4.591117000000004,
+      "process_cpu_system_seconds": 0.41835500000000003,
+      "placed": 89,
+      "isd": 0.9023144858592431,
+      "elapsed_times": {
+        "allocation_whole": 5.0,
+        "double_effort": 5.0,
+        "fitness_computer_partial": 0.7200000000000001,
+        "greedy": 3.8400000000000003,
+        "initialization": 0.0,
+        "volume_loss_update": 0.12000000000000001,
+        "wall": 4.800000000000001
+      }
+    },
+    {
+      "label": "thpack1_90_5s",
+      "pid": "90",
+      "cpu_budget_seconds": 5,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_90_5s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_90_5s.raw.json",
+        "--maximum_running_time_seconds=5"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 4.84435411000004,
+      "process_cpu_user_seconds": 4.591011000000002,
+      "process_cpu_system_seconds": 0.41414799999999996,
+      "placed": 86,
+      "isd": 0.9370216041279351,
+      "elapsed_times": {
+        "allocation_whole": 5.0,
+        "double_effort": 5.0,
+        "fitness_computer_partial": 0.8,
+        "greedy": 4.140000000000001,
+        "initialization": 0.0,
+        "volume_loss_update": 0.22,
+        "wall": 4.8100000000000005
+      }
+    },
+    {
+      "label": "thpack1_81_30s",
+      "pid": "81",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_81_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_81_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.783628619999945,
+      "process_cpu_user_seconds": 27.822209,
+      "process_cpu_system_seconds": 2.1878649999999995,
+      "placed": 69,
+      "isd": 0.9397965145455476,
+      "elapsed_times": {
+        "allocation_whole": 30.000000000000004,
+        "double_effort": 30.000000000000004,
+        "fitness_computer_partial": 3.43,
+        "greedy": 25.35,
+        "initialization": 0.0,
+        "volume_loss_update": 0.49000000000000005,
+        "wall": 28.770000000000003
+      }
+    },
+    {
+      "label": "thpack1_82_30s",
+      "pid": "82",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_82_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_82_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.90021827299961,
+      "process_cpu_user_seconds": 28.235000999999997,
+      "process_cpu_system_seconds": 1.776904,
+      "placed": 161,
+      "isd": 0.9729291363599806,
+      "elapsed_times": {
+        "allocation_whole": 29.990000000000002,
+        "double_effort": 29.990000000000002,
+        "fitness_computer_partial": 3.24,
+        "greedy": 25.430000000000003,
+        "initialization": 0.01,
+        "volume_loss_update": 0.55,
+        "wall": 28.89
+      }
+    },
+    {
+      "label": "thpack1_83_30s",
+      "pid": "83",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_83_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_83_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.892415015000097,
+      "process_cpu_user_seconds": 28.516074000000003,
+      "process_cpu_system_seconds": 1.492216,
+      "placed": 117,
+      "isd": 0.9687009008422174,
+      "elapsed_times": {
+        "allocation_whole": 29.990000000000002,
+        "double_effort": 29.990000000000002,
+        "fitness_computer_partial": 2.93,
+        "greedy": 25.28,
+        "initialization": 0.01,
+        "volume_loss_update": 0.38,
+        "wall": 28.880000000000003
+      }
+    },
+    {
+      "label": "thpack1_84_30s",
+      "pid": "84",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_84_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_84_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.93097987400006,
+      "process_cpu_user_seconds": 27.613302000000004,
+      "process_cpu_system_seconds": 2.3952340000000003,
+      "placed": 65,
+      "isd": 0.9415229570861978,
+      "elapsed_times": {
+        "allocation_whole": 30.000000000000004,
+        "double_effort": 30.000000000000004,
+        "fitness_computer_partial": 3.7500000000000004,
+        "greedy": 25.560000000000002,
+        "initialization": 0.0,
+        "volume_loss_update": 0.39,
+        "wall": 28.91
+      }
+    },
+    {
+      "label": "thpack1_85_30s",
+      "pid": "85",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_85_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_85_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.636636546999853,
+      "process_cpu_user_seconds": 28.929992999999996,
+      "process_cpu_system_seconds": 1.0994569999999992,
+      "placed": 315,
+      "isd": 0.985188380577754,
+      "elapsed_times": {
+        "allocation_whole": 29.92,
+        "double_effort": 29.92,
+        "fitness_computer_partial": 1.9100000000000001,
+        "greedy": 24.82,
+        "initialization": 0.09000000000000001,
+        "volume_loss_update": 0.5800000000000001,
+        "wall": 28.62
+      }
+    },
+    {
+      "label": "thpack1_86_30s",
+      "pid": "86",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_86_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_86_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.742166128000008,
+      "process_cpu_user_seconds": 28.679034,
+      "process_cpu_system_seconds": 1.3412810000000004,
+      "placed": 149,
+      "isd": 0.9659996370841506,
+      "elapsed_times": {
+        "allocation_whole": 29.970000000000002,
+        "double_effort": 29.970000000000002,
+        "fitness_computer_partial": 2.5500000000000003,
+        "greedy": 25.17,
+        "initialization": 0.030000000000000002,
+        "volume_loss_update": 0.54,
+        "wall": 28.720000000000002
+      }
+    },
+    {
+      "label": "thpack1_87_30s",
+      "pid": "87",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_87_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_87_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.658898366999892,
+      "process_cpu_user_seconds": 27.501893999999993,
+      "process_cpu_system_seconds": 2.501190000000001,
+      "placed": 94,
+      "isd": 0.9451662068181652,
+      "elapsed_times": {
+        "allocation_whole": 30.000000000000004,
+        "double_effort": 30.000000000000004,
+        "fitness_computer_partial": 4.99,
+        "greedy": 25.790000000000003,
+        "initialization": 0.0,
+        "volume_loss_update": 0.52,
+        "wall": 28.64
+      }
+    },
+    {
+      "label": "thpack1_88_30s",
+      "pid": "88",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_88_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_88_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.442974722000145,
+      "process_cpu_user_seconds": 27.98372200000003,
+      "process_cpu_system_seconds": 2.026572999999999,
+      "placed": 120,
+      "isd": 0.9537667807037776,
+      "elapsed_times": {
+        "allocation_whole": 30.000000000000004,
+        "double_effort": 30.000000000000004,
+        "fitness_computer_partial": 3.7500000000000004,
+        "greedy": 25.470000000000002,
+        "initialization": 0.0,
+        "volume_loss_update": 0.48000000000000004,
+        "wall": 28.430000000000003
+      }
+    },
+    {
+      "label": "thpack1_89_30s",
+      "pid": "89",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_89_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_89_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.640372777000266,
+      "process_cpu_user_seconds": 27.75221399999998,
+      "process_cpu_system_seconds": 2.25807,
+      "placed": 89,
+      "isd": 0.9023144858592431,
+      "elapsed_times": {
+        "allocation_whole": 30.000000000000004,
+        "double_effort": 30.000000000000004,
+        "fitness_computer_partial": 3.95,
+        "greedy": 24.87,
+        "initialization": 0.0,
+        "volume_loss_update": 0.4,
+        "wall": 28.62
+      }
+    },
+    {
+      "label": "thpack1_90_30s",
+      "pid": "90",
+      "cpu_budget_seconds": 30,
+      "cpu_affinity": 0,
+      "command": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/yzj/boxpack-author/build-release/app/allocate",
+        "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_90_30s.input.json",
+        "--output-file=/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/guesser_frozen81_90_v1/thpack1_90_30s.raw.json",
+        "--maximum_running_time_seconds=30"
+      ],
+      "errors": [],
+      "returncode": 0,
+      "wall_seconds_solver_process": 28.651645937000012,
+      "process_cpu_user_seconds": 27.643610999999964,
+      "process_cpu_system_seconds": 2.363346,
+      "placed": 85,
+      "isd": 0.9399928280915478,
+      "elapsed_times": {
+        "allocation_whole": 30.000000000000004,
+        "double_effort": 30.000000000000004,
+        "fitness_computer_partial": 4.260000000000001,
+        "greedy": 25.630000000000003,
+        "initialization": 0.0,
+        "volume_loss_update": 0.45,
+        "wall": 28.64
+      }
+    }
+  ],
+  "summary_by_budget": {
+    "5": {
+      "n": 10,
+      "mean_isd": 0.9488822324775121,
+      "min_isd": 0.9023144858592431,
+      "max_isd": 0.9836933135081134,
+      "mean_process_cpu_seconds": 5.0086167,
+      "mean_wall_seconds": 4.844716442900108
+    },
+    "30": {
+      "n": 10,
+      "mean_isd": 0.9515377827968582,
+      "min_isd": 0.9023144858592431,
+      "max_isd": 0.985188380577754,
+      "mean_process_cpu_seconds": 30.011919,
+      "mean_wall_seconds": 28.72799362599999
+    }
+  }
+}
