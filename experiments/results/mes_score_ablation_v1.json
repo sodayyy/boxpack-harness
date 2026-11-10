@@ -1,0 +1,87 @@
+{
+  "method": "B2_state_priority_ablation",
+  "scope": "small_single_container_integer_grid_L0_diagnostic",
+  "common_item_order": "volume_desc_then_serial",
+  "fixed_actions": "lower_front_left_MES_anchor",
+  "rows": [
+    {
+      "instance_id": "toy_exact_fill_8",
+      "state_priority": "volume",
+      "beam_width": 8,
+      "space_cap": 80,
+      "exact_status": "optimal",
+      "exact_placed": 8,
+      "exact_used_volume": 64,
+      "placed": 8,
+      "used_volume": 64,
+      "count_gap_if_exact": 0,
+      "volume_gap_if_exact": 0
+    },
+    {
+      "instance_id": "toy_exact_fill_8",
+      "state_priority": "count",
+      "beam_width": 8,
+      "space_cap": 80,
+      "exact_status": "optimal",
+      "exact_placed": 8,
+      "exact_used_volume": 64,
+      "placed": 8,
+      "used_volume": 64,
+      "count_gap_if_exact": 0,
+      "volume_gap_if_exact": 0
+    },
+    {
+      "instance_id": "b2_gap_5",
+      "state_priority": "volume",
+      "beam_width": 8,
+      "space_cap": 80,
+      "exact_status": "optimal",
+      "exact_placed": 5,
+      "exact_used_volume": 308,
+      "placed": 5,
+      "used_volume": 308,
+      "count_gap_if_exact": 0,
+      "volume_gap_if_exact": 0
+    },
+    {
+      "instance_id": "b2_gap_5",
+      "state_priority": "count",
+      "beam_width": 8,
+      "space_cap": 80,
+      "exact_status": "optimal",
+      "exact_placed": 5,
+      "exact_used_volume": 308,
+      "placed": 5,
+      "used_volume": 308,
+      "count_gap_if_exact": 0,
+      "volume_gap_if_exact": 0
+    },
+    {
+      "instance_id": "b2_gap_3",
+      "state_priority": "volume",
+      "beam_width": 8,
+      "space_cap": 80,
+      "exact_status": "optimal",
+      "exact_placed": 3,
+      "exact_used_volume": 27,
+      "placed": 2,
+      "used_volume": 15,
+      "count_gap_if_exact": 1,
+      "volume_gap_if_exact": 12
+    },
+    {
+      "instance_id": "b2_gap_3",
+      "state_priority": "count",
+      "beam_width": 8,
+      "space_cap": 80,
+      "exact_status": "optimal",
+      "exact_placed": 3,
+      "exact_used_volume": 27,
+      "placed": 2,
+      "used_volume": 15,
+      "count_gap_if_exact": 1,
+      "volume_gap_if_exact": 12
+    }
+  ],
+  "interpretation": "Only state_priority changes. Exact gaps are reported only for optimal referee rows; this small diagnostic does not establish a general ranking of scoring rules."
+}

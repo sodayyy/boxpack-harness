@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Compare B2 with a complete small-instance L0 referee.
+"""Compare B2 with a complete integer-grid small-instance L0 referee.
 
-The referee is only exact when it returns ``status=optimal``.  A time-limited
-run is reported as a bounded search observation, never as an optimum.
+The referee is only exact when it returns ``status=optimal``. A time-limited
+run reports a feasible incumbent and conservative count bound, never an
+optimum.
 """
 from __future__ import annotations
 
@@ -58,11 +59,24 @@ INSTANCES = [
             ])
         ],
     },
+    {
+        "instance_id": "b2_gap_3",
+        "container": [4, 4, 4],
+        "items": [
+            {"serial": "R0", "dims": [1, 3, 1]},
+            {"serial": "R1", "dims": [4, 3, 1]},
+            {"serial": "R2", "dims": [1, 4, 3]},
+        ],
+    },
 ]
 
 
 def _run_one(instance, time_limit, node_limit):
     items = [dict(item, dims=tuple(item["dims"])) for item in instance["items"]]
+    # B2's production calibration uses the same deterministic volume-descending
+    # input order. Keep the referee and B2 on exactly this common sequence.
+    items.sort(key=lambda it: (-it["dims"][0] * it["dims"][1] * it["dims"][2],
+                              str(it.get("serial", ""))))
     container = tuple(instance["container"])
     exact = solve_exact(items, container, time_limit=time_limit, node_limit=node_limit)
     b2_start = time.perf_counter()
@@ -81,11 +95,13 @@ def _run_one(instance, time_limit, node_limit):
             "placed": exact.placed,
             "used_volume": exact.used_volume,
             "nodes": exact.nodes,
+            "upper_bound": exact.upper_bound,
             "seconds": round(exact.seconds, 6),
         },
         "b2": {
             "beam_width": b2["beam_width"],
             "space_cap": b2["space_cap"],
+            "state_priority": b2["state_priority"],
             "placed": b2["placed"],
             "used_volume": b2["used_volume"],
             "recomputed_volume": b2_volume,
@@ -97,6 +113,7 @@ def _run_one(instance, time_limit, node_limit):
                                if exact.status == "optimal" else None),
         "volume_gap_if_exact": (exact.used_volume - b2["used_volume"]
                                 if exact.status == "optimal" else None),
+        "common_item_order": "volume_desc_then_serial",
     }
 
 
@@ -107,11 +124,11 @@ def main():
     rows = [_run_one(instance, time_limit, node_limit) for instance in INSTANCES]
     payload = {
         "method": "B2_vs_exact_L0_referee",
-        "scope": "small_single_container_axis_aligned_geometry",
+        "scope": "small_single_container_integer_grid_axis_aligned_geometry",
         "time_limit_seconds": time_limit,
         "node_limit": node_limit,
         "instances": rows,
-        "interpretation": "Only rows with exact.status=optimal support an exact gap comparison; time_limit rows are not optimality claims.",
+        "interpretation": "The referee and B2 share one deterministic volume-descending item order. Only rows with exact.status=optimal support an exact gap comparison; time_limit rows provide a feasible lower bound and a conservative count upper bound, not an optimality claim.",
     }
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for row in rows:

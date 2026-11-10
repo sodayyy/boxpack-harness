@@ -245,6 +245,7 @@ experiments/test_mes_beam.py     B2空间切分专项测试
 experiments/verify_mes_result.py B2保存布局独立几何校验
 experiments/exact_l0.py               小规模L0完整枚举裁判
 experiments/bench_small_l0.py         B2与小规模裁判对照
+experiments/ablation_mes_score.py     B2评分优先级消融
 experiments/ftl_attempts.py      早期贪心分层尝试，结论已降级
 experiments/platform_analysis.py 平台候选诊断，仅作诊断指标
 experiments/run_baselines.py     当前 EP/LAYER 对照
@@ -268,6 +269,7 @@ py -3.12 experiments/test_mes_beam.py
 py -3.12 experiments/verify_mes_result.py experiments/results/thpack1_b2_final_w8_s80.json
 py -3.12 experiments/test_mes_beam.py
 py -3.12 experiments/bench_small_l0.py
+py -3.12 experiments/ablation_mes_score.py
 py -3.12 experiments/ftl_attempts.py
 py -3.12 experiments/platform_analysis.py
 py -3.12 experiments/run_baselines.py
@@ -287,9 +289,9 @@ py -3.12 experiments/run_baselines.py
 | B1 承重是整底面积分摊/平均近似 | 后续小规模加入载荷守恒与必要力矩平衡，不与算法B2编号混用 |
 | 目前主要是单车型实验 | 实现 B4 混合车型枚举和成本优化 |
 | 只有一组题面货物 | N3 扫描易碎比例、规模、定向比例、承重上限和车型组合 |
-| 尚无小规模最优解 | 建立 8–20 件精确验证器 |
+| 小规模裁判目前只覆盖整数网格L0 | 扩展实例规模和约束层；只有完整搜索或有效上界吻合时声明最优 |
 
-当前正式节点和 Git 标签见 [`PROGRESS.md`](PROGRESS.md)。本次独立约束12/12、平台专项8/8、两车型五层10/10配置回归通过；所有配置未装0件、按层独立检查违规0条。B2首版已实现但三算例平均低于EP，暂不扩展到多车；N2保留为失败诊断，原“一车解或不可行证明”判据未满足；B3/B4尚未实现。下一步先做B2空间切分不变量、评分函数消融和8–20件精确裁判。
+当前正式节点和 Git 标签见 [`PROGRESS.md`](PROGRESS.md)。B2首版三算例平均低于EP；同口径 `count` 评分优先级消融未改善前三例平均ISD。新增的L0整数网格裁判与空间不变量测试只用于小规模诊断，不外推为L1–L4或多容器最优结论。N2保留为失败诊断，原“一车解或不可行证明”判据未满足；B3/B4尚未实现。
 
 ---
 

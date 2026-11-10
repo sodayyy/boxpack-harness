@@ -1,6 +1,6 @@
 {
   "method": "B2_vs_exact_L0_referee",
-  "scope": "small_single_container_axis_aligned_geometry",
+  "scope": "small_single_container_integer_grid_axis_aligned_geometry",
   "time_limit_seconds": 5.0,
   "node_limit": 2000000,
   "instances": [
@@ -16,21 +16,24 @@
         "status": "optimal",
         "placed": 8,
         "used_volume": 64,
-        "nodes": 1280,
-        "seconds": 0.005896
+        "nodes": 9,
+        "upper_bound": 8,
+        "seconds": 0.000964
       },
       "b2": {
         "beam_width": 8,
         "space_cap": 80,
+        "state_priority": "volume",
         "placed": 8,
         "used_volume": 64,
         "recomputed_volume": 64,
         "skipped": 0,
-        "seconds": 0.001246,
+        "seconds": 0.001152,
         "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
       },
       "count_gap_if_exact": 0,
-      "volume_gap_if_exact": 0
+      "volume_gap_if_exact": 0,
+      "common_item_order": "volume_desc_then_serial"
     },
     {
       "instance_id": "mixed_8",
@@ -41,24 +44,27 @@
       ],
       "n_items": 8,
       "exact": {
-        "status": "time_limit",
+        "status": "optimal",
         "placed": 8,
         "used_volume": 452,
-        "nodes": 1652636,
-        "seconds": 5.00039
+        "nodes": 9,
+        "upper_bound": 8,
+        "seconds": 0.001253
       },
       "b2": {
         "beam_width": 8,
         "space_cap": 80,
+        "state_priority": "volume",
         "placed": 8,
         "used_volume": 452,
         "recomputed_volume": 452,
         "skipped": 0,
-        "seconds": 0.003755,
+        "seconds": 0.003432,
         "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
       },
-      "count_gap_if_exact": null,
-      "volume_gap_if_exact": null
+      "count_gap_if_exact": 0,
+      "volume_gap_if_exact": 0,
+      "common_item_order": "volume_desc_then_serial"
     },
     {
       "instance_id": "tight_12",
@@ -69,24 +75,27 @@
       ],
       "n_items": 12,
       "exact": {
-        "status": "time_limit",
+        "status": "optimal",
         "placed": 12,
         "used_volume": 441,
-        "nodes": 1348388,
-        "seconds": 5.000869
+        "nodes": 13,
+        "upper_bound": 12,
+        "seconds": 0.001725
       },
       "b2": {
         "beam_width": 8,
         "space_cap": 80,
+        "state_priority": "volume",
         "placed": 12,
         "used_volume": 441,
         "recomputed_volume": 441,
         "skipped": 0,
-        "seconds": 0.007662,
+        "seconds": 0.006983,
         "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
       },
-      "count_gap_if_exact": null,
-      "volume_gap_if_exact": null
+      "count_gap_if_exact": 0,
+      "volume_gap_if_exact": 0,
+      "common_item_order": "volume_desc_then_serial"
     },
     {
       "instance_id": "b2_gap_5",
@@ -100,22 +109,56 @@
         "status": "optimal",
         "placed": 5,
         "used_volume": 308,
-        "nodes": 641968,
-        "seconds": 1.348554
+        "nodes": 6,
+        "upper_bound": 5,
+        "seconds": 0.000255
       },
       "b2": {
         "beam_width": 8,
         "space_cap": 80,
-        "placed": 4,
-        "used_volume": 248,
-        "recomputed_volume": 248,
+        "state_priority": "volume",
+        "placed": 5,
+        "used_volume": 308,
+        "recomputed_volume": 308,
+        "skipped": 0,
+        "seconds": 0.00144,
+        "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
+      },
+      "count_gap_if_exact": 0,
+      "volume_gap_if_exact": 0,
+      "common_item_order": "volume_desc_then_serial"
+    },
+    {
+      "instance_id": "b2_gap_3",
+      "container": [
+        4,
+        4,
+        4
+      ],
+      "n_items": 3,
+      "exact": {
+        "status": "optimal",
+        "placed": 3,
+        "used_volume": 27,
+        "nodes": 4,
+        "upper_bound": 3,
+        "seconds": 8.3e-05
+      },
+      "b2": {
+        "beam_width": 8,
+        "space_cap": 80,
+        "state_priority": "volume",
+        "placed": 2,
+        "used_volume": 15,
+        "recomputed_volume": 15,
         "skipped": 1,
-        "seconds": 0.000811,
+        "seconds": 8.5e-05,
         "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
       },
       "count_gap_if_exact": 1,
-      "volume_gap_if_exact": 60
+      "volume_gap_if_exact": 12,
+      "common_item_order": "volume_desc_then_serial"
     }
   ],
-  "interpretation": "Only rows with exact.status=optimal support an exact gap comparison; time_limit rows are not optimality claims."
+  "interpretation": "The referee and B2 share one deterministic volume-descending item order. Only rows with exact.status=optimal support an exact gap comparison; time_limit rows provide a feasible lower bound and a conservative count upper bound, not an optimality claim."
 }

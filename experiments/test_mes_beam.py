@@ -71,14 +71,18 @@ class MesBeamTests(unittest.TestCase):
 
     def test_exact_referee_exposes_b2_gap(self):
         items = [
-            {"serial": f"G{i}", "dims": dims}
-            for i, dims in enumerate(((2, 2, 1), (5, 4, 3), (6, 5, 4), (6, 5, 4), (2, 2, 1)))
+            {"serial": "R0", "dims": (1, 3, 1)},
+            {"serial": "R1", "dims": (4, 3, 1)},
+            {"serial": "R2", "dims": (1, 4, 3)},
         ]
-        exact = solve_exact(items, (10, 10, 10), time_limit=5, node_limit=2_000_000)
-        b2 = beam_pack(items, (10, 10, 10), beam_width=8, space_cap=80)
+        items.sort(key=lambda it: (-it["dims"][0] * it["dims"][1] * it["dims"][2],
+                                   it["serial"]))
+        exact = solve_exact(items, (4, 4, 4), time_limit=5, node_limit=2_000_000)
+        b2 = beam_pack(items, (4, 4, 4), beam_width=8, space_cap=80)
         self.assertEqual(exact.status, "optimal")
-        self.assertEqual(exact.placed, 5)
-        self.assertEqual(b2["placed"], 4)
+        self.assertEqual(exact.placed, 3)
+        self.assertEqual(exact.used_volume, 27)
+        self.assertEqual(b2["placed"], 2)
         self.assertLess(b2["placed"], exact.placed)
 
 

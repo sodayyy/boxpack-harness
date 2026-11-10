@@ -155,10 +155,18 @@ def _fits_at(state, space, dims, container):
     return not any(_overlap(box, old) for old in state.boxes)
 
 
-def _state_key(state):
-    # Volume is the primary objective; item count can favor many tiny pieces
-    # over one large piece and therefore must not be the first key.
-    return (state.used_volume, state.placed, -state.skipped, -len(state.spaces))
+def _state_key(state, priority="volume"):
+    """Rank beam states without claiming that the ranking is optimal.
+
+    ``volume`` preserves the original B2 calibration rule. ``count`` is an
+    ablation aligned with the lexicographic referee objective (count, then
+    volume). The last two terms are deterministic tie-breakers only.
+    """
+    if priority == "volume":
+        return (state.used_volume, state.placed, -state.skipped, -len(state.spaces))
+    if priority == "count":
+        return (state.placed, state.used_volume, -state.skipped, -len(state.spaces))
+    raise ValueError("state_priority must be 'volume' or 'count'")
 
 
 def _candidate_origins(space, dims):
@@ -202,7 +210,8 @@ def _candidate_states(state, item, container, space_cap):
                 yield child
 
 
-def beam_pack(items, container, beam_width=8, space_cap=80):
+def beam_pack(items, container, beam_width=8, space_cap=80,
+              state_priority="volume"):
     """Pack one container at L0 using bounded beam search.
 
     Parameters
@@ -211,12 +220,15 @@ def beam_pack(items, container, beam_width=8, space_cap=80):
     container: ``(L, W, H)``; the height is already the effective height.
     beam_width: number of partial layouts retained after each item.
     space_cap: maximum candidate spaces considered per partial layout.
+    state_priority: ``volume`` (the calibrated default) or ``count`` (ablation).
 
     Returns a dictionary with the best layout and explicit search parameters.
     It is a bounded heuristic result; no optimality claim is made.
     """
     if beam_width < 1 or space_cap < 1:
         raise ValueError("beam_width and space_cap must be positive")
+    if state_priority not in {"volume", "count"}:
+        raise ValueError("state_priority must be 'volume' or 'count'")
     L, W, H = container
     initial = BeamState([], [Space(0, 0, 0, L, W, H)])
     beam = [initial]
@@ -234,11 +246,14 @@ def beam_pack(items, container, beam_width=8, space_cap=80):
             signature = tuple((b["serial"], b["x"], b["y"], b["z"],
                                b["l"], b["w"], b["h"]) for b in state.boxes)
             old = unique.get(signature)
-            if old is None or _state_key(state) > _state_key(old):
+            if old is None or _state_key(state, state_priority) > _state_key(old, state_priority):
                 unique[signature] = state
-        beam = sorted(unique.values(), key=_state_key, reverse=True)[:beam_width]
-    best = max(beam, key=_state_key)
+        beam = sorted(unique.values(),
+                      key=lambda state: _state_key(state, state_priority),
+                      reverse=True)[:beam_width]
+    best = max(beam, key=lambda state: _state_key(state, state_priority))
     return dict(boxes=best.boxes, placed=best.placed, skipped=best.skipped,
                 used_volume=best.used_volume, remaining_spaces=len(best.spaces),
                 beam_width=beam_width, space_cap=space_cap,
-                container=container, status="bounded_heuristic_not_optimal")
+                state_priority=state_priority, container=container,
+                status="bounded_heuristic_not_optimal")
