@@ -77,7 +77,7 @@ def run_one(spec, how, algo, solution_dir=None):
             if check_fleet(restored, TRUCK_INFO, CATALOG,
                            support_ratio=float(SUPPORT_RATIO)) != errs:
                 raise AssertionError("roundtrip validation changed")
-        solution_files = [str(jp.relative_to(ROOT)), str(cp.relative_to(ROOT))]
+        solution_files = [jp.relative_to(ROOT).as_posix(), cp.relative_to(ROOT).as_posix()]
     return dict(truck=spec.name, sort=how, algo=algo, trucks=n, lower=lb,
                 schema_version=2, pressure_model="legacy_b1",
                 chain_audit=chain, chain_audit_errors=sum(len(a["errors"]) for a in chain),

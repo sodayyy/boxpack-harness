@@ -105,6 +105,7 @@
 | `v0.5-b2-calibration` | `d734f7d` | B2 MES+Beam组件、统一s80校准、独立几何校验与负结果归档 |
 | `v0.6-small-exact-referee` | `bd862de` | 整数网格L0裁判初版与评分优先级消融 |
 | `v0.6.1-l0-referee-correction` | `f52d47a` | 对齐B2目标函数、保存布局与停止依据并独立校验 |
-| `v0.7-protocol-validation` | 以标签解引用commit核验 | 固定协议、严格目录身份、双轴导出、载荷链后验检查、显式L0全100例、作者源码/输入状态 |
+| `v0.7-protocol-validation` | `a7dc7d3` | 固定协议、严格目录身份、双轴导出、载荷链后验检查、显式L0全100例、作者源码/输入状态 |
+| `v0.7.1-portable-paths` | 以标签解引用commit核验 | 逐件方案相对路径统一正斜杠，避免Linux将Windows反斜杠误作文件名；协议14项复验通过 |
 
 使用标签反查 commit，避免为在同一提交中写入自身哈希而反复追加无意义提交。原始探索复查报告继续本地保留，GitHub 只同步正式文档、代码与正式结果。
