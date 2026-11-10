@@ -133,7 +133,7 @@ Extreme Point + First-Fit + 体积降序
 
 用于检验简单改变货物顺序是否有效。已测小样本中，固定候选点骨架下的排序变化和 RGS 重启未显示稳定增益；这不能推广为所有随机搜索都无效，仍需考察更强的搜索框架。
 
-### B2：MES + Beam Search（下一阶段首选强基线）
+### B2：MES + Beam Search（组件已实现，校准未优于EP）
 
 参考 Guesser et al. 2026 EJOR：
 
@@ -143,7 +143,7 @@ Extreme Point + First-Fit + 体积降序
 - 尝试多个姿态、候选空间和放置动作；
 - 用统一独立校验器验收最终解。
 
-它首先在 L0 单容器标准算例上校准，再迁移到多容器和 L2 易碎件层，避免把算法问题和约束问题混在一起。
+它首先在 L0 单容器标准算例上校准，再迁移到多容器和 L2 易碎件层，避免把算法问题和约束问题混在一起。当前B2首版已完成同口径校准：thpack1前3例、体积排序、space_cap=80下，width=1/4/8/16平均ISD分别为74.6%/76.1%/77.3%/77.3%；代表性width=8低于EP-FF同口径85.9%。因此B2目前只能称已实现的组件级实验，不能称SOTA或性能提升；独立几何校验为0违规。
 
 ### B3：Block-building + MES + Beam
 
@@ -237,8 +237,12 @@ Lean 工程包含4个无 `sorry` 的算术声明，本次 `lake env lean` 与 `l
 src/pack_lib.py                  数据、车辆、占用栅格、L0–L4、EP 求解器
 src/constraints.py               独立约束校验器
 src/thpack.py                    OR-Library thpack 解析
+src/mes_beam.py                  B2 MES + Beam 单容器L0组件
 experiments/ablation_levels.py   L0–L4 约束消融
-experiments/bench_thpack.py      标准算例校准
+experiments/bench_thpack.py      EP标准算例校准
+experiments/bench_mes_beam.py    B2单容器L0校准
+experiments/test_mes_beam.py     B2空间切分专项测试
+experiments/verify_mes_result.py B2保存布局独立几何校验
 experiments/ftl_attempts.py      早期贪心分层尝试，结论已降级
 experiments/platform_analysis.py 平台候选诊断，仅作诊断指标
 experiments/run_baselines.py     当前 EP/LAYER 对照
@@ -257,6 +261,9 @@ py -3.12 experiments/review_regression.py
 py -3.12 experiments/ablation_levels.py --truck 1
 py -3.12 experiments/ablation_levels.py --truck 0
 py -3.12 experiments/bench_thpack.py
+py -3.12 experiments/bench_mes_beam.py --instances 3 --beam-width 8 --space-cap 80
+py -3.12 experiments/test_mes_beam.py
+py -3.12 experiments/verify_mes_result.py experiments/results/thpack1_b2_final_w8_s80.json
 py -3.12 experiments/ftl_attempts.py
 py -3.12 experiments/platform_analysis.py
 py -3.12 experiments/run_baselines.py
@@ -270,7 +277,7 @@ py -3.12 experiments/run_baselines.py
 
 | 局限 | 处理方式 |
 |---|---|
-| 当前实现仅作弱基线，尚无同口径SOTA对照 | 实现 B2 MES + Beam，再做统一校准 |
+| 当前EP-FF为弱基线，B2首版尚未优于EP | 先做B2空间/评分函数诊断与小规模精确裁判，再扩展搜索 |
 | 车型 2 一辆车全约束可行性未解决 | 做实际迁移/重排和 B2/B3 搜索，不作先验断言 |
 | L1 不是完整物理稳定性 | 参数化支撑比例，并区分几何接触与静态稳定 |
 | B1 承重是整底面积分摊/平均近似 | 后续小规模加入载荷守恒与必要力矩平衡，不与算法B2编号混用 |
@@ -278,7 +285,7 @@ py -3.12 experiments/run_baselines.py
 | 只有一组题面货物 | N3 扫描易碎比例、规模、定向比例、承重上限和车型组合 |
 | 尚无小规模最优解 | 建立 8–20 件精确验证器 |
 
-当前正式节点和 Git 标签见 [`PROGRESS.md`](PROGRESS.md)。本次独立约束12/12、平台专项8/8、两车型五层10/10配置回归通过；所有配置未装0件、按层独立检查违规0条。N2保留为失败诊断，原“一车解或不可行证明”判据未满足；B2/B3/B4尚未实现。
+当前正式节点和 Git 标签见 [`PROGRESS.md`](PROGRESS.md)。本次独立约束12/12、平台专项8/8、两车型五层10/10配置回归通过；所有配置未装0件、按层独立检查违规0条。B2首版已实现但三算例平均低于EP，暂不扩展到多车；N2保留为失败诊断，原“一车解或不可行证明”判据未满足；B3/B4尚未实现。下一步先做B2空间切分不变量、评分函数消融和8–20件精确裁判。
 
 ---
 

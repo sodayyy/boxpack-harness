@@ -1,0 +1,21 @@
+{
+  "method": "MES+Beam",
+  "scope": "single_container_L0_component_calibration",
+  "dataset": "thpack1 first 3 instances",
+  "comparison": {
+    "ep_volume_mean_isd": 0.859,
+    "ep_height_mean_isd": 0.834,
+    "ep_area_mean_isd": 0.853,
+    "b2_final_width_1_space_80_mean_isd": 0.7457321605701014,
+    "b2_final_width_4_space_80_mean_isd": 0.7612632051419498,
+    "b2_final_width_8_space_80_mean_isd": 0.7734217204028057,
+    "b2_final_width_16_space_80_mean_isd": 0.7734217204028057
+  },
+  "interpretation": "The current B2 component is geometrically valid but does not yet improve EP-FF on these three instances. These are calibration observations, not SOTA comparisons or optimality claims.",
+  "independent_geometry_check": "0 errors",
+  "next_diagnostic": [
+    "small-instance exact verification",
+    "space-splitting invariant and candidate-action ablation",
+    "paper-level double-effort, block construction, evaluation and memory components"
+  ]
+}
