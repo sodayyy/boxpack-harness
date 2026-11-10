@@ -1,0 +1,121 @@
+{
+  "method": "B2_vs_exact_L0_referee",
+  "scope": "small_single_container_axis_aligned_geometry",
+  "time_limit_seconds": 5.0,
+  "node_limit": 2000000,
+  "instances": [
+    {
+      "instance_id": "toy_exact_fill_8",
+      "container": [
+        4,
+        4,
+        4
+      ],
+      "n_items": 8,
+      "exact": {
+        "status": "optimal",
+        "placed": 8,
+        "used_volume": 64,
+        "nodes": 1280,
+        "seconds": 0.005896
+      },
+      "b2": {
+        "beam_width": 8,
+        "space_cap": 80,
+        "placed": 8,
+        "used_volume": 64,
+        "recomputed_volume": 64,
+        "skipped": 0,
+        "seconds": 0.001246,
+        "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
+      },
+      "count_gap_if_exact": 0,
+      "volume_gap_if_exact": 0
+    },
+    {
+      "instance_id": "mixed_8",
+      "container": [
+        10,
+        10,
+        10
+      ],
+      "n_items": 8,
+      "exact": {
+        "status": "time_limit",
+        "placed": 8,
+        "used_volume": 452,
+        "nodes": 1652636,
+        "seconds": 5.00039
+      },
+      "b2": {
+        "beam_width": 8,
+        "space_cap": 80,
+        "placed": 8,
+        "used_volume": 452,
+        "recomputed_volume": 452,
+        "skipped": 0,
+        "seconds": 0.003755,
+        "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
+      },
+      "count_gap_if_exact": null,
+      "volume_gap_if_exact": null
+    },
+    {
+      "instance_id": "tight_12",
+      "container": [
+        10,
+        10,
+        10
+      ],
+      "n_items": 12,
+      "exact": {
+        "status": "time_limit",
+        "placed": 12,
+        "used_volume": 441,
+        "nodes": 1348388,
+        "seconds": 5.000869
+      },
+      "b2": {
+        "beam_width": 8,
+        "space_cap": 80,
+        "placed": 12,
+        "used_volume": 441,
+        "recomputed_volume": 441,
+        "skipped": 0,
+        "seconds": 0.007662,
+        "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
+      },
+      "count_gap_if_exact": null,
+      "volume_gap_if_exact": null
+    },
+    {
+      "instance_id": "b2_gap_5",
+      "container": [
+        10,
+        10,
+        10
+      ],
+      "n_items": 5,
+      "exact": {
+        "status": "optimal",
+        "placed": 5,
+        "used_volume": 308,
+        "nodes": 641968,
+        "seconds": 1.348554
+      },
+      "b2": {
+        "beam_width": 8,
+        "space_cap": 80,
+        "placed": 4,
+        "used_volume": 248,
+        "recomputed_volume": 248,
+        "skipped": 1,
+        "seconds": 0.000811,
+        "internal_space_check_note": "Final MES list is not part of the public result; dedicated unit tests cover the update invariant."
+      },
+      "count_gap_if_exact": 1,
+      "volume_gap_if_exact": 60
+    }
+  ],
+  "interpretation": "Only rows with exact.status=optimal support an exact gap comparison; time_limit rows are not optimality claims."
+}

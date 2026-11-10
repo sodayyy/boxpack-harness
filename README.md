@@ -243,6 +243,8 @@ experiments/bench_thpack.py      EP标准算例校准
 experiments/bench_mes_beam.py    B2单容器L0校准
 experiments/test_mes_beam.py     B2空间切分专项测试
 experiments/verify_mes_result.py B2保存布局独立几何校验
+experiments/exact_l0.py               小规模L0完整枚举裁判
+experiments/bench_small_l0.py         B2与小规模裁判对照
 experiments/ftl_attempts.py      早期贪心分层尝试，结论已降级
 experiments/platform_analysis.py 平台候选诊断，仅作诊断指标
 experiments/run_baselines.py     当前 EP/LAYER 对照
@@ -264,6 +266,8 @@ py -3.12 experiments/bench_thpack.py
 py -3.12 experiments/bench_mes_beam.py --instances 3 --beam-width 8 --space-cap 80
 py -3.12 experiments/test_mes_beam.py
 py -3.12 experiments/verify_mes_result.py experiments/results/thpack1_b2_final_w8_s80.json
+py -3.12 experiments/test_mes_beam.py
+py -3.12 experiments/bench_small_l0.py
 py -3.12 experiments/ftl_attempts.py
 py -3.12 experiments/platform_analysis.py
 py -3.12 experiments/run_baselines.py
@@ -277,7 +281,7 @@ py -3.12 experiments/run_baselines.py
 
 | 局限 | 处理方式 |
 |---|---|
-| 当前EP-FF为弱基线，B2首版尚未优于EP | 先做B2空间/评分函数诊断与小规模精确裁判，再扩展搜索 |
+| 当前EP-FF为弱基线，B2首版尚未优于EP | 已补空间不变量测试和小规模L0精确裁判；再做评分函数消融与论文级组件 |
 | 车型 2 一辆车全约束可行性未解决 | 做实际迁移/重排和 B2/B3 搜索，不作先验断言 |
 | L1 不是完整物理稳定性 | 参数化支撑比例，并区分几何接触与静态稳定 |
 | B1 承重是整底面积分摊/平均近似 | 后续小规模加入载荷守恒与必要力矩平衡，不与算法B2编号混用 |

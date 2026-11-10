@@ -56,6 +56,61 @@ def _contains(a, b):
             a.z + a.h >= b.z + b.h)
 
 
+def _space_volume(s):
+    return s.l * s.w * s.h
+
+
+def _check_space_invariants(spaces, boxes, container):
+    """Return violations in a MES/box state without changing the state.
+
+    This is deliberately a diagnostic helper rather than a hot-path assertion.
+    Touching at a face/edge/corner is allowed; positive-volume intersections are
+    not.  The check is used by small-instance tests to separate space-update
+    errors from search-quality errors.
+    """
+    L, W, H = container
+    errors = []
+    seen = set()
+    for s in spaces:
+        key = (s.x, s.y, s.z, s.l, s.w, s.h)
+        if key in seen:
+            errors.append(f"duplicate space: {key}")
+        seen.add(key)
+        if not _valid_space(s):
+            errors.append(f"nonpositive space: {key}")
+        if not (0 <= s.x and 0 <= s.y and 0 <= s.z and
+                s.x + s.l <= L and s.y + s.w <= W and s.z + s.h <= H):
+            errors.append(f"space out of bounds: {key}")
+    for i, a in enumerate(spaces):
+        for b in spaces[i + 1:]:
+            if _space_overlap(a, {
+                "x": b.x, "y": b.y, "z": b.z,
+                "l": b.l, "w": b.w, "h": b.h,
+            }):
+                errors.append(f"overlapping spaces: {a} / {b}")
+    seen_serials = set()
+    for b in boxes:
+        serial = b.get("serial")
+        if serial in seen_serials:
+            errors.append(f"duplicate box serial: {serial}")
+        seen_serials.add(serial)
+        if min(b[k] for k in ("l", "w", "h")) <= 0:
+            errors.append(f"nonpositive box: {serial}")
+        if not (0 <= b["x"] and 0 <= b["y"] and 0 <= b["z"] and
+                b["x"] + b["l"] <= L and b["y"] + b["w"] <= W and
+                b["z"] + b["h"] <= H):
+            errors.append(f"box out of bounds: {serial}")
+    for i, a in enumerate(boxes):
+        for b in boxes[i + 1:]:
+            if _overlap(a, b):
+                errors.append(f"overlapping boxes: {a.get('serial')} / {b.get('serial')}")
+    for s in spaces:
+        for b in boxes:
+            if _space_overlap(s, b):
+                errors.append(f"space intersects box: {s} / {b.get('serial')}")
+    return errors
+
+
 def _prune_spaces(spaces):
     unique = {(s.x, s.y, s.z, s.l, s.w, s.h): s for s in spaces if _valid_space(s)}
     values = list(unique.values())
