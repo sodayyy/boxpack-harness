@@ -59,7 +59,8 @@ def verify_bundle(directory):
             if hashlib.sha256(path.read_bytes()).hexdigest() != digest:
                 errors.append("hash mismatch: " + name)
         for rel in ("data/items.csv", "data/trucks.csv"):
-            if (directory / "snapshot" / rel).read_bytes() != (ROOT / rel).read_bytes():
+            # Catalog checkout line endings may differ; evidence bytes stay hashed.
+            if (directory / "snapshot" / rel).read_text(encoding="utf-8") != (ROOT / rel).read_text(encoding="utf-8"):
                 errors.append("source differs from original catalog: " + rel)
         catalog = load_catalog(directory / "snapshot/data/items.csv")
         trucks = load_trucks(directory / "snapshot/data/trucks.csv")

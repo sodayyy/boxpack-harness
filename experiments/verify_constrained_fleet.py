@@ -89,9 +89,9 @@ def verify_bundle(directory):
         manifest, env, hashes = read("manifest.json"), read("environment.json"), read("sha256.json")["files"]
         trucks = load_trucks(directory / "snapshot/data/trucks.csv")
         catalog = load_catalog(directory / "snapshot/data/items.csv")
-        if (directory / "snapshot/data/items.csv").read_bytes() != (ROOT / "data/items.csv").read_bytes():
+        if (directory / "snapshot/data/items.csv").read_text(encoding="utf-8") != (ROOT / "data/items.csv").read_text(encoding="utf-8"):
             errors.append("item source differs from original catalog")
-        if (directory / "snapshot/data/trucks.csv").read_bytes() != (ROOT / "data/trucks.csv").read_bytes():
+        if (directory / "snapshot/data/trucks.csv").read_text(encoding="utf-8") != (ROOT / "data/trucks.csv").read_text(encoding="utf-8"):
             errors.append("truck source differs from original catalog")
         scope, level = env["scope"], env["level"]
         if type(level) is not int or level not in range(5) or env["pressure_model"] != "chain_area_v1" or env["support_ratio"] != 0:

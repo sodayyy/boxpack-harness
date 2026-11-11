@@ -10,6 +10,8 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from experiments.verify_parameter_envelope import verify_bundle
+import experiments.verify_parameter_envelope as verifier
+from unittest.mock import patch
 
 EVIDENCE = ROOT / "experiments/results/parameter_envelope_R7_v1"
 
@@ -54,6 +56,30 @@ class ParameterEvidenceTests(unittest.TestCase):
 
     def test_false_threshold_rejected_after_rehash(self):
         self.assert_corruption_rejected("thresholds.json", lambda obj: obj["candidates"][0]["threshold"].update(pressure_min="300"), "thresholds/deduplication")
+
+    def test_catalog_checkout_newlines_only_and_real_change_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            alternate_root = Path(temp)
+            (alternate_root / "data").mkdir()
+            (alternate_root / "experiments/results").mkdir(parents=True)
+            # Bind source evidence read-only without copying/changing original files.
+            (alternate_root / "experiments/results/block_search_L4_v1").mkdir()
+            for name in ("manifest.json", "sha256.json"):
+                shutil.copyfile(ROOT / "experiments/results/block_search_L4_v1" / name,
+                                alternate_root / "experiments/results/block_search_L4_v1" / name)
+            for name in ("items.csv", "trucks.csv"):
+                source = (ROOT / "data" / name).read_bytes().replace(b"\r\n", b"\n")
+                (alternate_root / "data" / name).write_bytes(source)
+            with patch.object(verifier, "ROOT", alternate_root):
+                result = verify_bundle(EVIDENCE)
+                self.assertTrue(result["passed"], result["errors"])
+                path = alternate_root / "data/items.csv"
+                original = path.read_text(encoding="utf-8")
+                self.assertIn("12", original)
+                path.write_text(original.replace("12", "13", 1), encoding="utf-8")
+                result = verify_bundle(EVIDENCE)
+                self.assertFalse(result["passed"])
+                self.assertIn("catalog mismatch: data/items.csv", result["errors"])
 
 
 if __name__ == "__main__":

@@ -72,7 +72,9 @@ def verify_bundle(directory):
             if hashlib.sha256(path.read_bytes()).hexdigest() != digest:
                 errors.append("hash mismatch: " + name)
         for rel in ("data/items.csv", "data/trucks.csv"):
-            if (directory / "snapshot" / rel).read_bytes() != (ROOT / rel).read_bytes():
+            # Git may normalize CRLF/LF in ordinary catalogs, never in evidence.
+            # read_text normalizes only newlines; all remaining content must match.
+            if (directory / "snapshot" / rel).read_text(encoding="utf-8") != (ROOT / rel).read_text(encoding="utf-8"):
                 errors.append("catalog mismatch: " + rel)
         trucks = load_trucks(directory / "snapshot/data/trucks.csv")
         catalog = load_catalog(directory / "snapshot/data/items.csv")
