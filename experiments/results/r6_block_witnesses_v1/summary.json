@@ -1,0 +1,294 @@
+{
+  "verification": {
+    "directory": "D:\\WorkBuddy\\workspace\\2026-10-29-17-53-27\\boxpack-harness\\experiments\\results\\block_search_L4_v1",
+    "runs": 96,
+    "hashed_files": 109,
+    "complete_runs": 44,
+    "independent_objectives": {
+      "P1": {
+        "objective": "vehicles",
+        "value": 1,
+        "label": "blocks_L4_024",
+        "cost": 700,
+        "status": "best_verified_heuristic_not_global_optimum"
+      },
+      "P2": {
+        "objective": "cost",
+        "value": 700,
+        "label": "blocks_L4_024",
+        "vehicles": 1,
+        "status": "best_verified_heuristic_not_global_optimum"
+      }
+    },
+    "best_by_combination": {
+      "(0, 1)": {
+        "label": "blocks_L4_024",
+        "config": {
+          "combination": [
+            0,
+            1
+          ],
+          "capped": true,
+          "order": "area",
+          "axis": "yx",
+          "rotation": "original"
+        },
+        "placed": 300,
+        "used_volume_cm3": 28735000,
+        "complete": true,
+        "rest_serials": []
+      },
+      "(2, 0)": {
+        "label": "blocks_L4_072",
+        "config": {
+          "combination": [
+            2,
+            0
+          ],
+          "capped": true,
+          "order": "area",
+          "axis": "yx",
+          "rotation": "original"
+        },
+        "placed": 300,
+        "used_volume_cm3": 28735000,
+        "complete": true,
+        "rest_serials": []
+      }
+    },
+    "cpu_seconds": 45.704723529000006,
+    "wall_seconds": 45.618532604999984,
+    "errors": [],
+    "passed": true
+  },
+  "baseline_verification": {
+    "directory": "D:\\WorkBuddy\\workspace\\2026-10-29-17-53-27\\boxpack-harness\\experiments\\results\\chain_mixed_L4_v1",
+    "scope": "fleet",
+    "level": 4,
+    "runs": 55,
+    "complete_runs": 41,
+    "hashed_files": 63,
+    "independent_objectives": {
+      "P1": {
+        "objective": "vehicles",
+        "value": 2,
+        "label": "fleet_L4_015",
+        "cost": 1150,
+        "status": "best_verified_heuristic_not_global_optimum"
+      },
+      "P2": {
+        "objective": "cost",
+        "value": 1150,
+        "label": "fleet_L4_015",
+        "vehicles": 2,
+        "status": "best_verified_heuristic_not_global_optimum"
+      }
+    },
+    "best_single": null,
+    "errors": [],
+    "passed": true
+  },
+  "source": {
+    "items": 300,
+    "volume_cm3": 28735000,
+    "weight_kg": 4110,
+    "effective_capacities_cm3": {
+      "车型1": 19139400,
+      "车型2": 41150200
+    }
+  },
+  "groups": [
+    {
+      "combination": [
+        0,
+        1
+      ],
+      "capped": false,
+      "runs": 24,
+      "complete_runs": 0,
+      "best_label": "blocks_L4_015",
+      "placed": 291,
+      "used_volume_cm3": 27571250
+    },
+    {
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "runs": 24,
+      "complete_runs": 24,
+      "best_label": "blocks_L4_024",
+      "placed": 300,
+      "used_volume_cm3": 28735000
+    },
+    {
+      "combination": [
+        2,
+        0
+      ],
+      "capped": false,
+      "runs": 24,
+      "complete_runs": 0,
+      "best_label": "blocks_L4_060",
+      "placed": 286,
+      "used_volume_cm3": 26775000
+    },
+    {
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "runs": 24,
+      "complete_runs": 20,
+      "best_label": "blocks_L4_072",
+      "placed": 300,
+      "used_volume_cm3": 28735000
+    }
+  ],
+  "baseline_best": {
+    "(0, 1)": {
+      "label": "fleet_L4_004",
+      "placed": 280,
+      "used_volume_cm3": 25935000,
+      "complete": false
+    },
+    "(2, 0)": {
+      "label": "fleet_L4_037",
+      "placed": 282,
+      "used_volume_cm3": 26215000,
+      "complete": false
+    }
+  },
+  "witnesses": {
+    "(0, 1)": {
+      "label": "blocks_L4_024",
+      "metrics": {
+        "trucks": 1,
+        "placed": 300,
+        "cost": 700,
+        "nominal_space_util": 0.6899159663865546,
+        "effective_space_util": 0.6982955125369986,
+        "shipment_completion": 1.0,
+        "weight_util": 0.411
+      },
+      "support_ratio_1_errors": [],
+      "legacy_b1_errors": [],
+      "max_top_pressure_kg_m2": 362.85714285714283,
+      "max_height_cm": 240,
+      "floor_reaction_kg": 4110.0,
+      "floor_reaction_residual_kg": 0.0,
+      "by_vehicle": [
+        {
+          "truck_type": "车型2",
+          "items": 300,
+          "volume_cm3": 28735000,
+          "weight_kg": 4110,
+          "counts": {
+            "G4": 40,
+            "G2": 100,
+            "G3": 30,
+            "G1": 80,
+            "G5": 50
+          }
+        }
+      ],
+      "export_files": [
+        "one_large.json",
+        "one_large.csv"
+      ],
+      "json_csv_roundtrip_passed": true
+    },
+    "(2, 0)": {
+      "label": "blocks_L4_072",
+      "metrics": {
+        "trucks": 2,
+        "placed": 300,
+        "cost": 900,
+        "nominal_space_util": 0.7404401154401155,
+        "effective_space_util": 0.7506766147319143,
+        "shipment_completion": 1.0,
+        "weight_util": 0.3425
+      },
+      "support_ratio_1_errors": [],
+      "legacy_b1_errors": [],
+      "max_top_pressure_kg_m2": 317.1428571428571,
+      "max_height_cm": 215,
+      "floor_reaction_kg": 4110.0,
+      "floor_reaction_residual_kg": 0.0,
+      "by_vehicle": [
+        {
+          "truck_type": "车型1",
+          "items": 165,
+          "volume_cm3": 17111000,
+          "weight_kg": 2203,
+          "counts": {
+            "G4": 40,
+            "G2": 84,
+            "G3": 13,
+            "G1": 28
+          }
+        },
+        {
+          "truck_type": "车型1",
+          "items": 135,
+          "volume_cm3": 11624000,
+          "weight_kg": 1907,
+          "counts": {
+            "G2": 16,
+            "G3": 17,
+            "G1": 52,
+            "G5": 50
+          }
+        }
+      ],
+      "export_files": [
+        "two_small.json",
+        "two_small.csv"
+      ],
+      "json_csv_roundtrip_passed": true
+    }
+  },
+  "certificates": {
+    "scope": "original_300_items_two_truck_types_L4_chain_area_v1_support0_clearance3",
+    "P1": {
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "witness": "blocks_L4_024",
+      "proven_optimal": true,
+      "argument": "nonempty shipment needs at least one vehicle"
+    },
+    "P2": {
+      "lower_bound": 700,
+      "upper_bound": 700,
+      "witness": "blocks_L4_024",
+      "proven_optimal": true,
+      "all_strictly_cheaper_fleets": [
+        {
+          "combination": [
+            0,
+            0
+          ],
+          "cost": 0,
+          "effective_volume_cm3": 0,
+          "rejected_by_volume": true,
+          "rejected_by_weight": true
+        },
+        {
+          "combination": [
+            1,
+            0
+          ],
+          "cost": 450,
+          "effective_volume_cm3": 19139400,
+          "rejected_by_volume": true,
+          "rejected_by_weight": false
+        }
+      ],
+      "argument": "all cheaper original fleets fail necessary capacity; verified witness attains cost"
+    },
+    "boundary": "No optimality claim for maximal packing heuristics, other instances, physical safety or modified models"
+  },
+  "note": "known-instance development, configurations not independent random repetitions; no measured AI-time saving"
+}

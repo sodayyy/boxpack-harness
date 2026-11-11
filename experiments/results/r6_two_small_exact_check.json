@@ -1,0 +1,28 @@
+{
+  "file": "C:\\Users\\yzj\\WorkBuddy\\2026-10-29-17-53-27\\boxpack-harness\\experiments\\results\\r6_block_witnesses_v1\\two_small.json",
+  "passed": true,
+  "errors": [],
+  "items": 300,
+  "volume_cm3": 28735000,
+  "weight_kg": 4110,
+  "vehicles": [
+    {
+      "truck_type": "车型1",
+      "count": 165,
+      "weight_kg": 2203,
+      "exact_floor_reaction_kg": "2203"
+    },
+    {
+      "truck_type": "车型1",
+      "count": 135,
+      "weight_kg": 1907,
+      "exact_floor_reaction_kg": "1907"
+    }
+  ],
+  "exact_floor_reaction_kg": "4110",
+  "exact_max_top_pressure_kg_m2": "2220/7",
+  "exact_min_support_ratio": "1",
+  "max_height_cm": 215,
+  "method": "integer geometry and Fraction load propagation; no solver or original checker imports",
+  "scope": "original catalog, fragile six orientations, oriented original pose, full support, no moment/dynamic certification"
+}
