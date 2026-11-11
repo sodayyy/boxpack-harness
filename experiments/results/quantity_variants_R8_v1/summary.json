@@ -1,0 +1,356 @@
+{
+  "cases": {
+    "base": {
+      "totals": {
+        "items": 300,
+        "volume_cm3": 28735000,
+        "weight_kg": 4110,
+        "fragile_count": 30,
+        "oriented_count": 90
+      },
+      "capacity_lower_bounds": {
+        "P1": 1,
+        "P2": 700,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 1
+      },
+      "complete_runs": 20,
+      "P1": {
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "witness": "variants_016",
+        "proven_optimal": true
+      },
+      "P2": {
+        "lower_bound": 700,
+        "upper_bound": 700,
+        "witness": "variants_016",
+        "proven_optimal": true
+      },
+      "status": "both_objectives_proven"
+    },
+    "scale_1_2": {
+      "totals": {
+        "items": 150,
+        "volume_cm3": 14367500,
+        "weight_kg": 2055,
+        "fragile_count": 15,
+        "oriented_count": 45
+      },
+      "capacity_lower_bounds": {
+        "P1": 1,
+        "P2": 450,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 1
+      },
+      "complete_runs": 21,
+      "P1": {
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "witness": "variants_027",
+        "proven_optimal": true
+      },
+      "P2": {
+        "lower_bound": 450,
+        "upper_bound": 450,
+        "witness": "variants_027",
+        "proven_optimal": true
+      },
+      "status": "both_objectives_proven"
+    },
+    "scale_3_2": {
+      "totals": {
+        "items": 450,
+        "volume_cm3": 43102500,
+        "weight_kg": 6165,
+        "fragile_count": 45,
+        "oriented_count": 135
+      },
+      "capacity_lower_bounds": {
+        "P1": 2,
+        "P2": 1150,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 3
+      },
+      "complete_runs": 12,
+      "P1": {
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "witness": "variants_068",
+        "proven_optimal": true
+      },
+      "P2": {
+        "lower_bound": 1150,
+        "upper_bound": 1350,
+        "witness": "variants_056",
+        "proven_optimal": false
+      },
+      "status": "verified_bounds_gap_remaining"
+    },
+    "scale_2": {
+      "totals": {
+        "items": 600,
+        "volume_cm3": 57470000,
+        "weight_kg": 8220,
+        "fragile_count": 60,
+        "oriented_count": 180
+      },
+      "capacity_lower_bounds": {
+        "P1": 2,
+        "P2": 1150,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 3
+      },
+      "complete_runs": 8,
+      "P1": {
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "witness": "variants_092",
+        "proven_optimal": true
+      },
+      "P2": {
+        "lower_bound": 1150,
+        "upper_bound": 1400,
+        "witness": "variants_092",
+        "proven_optimal": false
+      },
+      "status": "verified_bounds_gap_remaining"
+    },
+    "fragile_0": {
+      "totals": {
+        "items": 270,
+        "volume_cm3": 24535000,
+        "weight_kg": 3660,
+        "fragile_count": 0,
+        "oriented_count": 90
+      },
+      "capacity_lower_bounds": {
+        "P1": 1,
+        "P2": 700,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 1
+      },
+      "complete_runs": 20,
+      "P1": {
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "witness": "variants_112",
+        "proven_optimal": true
+      },
+      "P2": {
+        "lower_bound": 700,
+        "upper_bound": 700,
+        "witness": "variants_112",
+        "proven_optimal": true
+      },
+      "status": "both_objectives_proven"
+    },
+    "fragile_15": {
+      "totals": {
+        "items": 285,
+        "volume_cm3": 26635000,
+        "weight_kg": 3885,
+        "fragile_count": 15,
+        "oriented_count": 90
+      },
+      "capacity_lower_bounds": {
+        "P1": 1,
+        "P2": 700,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 1
+      },
+      "complete_runs": 20,
+      "P1": {
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "witness": "variants_136",
+        "proven_optimal": true
+      },
+      "P2": {
+        "lower_bound": 700,
+        "upper_bound": 700,
+        "witness": "variants_136",
+        "proven_optimal": true
+      },
+      "status": "both_objectives_proven"
+    },
+    "fragile_45": {
+      "totals": {
+        "items": 315,
+        "volume_cm3": 30835000,
+        "weight_kg": 4335,
+        "fragile_count": 45,
+        "oriented_count": 90
+      },
+      "capacity_lower_bounds": {
+        "P1": 1,
+        "P2": 700,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 1
+      },
+      "complete_runs": 12,
+      "P1": {
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "witness": "variants_164",
+        "proven_optimal": false
+      },
+      "P2": {
+        "lower_bound": 700,
+        "upper_bound": 1350,
+        "witness": "variants_152",
+        "proven_optimal": false
+      },
+      "status": "verified_bounds_gap_remaining"
+    },
+    "fragile_60": {
+      "totals": {
+        "items": 330,
+        "volume_cm3": 32935000,
+        "weight_kg": 4560,
+        "fragile_count": 60,
+        "oriented_count": 90
+      },
+      "capacity_lower_bounds": {
+        "P1": 1,
+        "P2": 700,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 1
+      },
+      "complete_runs": 12,
+      "P1": {
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "witness": "variants_188",
+        "proven_optimal": false
+      },
+      "P2": {
+        "lower_bound": 700,
+        "upper_bound": 1350,
+        "witness": "variants_176",
+        "proven_optimal": false
+      },
+      "status": "verified_bounds_gap_remaining"
+    },
+    "oriented_0": {
+      "totals": {
+        "items": 210,
+        "volume_cm3": 14335000,
+        "weight_kg": 2210,
+        "fragile_count": 30,
+        "oriented_count": 0
+      },
+      "capacity_lower_bounds": {
+        "P1": 1,
+        "P2": 450,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 1
+      },
+      "complete_runs": 22,
+      "P1": {
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "witness": "variants_192",
+        "proven_optimal": true
+      },
+      "P2": {
+        "lower_bound": 450,
+        "upper_bound": 450,
+        "witness": "variants_192",
+        "proven_optimal": true
+      },
+      "status": "both_objectives_proven"
+    },
+    "oriented_1_2": {
+      "totals": {
+        "items": 255,
+        "volume_cm3": 21535000,
+        "weight_kg": 3160,
+        "fragile_count": 30,
+        "oriented_count": 45
+      },
+      "capacity_lower_bounds": {
+        "P1": 1,
+        "P2": 700,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 1
+      },
+      "complete_runs": 20,
+      "P1": {
+        "lower_bound": 1,
+        "upper_bound": 1,
+        "witness": "variants_232",
+        "proven_optimal": true
+      },
+      "P2": {
+        "lower_bound": 700,
+        "upper_bound": 700,
+        "witness": "variants_232",
+        "proven_optimal": true
+      },
+      "status": "both_objectives_proven"
+    },
+    "oriented_3_2": {
+      "totals": {
+        "items": 345,
+        "volume_cm3": 35935000,
+        "weight_kg": 5060,
+        "fragile_count": 30,
+        "oriented_count": 135
+      },
+      "capacity_lower_bounds": {
+        "P1": 1,
+        "P2": 700,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 1
+      },
+      "complete_runs": 12,
+      "P1": {
+        "lower_bound": 1,
+        "upper_bound": 2,
+        "witness": "variants_260",
+        "proven_optimal": false
+      },
+      "P2": {
+        "lower_bound": 700,
+        "upper_bound": 1350,
+        "witness": "variants_248",
+        "proven_optimal": false
+      },
+      "status": "verified_bounds_gap_remaining"
+    },
+    "oriented_2": {
+      "totals": {
+        "items": 390,
+        "volume_cm3": 43135000,
+        "weight_kg": 6010,
+        "fragile_count": 30,
+        "oriented_count": 180
+      },
+      "capacity_lower_bounds": {
+        "P1": 2,
+        "P2": 1150,
+        "scope": "all_types_including_mixed_volume_weight_relaxation",
+        "enumeration_count_limit": 3
+      },
+      "complete_runs": 12,
+      "P1": {
+        "lower_bound": 2,
+        "upper_bound": 2,
+        "witness": "variants_284",
+        "proven_optimal": true
+      },
+      "P2": {
+        "lower_bound": 1150,
+        "upper_bound": 1350,
+        "witness": "variants_272",
+        "proven_optimal": false
+      },
+      "status": "verified_bounds_gap_remaining"
+    }
+  },
+  "runs": 288,
+  "complete_runs": 191,
+  "no_failure_is_infeasibility": true,
+  "no_ai_efficiency_claim": true
+}

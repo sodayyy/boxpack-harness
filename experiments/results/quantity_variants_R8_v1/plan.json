@@ -1,0 +1,3326 @@
+{
+  "schema": "r8_quantity_variants_v1",
+  "cases": [
+    {
+      "id": "base",
+      "family": "base",
+      "factor": "1",
+      "quantities": [
+        80,
+        100,
+        30,
+        40,
+        50
+      ]
+    },
+    {
+      "id": "scale_1_2",
+      "family": "scale",
+      "factor": "1/2",
+      "quantities": [
+        40,
+        50,
+        15,
+        20,
+        25
+      ]
+    },
+    {
+      "id": "scale_3_2",
+      "family": "scale",
+      "factor": "3/2",
+      "quantities": [
+        120,
+        150,
+        45,
+        60,
+        75
+      ]
+    },
+    {
+      "id": "scale_2",
+      "family": "scale",
+      "factor": "2",
+      "quantities": [
+        160,
+        200,
+        60,
+        80,
+        100
+      ]
+    },
+    {
+      "id": "fragile_0",
+      "family": "fragile",
+      "factor": "0",
+      "quantities": [
+        80,
+        100,
+        0,
+        40,
+        50
+      ]
+    },
+    {
+      "id": "fragile_15",
+      "family": "fragile",
+      "factor": "1/2",
+      "quantities": [
+        80,
+        100,
+        15,
+        40,
+        50
+      ]
+    },
+    {
+      "id": "fragile_45",
+      "family": "fragile",
+      "factor": "3/2",
+      "quantities": [
+        80,
+        100,
+        45,
+        40,
+        50
+      ]
+    },
+    {
+      "id": "fragile_60",
+      "family": "fragile",
+      "factor": "2",
+      "quantities": [
+        80,
+        100,
+        60,
+        40,
+        50
+      ]
+    },
+    {
+      "id": "oriented_0",
+      "family": "oriented",
+      "factor": "0",
+      "quantities": [
+        80,
+        100,
+        30,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "oriented_1_2",
+      "family": "oriented",
+      "factor": "1/2",
+      "quantities": [
+        80,
+        100,
+        30,
+        20,
+        25
+      ]
+    },
+    {
+      "id": "oriented_3_2",
+      "family": "oriented",
+      "factor": "3/2",
+      "quantities": [
+        80,
+        100,
+        30,
+        60,
+        75
+      ]
+    },
+    {
+      "id": "oriented_2",
+      "family": "oriented",
+      "factor": "2",
+      "quantities": [
+        80,
+        100,
+        30,
+        80,
+        100
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "case": "base",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "base",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_1_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_3_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "scale_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_0",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_15",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_45",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "fragile_60",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_0",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_1_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_3_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        1,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        2,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        3,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        4,
+        0
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        0,
+        1
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "case": "oriented_2",
+      "combination": [
+        0,
+        2
+      ],
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    }
+  ],
+  "planned_runs": 288,
+  "level": 4,
+  "support_ratio": 0,
+  "pressure_model": "chain_area_v1",
+  "pressure": 500,
+  "clearance": 3,
+  "scope": "derived_quantity_development_not_holdout_or_causal"
+}
