@@ -1,0 +1,27 @@
+{
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+  "command": [
+    "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/bench_mixed_study.py",
+    "--output-dir",
+    "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/mixed_blocks_R9_v1"
+  ],
+  "process_affinity": [
+    0
+  ],
+  "planned_runs": 288,
+  "source_verification": {
+    "directory": "/mnt/d/WorkBuddy/workspace/2026-10-29-17-53-27/boxpack-harness/experiments/results/quantity_variants_R8_v1",
+    "runs": 288,
+    "cases": 12,
+    "complete_runs": 191,
+    "hashed_files": 317,
+    "objective_proven_counts": {
+      "P1": 9,
+      "P2": 6
+    },
+    "cpu_seconds": 140.08081488399998,
+    "errors": [],
+    "passed": true
+  }
+}
