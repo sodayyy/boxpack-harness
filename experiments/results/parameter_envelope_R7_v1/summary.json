@@ -1,0 +1,55 @@
+{
+  "unique_layouts": 21,
+  "source_complete_runs": 44,
+  "boundary_checks": 84,
+  "grid_points": 720,
+  "status_counts": {
+    "no_saved_witness_not_infeasible": 594,
+    "verified_upper_bounds_not_global_optimum": 54,
+    "witness_and_lower_bounds": 72
+  },
+  "frontier": {
+    "one_large": [
+      {
+        "alpha_max": "1",
+        "pressure_min": "2540/7",
+        "clearance_max": "10",
+        "witnesses": [
+          "blocks_L4_024",
+          "blocks_L4_025",
+          "blocks_L4_027",
+          "blocks_L4_028",
+          "blocks_L4_036",
+          "blocks_L4_037",
+          "blocks_L4_039",
+          "blocks_L4_040",
+          "blocks_L4_042",
+          "blocks_L4_043",
+          "blocks_L4_045",
+          "blocks_L4_046"
+        ]
+      }
+    ],
+    "two_small": [
+      {
+        "alpha_max": "1",
+        "pressure_min": "2220/7",
+        "clearance_max": "5",
+        "witnesses": [
+          "blocks_L4_072",
+          "blocks_L4_073",
+          "blocks_L4_075",
+          "blocks_L4_084",
+          "blocks_L4_085",
+          "blocks_L4_087",
+          "blocks_L4_090",
+          "blocks_L4_091",
+          "blocks_L4_093"
+        ]
+      }
+    ]
+  },
+  "optimal_700_grid_points": 72,
+  "no_witness_is_not_infeasibility": true,
+  "no_ai_time_saving_claim": true
+}

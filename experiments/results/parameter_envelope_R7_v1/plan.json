@@ -1,0 +1,48 @@
+{
+  "schema": "r7_fixed_pool_v1",
+  "alphas": [
+    "0",
+    "1/4",
+    "1/2",
+    "3/4",
+    "9/10",
+    "1"
+  ],
+  "pressures": [
+    "0",
+    "100",
+    "200",
+    "250",
+    "300",
+    "317",
+    "318",
+    "350",
+    "362",
+    "363",
+    "400",
+    "500"
+  ],
+  "clearances": [
+    "0",
+    "3",
+    "5",
+    "10",
+    "11",
+    "20",
+    "25",
+    "30",
+    "40",
+    "50"
+  ],
+  "planned_grid_points": 720,
+  "source_runs": 96,
+  "source_complete_runs": 44,
+  "candidate_policy": "all_complete_original_R6_records",
+  "pressure_model": "chain_area_v1",
+  "source_default": {
+    "alpha": "0",
+    "pressure": "500",
+    "clearance": "3"
+  },
+  "scope": "fixed_layout_pool_inner_feasible_region_not_reoptimization"
+}
