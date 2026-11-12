@@ -1,7 +1,7 @@
 """Render the editable research manuscript and appendices as one reading page.
 
-Requires markdown-it-py. MathJax is loaded from a CDN; without network the
-mathematical source remains visible. Does not generate or modify research data.
+Requires markdown-it-py and latex2mathml==3.78.1. Outputs native offline
+MathML. Does not generate or modify research data.
 """
 import argparse
 import html
@@ -10,6 +10,7 @@ import re
 from urllib.parse import quote
 
 from markdown_it import MarkdownIt
+from latex2mathml.converter import convert
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = [
@@ -24,7 +25,11 @@ def render(text):
 
     def math(match):
         key = len(blocks)
-        blocks.append('<div class="equation">\\[' + html.escape(match.group(1)) + '\\]</div>')
+        source = match.group(1)
+        tags = re.findall(r"\\tag\{([^}]+)\}", source)
+        source = re.sub(r"\\tag\{[^}]+\}", "", source)
+        number = '<span class="eqno">(' + html.escape(tags[0]) + ')</span>' if tags else ""
+        blocks.append('<div class="equation">' + convert(source, display="block") + number + '</div>')
         return "\n\nMATHBLOCK" + str(key) + "END\n\n"
 
     text = re.sub(r"\\\[([\s\S]*?)\\\]", math, text)
@@ -33,7 +38,7 @@ def render(text):
 
     def inline_math(match):
         key = len(inline)
-        inline.append('\\(' + html.escape(match.group(1)) + '\\)')
+        inline.append(convert(match.group(1)))
         return "INLINEMATH" + str(key) + "END"
 
     text = re.sub(r"\\\(([\s\S]*?)\\\)", inline_math, text)
@@ -74,14 +79,14 @@ table { border-collapse:collapse; width:100%; font-size:14px; display:block; ove
 th,td { border:1px solid #d4dfe3; padding:10px 12px; vertical-align:top; } th { background:#edf4f5; text-align:left; }
 pre { background:#f3f5f7; border:1px solid #dce3e7; padding:16px; overflow:auto; font-size:13px; line-height:1.65; }
 code { font-family:Consolas,monospace; overflow-wrap:anywhere; } p code,td code { font-size:.9em; background:#f0f4f5; padding:2px 4px; }
-section svg { max-width:100%; height:auto; } .equation { overflow-x:auto; padding:10px 0; text-align:center; white-space:pre-wrap; font-family:Cambria,serif; }
+section svg { max-width:100%; height:auto; } .equation { overflow-x:auto; padding:16px 4px; text-align:center; font-family:Cambria,serif; } math { font-family:'Cambria Math','STIX Two Math',serif; } .eqno { float:right; padding-left:10px; }
 footer { text-align:center; color:#5e7180; padding:25px; font-size:13px; }
 @media(max-width:700px) { section { padding:22px 19px; } section h1 { font-size:24px; } body { font-size:15px; } }
 @media print { body { background:white; } nav,header { position:static; } section { border:0; padding:0; page-break-before:always; } main { max-width:none; } }
 """
     page = '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>三维装箱研究 · 论文与完整公式</title><style>' + style + '</style>'
-    page += """<script>window.MathJax={tex:{inlineMath:[['\\\\(','\\\\)']],displayMath:[['\\\\[','\\\\]']]},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script></head><body>"""
-    page += '<header><h1>多车型三维装箱：模型、证书与可核验结果</h1><p>2026-11-13 · 学术论文工作稿与两个附录</p><p>先给问题与依据，再谈工具。当前模型原实例最优1辆/700元；一般完整相图、动力学和AI节时仍未完成。</p><p style="font-size:13px">公式排版使用联网MathJax；离线时保留TeX原式。可编辑Markdown源稿与Lean/Python文件另行交付。</p></header><nav>' + nav + '</nav><main>' + sections + '</main><footer>研究自查，不是同行评审或第三方安全认证。未覆盖区域不等于无解。</footer></body></html>'
+    page += '</head><body>'
+    page += '<header><h1>多车型三维装箱：模型、证书与可核验结果</h1><p>2026-11-13 · 学术论文工作稿与两个附录</p><p>先给问题与依据，再谈工具。当前模型原实例最优1辆/700元；一般完整相图、动力学和AI节时仍未完成。</p><p style="font-size:13px">公式采用浏览器原生MathML，离线可读，无需联网公式库。可编辑Markdown源稿与Lean/Python文件另行交付。</p></header><nav>' + nav + '</nav><main>' + sections + '</main><footer>研究自查，不是同行评审或第三方安全认证。未覆盖区域不等于无解。</footer></body></html>'
     args.output.write_text(page, encoding="utf-8")
     print(dict(output=str(args.output), sections=len(DOCS), equations=page.count('class="equation"'), chars=len(page)))
 
