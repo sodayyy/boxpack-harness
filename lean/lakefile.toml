@@ -4,6 +4,7 @@ defaultTargets = ["Boxpack"]
 
 [[lean_lib]]
 name = "Boxpack"
+roots = ["Boxpack", "Parametric"]
 
 [[lean_exe]]
 name = "boxpack"
