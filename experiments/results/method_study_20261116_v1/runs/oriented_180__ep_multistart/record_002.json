@@ -1,0 +1,31 @@
+{
+  "id": 2,
+  "candidate": {
+    "method": "ep_multistart",
+    "fleet": [
+      1,
+      1
+    ],
+    "config": {
+      "order": "standard_first"
+    }
+  },
+  "status": "partial",
+  "rest_serials": [
+    "G3-022",
+    "G3-023",
+    "G3-024",
+    "G3-025",
+    "G3-026",
+    "G3-027",
+    "G3-028",
+    "G3-029"
+  ],
+  "placed": 382,
+  "vehicles": 2,
+  "cost": 1400,
+  "threshold": null,
+  "search_seconds": 7.342327757000021,
+  "file": "candidate_002.json",
+  "accepted_at": 21.602424290000044
+}

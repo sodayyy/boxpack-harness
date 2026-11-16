@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "scale_450",
+    "counts": [
+      120,
+      150,
+      45,
+      60,
+      75
+    ],
+    "alpha": "1",
+    "pressure": "500",
+    "clearance": 3
+  },
+  "candidate": {
+    "method": "block_columns",
+    "fleet": [
+      1,
+      0
+    ],
+    "config": {
+      "order": "area",
+      "axis": "xy",
+      "rotation": "wide"
+    }
+  }
+}

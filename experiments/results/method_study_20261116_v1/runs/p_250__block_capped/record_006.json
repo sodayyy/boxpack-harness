@@ -1,0 +1,29 @@
+{
+  "id": 6,
+  "candidate": {
+    "method": "block_capped",
+    "fleet": [
+      1
+    ],
+    "config": {
+      "order": "area",
+      "axis": "yx",
+      "rotation": "wide"
+    }
+  },
+  "status": "partial",
+  "rest_serials": [
+    "G5-045",
+    "G5-046",
+    "G5-047",
+    "G5-048",
+    "G5-049"
+  ],
+  "placed": 295,
+  "vehicles": 1,
+  "cost": 700,
+  "threshold": null,
+  "search_seconds": 0.8281627479999827,
+  "file": "candidate_006.json",
+  "accepted_at": 7.661038916999985
+}

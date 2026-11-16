@@ -1,0 +1,190 @@
+{
+  "scope": "read_only_evidence_recheck_not_new_search_or_AI_efficiency_measurement",
+  "started": "2026-11-16T02:14:40.913542+00:00",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "commands": [
+    {
+      "name": "unittest",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "unittest.log",
+      "sha256": "4dbd645046bc4d57d4fd3c8fa3537b45c35a469c6ff99f14521c4c29d31a5d84"
+    },
+    {
+      "name": "constraint_triggers",
+      "command": [
+        "/usr/bin/python3",
+        "experiments/test_constraints.py"
+      ],
+      "returncode": 0,
+      "log": "constraint_triggers.log",
+      "sha256": "992e42f1f223e112cd5471729f62774d0cb98803a6f4dd63818ba58130a63e52"
+    },
+    {
+      "name": "R6_matrix",
+      "command": [
+        "/usr/bin/python3",
+        "experiments/verify_block_search.py",
+        "experiments/results/block_search_L4_v1"
+      ],
+      "returncode": 0,
+      "log": "R6_matrix.log",
+      "sha256": "3a36745137a5f4ca9d6c06793399175b9e53f43c2c9d1294f5176f6ff39d587e"
+    },
+    {
+      "name": "R6_one_large",
+      "command": [
+        "/usr/bin/python3",
+        "experiments/verify_witness_exact.py",
+        "experiments/results/r6_block_witnesses_v1/one_large.json"
+      ],
+      "returncode": 0,
+      "log": "R6_one_large.log",
+      "sha256": "54b70a571ef563835a397a2b7811b1e5ab2c02978d756316900a1408afe974f4"
+    },
+    {
+      "name": "R6_two_small",
+      "command": [
+        "/usr/bin/python3",
+        "experiments/verify_witness_exact.py",
+        "experiments/results/r6_block_witnesses_v1/two_small.json"
+      ],
+      "returncode": 0,
+      "log": "R6_two_small.log",
+      "sha256": "185874560f7e57c00883c73220f8a3f0a2cd3e2f72a60029198debbb26ce4a18"
+    },
+    {
+      "name": "R7",
+      "command": [
+        "/usr/bin/python3",
+        "experiments/verify_parameter_envelope.py",
+        "experiments/results/parameter_envelope_R7_v1"
+      ],
+      "returncode": 0,
+      "log": "R7.log",
+      "sha256": "196ee8f71aba083f8fa21f9a929cca30e4dac4b0bf22465f1fcc653c081b23f6"
+    },
+    {
+      "name": "R8",
+      "command": [
+        "/usr/bin/python3",
+        "experiments/verify_variant_study.py",
+        "experiments/results/quantity_variants_R8_v1"
+      ],
+      "returncode": 0,
+      "log": "R8.log",
+      "sha256": "c9e32fef0a705bc9f92fc8be42350ccc67bb117f39d1bb03ec5d1251d2cb2d90"
+    },
+    {
+      "name": "R9",
+      "command": [
+        "/usr/bin/python3",
+        "experiments/verify_mixed_study.py",
+        "experiments/results/mixed_blocks_R9_v1"
+      ],
+      "returncode": 0,
+      "log": "R9.log",
+      "sha256": "dbb6f59b0b6263f86494ea07227cdf0b3bf7a0837b3d476f891550e5f067fea6"
+    }
+  ],
+  "source_sha256": {
+    "src/__init__.py": "4a7ebae6cf07c09c43a03a63b3db6bd664f2970402ee346bc82d6d957090950a",
+    "src/block_search.py": "022408899a0fd58d5f9f20a01bed523bde4366445645d7281dc851b5e53d2315",
+    "src/constrained_ep.py": "c64b5d01f300eedfef1c87a1fc4b27b6adb8faf9ce423f525e0adbb6db115fce",
+    "src/constraints.py": "7d80586c08f4b82466b58acc8599e5991e42a5599acd502d6c335c5b7b9bc9bf",
+    "src/mes_beam.py": "ec78b360e3bf89c49cc2ac3760a11e5a0a23c10e584435134a55ae00cdba7bcb",
+    "src/mixed_blocks.py": "1c42912544a9365660bd75c3936d8326775bcebf96b756047071f4d328c77f38",
+    "src/pack_lib.py": "f5fded3e7a0efaeecae47dca8441796280ab70d378ddde25a65c79e2169e48c6",
+    "src/solution_io.py": "1018ed75a7fd5b01cc8705656906de22550f20ccb5c1f5341ef0138a62e86557",
+    "src/thpack.py": "b67c14b8d16d7113dfeff3f73a867e3f58f96161f87b16ce84911ed761fa8a26",
+    "experiments/ablation_levels.py": "67c78435c34de935801f9e0f0dcb847f9722ddc3c4f6e99e654ff142db44f70d",
+    "experiments/ablation_mes_score.py": "be01df389a0a4e079fab8628973e9e97d0b0f44bcab0f1ceac33d8bc3fa331ed",
+    "experiments/adapt_guesser_output.py": "a52649db8e4b89d1bafc66981a78592fa00e8c5ebb293d01655de76184d20673",
+    "experiments/adapt_metasolver_output.py": "fc38a84631bd9c136ec4179e3c9a3d8ea89e7b0c8fbb673902a1cb91ee85af3b",
+    "experiments/audit_research_core.py": "eec9152e0b0fef0a85a4d3cfb493df842d803b6ca1bc970624cedcb1c8b2d79e",
+    "experiments/bench_block_search.py": "8888491e510dffa7f922fe620293870f38c1a510d54e971d2502daf5716f0785",
+    "experiments/bench_constrained_fleet.py": "aa279b72f7dab664993d7c47cd44a3d4d7150791e583c0c44533496f5ac3e811",
+    "experiments/bench_guesser.py": "d53036e87a226c76a7219f10b3f5054fbece4b943ec879a4c71b91da87a261bf",
+    "experiments/bench_linux_components.py": "8300331080fcb90ef8fe33015247c0118fbb456f22e0136da124105dbb4a30c2",
+    "experiments/bench_mes_beam.py": "6ec728cd39bb2c89fd979ebef4209d2804f0465fe747d2ce3cee9fd231fa3a16",
+    "experiments/bench_metasolver.py": "cf3acab61d7a3309911ffd78d244ae3b6a84f5e0c95b9ee92f6ed758e0498445",
+    "experiments/bench_mixed_study.py": "befaa6e16de56abdb26a940b429f536a53826492b4fd10903d065f257ad058bc",
+    "experiments/bench_parameter_envelope.py": "5caf94d9c83c633cf8e5ebf1f49085390345f80c31fd8abaadfbde3feb5cf820",
+    "experiments/bench_small_constrained.py": "dd46a39813a41f2184c3ef310523313421d28bd2de274f1e92f4fc3d9f83377e",
+    "experiments/bench_small_l0.py": "9b4117824cc6a424b7f8aa6feb3754d805969978aabf9bf17d0f9689ab1e7245",
+    "experiments/bench_thpack.py": "90490bbae1a3634c29a58dfad5b7c02c04e38213659ded3d54950348ab4d5f8d",
+    "experiments/bench_variant_study.py": "6c1d9b9a9cb28307e145c31005becb67cbc4792aa3385e0ca47681a86e8241b5",
+    "experiments/exact_constrained.py": "7ea084d89bc4efe4512b79bfe11d64af5579bd281dee55a4cff6a4e20b213b7a",
+    "experiments/exact_l0.py": "bb20163a6eaeb153175cc6f728d3f25d20d4f02ded3d9df5f8ea66f28382f79e",
+    "experiments/ftl_attempts.py": "680c7d846f6ddaf67c3c10b1bc719d4b441816205e3e299d8ebe35d01a45802f",
+    "experiments/inspect_solution.py": "55d63cfc3aa5997a82897b21adb1bc26a81fb53ce81558867fa3f18268a8e849",
+    "experiments/method_study.py": "88206351b89567a595978e6c06527683ff902d9f3f796fc499fa1ddbab360245",
+    "experiments/mixed_study.py": "65a73b65e5ee8fb0aa4c586201ea9208f51b37430c56bbebb7a23fad9bf89cc8",
+    "experiments/parameter_envelope.py": "47367d4f1fae91f99eca1c34f6da34ffb5b5180784fd50a225296e1290031e98",
+    "experiments/parameter_task.py": "734917f9e6d8fc25eab3cbea9115983f9c0824b2d3718b8da13b0a4a87cb8f1e",
+    "experiments/platform_analysis.py": "ae305b294a73b61651c7af2653084f5ba5d2cf4e2304304752aa86edc3b87435",
+    "experiments/prepare_guesser_inputs.py": "c85cdbaa882a5b9cde91fb0ca332d55659f40bf774cbc563697264b62c6505d4",
+    "experiments/render_r6_report.py": "e068377ad7eb9effdc38e32a1af93c7d011d49d15c764e2221f1e69361d7b681",
+    "experiments/render_r7_report.py": "f66821c373a418cd901da9dfaf79573da936814ac48044e6686b76fd5c9654fa",
+    "experiments/render_r8_report.py": "9983f5cbf53d1dca30747bfbcf8067bdcb613a631f13806362be7616d267e9d1",
+    "experiments/render_r9_report.py": "44d55ab40c54b16ea048ec9bda015f1bc3e7c052c63f7982753d68b683ff073d",
+    "experiments/render_research_paper.py": "9c448d22103c59e361d9ee6bc908d35d22b0d25ca3faee69ecb07a4efa6d0571",
+    "experiments/review_regression.py": "2e0d2c5aa6efd2b8718e33540329b9ae98b8dd137f924462dd29b9f97c86ba6b",
+    "experiments/run_baselines.py": "7a50b47fabeb722ba47c7bfe89e26b2778101b35aec274caf923ff3d3fb5ef82",
+    "experiments/search_pressure350.py": "11c9e3a39d2848f3028046ab28ab208bb59d208dd5ac05fa480a6e92a5863217",
+    "experiments/summarize_author_comparison.py": "1917e66f566fc2e68b6e3951910d4c760b14d19c0a43f25478a25933f95a4d38",
+    "experiments/summarize_block_search.py": "9fec5e63fd8182cd83e19bfcff56f57610e43c4d623365b638ceac93b34d0048",
+    "experiments/summarize_constrained.py": "44fbd94667f5b68c68379d43efbd80a65e3a27710b793a96da699dbd33fe760d",
+    "experiments/summarize_frozen100.py": "a7c7aa96bdf4ff9b837db10d3fcba13f6d5cfdacdcbd8353800dfda97414f485",
+    "experiments/test_block_evidence.py": "c98420bc3cfd691ec2110c08e1b1aad492e42f5b1f48e10d8c90603065039a2b",
+    "experiments/test_block_search.py": "909594f65e70fcf8096093463619cefdb63be81cc9d1f9f9e284507547c08ba9",
+    "experiments/test_constrained_ep.py": "e583cec8c7f8d9ee6843543ecd31920d36ba3a71731bc5209a76d1af0ba794fa",
+    "experiments/test_constraints.py": "7c2e6047bfb0a82fb7d26a5a0d9b831bf94ec094e210bb63650afe96dfe17fb8",
+    "experiments/test_evidence_protocol.py": "e471b50ae9a658931701f603e9a36ab9c33acfa5a47e2c006dc77075b2675fff",
+    "experiments/test_exact_constrained.py": "04b38e1e032c813ab64c59cf66b2f8661cbe05f0f2bc97ae0bece4948a16ce87",
+    "experiments/test_fleet_protocol.py": "a42a2f97cfae48d462d4d816403ee598fa4932e66e0c131c19d68040f287e21c",
+    "experiments/test_mes_beam.py": "e16c549dd87801add0265b592e26b8ecbd18bf9754ee42522b377af7d94dd365",
+    "experiments/test_metasolver_adapter.py": "8cc9479c3bf487dabf566b49d92f7117c4a43761c0fad48b14169453a61b0a51",
+    "experiments/test_method_study.py": "474cf24f732fae88bcf4abbeb998ff8c1243e5d88c1b9b446db4708da6e33ea9",
+    "experiments/test_mixed_evidence.py": "3ef9231cb0d12a2a086b2a1cb67f41a72817ddff3c544d98256f1bce04cfe1bb",
+    "experiments/test_mixed_study.py": "821740b1204e9bfcb867e8625164a3ff7810615067c2471ac631b6854234f37e",
+    "experiments/test_parameter_envelope.py": "ba56e8e96830918680fa527bbb1b17eac0259f1bc6b1535105df789c230daf45",
+    "experiments/test_parameter_evidence.py": "ad8fc7d1e2f1895f79802adb982c05e07e7a200fd9525ffe882bd18c995d2b66",
+    "experiments/test_parameter_task.py": "6e5bf6136f55cd860abb1bda3532cc566fd83f2c049b7ee0731a30f77539be18",
+    "experiments/test_platform_analysis.py": "c15edaeb6eaaaf2e96a894152fc85f58e58029894666750809687a89eb14e6b7",
+    "experiments/test_pressure_search.py": "0630110c3ff7182f7dc4a8ec66c494fd095d090521cfceab0b3609701251ed8d",
+    "experiments/test_protocol.py": "775cb6b51a9509cb1bb65a1ced3afc4c9378053e7f3cb712116d3198ec03ae7b",
+    "experiments/test_variant_evidence.py": "1ca53a5396e922f536fa47b8d4d7727fa948ae90265588346fd3530686808bf8",
+    "experiments/test_variant_study.py": "a911d69ebc61393ce92a3ebf97ea79addfb822aa7c01795700650d84e2027231",
+    "experiments/variant_study.py": "cbafa04701dd407b1dce192165e3d422ef81d11c70f6cfebc5bc519c539cace3",
+    "experiments/verify_block_search.py": "ac1ff971eaf49d7fa700d95ec9722ad27553bc53236a7157e4745edab224be12",
+    "experiments/verify_constrained_fleet.py": "cd6b40c8f320e21e30edbf75dcccb71a78995e8507d00daaa777b30570785dd9",
+    "experiments/verify_guesser_evidence.py": "e5d1b9e819138f538e84c2607c450223babed1bd80c0e470528d0a7a950d1a8a",
+    "experiments/verify_linux_components.py": "a10a8678bba59357b7d7aaa9b970621020c70d2c9f3568ef1b79a8a5ad8ca6d0",
+    "experiments/verify_mes_result.py": "50c82ad7d8917c1eb8ba61d663c6523098cbaada4116258aa075db9372cddf5d",
+    "experiments/verify_metasolver_evidence.py": "8db9613713bcda62c352857bb2b8b0a73a3634b6bf73f17b3c61ac565b7ec435",
+    "experiments/verify_method_study.py": "bc9548264d13350f29ffff602eea5461b38dde5e6f8964a039ab4e44a9be311f",
+    "experiments/verify_mixed_study.py": "3d2876d9ba898f9f599c9e4c2a7555cf6ef409b9cd951a2e7e240ca3a4c3dcd4",
+    "experiments/verify_parameter_envelope.py": "879a2ed81a44eb116247fcd18a43c5296a1e8e27aa1459837e19eeeb2cbd5ca9",
+    "experiments/verify_pressure350.py": "5841531d1d114fd8b094d0722c12f96f4661e569f1d4fb254846051bc46a43b9",
+    "experiments/verify_variant_study.py": "f9f006f5cd8c5596993c162d1cb13a85d9e6b42484149ead6df1099c880e266b",
+    "experiments/verify_witness_exact.py": "77557628074a484c82e6476baa859aaf503569c90bdb6f0e18229a29898f0d13",
+    "lean/Boxpack.lean": "dbc31562bf454d19b95a13feca91b66a1be3324b9da6304771a0d898a79ce66f",
+    "lean/Main.lean": "cbe4fc5bb853da978e5ab5dbf752fb7e9d003619858ccea1ca10b446d40afc4d",
+    "lean/Parametric.lean": "c18fed7f2d0ad8a30be6df92cad9a37b099ca1e5ec4d4cf977827735a35e5108",
+    "lean/lakefile.toml": "bdbf6c5c5038707f8ba265528e896b1cae5ff3fb32d9b66b5baa8cbf4ccad4ae"
+  },
+  "finished": "2026-11-16T02:20:43.814770+00:00",
+  "passed": true
+}

@@ -1,0 +1,38 @@
+{
+  "study": "full_constraint_method_parameter_comparison_v1",
+  "status": "frozen_before_new_runs",
+  "scope": "Known original catalog and declared quantity variants; development study, not blind evaluation or SOTA replication",
+  "rules": "L4 chain_area_v1, original orientations, both objectives separately",
+  "methods": ["ep_multistart", "block_columns", "block_capped"],
+  "scenario_design": {
+    "base_counts": [80,100,30,40,50],
+    "base_parameters": {"alpha":"1", "pressure":"350", "clearance":3},
+    "pressure_slice": ["250","300","317.5","337.499","337.5","350","500"],
+    "clearance_slice_at_350": [10,11,30],
+    "alpha_slice_at_350": ["0","3/4"],
+    "quantity_variants_at_500": [[120,150,45,60,75],[160,200,60,80,100],[80,100,60,40,50],[80,100,30,80,100]]
+  },
+  "fleet_sequences": [[1],[0,0],[0,1],[1,0],[1,1],[0,0,0]],
+  "fleet_scope": "All potentially improving count<=2 OR cost<=1400 fleets after volume/weight pruning; three-small retained for cost objective. Capacity exclusions are necessary conditions only.",
+  "budget": {
+    "wall_seconds_per_scenario_method":30,
+    "cumulative_checkpoints_seconds":[10,30],
+    "includes":"worker imports, construction, serialization, independent validation and readback; coordinator setup excluded",
+    "hard_timeout_scope":"one sequential child process per candidate, remaining portfolio time",
+    "concurrency":1,
+    "repetitions":1,
+    "note":"Single-machine deterministic development comparison; wall-time variation is not a speed significance estimate"
+  },
+  "configuration_order": {
+    "ep_orders":["standard_first","volume","height","fragile_last","fragile_first"],
+    "ep_cap":1500,
+    "blocks_orders":["area","long","volume","height"],
+    "blocks_axes":["yx","xy"],
+    "blocks_rotations":["original","wide","long"],
+    "iteration":"config outer, fleet sequence inner; same fleet order for all methods"
+  },
+  "acceptance":"Complete identities, independent parameter referee, rational thresholds, JSON/CSV readback. Partial candidates audited but never enter P1/P2. Invalid candidates retained as rejection, not infeasibility.",
+  "analysis":"Report observed method budget performance separately from combined old/new witness bounds. No claim that any algorithm is necessary. Timing excludes user/AI work and is not AI efficiency.",
+  "portfolio_stopping":"Stop a scenario-method group early only when both independent global capacity lower bounds are attained, or all fixed configurations exhausted. Record all remaining configurations as unattempted via plan minus records. Timing includes all acceptance checks. The mixed/equal fleet constructor consistently repacks remaining items separately at each truck, not the older equal-height joint-floor variant.",
+  "stopping":"Run the frozen matrix once, diagnose execution errors, verify evidence, report unresolved regions. No adaptive extra search to force a crossover or close all continuous parameters."
+}

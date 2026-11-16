@@ -1,0 +1,43 @@
+{
+  "id": 2,
+  "candidate": {
+    "method": "ep_multistart",
+    "fleet": [
+      0,
+      1
+    ],
+    "config": {
+      "order": "standard_first"
+    }
+  },
+  "status": "partial",
+  "rest_serials": [
+    "G3-010",
+    "G3-011",
+    "G3-012",
+    "G3-013",
+    "G3-014",
+    "G3-015",
+    "G3-016",
+    "G3-017",
+    "G3-018",
+    "G3-019",
+    "G3-020",
+    "G3-021",
+    "G3-022",
+    "G3-023",
+    "G3-024",
+    "G3-025",
+    "G3-026",
+    "G3-027",
+    "G3-028",
+    "G3-029"
+  ],
+  "placed": 280,
+  "vehicles": 2,
+  "cost": 1150,
+  "threshold": null,
+  "search_seconds": 4.370203239999995,
+  "file": "candidate_002.json",
+  "accepted_at": 14.698357224000006
+}

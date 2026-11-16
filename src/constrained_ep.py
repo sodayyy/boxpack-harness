@@ -51,13 +51,22 @@ def vertical_load_state(boxes, max_pressure=500.0):
 
 class ChainTruck(Truck):
     """Integer-grid EP truck with versioned chain pressure and bidirectional contacts."""
-    def __init__(self, spec, level=4, clearance=None, support_ratio=0.0):
+    def __init__(self, spec, level=4, clearance=None, support_ratio=0.0, max_pressure=500.0):
         if type(level) is not int or level not in range(5):
             raise ValueError("invalid constraint level")
         if (isinstance(support_ratio, bool) or not isinstance(support_ratio, (int, float))
                 or not math.isfinite(support_ratio) or not 0 <= support_ratio <= 1):
             raise ValueError("invalid support ratio")
+        if isinstance(max_pressure, bool):
+            raise ValueError("invalid max pressure")
+        try:
+            pressure = float(max_pressure)
+        except (ValueError, TypeError, OverflowError) as exc:
+            raise ValueError("invalid max pressure") from exc
+        if not math.isfinite(pressure) or pressure < 0:
+            raise ValueError("invalid max pressure")
         super().__init__(spec, clearance=clearance, level=level)
+        self.max_pressure = pressure
         self.support_ratio = support_ratio
         self.pressure_model = "chain_area_v1"
 
@@ -100,7 +109,7 @@ class ChainTruck(Truck):
                    (b["x"] <= cx <= b["x"] + b["l"] and b["y"] <= cy <= b["y"] + b["w"])
                    for b in below):
                 return False
-        if level >= 4 and vertical_load_state(self.boxes + [candidate]) is None:
+        if level >= 4 and vertical_load_state(self.boxes + [candidate], max_pressure=self.max_pressure) is None:
             return False
         return True
 
@@ -115,13 +124,15 @@ class ChainTruck(Truck):
         super().put(meta, x, y, z, l, w, h)
 
 
-def pack_fixed_fleet(items, specs, level=4, ep_cap=1500, support_ratio=0.0):
+def pack_fixed_fleet(items, specs, level=4, ep_cap=1500, support_ratio=0.0,
+                     clearance=None, max_pressure=500.0):
     """First-fit in a FIXED finite fleet; never opens an undeclared vehicle.
 
     Returns serializable nonempty vehicles and all unplaced original items.
     Failure is only a heuristic result, not a feasibility certificate.
     """
-    trucks = [ChainTruck(spec, level=level, support_ratio=support_ratio) for spec in specs]
+    trucks = [ChainTruck(spec, level=level, support_ratio=support_ratio,
+                         clearance=clearance, max_pressure=max_pressure) for spec in specs]
     rest = []
     for item in items:
         if not any(_ep_one(truck, item, ep_cap) for truck in trucks):

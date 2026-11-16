@@ -1,0 +1,224 @@
+{
+  "scope": "verified method-study non-dominated layouts; not a global frontier",
+  "verification_sha256": "fd263852dfb084c2d719bb838078401b7030f8617bf535b2c43b7bbc771d9b9f",
+  "records": [
+    {
+      "name": "layout_00",
+      "source": "outputs/method-study-20261116-v1/runs/d_30__ep_multistart/candidate_004.json",
+      "threshold": {
+        "alpha_max": "1",
+        "pressure_min": "825/4",
+        "clearance_max": "40",
+        "critical_pressure_serials": [
+          "G1-000",
+          "G1-001"
+        ],
+        "floor_reactions_kg": [
+          "2820",
+          "1290"
+        ],
+        "height_by_vehicle": [
+          {
+            "vehicle_index": 0,
+            "highest_cm": 210,
+            "clearance_max": "40"
+          },
+          {
+            "vehicle_index": 1,
+            "highest_cm": 110,
+            "clearance_max": "140"
+          }
+        ],
+        "vehicles": 2,
+        "cost": 1400,
+        "items": 300
+      },
+      "json_sha256": "8ccf91686908a3404940473f07e5dfc12deb6311d28e44aabac2a30ccd8ab612",
+      "csv_sha256": "f1599eff3be1ff951de8efcee5b3c985ba0854393f6b718adc1c5e4b8e9f4737"
+    },
+    {
+      "name": "layout_01",
+      "source": "outputs/method-study-20261116-v1/runs/d_30__ep_multistart/candidate_003.json",
+      "threshold": {
+        "alpha_max": "1",
+        "pressure_min": "225",
+        "clearance_max": "40",
+        "critical_pressure_serials": [
+          "G4-031",
+          "G4-032",
+          "G4-033",
+          "G4-034",
+          "G4-036",
+          "G4-037"
+        ],
+        "floor_reactions_kg": [
+          "2820",
+          "1290"
+        ],
+        "height_by_vehicle": [
+          {
+            "vehicle_index": 0,
+            "highest_cm": 210,
+            "clearance_max": "40"
+          },
+          {
+            "vehicle_index": 1,
+            "highest_cm": 170,
+            "clearance_max": "50"
+          }
+        ],
+        "vehicles": 2,
+        "cost": 1150,
+        "items": 300
+      },
+      "json_sha256": "38f4b2992c4ced44a6e20cbe5e5f81ae2dd849e6a95111d942bf6625677ec5ca",
+      "csv_sha256": "cae7034c10f873f3bf6f3576c2b22cedca78a8222661339aa008eacdcba8577e"
+    },
+    {
+      "name": "layout_02",
+      "source": "outputs/method-study-20261116-v1/runs/p_250__block_capped/candidate_027.json",
+      "threshold": {
+        "alpha_max": "1",
+        "pressure_min": "1580/7",
+        "clearance_max": "50",
+        "critical_pressure_serials": [
+          "G2-000",
+          "G2-001",
+          "G2-010",
+          "G2-011",
+          "G2-020",
+          "G2-021",
+          "G2-030",
+          "G2-031",
+          "G2-040",
+          "G2-041",
+          "G2-050",
+          "G2-051",
+          "G2-060",
+          "G2-061",
+          "G2-070",
+          "G2-071",
+          "G2-080",
+          "G2-081",
+          "G2-090",
+          "G2-091"
+        ],
+        "floor_reactions_kg": [
+          "4074",
+          "36"
+        ],
+        "height_by_vehicle": [
+          {
+            "vehicle_index": 0,
+            "highest_cm": 200,
+            "clearance_max": "50"
+          },
+          {
+            "vehicle_index": 1,
+            "highest_cm": 120,
+            "clearance_max": "100"
+          }
+        ],
+        "vehicles": 2,
+        "cost": 1150,
+        "items": 300
+      },
+      "json_sha256": "dc150eeb20e1ea60982d931d2c2363c841911d778b91863595b71677021cd65c",
+      "csv_sha256": "57612297a35602a9c161a831ad75023486cb31e72a4f3148b3cbf9b79055c95f"
+    },
+    {
+      "name": "layout_03",
+      "source": "outputs/method-study-20261116-v1/runs/p_250__block_capped/candidate_001.json",
+      "threshold": {
+        "alpha_max": "1",
+        "pressure_min": "1580/7",
+        "clearance_max": "20",
+        "critical_pressure_serials": [
+          "G2-000",
+          "G2-001",
+          "G2-010",
+          "G2-011",
+          "G2-020",
+          "G2-021",
+          "G2-030",
+          "G2-031",
+          "G2-040",
+          "G2-041",
+          "G2-050",
+          "G2-051",
+          "G2-060",
+          "G2-061",
+          "G2-070",
+          "G2-071",
+          "G2-080",
+          "G2-081",
+          "G2-090",
+          "G2-091"
+        ],
+        "floor_reactions_kg": [
+          "2011",
+          "2099"
+        ],
+        "height_by_vehicle": [
+          {
+            "vehicle_index": 0,
+            "highest_cm": 200,
+            "clearance_max": "20"
+          },
+          {
+            "vehicle_index": 1,
+            "highest_cm": 190,
+            "clearance_max": "30"
+          }
+        ],
+        "vehicles": 2,
+        "cost": 900,
+        "items": 300
+      },
+      "json_sha256": "2ab407fd8cc5f2fb7bba5f3e2478765ec42d6e84d46635ec837e44eee31a38e0",
+      "csv_sha256": "a60d1a89ba2d9d9811313c26e4e9792f3ded2a9fe0616d6e819186602184ab67"
+    },
+    {
+      "name": "layout_04",
+      "source": "outputs/method-study-20261116-v1/runs/p_300__block_capped/candidate_024.json",
+      "threshold": {
+        "alpha_max": "1",
+        "pressure_min": "1900/7",
+        "clearance_max": "30",
+        "critical_pressure_serials": [
+          "G2-000",
+          "G2-001",
+          "G2-012",
+          "G2-013",
+          "G2-024",
+          "G2-025",
+          "G2-036",
+          "G2-037",
+          "G2-048",
+          "G2-049",
+          "G2-060",
+          "G2-061",
+          "G2-072",
+          "G2-073",
+          "G2-084",
+          "G2-085"
+        ],
+        "floor_reactions_kg": [
+          "4110"
+        ],
+        "height_by_vehicle": [
+          {
+            "vehicle_index": 0,
+            "highest_cm": 220,
+            "clearance_max": "30"
+          }
+        ],
+        "vehicles": 1,
+        "cost": 700,
+        "items": 300
+      },
+      "json_sha256": "3d60a58e2d23b813359663ad87324ac6c4b636a8eb21f5516802a533305bc90f",
+      "csv_sha256": "774510635aa056aca514fb13248497aed5e9b3e47960b831bab70d3d9f365c18"
+    }
+  ]
+}

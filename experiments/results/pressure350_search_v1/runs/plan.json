@@ -1,0 +1,301 @@
+{
+  "parameters": {
+    "alpha": "1",
+    "pressure": "350",
+    "clearance": "3"
+  },
+  "runs": [
+    {
+      "capped": false,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "capped": false,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "wide"
+    },
+    {
+      "capped": false,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "long"
+    },
+    {
+      "capped": false,
+      "order": "area",
+      "axis": "xy",
+      "rotation": "original"
+    },
+    {
+      "capped": false,
+      "order": "area",
+      "axis": "xy",
+      "rotation": "wide"
+    },
+    {
+      "capped": false,
+      "order": "area",
+      "axis": "xy",
+      "rotation": "long"
+    },
+    {
+      "capped": false,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "capped": false,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "wide"
+    },
+    {
+      "capped": false,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "long"
+    },
+    {
+      "capped": false,
+      "order": "long",
+      "axis": "xy",
+      "rotation": "original"
+    },
+    {
+      "capped": false,
+      "order": "long",
+      "axis": "xy",
+      "rotation": "wide"
+    },
+    {
+      "capped": false,
+      "order": "long",
+      "axis": "xy",
+      "rotation": "long"
+    },
+    {
+      "capped": false,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "capped": false,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "wide"
+    },
+    {
+      "capped": false,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "long"
+    },
+    {
+      "capped": false,
+      "order": "volume",
+      "axis": "xy",
+      "rotation": "original"
+    },
+    {
+      "capped": false,
+      "order": "volume",
+      "axis": "xy",
+      "rotation": "wide"
+    },
+    {
+      "capped": false,
+      "order": "volume",
+      "axis": "xy",
+      "rotation": "long"
+    },
+    {
+      "capped": false,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "capped": false,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "wide"
+    },
+    {
+      "capped": false,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "long"
+    },
+    {
+      "capped": false,
+      "order": "height",
+      "axis": "xy",
+      "rotation": "original"
+    },
+    {
+      "capped": false,
+      "order": "height",
+      "axis": "xy",
+      "rotation": "wide"
+    },
+    {
+      "capped": false,
+      "order": "height",
+      "axis": "xy",
+      "rotation": "long"
+    },
+    {
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "wide"
+    },
+    {
+      "capped": true,
+      "order": "area",
+      "axis": "yx",
+      "rotation": "long"
+    },
+    {
+      "capped": true,
+      "order": "area",
+      "axis": "xy",
+      "rotation": "original"
+    },
+    {
+      "capped": true,
+      "order": "area",
+      "axis": "xy",
+      "rotation": "wide"
+    },
+    {
+      "capped": true,
+      "order": "area",
+      "axis": "xy",
+      "rotation": "long"
+    },
+    {
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "wide"
+    },
+    {
+      "capped": true,
+      "order": "long",
+      "axis": "yx",
+      "rotation": "long"
+    },
+    {
+      "capped": true,
+      "order": "long",
+      "axis": "xy",
+      "rotation": "original"
+    },
+    {
+      "capped": true,
+      "order": "long",
+      "axis": "xy",
+      "rotation": "wide"
+    },
+    {
+      "capped": true,
+      "order": "long",
+      "axis": "xy",
+      "rotation": "long"
+    },
+    {
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "wide"
+    },
+    {
+      "capped": true,
+      "order": "volume",
+      "axis": "yx",
+      "rotation": "long"
+    },
+    {
+      "capped": true,
+      "order": "volume",
+      "axis": "xy",
+      "rotation": "original"
+    },
+    {
+      "capped": true,
+      "order": "volume",
+      "axis": "xy",
+      "rotation": "wide"
+    },
+    {
+      "capped": true,
+      "order": "volume",
+      "axis": "xy",
+      "rotation": "long"
+    },
+    {
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "original"
+    },
+    {
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "wide"
+    },
+    {
+      "capped": true,
+      "order": "height",
+      "axis": "yx",
+      "rotation": "long"
+    },
+    {
+      "capped": true,
+      "order": "height",
+      "axis": "xy",
+      "rotation": "original"
+    },
+    {
+      "capped": true,
+      "order": "height",
+      "axis": "xy",
+      "rotation": "wide"
+    },
+    {
+      "capped": true,
+      "order": "height",
+      "axis": "xy",
+      "rotation": "long"
+    }
+  ],
+  "per_run_seconds": 30,
+  "total_seconds": 600,
+  "scope": "known original instance; restricted constructive feasibility experiment",
+  "failure_means": "unknown, not general infeasibility"
+}

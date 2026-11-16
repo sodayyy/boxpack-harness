@@ -1,0 +1,15 @@
+{
+  "schema": "pressure350_blocks_v1",
+  "scope": "original 300 items; one large truck; L4; chain_area_v1",
+  "alpha": "1", "pressure": "350", "clearance": "3",
+  "method": "existing restricted columns and fragile caps, with pressure-dependent column counts and insertion checks",
+  "grid": {"capped": [false, true], "order": ["area", "long", "volume", "height"], "axis": ["yx", "xy"], "rotation": ["original", "wide", "long"]},
+  "planned_count": 48,
+  "per_configuration_seconds": 30,
+  "total_execution_seconds": 600,
+  "stop": "complete fixed grid or total budget; no adaptive restarts; a validation error stops the run",
+  "validation": "export and reread complete layouts; exact thresholds and separate floating referee at requested parameters; partial layouts checked with subset identities",
+  "interpretation": "verified complete one-large witness plus existing volume/cost lower bounds closes both objectives; failure or timeout only leaves original problem unknown",
+  "comparison": "development on known instance, not a fair multi-algorithm comparison or AI efficiency experiment",
+  "preregistration": "written before production change and first search run; not a third-party immutable registration"
+}

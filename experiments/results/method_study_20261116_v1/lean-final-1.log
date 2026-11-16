@@ -1,0 +1,25 @@
+ℹ [2/12] Replayed Parametric
+info: Parametric.lean:99:0: 'Boxpack.Parametric.tightens_refl' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Parametric.lean:100:0: 'Boxpack.Parametric.tightens_trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Parametric.lean:101:0: 'Boxpack.Parametric.admissible_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Parametric.lean:102:0: 'Boxpack.Parametric.feasible_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Parametric.lean:103:0: 'Boxpack.Parametric.witness_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Parametric.lean:104:0: 'Boxpack.Parametric.witness_lower_bound' does not depend on any axioms
+info: Parametric.lean:105:0: 'Boxpack.Parametric.separate_objectives' does not depend on any axioms
+info: Parametric.lean:106:0: 'Boxpack.Parametric.minimum_mono' does not depend on any axioms
+ℹ [4/12] Replayed Boxpack
+info: Boxpack.lean:77:0: 'Boxpack.original_fleet_cost_lower' depends on axioms: [propext, Quot.sound]
+info: Boxpack.lean:78:0: 'Boxpack.original_fleet_count_lower' depends on axioms: [propext, Quot.sound]
+info: Boxpack.lean:79:0: 'Boxpack.doubled_fleet_lower' depends on axioms: [propext, Quot.sound]
+info: Boxpack.lean:80:0: 'Boxpack.doubled_three_small_excluded' does not depend on any axioms
+info: Boxpack.lean:82:0: Boxpack.total_le : ∀ (C : Nat) (boxes : List (List Nat)),
+  (∀ (b : List Nat), b ∈ boxes → b.sum ≤ C) → (List.map List.sum boxes).sum ≤ boxes.length * C
+info: Boxpack.lean:83:0: Boxpack.capacity_bounds_total : ∀ (C : Nat) (boxes : List (List Nat)),
+  (∀ (b : List Nat), b ∈ boxes → b.sum ≤ C) → (List.map List.sum boxes).sum ≤ boxes.length * C
+info: Boxpack.lean:84:0: Boxpack.floor_shadow_capacity_insufficient : 680 * 245 * 247 - 30 * 70 * 50 * (247 - 40) < 28735000
+info: Boxpack.lean:85:0: Boxpack.effective_capacity_not_ruled_out : 28735000 ≤ 680 * 245 * 247
+info: Boxpack.lean:86:0: 'Boxpack.total_le' depends on axioms: [propext, Quot.sound]
+info: Boxpack.lean:87:0: 'Boxpack.capacity_bounds_total' depends on axioms: [propext, Quot.sound]
+info: Boxpack.lean:88:0: 'Boxpack.floor_shadow_capacity_insufficient' does not depend on any axioms
+info: Boxpack.lean:89:0: 'Boxpack.effective_capacity_not_ruled_out' does not depend on any axioms
+Build completed successfully (12 jobs).

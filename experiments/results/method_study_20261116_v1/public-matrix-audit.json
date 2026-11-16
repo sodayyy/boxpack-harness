@@ -1,0 +1,442 @@
+{
+  "passed": true,
+  "errors": [],
+  "groups": [
+    {
+      "case": "p_250",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 1,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "p_250",
+      "method": "block_columns",
+      "runs": 44,
+      "complete": 28,
+      "timeouts": 0,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "p_250",
+      "method": "block_capped",
+      "runs": 29,
+      "complete": 21,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 900
+    },
+    {
+      "case": "p_300",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 1,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "p_300",
+      "method": "block_columns",
+      "runs": 43,
+      "complete": 28,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "p_300",
+      "method": "block_capped",
+      "runs": 25,
+      "complete": 21,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "p_317_5",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 1,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "p_317_5",
+      "method": "block_columns",
+      "runs": 43,
+      "complete": 28,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "p_317_5",
+      "method": "block_capped",
+      "runs": 19,
+      "complete": 16,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "p_337_499",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 1,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "p_337_499",
+      "method": "block_columns",
+      "runs": 41,
+      "complete": 26,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "p_337_499",
+      "method": "block_capped",
+      "runs": 19,
+      "complete": 16,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "p_337_5",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 1,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "p_337_5",
+      "method": "block_columns",
+      "runs": 41,
+      "complete": 26,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "p_337_5",
+      "method": "block_capped",
+      "runs": 1,
+      "complete": 1,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "p_350",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 1,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "p_350",
+      "method": "block_columns",
+      "runs": 41,
+      "complete": 26,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "p_350",
+      "method": "block_capped",
+      "runs": 1,
+      "complete": 1,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "p_500",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 1,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "p_500",
+      "method": "block_columns",
+      "runs": 40,
+      "complete": 25,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "p_500",
+      "method": "block_capped",
+      "runs": 1,
+      "complete": 1,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "d_10",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 1,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "d_10",
+      "method": "block_columns",
+      "runs": 39,
+      "complete": 24,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "d_10",
+      "method": "block_capped",
+      "runs": 1,
+      "complete": 1,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "d_11",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 1,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "d_11",
+      "method": "block_columns",
+      "runs": 42,
+      "complete": 27,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "d_11",
+      "method": "block_capped",
+      "runs": 19,
+      "complete": 16,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "d_30",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 2,
+      "timeouts": 0,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "d_30",
+      "method": "block_columns",
+      "runs": 42,
+      "complete": 27,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "d_30",
+      "method": "block_capped",
+      "runs": 19,
+      "complete": 13,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "a_0",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 2,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "a_0",
+      "method": "block_columns",
+      "runs": 41,
+      "complete": 26,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "a_0",
+      "method": "block_capped",
+      "runs": 1,
+      "complete": 1,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "a_1",
+      "method": "ep_multistart",
+      "runs": 6,
+      "complete": 2,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "a_1",
+      "method": "block_columns",
+      "runs": 41,
+      "complete": 26,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "a_1",
+      "method": "block_capped",
+      "runs": 1,
+      "complete": 1,
+      "timeouts": 0,
+      "P1": 1,
+      "P2": 700
+    },
+    {
+      "case": "scale_450",
+      "method": "ep_multistart",
+      "runs": 3,
+      "complete": 0,
+      "timeouts": 1,
+      "P1": null,
+      "P2": null
+    },
+    {
+      "case": "scale_450",
+      "method": "block_columns",
+      "runs": 29,
+      "complete": 7,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "scale_450",
+      "method": "block_capped",
+      "runs": 2,
+      "complete": 1,
+      "timeouts": 0,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "scale_600",
+      "method": "ep_multistart",
+      "runs": 2,
+      "complete": 0,
+      "timeouts": 1,
+      "P1": null,
+      "P2": null
+    },
+    {
+      "case": "scale_600",
+      "method": "block_columns",
+      "runs": 26,
+      "complete": 0,
+      "timeouts": 0,
+      "P1": null,
+      "P2": null
+    },
+    {
+      "case": "scale_600",
+      "method": "block_capped",
+      "runs": 13,
+      "complete": 4,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "fragile_60",
+      "method": "ep_multistart",
+      "runs": 5,
+      "complete": 0,
+      "timeouts": 1,
+      "P1": null,
+      "P2": null
+    },
+    {
+      "case": "fragile_60",
+      "method": "block_columns",
+      "runs": 43,
+      "complete": 7,
+      "timeouts": 0,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "fragile_60",
+      "method": "block_capped",
+      "runs": 32,
+      "complete": 20,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1150
+    },
+    {
+      "case": "oriented_180",
+      "method": "ep_multistart",
+      "runs": 5,
+      "complete": 0,
+      "timeouts": 1,
+      "P1": null,
+      "P2": null
+    },
+    {
+      "case": "oriented_180",
+      "method": "block_columns",
+      "runs": 33,
+      "complete": 8,
+      "timeouts": 1,
+      "P1": 2,
+      "P2": 1400
+    },
+    {
+      "case": "oriented_180",
+      "method": "block_capped",
+      "runs": 1,
+      "complete": 1,
+      "timeouts": 0,
+      "P1": 2,
+      "P2": 1150
+    }
+  ],
+  "verified_candidates": 869,
+  "complete_candidates": 489,
+  "hashes": 5422,
+  "matrix_groups": 48
+}

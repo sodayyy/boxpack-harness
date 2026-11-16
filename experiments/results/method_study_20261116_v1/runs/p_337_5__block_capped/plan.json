@@ -1,0 +1,1750 @@
+{
+  "task": {
+    "id": "p_337_5",
+    "counts": [
+      80,
+      100,
+      30,
+      40,
+      50
+    ],
+    "alpha": "1",
+    "pressure": "337.5",
+    "clearance": 3
+  },
+  "method": "block_capped",
+  "candidates": [
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "area",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "long",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "volume",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "yx",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "original"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "wide"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        1,
+        1
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    },
+    {
+      "method": "block_capped",
+      "fleet": [
+        0,
+        0,
+        0
+      ],
+      "config": {
+        "order": "height",
+        "axis": "xy",
+        "rotation": "long"
+      }
+    }
+  ],
+  "lower": {
+    "vehicles": 1,
+    "cost": 700
+  }
+}

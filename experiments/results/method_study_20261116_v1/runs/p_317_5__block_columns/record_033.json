@@ -1,0 +1,60 @@
+{
+  "id": 33,
+  "candidate": {
+    "method": "block_columns",
+    "fleet": [
+      1,
+      0
+    ],
+    "config": {
+      "order": "area",
+      "axis": "xy",
+      "rotation": "long"
+    }
+  },
+  "status": "verified_complete",
+  "rest_serials": [],
+  "placed": 300,
+  "vehicles": 2,
+  "cost": 1150,
+  "threshold": {
+    "alpha_max": "1",
+    "pressure_min": "300",
+    "clearance_max": "40",
+    "critical_pressure_serials": [
+      "G1-000",
+      "G1-007",
+      "G1-014",
+      "G1-021",
+      "G1-028",
+      "G1-035",
+      "G1-042",
+      "G1-049",
+      "G1-056",
+      "G1-063",
+      "G1-070"
+    ],
+    "floor_reactions_kg": [
+      "3136",
+      "974"
+    ],
+    "height_by_vehicle": [
+      {
+        "vehicle_index": 0,
+        "highest_cm": 210,
+        "clearance_max": "40"
+      },
+      {
+        "vehicle_index": 1,
+        "highest_cm": 180,
+        "clearance_max": "40"
+      }
+    ],
+    "vehicles": 2,
+    "cost": 1150,
+    "items": 300
+  },
+  "search_seconds": 0.4149588530000301,
+  "file": "candidate_033.json",
+  "accepted_at": 23.924567561999993
+}

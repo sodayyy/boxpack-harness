@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "p_300",
+    "counts": [
+      80,
+      100,
+      30,
+      40,
+      50
+    ],
+    "alpha": "1",
+    "pressure": "300",
+    "clearance": 3
+  },
+  "candidate": {
+    "method": "block_capped",
+    "fleet": [
+      0,
+      0
+    ],
+    "config": {
+      "order": "area",
+      "axis": "yx",
+      "rotation": "original"
+    }
+  }
+}

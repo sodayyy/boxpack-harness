@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "D:/Lean/elan/bin/lake.exe",
+      "-d",
+      "C:\\Users\\yzj\\WorkBuddy\\2026-10-29-17-53-27\\boxpack-harness\\lean",
+      "env",
+      "lean",
+      "C:\\Users\\yzj\\WorkBuddy\\2026-10-29-17-53-27\\boxpack-harness\\lean\\Boxpack.lean"
+    ],
+    "returncode": 0,
+    "log": "lean-final-0.log",
+    "sha256": "aeb98af5799a3545a3dc09008d219f3811055ca7e9ed597bc94e7dca3a41d8d3"
+  },
+  {
+    "command": [
+      "D:/Lean/elan/bin/lake.exe",
+      "-d",
+      "C:\\Users\\yzj\\WorkBuddy\\2026-10-29-17-53-27\\boxpack-harness\\lean",
+      "build",
+      "Boxpack",
+      "boxpack"
+    ],
+    "returncode": 0,
+    "log": "lean-final-1.log",
+    "sha256": "663338f5caf46c9de32640d2ff30984d7d196d5dd1ea90a818992ecad828b6fa"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "task": {
+    "id": "p_337_499",
+    "counts": [
+      80,
+      100,
+      30,
+      40,
+      50
+    ],
+    "alpha": "1",
+    "pressure": "337.499",
+    "clearance": 3
+  },
+  "candidate": {
+    "method": "ep_multistart",
+    "fleet": [
+      0,
+      0,
+      0
+    ],
+    "config": {
+      "order": "standard_first"
+    }
+  }
+}

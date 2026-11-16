@@ -1,0 +1,14 @@
+'Boxpack.original_fleet_cost_lower' depends on axioms: [propext, Quot.sound]
+'Boxpack.original_fleet_count_lower' depends on axioms: [propext, Quot.sound]
+'Boxpack.doubled_fleet_lower' depends on axioms: [propext, Quot.sound]
+'Boxpack.doubled_three_small_excluded' does not depend on any axioms
+Boxpack.total_le : ∀ (C : Nat) (boxes : List (List Nat)),
+  (∀ (b : List Nat), b ∈ boxes → b.sum ≤ C) → (List.map List.sum boxes).sum ≤ boxes.length * C
+Boxpack.capacity_bounds_total : ∀ (C : Nat) (boxes : List (List Nat)),
+  (∀ (b : List Nat), b ∈ boxes → b.sum ≤ C) → (List.map List.sum boxes).sum ≤ boxes.length * C
+Boxpack.floor_shadow_capacity_insufficient : 680 * 245 * 247 - 30 * 70 * 50 * (247 - 40) < 28735000
+Boxpack.effective_capacity_not_ruled_out : 28735000 ≤ 680 * 245 * 247
+'Boxpack.total_le' depends on axioms: [propext, Quot.sound]
+'Boxpack.capacity_bounds_total' depends on axioms: [propext, Quot.sound]
+'Boxpack.floor_shadow_capacity_insufficient' does not depend on any axioms
+'Boxpack.effective_capacity_not_ruled_out' does not depend on any axioms

@@ -69,6 +69,19 @@ class ChainEPTests(unittest.TestCase):
             if solver is not None:
                 self.assertAlmostEqual(solver["floor_reaction_kg"], audit["total_weight_kg"])
 
+    def test_fixed_fleet_forwards_pressure_and_clearance(self):
+        # Removing either forwarded parameter must break a hand-derived result.
+        spec = TruckType('test', (10, 10, 20), 100, 1)
+        items = [meta('a', (10, 10, 10), kind='oriented'),
+                 meta('b', (10, 10, 10), kind='oriented')]
+        fleet, rest = pack_fixed_fleet(items, [spec], clearance=0, max_pressure=0)
+        self.assertEqual(len(rest), 1)  # second box adds 100 kg/m2 external load
+        fleet, rest = pack_fixed_fleet(items, [spec], clearance=0, max_pressure=100)
+        self.assertEqual(len(rest), 0)
+        self.assertEqual(max(b['z'] + b['h'] for b in fleet[0]['boxes']), 20)
+        fleet, rest = pack_fixed_fleet(items, [spec], clearance=1, max_pressure=100)
+        self.assertEqual(len(rest), 1)
+
     def test_fixed_fleet_never_opens_extra_vehicle(self):
         specs = [TruckType("small", (10, 10, 13), 100, 1)]
         items = [meta("a", (10, 10, 10)), meta("b", (10, 10, 10))]

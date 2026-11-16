@@ -1,0 +1,26 @@
+{
+  "task": {
+    "id": "d_30",
+    "counts": [
+      80,
+      100,
+      30,
+      40,
+      50
+    ],
+    "alpha": "1",
+    "pressure": "350",
+    "clearance": 30
+  },
+  "candidate": {
+    "method": "block_columns",
+    "fleet": [
+      1
+    ],
+    "config": {
+      "order": "area",
+      "axis": "xy",
+      "rotation": "wide"
+    }
+  }
+}

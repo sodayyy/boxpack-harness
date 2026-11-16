@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "registered": 5,
+  "boundaries": [
+    {
+      "layout": "layout_00",
+      "boundary": "equal",
+      "accepted": true
+    },
+    {
+      "layout": "layout_00",
+      "boundary": "p_below",
+      "accepted": false
+    },
+    {
+      "layout": "layout_00",
+      "boundary": "d_above",
+      "accepted": false
+    },
+    {
+      "layout": "layout_01",
+      "boundary": "equal",
+      "accepted": true
+    },
+    {
+      "layout": "layout_01",
+      "boundary": "p_below",
+      "accepted": false
+    },
+    {
+      "layout": "layout_01",
+      "boundary": "d_above",
+      "accepted": false
+    },
+    {
+      "layout": "layout_02",
+      "boundary": "equal",
+      "accepted": true
+    },
+    {
+      "layout": "layout_02",
+      "boundary": "p_below",
+      "accepted": false
+    },
+    {
+      "layout": "layout_02",
+      "boundary": "d_above",
+      "accepted": false
+    },
+    {
+      "layout": "layout_03",
+      "boundary": "equal",
+      "accepted": true
+    },
+    {
+      "layout": "layout_03",
+      "boundary": "p_below",
+      "accepted": false
+    },
+    {
+      "layout": "layout_03",
+      "boundary": "d_above",
+      "accepted": false
+    },
+    {
+      "layout": "layout_04",
+      "boundary": "equal",
+      "accepted": true
+    },
+    {
+      "layout": "layout_04",
+      "boundary": "p_below",
+      "accepted": false
+    },
+    {
+      "layout": "layout_04",
+      "boundary": "d_above",
+      "accepted": false
+    }
+  ],
+  "entry_reports": [
+    {
+      "name": "new_boundary",
+      "bounds": {
+        "vehicles": [
+          1,
+          1
+        ],
+        "cost_yuan": [
+          700,
+          700
+        ]
+      },
+      "status": "optimal_certified"
+    },
+    {
+      "name": "below",
+      "bounds": {
+        "vehicles": [
+          1,
+          2
+        ],
+        "cost_yuan": [
+          700,
+          1150
+        ]
+      },
+      "status": "bounded_unknown"
+    },
+    {
+      "name": "ep_complement",
+      "bounds": {
+        "vehicles": [
+          1,
+          2
+        ],
+        "cost_yuan": [
+          700,
+          1400
+        ]
+      },
+      "status": "bounded_unknown"
+    },
+    {
+      "name": "pressure250",
+      "bounds": {
+        "vehicles": [
+          1,
+          2
+        ],
+        "cost_yuan": [
+          700,
+          900
+        ]
+      },
+      "status": "bounded_unknown"
+    }
+  ],
+  "previous_pool_not_current": true,
+  "old_pool_bounds": {
+    "vehicles": [
+      1,
+      null
+    ],
+    "cost_yuan": [
+      700,
+      null
+    ]
+  }
+}

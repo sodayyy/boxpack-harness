@@ -38,7 +38,46 @@ theorem effective_capacity_not_ruled_out :
     (28735000 : Nat) ≤ (680 * 245 * 247) := by
   decide
 
+/-- 原300件：标称容量松弛已排除所有低于700元车队。
+    具体三维布局满足体积容量的桥接仍由外部核验承担。 -/
+theorem original_fleet_cost_lower (small large : Nat)
+    (h : 28735000 ≤ 19404000 * small + 41650000 * large) :
+    700 ≤ 450 * small + 700 * large := by
+  omega
+
+/-- 原300件非空运输至少使用一辆车。 -/
+theorem original_fleet_count_lower (small large : Nat)
+    (h : 28735000 ≤ 19404000 * small + 41650000 * large) :
+    1 ≤ small + large := by
+  omega
+
+/-- 600件在3cm余隙下的两个独立容量下界。 -/
+theorem doubled_fleet_lower (small large : Nat)
+    (h : 57470000 ≤ 19139400 * small + 41150200 * large) :
+    2 ≤ small + large ∧ 1150 ≤ 450 * small + 700 * large := by
+  constructor
+  · omega
+  · by_cases hz : large = 0
+    · subst large
+      have hs : 3 ≤ small := by omega
+      omega
+    · by_cases ho : large = 1
+      · subst large
+        have hs : 1 ≤ small := by omega
+        omega
+      · have hl : 2 ≤ large := by omega
+        omega
+
+/-- 600件不能用三小车：仅为有效容量排除，不是一般几何判定。 -/
+theorem doubled_three_small_excluded :
+    (3 * 19139400 : Nat) < 57470000 := by decide
+
 end Boxpack
+
+#print axioms Boxpack.original_fleet_cost_lower
+#print axioms Boxpack.original_fleet_count_lower
+#print axioms Boxpack.doubled_fleet_lower
+#print axioms Boxpack.doubled_three_small_excluded
 
 #check @Boxpack.total_le
 #check @Boxpack.capacity_bounds_total

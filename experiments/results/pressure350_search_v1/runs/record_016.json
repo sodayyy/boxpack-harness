@@ -1,0 +1,1061 @@
+{
+  "index": 16,
+  "config": {
+    "capped": false,
+    "order": "volume",
+    "axis": "xy",
+    "rotation": "wide"
+  },
+  "returncode": 0,
+  "status": "partial",
+  "rest_serials": [
+    "G3-021",
+    "G3-022",
+    "G3-023",
+    "G3-024",
+    "G3-025",
+    "G3-026",
+    "G3-027",
+    "G3-028",
+    "G3-029"
+  ],
+  "placed": 291,
+  "search": {
+    "blocks": 76,
+    "placed_blocks": 67,
+    "footprint_cm2": 175550,
+    "candidate_checks": 30784,
+    "placements": [
+      {
+        "block_id": 23,
+        "vehicle_index": 0,
+        "x": 0,
+        "y": 0,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-000",
+          "G4-001",
+          "G4-002",
+          "G4-003"
+        ]
+      },
+      {
+        "block_id": 24,
+        "vehicle_index": 0,
+        "x": 0,
+        "y": 60,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-004",
+          "G4-005",
+          "G4-006",
+          "G4-007"
+        ]
+      },
+      {
+        "block_id": 25,
+        "vehicle_index": 0,
+        "x": 0,
+        "y": 120,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-008",
+          "G4-009",
+          "G4-010",
+          "G4-011"
+        ]
+      },
+      {
+        "block_id": 26,
+        "vehicle_index": 0,
+        "x": 0,
+        "y": 180,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-012",
+          "G4-013",
+          "G4-014",
+          "G4-015"
+        ]
+      },
+      {
+        "block_id": 27,
+        "vehicle_index": 0,
+        "x": 80,
+        "y": 0,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-016",
+          "G4-017",
+          "G4-018",
+          "G4-019"
+        ]
+      },
+      {
+        "block_id": 28,
+        "vehicle_index": 0,
+        "x": 80,
+        "y": 60,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-020",
+          "G4-021",
+          "G4-022",
+          "G4-023"
+        ]
+      },
+      {
+        "block_id": 29,
+        "vehicle_index": 0,
+        "x": 80,
+        "y": 120,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-024",
+          "G4-025",
+          "G4-026",
+          "G4-027"
+        ]
+      },
+      {
+        "block_id": 30,
+        "vehicle_index": 0,
+        "x": 80,
+        "y": 180,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-028",
+          "G4-029",
+          "G4-030",
+          "G4-031"
+        ]
+      },
+      {
+        "block_id": 31,
+        "vehicle_index": 0,
+        "x": 160,
+        "y": 0,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-032",
+          "G4-033",
+          "G4-034",
+          "G4-035"
+        ]
+      },
+      {
+        "block_id": 32,
+        "vehicle_index": 0,
+        "x": 160,
+        "y": 60,
+        "l": 80,
+        "w": 60,
+        "rotated": false,
+        "serials": [
+          "G4-036",
+          "G4-037",
+          "G4-038",
+          "G4-039"
+        ]
+      },
+      {
+        "block_id": 0,
+        "vehicle_index": 0,
+        "x": 160,
+        "y": 120,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-000",
+          "G1-001",
+          "G1-002",
+          "G1-003",
+          "G1-004",
+          "G1-005",
+          "G1-006",
+          "G1-007"
+        ]
+      },
+      {
+        "block_id": 1,
+        "vehicle_index": 0,
+        "x": 160,
+        "y": 180,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-008",
+          "G1-009",
+          "G1-010",
+          "G1-011",
+          "G1-012",
+          "G1-013",
+          "G1-014",
+          "G1-015"
+        ]
+      },
+      {
+        "block_id": 2,
+        "vehicle_index": 0,
+        "x": 200,
+        "y": 120,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-016",
+          "G1-017",
+          "G1-018",
+          "G1-019",
+          "G1-020",
+          "G1-021",
+          "G1-022",
+          "G1-023"
+        ]
+      },
+      {
+        "block_id": 3,
+        "vehicle_index": 0,
+        "x": 200,
+        "y": 180,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-024",
+          "G1-025",
+          "G1-026",
+          "G1-027",
+          "G1-028",
+          "G1-029",
+          "G1-030",
+          "G1-031"
+        ]
+      },
+      {
+        "block_id": 4,
+        "vehicle_index": 0,
+        "x": 240,
+        "y": 0,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-032",
+          "G1-033",
+          "G1-034",
+          "G1-035",
+          "G1-036",
+          "G1-037",
+          "G1-038",
+          "G1-039"
+        ]
+      },
+      {
+        "block_id": 5,
+        "vehicle_index": 0,
+        "x": 240,
+        "y": 60,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-040",
+          "G1-041",
+          "G1-042",
+          "G1-043",
+          "G1-044",
+          "G1-045",
+          "G1-046",
+          "G1-047"
+        ]
+      },
+      {
+        "block_id": 6,
+        "vehicle_index": 0,
+        "x": 240,
+        "y": 120,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-048",
+          "G1-049",
+          "G1-050",
+          "G1-051",
+          "G1-052",
+          "G1-053",
+          "G1-054",
+          "G1-055"
+        ]
+      },
+      {
+        "block_id": 7,
+        "vehicle_index": 0,
+        "x": 240,
+        "y": 180,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-056",
+          "G1-057",
+          "G1-058",
+          "G1-059",
+          "G1-060",
+          "G1-061",
+          "G1-062",
+          "G1-063"
+        ]
+      },
+      {
+        "block_id": 8,
+        "vehicle_index": 0,
+        "x": 280,
+        "y": 0,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-064",
+          "G1-065",
+          "G1-066",
+          "G1-067",
+          "G1-068",
+          "G1-069",
+          "G1-070",
+          "G1-071"
+        ]
+      },
+      {
+        "block_id": 9,
+        "vehicle_index": 0,
+        "x": 280,
+        "y": 60,
+        "l": 40,
+        "w": 60,
+        "rotated": true,
+        "serials": [
+          "G1-072",
+          "G1-073",
+          "G1-074",
+          "G1-075",
+          "G1-076",
+          "G1-077",
+          "G1-078",
+          "G1-079"
+        ]
+      },
+      {
+        "block_id": 33,
+        "vehicle_index": 0,
+        "x": 280,
+        "y": 120,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-000",
+          "G5-001",
+          "G5-002",
+          "G5-003"
+        ]
+      },
+      {
+        "block_id": 34,
+        "vehicle_index": 0,
+        "x": 280,
+        "y": 160,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-004",
+          "G5-005",
+          "G5-006",
+          "G5-007"
+        ]
+      },
+      {
+        "block_id": 35,
+        "vehicle_index": 0,
+        "x": 280,
+        "y": 200,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-008",
+          "G5-009",
+          "G5-010",
+          "G5-011"
+        ]
+      },
+      {
+        "block_id": 36,
+        "vehicle_index": 0,
+        "x": 320,
+        "y": 0,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-012",
+          "G5-013",
+          "G5-014",
+          "G5-015"
+        ]
+      },
+      {
+        "block_id": 37,
+        "vehicle_index": 0,
+        "x": 320,
+        "y": 40,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-016",
+          "G5-017",
+          "G5-018",
+          "G5-019"
+        ]
+      },
+      {
+        "block_id": 38,
+        "vehicle_index": 0,
+        "x": 320,
+        "y": 80,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-020",
+          "G5-021",
+          "G5-022",
+          "G5-023"
+        ]
+      },
+      {
+        "block_id": 39,
+        "vehicle_index": 0,
+        "x": 320,
+        "y": 120,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-024",
+          "G5-025",
+          "G5-026",
+          "G5-027"
+        ]
+      },
+      {
+        "block_id": 40,
+        "vehicle_index": 0,
+        "x": 320,
+        "y": 160,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-028",
+          "G5-029",
+          "G5-030",
+          "G5-031"
+        ]
+      },
+      {
+        "block_id": 41,
+        "vehicle_index": 0,
+        "x": 320,
+        "y": 200,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-032",
+          "G5-033",
+          "G5-034",
+          "G5-035"
+        ]
+      },
+      {
+        "block_id": 42,
+        "vehicle_index": 0,
+        "x": 360,
+        "y": 0,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-036",
+          "G5-037",
+          "G5-038",
+          "G5-039"
+        ]
+      },
+      {
+        "block_id": 43,
+        "vehicle_index": 0,
+        "x": 360,
+        "y": 40,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-040",
+          "G5-041",
+          "G5-042",
+          "G5-043"
+        ]
+      },
+      {
+        "block_id": 44,
+        "vehicle_index": 0,
+        "x": 360,
+        "y": 80,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-044",
+          "G5-045",
+          "G5-046",
+          "G5-047"
+        ]
+      },
+      {
+        "block_id": 10,
+        "vehicle_index": 0,
+        "x": 360,
+        "y": 120,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-000",
+          "G2-001",
+          "G2-002",
+          "G2-003",
+          "G2-004",
+          "G2-005",
+          "G2-006",
+          "G2-007"
+        ]
+      },
+      {
+        "block_id": 11,
+        "vehicle_index": 0,
+        "x": 360,
+        "y": 170,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-008",
+          "G2-009",
+          "G2-010",
+          "G2-011",
+          "G2-012",
+          "G2-013",
+          "G2-014",
+          "G2-015"
+        ]
+      },
+      {
+        "block_id": 12,
+        "vehicle_index": 0,
+        "x": 395,
+        "y": 120,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-016",
+          "G2-017",
+          "G2-018",
+          "G2-019",
+          "G2-020",
+          "G2-021",
+          "G2-022",
+          "G2-023"
+        ]
+      },
+      {
+        "block_id": 13,
+        "vehicle_index": 0,
+        "x": 395,
+        "y": 170,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-024",
+          "G2-025",
+          "G2-026",
+          "G2-027",
+          "G2-028",
+          "G2-029",
+          "G2-030",
+          "G2-031"
+        ]
+      },
+      {
+        "block_id": 14,
+        "vehicle_index": 0,
+        "x": 400,
+        "y": 0,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-032",
+          "G2-033",
+          "G2-034",
+          "G2-035",
+          "G2-036",
+          "G2-037",
+          "G2-038",
+          "G2-039"
+        ]
+      },
+      {
+        "block_id": 15,
+        "vehicle_index": 0,
+        "x": 400,
+        "y": 50,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-040",
+          "G2-041",
+          "G2-042",
+          "G2-043",
+          "G2-044",
+          "G2-045",
+          "G2-046",
+          "G2-047"
+        ]
+      },
+      {
+        "block_id": 16,
+        "vehicle_index": 0,
+        "x": 430,
+        "y": 100,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-048",
+          "G2-049",
+          "G2-050",
+          "G2-051",
+          "G2-052",
+          "G2-053",
+          "G2-054",
+          "G2-055"
+        ]
+      },
+      {
+        "block_id": 17,
+        "vehicle_index": 0,
+        "x": 430,
+        "y": 150,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-056",
+          "G2-057",
+          "G2-058",
+          "G2-059",
+          "G2-060",
+          "G2-061",
+          "G2-062",
+          "G2-063"
+        ]
+      },
+      {
+        "block_id": 18,
+        "vehicle_index": 0,
+        "x": 430,
+        "y": 200,
+        "l": 50,
+        "w": 35,
+        "rotated": false,
+        "serials": [
+          "G2-064",
+          "G2-065",
+          "G2-066",
+          "G2-067",
+          "G2-068",
+          "G2-069",
+          "G2-070",
+          "G2-071"
+        ]
+      },
+      {
+        "block_id": 19,
+        "vehicle_index": 0,
+        "x": 435,
+        "y": 0,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-072",
+          "G2-073",
+          "G2-074",
+          "G2-075",
+          "G2-076",
+          "G2-077",
+          "G2-078",
+          "G2-079"
+        ]
+      },
+      {
+        "block_id": 20,
+        "vehicle_index": 0,
+        "x": 435,
+        "y": 50,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-080",
+          "G2-081",
+          "G2-082",
+          "G2-083",
+          "G2-084",
+          "G2-085",
+          "G2-086",
+          "G2-087"
+        ]
+      },
+      {
+        "block_id": 21,
+        "vehicle_index": 0,
+        "x": 465,
+        "y": 100,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-088",
+          "G2-089",
+          "G2-090",
+          "G2-091",
+          "G2-092",
+          "G2-093",
+          "G2-094",
+          "G2-095"
+        ]
+      },
+      {
+        "block_id": 45,
+        "vehicle_index": 0,
+        "x": 465,
+        "y": 150,
+        "l": 40,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G5-048",
+          "G5-049"
+        ]
+      },
+      {
+        "block_id": 22,
+        "vehicle_index": 0,
+        "x": 470,
+        "y": 0,
+        "l": 35,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G2-096",
+          "G2-097",
+          "G2-098",
+          "G2-099"
+        ]
+      },
+      {
+        "block_id": 46,
+        "vehicle_index": 0,
+        "x": 470,
+        "y": 50,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-000"
+        ]
+      },
+      {
+        "block_id": 47,
+        "vehicle_index": 0,
+        "x": 480,
+        "y": 190,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-001"
+        ]
+      },
+      {
+        "block_id": 48,
+        "vehicle_index": 0,
+        "x": 500,
+        "y": 100,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-002"
+        ]
+      },
+      {
+        "block_id": 49,
+        "vehicle_index": 0,
+        "x": 505,
+        "y": 0,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-003"
+        ]
+      },
+      {
+        "block_id": 50,
+        "vehicle_index": 0,
+        "x": 505,
+        "y": 150,
+        "l": 50,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G3-004"
+        ]
+      },
+      {
+        "block_id": 51,
+        "vehicle_index": 0,
+        "x": 510,
+        "y": 50,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-005"
+        ]
+      },
+      {
+        "block_id": 52,
+        "vehicle_index": 0,
+        "x": 520,
+        "y": 190,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-006"
+        ]
+      },
+      {
+        "block_id": 53,
+        "vehicle_index": 0,
+        "x": 540,
+        "y": 100,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-007"
+        ]
+      },
+      {
+        "block_id": 54,
+        "vehicle_index": 0,
+        "x": 545,
+        "y": 0,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-008"
+        ]
+      },
+      {
+        "block_id": 55,
+        "vehicle_index": 0,
+        "x": 550,
+        "y": 50,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-009"
+        ]
+      },
+      {
+        "block_id": 56,
+        "vehicle_index": 0,
+        "x": 555,
+        "y": 150,
+        "l": 50,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G3-010"
+        ]
+      },
+      {
+        "block_id": 57,
+        "vehicle_index": 0,
+        "x": 560,
+        "y": 190,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-011"
+        ]
+      },
+      {
+        "block_id": 58,
+        "vehicle_index": 0,
+        "x": 580,
+        "y": 100,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-012"
+        ]
+      },
+      {
+        "block_id": 59,
+        "vehicle_index": 0,
+        "x": 585,
+        "y": 0,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-013"
+        ]
+      },
+      {
+        "block_id": 60,
+        "vehicle_index": 0,
+        "x": 590,
+        "y": 50,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-014"
+        ]
+      },
+      {
+        "block_id": 61,
+        "vehicle_index": 0,
+        "x": 600,
+        "y": 190,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-015"
+        ]
+      },
+      {
+        "block_id": 62,
+        "vehicle_index": 0,
+        "x": 605,
+        "y": 150,
+        "l": 50,
+        "w": 40,
+        "rotated": false,
+        "serials": [
+          "G3-016"
+        ]
+      },
+      {
+        "block_id": 63,
+        "vehicle_index": 0,
+        "x": 620,
+        "y": 100,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-017"
+        ]
+      },
+      {
+        "block_id": 64,
+        "vehicle_index": 0,
+        "x": 625,
+        "y": 0,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-018"
+        ]
+      },
+      {
+        "block_id": 65,
+        "vehicle_index": 0,
+        "x": 630,
+        "y": 50,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-019"
+        ]
+      },
+      {
+        "block_id": 66,
+        "vehicle_index": 0,
+        "x": 640,
+        "y": 190,
+        "l": 40,
+        "w": 50,
+        "rotated": true,
+        "serials": [
+          "G3-020"
+        ]
+      }
+    ]
+  },
+  "seconds": 0.8796622689999936,
+  "external_errors": []
+}

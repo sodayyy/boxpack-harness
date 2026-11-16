@@ -6,6 +6,7 @@ standard columns may carry a fragile cap. Final acceptance is external.
 """
 from collections import defaultdict
 import math
+from fractions import Fraction
 
 import numpy as np
 
@@ -17,7 +18,7 @@ def volume(item):
     return math.prod(item["dims"])
 
 
-def make_blocks(items, height, capped=True):
+def make_blocks(items, height, capped=True, max_pressure=500):
     """Fixed original-catalog recipes; never manufactures or duplicates items.
 
     G1: 60x40 standard columns, optionally topped by 50x40x70 fragile.
@@ -41,6 +42,19 @@ def make_blocks(items, height, capped=True):
                 (tuple(it["dims"]), it["kind"], it["weight"]) != expected[it["name"]]):
             raise ValueError("recipes require the original catalog")
         pools[it["name"]].append(it)
+    if isinstance(max_pressure, bool):
+        raise ValueError("invalid max pressure")
+    try:
+        pressure = Fraction(str(max_pressure))
+    except (ValueError, TypeError, ZeroDivisionError) as exc:
+        raise ValueError("finite rational max pressure required") from exc
+    if pressure < 0:
+        raise ValueError("negative max pressure")
+
+    def count_limit(area_cm2, weight, cap_load=0):
+        # Bottom EXTERNAL load = (count-1)*weight + cap_load.
+        return max(0, (pressure * Fraction(area_cm2, 10000) - cap_load) // weight + 1)
+
     blocks = []
 
     def add(parts, l, w, h, rotate):
@@ -52,9 +66,10 @@ def make_blocks(items, height, capped=True):
                        "volume": sum(volume(p[0]) for p in parts)})
 
     while pools["G1"]:
-        cap = capped and bool(pools["G3"]) and height >= 100
-        count = min(len(pools["G1"]), (height - (70 if cap else 0)) // 30, 9 if cap else 10)
-        # At most 10 G1 boxes keeps bottom external pressure below 500 kg/m2.
+        cap = capped and bool(pools["G3"]) and height >= 100 and count_limit(2400, 12, 15) >= 1
+        count = min(len(pools["G1"]), (height - (70 if cap else 0)) // 30,
+                    9 if cap else 10, count_limit(2400, 12, 15 if cap else 0))
+        # Keep legacy recipe caps, and tighten for the requested pressure.
         if count <= 0:
             raise ValueError("height too small for G1 recipe")
         parts = [(pools["G1"].pop(0), 0, 0, j * 30, 60, 40, 30) for j in range(count)]
@@ -63,15 +78,17 @@ def make_blocks(items, height, capped=True):
         add(parts, 60, 40, count * 30 + (70 if cap else 0), True)
 
     while pools["G2"]:
-        cap = capped and bool(pools["G3"]) and len(pools["G2"]) >= 2 and height >= 65
+        cap = (capped and bool(pools["G3"]) and len(pools["G2"]) >= 2
+               and height >= 65 and count_limit(1750, 8, Fraction(15, 2)) >= 1)
         if cap:
-            layers = min(len(pools["G2"]) // 2, (height - 40) // 25, 10)
+            layers = min(len(pools["G2"]) // 2, (height - 40) // 25, 10,
+                         count_limit(1750, 8, Fraction(15, 2)))
             parts = [(pools["G2"].pop(0), side * 35, 0, j * 25, 35, 50, 25)
                      for j in range(layers) for side in range(2)]
             parts.append((pools["G3"].pop(0), 0, 0, layers * 25, 70, 50, 40))
             add(parts, 70, 50, layers * 25 + 40, True)
         else:
-            count = min(len(pools["G2"]), height // 25, 11)
+            count = min(len(pools["G2"]), height // 25, 11, count_limit(1750, 8))
             if count <= 0:
                 raise ValueError("height too small for G2 recipe")
             parts = [(pools["G2"].pop(0), 0, 0, j * 25, 50, 35, 25) for j in range(count)]
@@ -80,7 +97,8 @@ def make_blocks(items, height, capped=True):
     for name, dims, limit in (("G4", (80, 60, 50), 10), ("G5", (40, 40, 60), 5)):
         l, w, h = dims
         while pools[name]:
-            count = min(len(pools[name]), height // h, limit)
+            count = min(len(pools[name]), height // h, limit,
+                        count_limit(l*w, expected[name][2]))
             if count <= 0:
                 raise ValueError("height too small for oriented recipe")
             parts = [(pools[name].pop(0), 0, 0, j * h, l, w, h) for j in range(count)]
@@ -95,7 +113,8 @@ def make_blocks(items, height, capped=True):
     return blocks
 
 
-def pack_blocks(items, specs, capped=True, order="area", axis="yx", rotation="original"):
+def pack_blocks(items, specs, capped=True, order="area", axis="yx", rotation="original",
+                max_pressure=500, clearance=3, support_ratio=0.0):
     """Greedy whole-block first-fit, bounded by a fixed declared fleet.
 
     Candidate origins are Cartesian products of existing right/top edges and
@@ -109,8 +128,11 @@ def pack_blocks(items, specs, capped=True, order="area", axis="yx", rotation="or
             "height": lambda b: (-b["h"], -b["l"] * b["w"], b["id"])}
     if order not in keys or axis not in ("xy", "yx") or rotation not in ("original", "wide", "long"):
         raise ValueError("invalid floor-search configuration")
-    blocks = make_blocks(items, specs[0].dims[2] - 3, capped)
-    trucks = [ChainTruck(spec, level=4, support_ratio=0.0) for spec in specs]
+    if type(clearance) is not int or clearance < 0:
+        raise ValueError("nonnegative integral clearance required")
+    blocks = make_blocks(items, specs[0].dims[2] - clearance, capped, max_pressure=max_pressure)
+    trucks = [ChainTruck(spec, level=4, clearance=clearance,
+                         support_ratio=support_ratio, max_pressure=max_pressure) for spec in specs]
     floors = [np.zeros((tr.W, tr.L), dtype=np.bool_) for tr in trucks]
     edges = [({0}, {0}) for _ in trucks]
     rest, placements = [], []

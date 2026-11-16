@@ -9,14 +9,15 @@ from pathlib import Path
 import re
 from urllib.parse import quote
 
+# Historical manuscript renderer; current research entry is README.md.
 from markdown_it import MarkdownIt
 from latex2mathml.converter import convert
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = [
-    ("paper", "论文正文", "20-论文主稿.md"),
+    ("paper", "历史论文正文", "archive/20-论文主稿.md"),
     ("model", "附录A · 完整公式", "19-统一参数化模型.md"),
-    ("audit", "附录B · 核验台账", "21-科研核心核验与结论台账.md"),
+    ("audit", "历史核验台账", "archive/21-科研核心核验与结论台账.md"),
 ]
 
 
@@ -50,7 +51,7 @@ def render(text):
     for ident, _, filename in DOCS:
         page = page.replace('href="' + filename + '"', 'href="#' + ident + '"')
         page = page.replace('href="' + quote(filename) + '"', 'href="#' + ident + '"')
-    diagram = (ROOT / "docs" / "22-参数区域示意.svg").read_text(encoding="utf-8")
+    diagram = (ROOT / "docs" / "archive" / "22-参数区域示意.svg").read_text(encoding="utf-8")
     page = re.sub(r'<img src="22-[^\"]+\.svg"[^>]*>', diagram, page)
     return page
 
@@ -86,7 +87,7 @@ footer { text-align:center; color:#5e7180; padding:25px; font-size:13px; }
 """
     page = '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>三维装箱研究 · 论文与完整公式</title><style>' + style + '</style>'
     page += '</head><body>'
-    page += '<header><h1>多车型三维装箱：模型、证书与可核验结果</h1><p>2026-11-13 · 学术论文工作稿与两个附录</p><p>先给问题与依据，再谈工具。当前模型原实例最优1辆/700元；一般完整相图、动力学和AI节时仍未完成。</p><p style="font-size:13px">公式采用浏览器原生MathML，离线可读，无需联网公式库。可编辑Markdown源稿与Lean/Python文件另行交付。</p></header><nav>' + nav + '</nav><main>' + sections + '</main><footer>研究自查，不是同行评审或第三方安全认证。未覆盖区域不等于无解。</footer></body></html>'
+    page += '<header><h1>多车型三维装箱：模型、证书与可核验结果</h1><p>历史归档：2026-11-13论文工作稿；非最新研究入口</p><p>先给问题与依据，再谈工具。当前模型原实例最优1辆/700元；一般完整相图、动力学和AI节时仍未完成。</p><p style="font-size:13px">公式采用浏览器原生MathML，离线可读，无需联网公式库。可编辑Markdown源稿与Lean/Python文件另行交付。</p></header><nav>' + nav + '</nav><main>' + sections + '</main><footer>研究自查，不是同行评审或第三方安全认证。未覆盖区域不等于无解。</footer></body></html>'
     args.output.write_text(page, encoding="utf-8")
     print(dict(output=str(args.output), sections=len(DOCS), equations=page.count('class="equation"'), chars=len(page)))
 
